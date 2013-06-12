@@ -1137,6 +1137,21 @@
         <image name="SH_PIC_livingroom.png" width="4070" height="2850"/>
         <image name="SH_PIC_wholehouse.png" width="4104" height="2850"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SHLivingroomVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SHLivingroomVC.h"/>
+            <relationships>
+                <relationship kind="action" name="backToSH:" candidateClass="UIButton"/>
+                <relationship kind="action" name="lightButtonTouchUp:" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="SHViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SHViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
