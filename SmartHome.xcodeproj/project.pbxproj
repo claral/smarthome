@@ -27,6 +27,7 @@
 		EBD183F4176766AB002DB6F3 /* SH_PIC_entrance.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD183EE176766AB002DB6F3 /* SH_PIC_entrance.png */; };
 		EBD183F5176766AB002DB6F3 /* SH_PIC_kitchen.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD183EF176766AB002DB6F3 /* SH_PIC_kitchen.png */; };
 		EBD183F6176766AB002DB6F3 /* SH_PIC_livingroom.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD183F0176766AB002DB6F3 /* SH_PIC_livingroom.png */; };
+		F9CB96911768A9A5004379D2 /* SHLivingroomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9CB96901768A9A5004379D2 /* SHLivingroomVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,8 @@
 		EBD183EE176766AB002DB6F3 /* SH_PIC_entrance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_PIC_entrance.png; sourceTree = "<group>"; };
 		EBD183EF176766AB002DB6F3 /* SH_PIC_kitchen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_PIC_kitchen.png; sourceTree = "<group>"; };
 		EBD183F0176766AB002DB6F3 /* SH_PIC_livingroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_PIC_livingroom.png; sourceTree = "<group>"; };
+		F9CB968F1768A9A5004379D2 /* SHLivingroomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHLivingroomVC.h; sourceTree = "<group>"; };
+		F9CB96901768A9A5004379D2 /* SHLivingroomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHLivingroomVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				421CA599173AC4CB004AE723 /* SHAppDelegate.h */,
 				421CA59A173AC4CB004AE723 /* SHAppDelegate.m */,
 				421CA5A2173AC4CB004AE723 /* MainStoryboard.storyboard */,
+				F9CB968F1768A9A5004379D2 /* SHLivingroomVC.h */,
+				F9CB96901768A9A5004379D2 /* SHLivingroomVC.m */,
 				EB180A8617686A4000FEB253 /* Detailviews_XIB */,
 				421CA5A5173AC4CB004AE723 /* SHViewController.h */,
 				421CA5A6173AC4CB004AE723 /* SHViewController.m */,
@@ -239,6 +244,7 @@
 				421CA59B173AC4CB004AE723 /* SHAppDelegate.m in Sources */,
 				421CA5A7173AC4CB004AE723 /* SHViewController.m in Sources */,
 				EB180A8A17686B6C00FEB253 /* SHDetailviewLivingroomLightViewController.m in Sources */,
+				F9CB96911768A9A5004379D2 /* SHLivingroomVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

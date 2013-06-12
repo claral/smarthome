@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -1004,10 +1004,10 @@
             </objects>
             <point key="canvasLocation" x="-403" y="1401"/>
         </scene>
-        <!--Detailview Livingroom Light View Controller - SHLivingRoomVC-->
+        <!--LivingroomVC - SHLivingRoomVC-->
         <scene sceneID="6L1-2x-Uj2">
             <objects>
-                <viewController title="SHLivingRoomVC" id="BbP-8x-A33" customClass="SHDetailviewLivingroomLightViewController" sceneMemberID="viewController">
+                <viewController title="SHLivingRoomVC" id="BbP-8x-A33" customClass="SHLivingroomVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="blr-Vx-jsc">
                         <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1028,7 +1028,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2" kind="modal" animates="NO" id="QFZ-PJ-bcC"/>
+                                    <action selector="backToSH:" destination="BbP-8x-A33" eventType="touchUpInside" id="pEg-v8-8Q8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IzX-du-h8F">
@@ -1075,7 +1075,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="ActionButtonLivingroomLight:" destination="BbP-8x-A33" eventType="touchUpInside" id="RhJ-W8-CGR"/>
+                                    <action selector="lightButtonTouchUp:" destination="BbP-8x-A33" eventType="touchUpInside" id="SSe-hw-dXN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRK-KD-dJ5">
@@ -1121,9 +1121,6 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <outlet property="ButtonLivingRoomLight" destination="bQ3-HC-Dwi" id="9hK-db-4y2"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yKZ-Jt-fbJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1140,31 +1137,15 @@
         <image name="SH_PIC_livingroom.png" width="4070" height="2850"/>
         <image name="SH_PIC_wholehouse.png" width="4104" height="2850"/>
     </resources>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SHDetailviewLivingroomLightViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SHDetailviewLivingroomLightViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="ActionButtonLivingroomLight:"/>
-                <relationship kind="action" name="closeDetailView:"/>
-                <relationship kind="outlet" name="ButtonLivingRoomLight" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="SHViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SHViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="QFZ-PJ-bcC"/>
-        <segue reference="XYU-Bg-vR1"/>
-        <segue reference="Ij5-Rk-8qE"/>
-        <segue reference="jg5-pz-rw5"/>
+        <segue reference="zBC-2B-thU"/>
+        <segue reference="XLg-z8-e8c"/>
+        <segue reference="OSa-iG-1p0"/>
+        <segue reference="rCQ-B2-EuM"/>
     </inferredMetricsTieBreakers>
 </document>

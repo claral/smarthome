@@ -35,16 +35,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)ActionButtonLivingroomLight:(id)sender
-{
-    SHDetailviewLivingroomLightViewController* viewControllerLivingRoomDetailLight = [[SHDetailviewLivingroomLightViewController alloc] initWithNibName:@"SHDetailviewLivingroomLightViewController" bundle:nil];
-    
-    //[self.view pushViewController:viewControllerLivingRoomDetailLight];
-    [self presentViewController:viewControllerLivingRoomDetailLight animated:NO completion:^{
-        NSLog(@"Controller presented");
-    }];
-
-}
 
 - (IBAction)closeDetailView:(id)sender {
     [[self presentingViewController] dismissViewControllerAnimated:NO completion:nil];
