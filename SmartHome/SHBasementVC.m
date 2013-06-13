@@ -7,6 +7,8 @@
 //
 
 #import "SHBasementVC.h"
+#import "SHDetailviewBasementLightVC.h"
+#import "SHDetailviewBasementLaundryVC.h"
 
 @interface SHBasementVC ()
 
@@ -38,5 +40,19 @@
 - (IBAction)backToSH:(id)sender
 {
     [self dismissViewControllerAnimated:NO completion:nil];
+}
+
+- (IBAction)lightButtonTouchUp:(UIButton *)sender
+{
+    SHDetailviewBasementLightVC* viewControllerBasementDetailLight = [[SHDetailviewBasementLightVC alloc] initWithNibName:@"SHDetailviewBasementLightVC" bundle:nil];
+    
+    [self presentViewController:viewControllerBasementDetailLight animated:NO completion:nil];
+}
+
+- (IBAction)laundryButtonTouchUp:(UIButton *)sender
+{
+    SHDetailviewBasementLaundryVC* viewControllerBasementDetailLaundry = [[SHDetailviewBasementLaundryVC alloc] initWithNibName:@"SHDetailviewBasementLaundryVC" bundle:nil];
+    
+    [self presentViewController:viewControllerBasementDetailLaundry animated:NO completion:nil];
 }
 @end

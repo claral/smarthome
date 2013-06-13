@@ -7,6 +7,8 @@
 //
 
 #import "SHEntranceVC.h"
+#import "SHDetailviewEntranceAlarmVC.h"
+#import "SHDetailviewEntranceLightVC.h"
 
 @interface SHEntranceVC ()
 
@@ -39,4 +41,19 @@
 {
     [self dismissViewControllerAnimated:NO completion:nil];
 }
+
+- (IBAction)lightButtonTouchUp:(UIButton *)sender
+{
+    SHDetailviewEntranceLightVC* viewControllerEntranceDetailLight = [[SHDetailviewEntranceLightVC alloc] initWithNibName:@"SHDetailviewEntranceLightVC" bundle:nil];
+    
+    [self presentViewController:viewControllerEntranceDetailLight animated:NO completion:nil];
+}
+
+- (IBAction)alarmButtonTouchUp:(UIButton *)sender
+{
+    SHDetailviewEntranceAlarmVC* viewControllerEntranceDetailAlarm = [[SHDetailviewEntranceAlarmVC alloc] initWithNibName:@"SHDetailviewEntranceAlarmVC" bundle:nil];
+    
+    [self presentViewController:viewControllerEntranceDetailAlarm animated:NO completion:nil];
+}
+
 @end

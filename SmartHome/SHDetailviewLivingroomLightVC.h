@@ -10,7 +10,6 @@
 
 @interface SHDetailviewLivingroomLightVC : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIButton *ButtonLivingRoomLight;
 - (IBAction)ActionButtonLivingroomLight:(id)sender;
 - (IBAction)closeDetailView:(id)sender;
 - (IBAction)backToSH:(id)sender;

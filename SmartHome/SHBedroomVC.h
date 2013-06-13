@@ -11,4 +11,7 @@
 @interface SHBedroomVC : UIViewController
 
 - (IBAction)backToSH:(id)sender;
+- (IBAction)lightButtonTouchUp:(UIButton *)sender;
+- (IBAction)heatingButtonTouchUp:(UIButton *)sender;
+- (IBAction)soundButtonTouchUp:(UIButton *)sender;
 @end

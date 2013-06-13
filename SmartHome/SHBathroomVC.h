@@ -11,4 +11,9 @@
 @interface SHBathroomVC : UIViewController
 
 - (IBAction)backToSH:(id)sender;
+- (IBAction)lightButtonTouchUp:(UIButton *)sender;
+- (IBAction)heatingButtonTouchUp:(UIButton *)sender;
+- (IBAction)radioButtonTouchUp:(UIButton *)sender;
+- (IBAction)whirlpoolButtonTouchUp:(UIButton *)sender;
+
 @end

@@ -10,5 +10,11 @@
 
 @interface SHKitchenVC : UIViewController
 
+- (IBAction)lightButtonTouchUp:(UIButton *)sender;
+- (IBAction)heatingButtonTouchUp:(UIButton *)sender;
+- (IBAction)fridgeButtonTouchUp:(UIButton *)sender;
+- (IBAction)cookerButtonTouchUp:(UIButton *)sender;
+- (IBAction)coffeeButtonTouchUp:(UIButton *)sender;
+
 - (IBAction)backToSH:(id)sender;
 @end

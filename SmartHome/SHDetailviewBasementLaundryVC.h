@@ -1,5 +1,5 @@
 //
-//  SHEntranceVC.h
+//  SHDetailviewBasementLaundryVC.h
 //  SmartHome
 //
 //  Created by Clara Lange on 6/13/13.
@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SHEntranceVC : UIViewController
-
+@interface SHDetailviewBasementLaundryVC : UIViewController
 - (IBAction)backToSH:(id)sender;
-- (IBAction)lightButtonTouchUp:(UIButton *)sender;
-- (IBAction)alarmButtonTouchUp:(UIButton *)sender;
+- (IBAction)closeDetailView:(id)sender;
+
 @end

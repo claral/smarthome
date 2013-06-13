@@ -11,4 +11,6 @@
 @interface SHBasementVC : UIViewController
 
 - (IBAction)backToSH:(id)sender;
+- (IBAction)lightButtonTouchUp:(UIButton *)sender;
+- (IBAction)laundryButtonTouchUp:(UIButton *)sender;
 @end
