@@ -19,8 +19,24 @@
 		421CA5A4173AC4CB004AE723 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421CA5A2173AC4CB004AE723 /* MainStoryboard.storyboard */; };
 		421CA5A7173AC4CB004AE723 /* SHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421CA5A6173AC4CB004AE723 /* SHViewController.m */; };
 		EB012E0B1767504C0069681A /* SH_PIC_wholehouse.png in Resources */ = {isa = PBXBuildFile; fileRef = EB012E0A1767504C0069681A /* SH_PIC_wholehouse.png */; };
-		EB180A8A17686B6C00FEB253 /* SHDetailviewLivingroomLightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB180A8817686B6C00FEB253 /* SHDetailviewLivingroomLightViewController.m */; };
-		EB180A8B17686B6C00FEB253 /* SHDetailviewLivingroomLightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB180A8917686B6C00FEB253 /* SHDetailviewLivingroomLightViewController.xib */; };
+		EB180A8A17686B6C00FEB253 /* SHDetailviewLivingroomLightVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EB180A8817686B6C00FEB253 /* SHDetailviewLivingroomLightVC.m */; };
+		EB180A8B17686B6C00FEB253 /* SHDetailviewLivingroomLightVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB180A8917686B6C00FEB253 /* SHDetailviewLivingroomLightVC.xib */; };
+		EBCD340A1769BA04006BBE5A /* SHKitchenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCD34091769BA04006BBE5A /* SHKitchenVC.m */; };
+		EBCD340D1769BA21006BBE5A /* SHBathroomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCD340C1769BA21006BBE5A /* SHBathroomVC.m */; };
+		EBCD34101769BA50006BBE5A /* SHEntranceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCD340F1769BA50006BBE5A /* SHEntranceVC.m */; };
+		EBCD34131769BA69006BBE5A /* SHBasementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCD34121769BA69006BBE5A /* SHBasementVC.m */; };
+		EBCD34161769BA81006BBE5A /* SHBedroomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCD34151769BA81006BBE5A /* SHBedroomVC.m */; };
+		EBCD34191769BADB006BBE5A /* SHTabLightVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCD34181769BADB006BBE5A /* SHTabLightVC.m */; };
+		EBCD341C1769BAFE006BBE5A /* SHTabHeatingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCD341B1769BAFE006BBE5A /* SHTabHeatingVC.m */; };
+		EBCD341F1769BB41006BBE5A /* SHTabJalousieVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCD341E1769BB41006BBE5A /* SHTabJalousieVC.m */; };
+		EBCD34231769C320006BBE5A /* SHDetailviewLivingroomPhoneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCD34211769C320006BBE5A /* SHDetailviewLivingroomPhoneVC.m */; };
+		EBCD34241769C320006BBE5A /* SHDetailviewLivingroomPhoneVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBCD34221769C320006BBE5A /* SHDetailviewLivingroomPhoneVC.xib */; };
+		EBCD34281769CBFE006BBE5A /* SHDetailviewLivingroomTVVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCD34261769CBFE006BBE5A /* SHDetailviewLivingroomTVVC.m */; };
+		EBCD34291769CBFE006BBE5A /* SHDetailviewLivingroomTVVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBCD34271769CBFE006BBE5A /* SHDetailviewLivingroomTVVC.xib */; };
+		EBCD342D1769CCFF006BBE5A /* SHDetailviewLivingroomStereoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCD342B1769CCFE006BBE5A /* SHDetailviewLivingroomStereoVC.m */; };
+		EBCD342E1769CCFF006BBE5A /* SHDetailviewLivingroomStereoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBCD342C1769CCFF006BBE5A /* SHDetailviewLivingroomStereoVC.xib */; };
+		EBCD34321769CD93006BBE5A /* SHDetailviewLivingroomHeatingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCD34301769CD93006BBE5A /* SHDetailviewLivingroomHeatingVC.m */; };
+		EBCD34331769CD93006BBE5A /* SHDetailviewLivingroomHeatingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBCD34311769CD93006BBE5A /* SHDetailviewLivingroomHeatingVC.xib */; };
 		EBD183F1176766AB002DB6F3 /* SH_PIC_basement.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD183EB176766AB002DB6F3 /* SH_PIC_basement.png */; };
 		EBD183F2176766AB002DB6F3 /* SH_PIC_bathroom.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD183EC176766AB002DB6F3 /* SH_PIC_bathroom.png */; };
 		EBD183F3176766AB002DB6F3 /* SH_PIC_bedroom.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD183ED176766AB002DB6F3 /* SH_PIC_bedroom.png */; };
@@ -48,9 +64,37 @@
 		421CA5A5173AC4CB004AE723 /* SHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHViewController.h; sourceTree = "<group>"; };
 		421CA5A6173AC4CB004AE723 /* SHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHViewController.m; sourceTree = "<group>"; };
 		EB012E0A1767504C0069681A /* SH_PIC_wholehouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_PIC_wholehouse.png; sourceTree = "<group>"; };
-		EB180A8717686B6C00FEB253 /* SHDetailviewLivingroomLightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDetailviewLivingroomLightViewController.h; sourceTree = "<group>"; };
-		EB180A8817686B6C00FEB253 /* SHDetailviewLivingroomLightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDetailviewLivingroomLightViewController.m; sourceTree = "<group>"; };
-		EB180A8917686B6C00FEB253 /* SHDetailviewLivingroomLightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHDetailviewLivingroomLightViewController.xib; sourceTree = "<group>"; };
+		EB180A8717686B6C00FEB253 /* SHDetailviewLivingroomLightVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDetailviewLivingroomLightVC.h; sourceTree = "<group>"; };
+		EB180A8817686B6C00FEB253 /* SHDetailviewLivingroomLightVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDetailviewLivingroomLightVC.m; sourceTree = "<group>"; };
+		EB180A8917686B6C00FEB253 /* SHDetailviewLivingroomLightVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHDetailviewLivingroomLightVC.xib; sourceTree = "<group>"; };
+		EBCD34081769BA04006BBE5A /* SHKitchenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHKitchenVC.h; sourceTree = "<group>"; };
+		EBCD34091769BA04006BBE5A /* SHKitchenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHKitchenVC.m; sourceTree = "<group>"; };
+		EBCD340B1769BA21006BBE5A /* SHBathroomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHBathroomVC.h; sourceTree = "<group>"; };
+		EBCD340C1769BA21006BBE5A /* SHBathroomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHBathroomVC.m; sourceTree = "<group>"; };
+		EBCD340E1769BA50006BBE5A /* SHEntranceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHEntranceVC.h; sourceTree = "<group>"; };
+		EBCD340F1769BA50006BBE5A /* SHEntranceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHEntranceVC.m; sourceTree = "<group>"; };
+		EBCD34111769BA69006BBE5A /* SHBasementVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHBasementVC.h; sourceTree = "<group>"; };
+		EBCD34121769BA69006BBE5A /* SHBasementVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHBasementVC.m; sourceTree = "<group>"; };
+		EBCD34141769BA81006BBE5A /* SHBedroomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHBedroomVC.h; sourceTree = "<group>"; };
+		EBCD34151769BA81006BBE5A /* SHBedroomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHBedroomVC.m; sourceTree = "<group>"; };
+		EBCD34171769BADA006BBE5A /* SHTabLightVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHTabLightVC.h; sourceTree = "<group>"; };
+		EBCD34181769BADB006BBE5A /* SHTabLightVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHTabLightVC.m; sourceTree = "<group>"; };
+		EBCD341A1769BAFE006BBE5A /* SHTabHeatingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHTabHeatingVC.h; sourceTree = "<group>"; };
+		EBCD341B1769BAFE006BBE5A /* SHTabHeatingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHTabHeatingVC.m; sourceTree = "<group>"; };
+		EBCD341D1769BB41006BBE5A /* SHTabJalousieVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHTabJalousieVC.h; sourceTree = "<group>"; };
+		EBCD341E1769BB41006BBE5A /* SHTabJalousieVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHTabJalousieVC.m; sourceTree = "<group>"; };
+		EBCD34201769C320006BBE5A /* SHDetailviewLivingroomPhoneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDetailviewLivingroomPhoneVC.h; sourceTree = "<group>"; };
+		EBCD34211769C320006BBE5A /* SHDetailviewLivingroomPhoneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDetailviewLivingroomPhoneVC.m; sourceTree = "<group>"; };
+		EBCD34221769C320006BBE5A /* SHDetailviewLivingroomPhoneVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHDetailviewLivingroomPhoneVC.xib; sourceTree = "<group>"; };
+		EBCD34251769CBFE006BBE5A /* SHDetailviewLivingroomTVVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDetailviewLivingroomTVVC.h; sourceTree = "<group>"; };
+		EBCD34261769CBFE006BBE5A /* SHDetailviewLivingroomTVVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDetailviewLivingroomTVVC.m; sourceTree = "<group>"; };
+		EBCD34271769CBFE006BBE5A /* SHDetailviewLivingroomTVVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHDetailviewLivingroomTVVC.xib; sourceTree = "<group>"; };
+		EBCD342A1769CCFE006BBE5A /* SHDetailviewLivingroomStereoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDetailviewLivingroomStereoVC.h; sourceTree = "<group>"; };
+		EBCD342B1769CCFE006BBE5A /* SHDetailviewLivingroomStereoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDetailviewLivingroomStereoVC.m; sourceTree = "<group>"; };
+		EBCD342C1769CCFF006BBE5A /* SHDetailviewLivingroomStereoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHDetailviewLivingroomStereoVC.xib; sourceTree = "<group>"; };
+		EBCD342F1769CD92006BBE5A /* SHDetailviewLivingroomHeatingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDetailviewLivingroomHeatingVC.h; sourceTree = "<group>"; };
+		EBCD34301769CD93006BBE5A /* SHDetailviewLivingroomHeatingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDetailviewLivingroomHeatingVC.m; sourceTree = "<group>"; };
+		EBCD34311769CD93006BBE5A /* SHDetailviewLivingroomHeatingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHDetailviewLivingroomHeatingVC.xib; sourceTree = "<group>"; };
 		EBD183EB176766AB002DB6F3 /* SH_PIC_basement.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_PIC_basement.png; sourceTree = "<group>"; };
 		EBD183EC176766AB002DB6F3 /* SH_PIC_bathroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_PIC_bathroom.png; sourceTree = "<group>"; };
 		EBD183ED176766AB002DB6F3 /* SH_PIC_bedroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_PIC_bedroom.png; sourceTree = "<group>"; };
@@ -110,10 +154,26 @@
 				421CA5A2173AC4CB004AE723 /* MainStoryboard.storyboard */,
 				F9CB968F1768A9A5004379D2 /* SHLivingroomVC.h */,
 				F9CB96901768A9A5004379D2 /* SHLivingroomVC.m */,
-				EB180A8617686A4000FEB253 /* Detailviews_XIB */,
+				EBCD34081769BA04006BBE5A /* SHKitchenVC.h */,
+				EBCD34091769BA04006BBE5A /* SHKitchenVC.m */,
+				EBCD340B1769BA21006BBE5A /* SHBathroomVC.h */,
+				EBCD340C1769BA21006BBE5A /* SHBathroomVC.m */,
+				EBCD340E1769BA50006BBE5A /* SHEntranceVC.h */,
+				EBCD340F1769BA50006BBE5A /* SHEntranceVC.m */,
+				EBCD34111769BA69006BBE5A /* SHBasementVC.h */,
+				EBCD34121769BA69006BBE5A /* SHBasementVC.m */,
+				EBCD34141769BA81006BBE5A /* SHBedroomVC.h */,
+				EBCD34151769BA81006BBE5A /* SHBedroomVC.m */,
+				EB180A8617686A4000FEB253 /* Detailviews_LivingRoom */,
 				421CA5A5173AC4CB004AE723 /* SHViewController.h */,
 				421CA5A6173AC4CB004AE723 /* SHViewController.m */,
 				421CA591173AC4CB004AE723 /* Supporting Files */,
+				EBCD34171769BADA006BBE5A /* SHTabLightVC.h */,
+				EBCD34181769BADB006BBE5A /* SHTabLightVC.m */,
+				EBCD341A1769BAFE006BBE5A /* SHTabHeatingVC.h */,
+				EBCD341B1769BAFE006BBE5A /* SHTabHeatingVC.m */,
+				EBCD341D1769BB41006BBE5A /* SHTabJalousieVC.h */,
+				EBCD341E1769BB41006BBE5A /* SHTabJalousieVC.m */,
 			);
 			path = SmartHome;
 			sourceTree = "<group>";
@@ -155,14 +215,26 @@
 			name = Icon;
 			sourceTree = "<group>";
 		};
-		EB180A8617686A4000FEB253 /* Detailviews_XIB */ = {
+		EB180A8617686A4000FEB253 /* Detailviews_LivingRoom */ = {
 			isa = PBXGroup;
 			children = (
-				EB180A8717686B6C00FEB253 /* SHDetailviewLivingroomLightViewController.h */,
-				EB180A8817686B6C00FEB253 /* SHDetailviewLivingroomLightViewController.m */,
-				EB180A8917686B6C00FEB253 /* SHDetailviewLivingroomLightViewController.xib */,
+				EB180A8717686B6C00FEB253 /* SHDetailviewLivingroomLightVC.h */,
+				EB180A8817686B6C00FEB253 /* SHDetailviewLivingroomLightVC.m */,
+				EB180A8917686B6C00FEB253 /* SHDetailviewLivingroomLightVC.xib */,
+				EBCD34201769C320006BBE5A /* SHDetailviewLivingroomPhoneVC.h */,
+				EBCD34211769C320006BBE5A /* SHDetailviewLivingroomPhoneVC.m */,
+				EBCD34221769C320006BBE5A /* SHDetailviewLivingroomPhoneVC.xib */,
+				EBCD34251769CBFE006BBE5A /* SHDetailviewLivingroomTVVC.h */,
+				EBCD34261769CBFE006BBE5A /* SHDetailviewLivingroomTVVC.m */,
+				EBCD34271769CBFE006BBE5A /* SHDetailviewLivingroomTVVC.xib */,
+				EBCD342A1769CCFE006BBE5A /* SHDetailviewLivingroomStereoVC.h */,
+				EBCD342B1769CCFE006BBE5A /* SHDetailviewLivingroomStereoVC.m */,
+				EBCD342C1769CCFF006BBE5A /* SHDetailviewLivingroomStereoVC.xib */,
+				EBCD342F1769CD92006BBE5A /* SHDetailviewLivingroomHeatingVC.h */,
+				EBCD34301769CD93006BBE5A /* SHDetailviewLivingroomHeatingVC.m */,
+				EBCD34311769CD93006BBE5A /* SHDetailviewLivingroomHeatingVC.xib */,
 			);
-			name = Detailviews_XIB;
+			name = Detailviews_LivingRoom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,7 +301,11 @@
 				EBD183F4176766AB002DB6F3 /* SH_PIC_entrance.png in Resources */,
 				EBD183F5176766AB002DB6F3 /* SH_PIC_kitchen.png in Resources */,
 				EBD183F6176766AB002DB6F3 /* SH_PIC_livingroom.png in Resources */,
-				EB180A8B17686B6C00FEB253 /* SHDetailviewLivingroomLightViewController.xib in Resources */,
+				EB180A8B17686B6C00FEB253 /* SHDetailviewLivingroomLightVC.xib in Resources */,
+				EBCD34241769C320006BBE5A /* SHDetailviewLivingroomPhoneVC.xib in Resources */,
+				EBCD34291769CBFE006BBE5A /* SHDetailviewLivingroomTVVC.xib in Resources */,
+				EBCD342E1769CCFF006BBE5A /* SHDetailviewLivingroomStereoVC.xib in Resources */,
+				EBCD34331769CD93006BBE5A /* SHDetailviewLivingroomHeatingVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,8 +319,20 @@
 				421CA597173AC4CB004AE723 /* main.m in Sources */,
 				421CA59B173AC4CB004AE723 /* SHAppDelegate.m in Sources */,
 				421CA5A7173AC4CB004AE723 /* SHViewController.m in Sources */,
-				EB180A8A17686B6C00FEB253 /* SHDetailviewLivingroomLightViewController.m in Sources */,
+				EB180A8A17686B6C00FEB253 /* SHDetailviewLivingroomLightVC.m in Sources */,
 				F9CB96911768A9A5004379D2 /* SHLivingroomVC.m in Sources */,
+				EBCD340A1769BA04006BBE5A /* SHKitchenVC.m in Sources */,
+				EBCD340D1769BA21006BBE5A /* SHBathroomVC.m in Sources */,
+				EBCD34101769BA50006BBE5A /* SHEntranceVC.m in Sources */,
+				EBCD34131769BA69006BBE5A /* SHBasementVC.m in Sources */,
+				EBCD34161769BA81006BBE5A /* SHBedroomVC.m in Sources */,
+				EBCD34191769BADB006BBE5A /* SHTabLightVC.m in Sources */,
+				EBCD341C1769BAFE006BBE5A /* SHTabHeatingVC.m in Sources */,
+				EBCD341F1769BB41006BBE5A /* SHTabJalousieVC.m in Sources */,
+				EBCD34231769C320006BBE5A /* SHDetailviewLivingroomPhoneVC.m in Sources */,
+				EBCD34281769CBFE006BBE5A /* SHDetailviewLivingroomTVVC.m in Sources */,
+				EBCD342D1769CCFF006BBE5A /* SHDetailviewLivingroomStereoVC.m in Sources */,
+				EBCD34321769CD93006BBE5A /* SHDetailviewLivingroomHeatingVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

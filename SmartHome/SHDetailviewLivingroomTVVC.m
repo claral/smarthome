@@ -1,18 +1,18 @@
 //
-//  SHDetailviewLivingroomLightViewController.m
+//  SHDetailviewLivingroomTVVC.m
 //  SmartHome
 //
-//  Created by Clara Lange on 6/12/13.
+//  Created by Clara Lange on 6/13/13.
 //  Copyright (c) 2013 TUM lfe. All rights reserved.
 //
 
-#import "SHDetailviewLivingroomLightViewController.h"
+#import "SHDetailviewLivingroomTVVC.h"
 
-@interface SHDetailviewLivingroomLightViewController ()
+@interface SHDetailviewLivingroomTVVC ()
 
 @end
 
-@implementation SHDetailviewLivingroomLightViewController
+@implementation SHDetailviewLivingroomTVVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,8 +35,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)closeDetailView:(id)sender
+{
+    [self dismissViewControllerAnimated:NO completion:nil];
+}
 
-- (IBAction)closeDetailView:(id)sender {
-    [[self presentingViewController] dismissViewControllerAnimated:NO completion:nil];
+- (IBAction)backToSH:(id)sender
+{
+    [self.presentingViewController.presentingViewController dismissViewControllerAnimated:NO completion:nil];
+    // TODO: wirklich alle Views dismissed?
 }
 @end
