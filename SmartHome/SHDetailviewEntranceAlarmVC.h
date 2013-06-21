@@ -10,6 +10,9 @@
 
 @interface SHDetailviewEntranceAlarmVC : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *labelAlarmCode;
 - (IBAction)backToSH:(id)sender;
 - (IBAction)closeDetailView:(id)sender;
+- (IBAction)buttonAlarmDisplay:(UIButton *)sender;
+- (IBAction)buttonDeleteAlarmDisplayLastItem:(UIButton *)sender;
 @end

@@ -14,6 +14,8 @@
 
 @implementation SHDetailviewLivingroomTVVC
 
+@synthesize labelTVChannel = _labelTVChannel;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -44,5 +46,17 @@
 {
     [self.presentingViewController.presentingViewController dismissViewControllerAnimated:NO completion:nil];
     // TODO: wirklich alle Views dismissed?
+}
+
+- (IBAction)buttonChanelDisplay:(UIButton *)sender
+{
+    // TODO: change after 5 secs possible
+    if (self.labelTVChannel.text.length == 2)
+    {
+        NSLog(@"channel should consist of just 2 items - number of items: %d", self.labelTVChannel.text.length);
+    } else {
+        NSString *digit = sender.currentTitle;
+        self.labelTVChannel.text = [self.labelTVChannel.text stringByAppendingString:digit];
+    }
 }
 @end

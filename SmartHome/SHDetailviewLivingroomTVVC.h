@@ -10,7 +10,9 @@
 
 @interface SHDetailviewLivingroomTVVC : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *labelTVChannel;
 - (IBAction)closeDetailView:(id)sender;
 - (IBAction)backToSH:(id)sender;
+- (IBAction)buttonChanelDisplay:(UIButton *)sender;
 
 @end

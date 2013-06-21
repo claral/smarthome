@@ -10,6 +10,10 @@
 
 @interface SHDetailviewLivingroomPhoneVC : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *labelPhoneNumber;
 - (IBAction)closeDetailview:(id)sender;
 - (IBAction)backToSH:(id)sender;
+- (IBAction)buttonPhoneDisplay:(UIButton *)sender;
+- (IBAction)buttonDeletePhoneDisplay:(UIButton *)sender;
+- (IBAction)buttonDeletePhoneDisplayLastNumber:(UIButton *)sender;
 @end
