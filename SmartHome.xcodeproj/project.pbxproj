@@ -21,6 +21,8 @@
 		EB012E0B1767504C0069681A /* SH_PIC_wholehouse.png in Resources */ = {isa = PBXBuildFile; fileRef = EB012E0A1767504C0069681A /* SH_PIC_wholehouse.png */; };
 		EB180A8A17686B6C00FEB253 /* SHDetailviewLivingroomLightVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EB180A8817686B6C00FEB253 /* SHDetailviewLivingroomLightVC.m */; };
 		EB180A8B17686B6C00FEB253 /* SHDetailviewLivingroomLightVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB180A8917686B6C00FEB253 /* SHDetailviewLivingroomLightVC.xib */; };
+		EB7003221789CA51005C6949 /* oven2.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7003211789CA51005C6949 /* oven2.png */; };
+		EB7003241789CA57005C6949 /* oven.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7003231789CA57005C6949 /* oven.png */; };
 		EB9407861769E28D0061E17D /* SHDetailviewBathroomLightVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9407841769E28D0061E17D /* SHDetailviewBathroomLightVC.m */; };
 		EB9407871769E28D0061E17D /* SHDetailviewBathroomLightVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB9407851769E28D0061E17D /* SHDetailviewBathroomLightVC.xib */; };
 		EB94078B1769E2A10061E17D /* SHDetailviewBathroomHeatingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9407891769E2A10061E17D /* SHDetailviewBathroomHeatingVC.m */; };
@@ -75,12 +77,12 @@
 		EBD183F4176766AB002DB6F3 /* SH_PIC_entrance.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD183EE176766AB002DB6F3 /* SH_PIC_entrance.png */; };
 		EBD183F5176766AB002DB6F3 /* SH_PIC_kitchen.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD183EF176766AB002DB6F3 /* SH_PIC_kitchen.png */; };
 		EBD183F6176766AB002DB6F3 /* SH_PIC_livingroom.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD183F0176766AB002DB6F3 /* SH_PIC_livingroom.png */; };
-		EBD8E6D81779E9DF00C1EBCB /* SH_ICON_light2.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD8E6D71779E9DF00C1EBCB /* SH_ICON_light2.png */; };
 		EBE0D9331781833300E5CA2B /* SH_NAVI_base1.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE0D9321781833300E5CA2B /* SH_NAVI_base1.png */; };
 		EBE0D9351781883E00E5CA2B /* SH_NAVI_base2.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE0D9341781883E00E5CA2B /* SH_NAVI_base2.png */; };
 		EBE0D9371781884300E5CA2B /* SH_NAVI_base3.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE0D9361781884300E5CA2B /* SH_NAVI_base3.png */; };
 		EBE0D93917818E8800E5CA2B /* SH_NAVI_base4.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE0D93817818E8800E5CA2B /* SH_NAVI_base4.png */; };
 		EBE0D93B1781A99500E5CA2B /* SH_NAVI_base5.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE0D93A1781A99500E5CA2B /* SH_NAVI_base5.png */; };
+		EBE7A7021781C34B000C01B8 /* SH_ICON_light2.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE7A7011781C34B000C01B8 /* SH_ICON_light2.png */; };
 		F9CB96911768A9A5004379D2 /* SHLivingroomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9CB96901768A9A5004379D2 /* SHLivingroomVC.m */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +107,8 @@
 		EB180A8717686B6C00FEB253 /* SHDetailviewLivingroomLightVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDetailviewLivingroomLightVC.h; sourceTree = "<group>"; };
 		EB180A8817686B6C00FEB253 /* SHDetailviewLivingroomLightVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDetailviewLivingroomLightVC.m; sourceTree = "<group>"; };
 		EB180A8917686B6C00FEB253 /* SHDetailviewLivingroomLightVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHDetailviewLivingroomLightVC.xib; sourceTree = "<group>"; };
+		EB7003211789CA51005C6949 /* oven2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oven2.png; sourceTree = "<group>"; };
+		EB7003231789CA57005C6949 /* oven.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oven.png; sourceTree = "<group>"; };
 		EB9407831769E28D0061E17D /* SHDetailviewBathroomLightVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDetailviewBathroomLightVC.h; sourceTree = "<group>"; };
 		EB9407841769E28D0061E17D /* SHDetailviewBathroomLightVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDetailviewBathroomLightVC.m; sourceTree = "<group>"; };
 		EB9407851769E28D0061E17D /* SHDetailviewBathroomLightVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHDetailviewBathroomLightVC.xib; sourceTree = "<group>"; };
@@ -187,12 +191,12 @@
 		EBD183EE176766AB002DB6F3 /* SH_PIC_entrance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_PIC_entrance.png; sourceTree = "<group>"; };
 		EBD183EF176766AB002DB6F3 /* SH_PIC_kitchen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_PIC_kitchen.png; sourceTree = "<group>"; };
 		EBD183F0176766AB002DB6F3 /* SH_PIC_livingroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_PIC_livingroom.png; sourceTree = "<group>"; };
-		EBD8E6D71779E9DF00C1EBCB /* SH_ICON_light2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_light2.png; sourceTree = "<group>"; };
 		EBE0D9321781833300E5CA2B /* SH_NAVI_base1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_NAVI_base1.png; sourceTree = "<group>"; };
 		EBE0D9341781883E00E5CA2B /* SH_NAVI_base2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_NAVI_base2.png; sourceTree = "<group>"; };
 		EBE0D9361781884300E5CA2B /* SH_NAVI_base3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_NAVI_base3.png; sourceTree = "<group>"; };
 		EBE0D93817818E8800E5CA2B /* SH_NAVI_base4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_NAVI_base4.png; sourceTree = "<group>"; };
 		EBE0D93A1781A99500E5CA2B /* SH_NAVI_base5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_NAVI_base5.png; sourceTree = "<group>"; };
+		EBE7A7011781C34B000C01B8 /* SH_ICON_light2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_light2.png; sourceTree = "<group>"; };
 		F9CB968F1768A9A5004379D2 /* SHLivingroomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHLivingroomVC.h; sourceTree = "<group>"; };
 		F9CB96901768A9A5004379D2 /* SHLivingroomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHLivingroomVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -308,7 +312,7 @@
 		EB012E091767502E0069681A /* Icon */ = {
 			isa = PBXGroup;
 			children = (
-				EBD8E6D71779E9DF00C1EBCB /* SH_ICON_light2.png */,
+				EBE7A7011781C34B000C01B8 /* SH_ICON_light2.png */,
 				EBE0D9321781833300E5CA2B /* SH_NAVI_base1.png */,
 				EBE0D9341781883E00E5CA2B /* SH_NAVI_base2.png */,
 				EBE0D9361781884300E5CA2B /* SH_NAVI_base3.png */,
@@ -419,6 +423,8 @@
 				EBCD34491769D874006BBE5A /* SHDetailviewKitchenCookerVC.h */,
 				EBCD344A1769D874006BBE5A /* SHDetailviewKitchenCookerVC.m */,
 				EBCD344B1769D874006BBE5A /* SHDetailviewKitchenCookerVC.xib */,
+				EB7003231789CA57005C6949 /* oven.png */,
+				EB7003211789CA51005C6949 /* oven2.png */,
 			);
 			name = Detailviews_Kitchen;
 			sourceTree = "<group>";
@@ -508,12 +514,14 @@
 				EB9407AF1769E7870061E17D /* SHDetailviewBasementLaundryVC.xib in Resources */,
 				EB9407B41769E7990061E17D /* SHDetailviewEntranceLightVC.xib in Resources */,
 				EB9407B91769E7A90061E17D /* SHDetailviewEntranceAlarmVC.xib in Resources */,
-				EBD8E6D81779E9DF00C1EBCB /* SH_ICON_light2.png in Resources */,
 				EBE0D9331781833300E5CA2B /* SH_NAVI_base1.png in Resources */,
 				EBE0D9351781883E00E5CA2B /* SH_NAVI_base2.png in Resources */,
 				EBE0D9371781884300E5CA2B /* SH_NAVI_base3.png in Resources */,
 				EBE0D93917818E8800E5CA2B /* SH_NAVI_base4.png in Resources */,
 				EBE0D93B1781A99500E5CA2B /* SH_NAVI_base5.png in Resources */,
+				EBE7A7021781C34B000C01B8 /* SH_ICON_light2.png in Resources */,
+				EB7003221789CA51005C6949 /* oven2.png in Resources */,
+				EB7003241789CA57005C6949 /* oven.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
