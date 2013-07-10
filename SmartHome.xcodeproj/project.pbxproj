@@ -77,6 +77,16 @@
 		EBD183F4176766AB002DB6F3 /* SH_PIC_entrance.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD183EE176766AB002DB6F3 /* SH_PIC_entrance.png */; };
 		EBD183F5176766AB002DB6F3 /* SH_PIC_kitchen.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD183EF176766AB002DB6F3 /* SH_PIC_kitchen.png */; };
 		EBD183F6176766AB002DB6F3 /* SH_PIC_livingroom.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD183F0176766AB002DB6F3 /* SH_PIC_livingroom.png */; };
+		EBD258F8178D4F2E00EC0342 /* SH_ICON_alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD258EE178D4F2E00EC0342 /* SH_ICON_alarm.png */; };
+		EBD258F9178D4F2E00EC0342 /* SH_ICON_coffee.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD258EF178D4F2E00EC0342 /* SH_ICON_coffee.png */; };
+		EBD258FA178D4F2E00EC0342 /* SH_ICON_fridge.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD258F0178D4F2E00EC0342 /* SH_ICON_fridge.png */; };
+		EBD258FB178D4F2E00EC0342 /* SH_ICON_heating.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD258F1178D4F2E00EC0342 /* SH_ICON_heating.png */; };
+		EBD258FC178D4F2E00EC0342 /* SH_ICON_laundry.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD258F2178D4F2E00EC0342 /* SH_ICON_laundry.png */; };
+		EBD258FD178D4F2E00EC0342 /* SH_ICON_oven.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD258F3178D4F2E00EC0342 /* SH_ICON_oven.png */; };
+		EBD258FE178D4F2E00EC0342 /* SH_ICON_phone.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD258F4178D4F2E00EC0342 /* SH_ICON_phone.png */; };
+		EBD258FF178D4F2E00EC0342 /* SH_ICON_stereo.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD258F5178D4F2E00EC0342 /* SH_ICON_stereo.png */; };
+		EBD25900178D4F2E00EC0342 /* SH_ICON_tv.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD258F6178D4F2E00EC0342 /* SH_ICON_tv.png */; };
+		EBD25901178D4F2E00EC0342 /* SH_ICON_whirlpool.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD258F7178D4F2E00EC0342 /* SH_ICON_whirlpool.png */; };
 		EBE0D9331781833300E5CA2B /* SH_NAVI_base1.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE0D9321781833300E5CA2B /* SH_NAVI_base1.png */; };
 		EBE0D9351781883E00E5CA2B /* SH_NAVI_base2.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE0D9341781883E00E5CA2B /* SH_NAVI_base2.png */; };
 		EBE0D9371781884300E5CA2B /* SH_NAVI_base3.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE0D9361781884300E5CA2B /* SH_NAVI_base3.png */; };
@@ -191,6 +201,16 @@
 		EBD183EE176766AB002DB6F3 /* SH_PIC_entrance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_PIC_entrance.png; sourceTree = "<group>"; };
 		EBD183EF176766AB002DB6F3 /* SH_PIC_kitchen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_PIC_kitchen.png; sourceTree = "<group>"; };
 		EBD183F0176766AB002DB6F3 /* SH_PIC_livingroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_PIC_livingroom.png; sourceTree = "<group>"; };
+		EBD258EE178D4F2E00EC0342 /* SH_ICON_alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_alarm.png; sourceTree = "<group>"; };
+		EBD258EF178D4F2E00EC0342 /* SH_ICON_coffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_coffee.png; sourceTree = "<group>"; };
+		EBD258F0178D4F2E00EC0342 /* SH_ICON_fridge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_fridge.png; sourceTree = "<group>"; };
+		EBD258F1178D4F2E00EC0342 /* SH_ICON_heating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_heating.png; sourceTree = "<group>"; };
+		EBD258F2178D4F2E00EC0342 /* SH_ICON_laundry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_laundry.png; sourceTree = "<group>"; };
+		EBD258F3178D4F2E00EC0342 /* SH_ICON_oven.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_oven.png; sourceTree = "<group>"; };
+		EBD258F4178D4F2E00EC0342 /* SH_ICON_phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_phone.png; sourceTree = "<group>"; };
+		EBD258F5178D4F2E00EC0342 /* SH_ICON_stereo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_stereo.png; sourceTree = "<group>"; };
+		EBD258F6178D4F2E00EC0342 /* SH_ICON_tv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_tv.png; sourceTree = "<group>"; };
+		EBD258F7178D4F2E00EC0342 /* SH_ICON_whirlpool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_whirlpool.png; sourceTree = "<group>"; };
 		EBE0D9321781833300E5CA2B /* SH_NAVI_base1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_NAVI_base1.png; sourceTree = "<group>"; };
 		EBE0D9341781883E00E5CA2B /* SH_NAVI_base2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_NAVI_base2.png; sourceTree = "<group>"; };
 		EBE0D9361781884300E5CA2B /* SH_NAVI_base3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_NAVI_base3.png; sourceTree = "<group>"; };
@@ -312,7 +332,17 @@
 		EB012E091767502E0069681A /* Icon */ = {
 			isa = PBXGroup;
 			children = (
+				EBD258EE178D4F2E00EC0342 /* SH_ICON_alarm.png */,
+				EBD258EF178D4F2E00EC0342 /* SH_ICON_coffee.png */,
+				EBD258F0178D4F2E00EC0342 /* SH_ICON_fridge.png */,
+				EBD258F1178D4F2E00EC0342 /* SH_ICON_heating.png */,
+				EBD258F2178D4F2E00EC0342 /* SH_ICON_laundry.png */,
 				EBE7A7011781C34B000C01B8 /* SH_ICON_light2.png */,
+				EBD258F3178D4F2E00EC0342 /* SH_ICON_oven.png */,
+				EBD258F4178D4F2E00EC0342 /* SH_ICON_phone.png */,
+				EBD258F5178D4F2E00EC0342 /* SH_ICON_stereo.png */,
+				EBD258F6178D4F2E00EC0342 /* SH_ICON_tv.png */,
+				EBD258F7178D4F2E00EC0342 /* SH_ICON_whirlpool.png */,
 				EBE0D9321781833300E5CA2B /* SH_NAVI_base1.png */,
 				EBE0D9341781883E00E5CA2B /* SH_NAVI_base2.png */,
 				EBE0D9361781884300E5CA2B /* SH_NAVI_base3.png */,
@@ -522,6 +552,16 @@
 				EBE7A7021781C34B000C01B8 /* SH_ICON_light2.png in Resources */,
 				EB7003221789CA51005C6949 /* oven2.png in Resources */,
 				EB7003241789CA57005C6949 /* oven.png in Resources */,
+				EBD258F8178D4F2E00EC0342 /* SH_ICON_alarm.png in Resources */,
+				EBD258F9178D4F2E00EC0342 /* SH_ICON_coffee.png in Resources */,
+				EBD258FA178D4F2E00EC0342 /* SH_ICON_fridge.png in Resources */,
+				EBD258FB178D4F2E00EC0342 /* SH_ICON_heating.png in Resources */,
+				EBD258FC178D4F2E00EC0342 /* SH_ICON_laundry.png in Resources */,
+				EBD258FD178D4F2E00EC0342 /* SH_ICON_oven.png in Resources */,
+				EBD258FE178D4F2E00EC0342 /* SH_ICON_phone.png in Resources */,
+				EBD258FF178D4F2E00EC0342 /* SH_ICON_stereo.png in Resources */,
+				EBD25900178D4F2E00EC0342 /* SH_ICON_tv.png in Resources */,
+				EBD25901178D4F2E00EC0342 /* SH_ICON_whirlpool.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
