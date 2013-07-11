@@ -18,6 +18,13 @@
 		421CA5A1173AC4CB004AE723 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 421CA5A0173AC4CB004AE723 /* Default-568h@2x.png */; };
 		421CA5A4173AC4CB004AE723 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421CA5A2173AC4CB004AE723 /* MainStoryboard.storyboard */; };
 		421CA5A7173AC4CB004AE723 /* SHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421CA5A6173AC4CB004AE723 /* SHViewController.m */; };
+		42DC8555178F2FBB002EC3F7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DC8554178F2FBB002EC3F7 /* CoreAudio.framework */; };
+		42DC8557178F2FC6002EC3F7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DC8556178F2FC5002EC3F7 /* CoreData.framework */; };
+		42DC8559178F2FD6002EC3F7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DC8558178F2FD6002EC3F7 /* QuartzCore.framework */; };
+		42DC855B178F2FFF002EC3F7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DC855A178F2FFF002EC3F7 /* AudioToolbox.framework */; };
+		42DC8560178F3B55002EC3F7 /* VEIFStaticHorizontalSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DC855D178F3B53002EC3F7 /* VEIFStaticHorizontalSliderViewController.m */; };
+		42DC8561178F3B55002EC3F7 /* VEStaticHorizontalSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DC855F178F3B54002EC3F7 /* VEStaticHorizontalSliderView.m */; };
+		42DC8565178F3EC7002EC3F7 /* SHIconWithTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DC8564178F3EC7002EC3F7 /* SHIconWithTitle.m */; };
 		EB012E0B1767504C0069681A /* SH_PIC_wholehouse.png in Resources */ = {isa = PBXBuildFile; fileRef = EB012E0A1767504C0069681A /* SH_PIC_wholehouse.png */; };
 		EB180A8A17686B6C00FEB253 /* SHDetailviewLivingroomLightVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EB180A8817686B6C00FEB253 /* SHDetailviewLivingroomLightVC.m */; };
 		EB180A8B17686B6C00FEB253 /* SHDetailviewLivingroomLightVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB180A8917686B6C00FEB253 /* SHDetailviewLivingroomLightVC.xib */; };
@@ -114,6 +121,16 @@
 		421CA5A3173AC4CB004AE723 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		421CA5A5173AC4CB004AE723 /* SHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHViewController.h; sourceTree = "<group>"; };
 		421CA5A6173AC4CB004AE723 /* SHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHViewController.m; sourceTree = "<group>"; };
+		42DC8554178F2FBB002EC3F7 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		42DC8556178F2FC5002EC3F7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		42DC8558178F2FD6002EC3F7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		42DC855A178F2FFF002EC3F7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		42DC855C178F3B53002EC3F7 /* VEIFStaticHorizontalSliderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VEIFStaticHorizontalSliderViewController.h; sourceTree = "<group>"; };
+		42DC855D178F3B53002EC3F7 /* VEIFStaticHorizontalSliderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VEIFStaticHorizontalSliderViewController.m; sourceTree = "<group>"; };
+		42DC855E178F3B54002EC3F7 /* VEStaticHorizontalSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VEStaticHorizontalSliderView.h; sourceTree = "<group>"; };
+		42DC855F178F3B54002EC3F7 /* VEStaticHorizontalSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VEStaticHorizontalSliderView.m; sourceTree = "<group>"; };
+		42DC8563178F3EC7002EC3F7 /* SHIconWithTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHIconWithTitle.h; sourceTree = "<group>"; };
+		42DC8564178F3EC7002EC3F7 /* SHIconWithTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHIconWithTitle.m; sourceTree = "<group>"; };
 		EB012E0A1767504C0069681A /* SH_PIC_wholehouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_PIC_wholehouse.png; sourceTree = "<group>"; };
 		EB180A8717686B6C00FEB253 /* SHDetailviewLivingroomLightVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDetailviewLivingroomLightVC.h; sourceTree = "<group>"; };
 		EB180A8817686B6C00FEB253 /* SHDetailviewLivingroomLightVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDetailviewLivingroomLightVC.m; sourceTree = "<group>"; };
@@ -228,6 +245,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42DC855B178F2FFF002EC3F7 /* AudioToolbox.framework in Frameworks */,
+				42DC8559178F2FD6002EC3F7 /* QuartzCore.framework in Frameworks */,
+				42DC8557178F2FC6002EC3F7 /* CoreData.framework in Frameworks */,
+				42DC8555178F2FBB002EC3F7 /* CoreAudio.framework in Frameworks */,
 				421CA58B173AC4CB004AE723 /* UIKit.framework in Frameworks */,
 				421CA58D173AC4CB004AE723 /* Foundation.framework in Frameworks */,
 				421CA58F173AC4CB004AE723 /* CoreGraphics.framework in Frameworks */,
@@ -240,6 +261,10 @@
 		421CA57E173AC4CB004AE723 = {
 			isa = PBXGroup;
 			children = (
+				42DC855A178F2FFF002EC3F7 /* AudioToolbox.framework */,
+				42DC8558178F2FD6002EC3F7 /* QuartzCore.framework */,
+				42DC8556178F2FC5002EC3F7 /* CoreData.framework */,
+				42DC8554178F2FBB002EC3F7 /* CoreAudio.framework */,
 				421CA590173AC4CB004AE723 /* SmartHome */,
 				421CA589173AC4CB004AE723 /* Frameworks */,
 				421CA588173AC4CB004AE723 /* Products */,
@@ -267,6 +292,7 @@
 		421CA590173AC4CB004AE723 /* SmartHome */ = {
 			isa = PBXGroup;
 			children = (
+				42DC8562178F3B5D002EC3F7 /* StaticHorizontalSlider */,
 				421CA599173AC4CB004AE723 /* SHAppDelegate.h */,
 				421CA59A173AC4CB004AE723 /* SHAppDelegate.m */,
 				421CA5A2173AC4CB004AE723 /* MainStoryboard.storyboard */,
@@ -315,6 +341,19 @@
 				421CA5A0173AC4CB004AE723 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42DC8562178F3B5D002EC3F7 /* StaticHorizontalSlider */ = {
+			isa = PBXGroup;
+			children = (
+				42DC855C178F3B53002EC3F7 /* VEIFStaticHorizontalSliderViewController.h */,
+				42DC855D178F3B53002EC3F7 /* VEIFStaticHorizontalSliderViewController.m */,
+				42DC855E178F3B54002EC3F7 /* VEStaticHorizontalSliderView.h */,
+				42DC855F178F3B54002EC3F7 /* VEStaticHorizontalSliderView.m */,
+				42DC8563178F3EC7002EC3F7 /* SHIconWithTitle.h */,
+				42DC8564178F3EC7002EC3F7 /* SHIconWithTitle.m */,
+			);
+			name = StaticHorizontalSlider;
 			sourceTree = "<group>";
 		};
 		EB012E08176750250069681A /* Pictures */ = {
@@ -609,6 +648,9 @@
 				EB9407AE1769E7870061E17D /* SHDetailviewBasementLaundryVC.m in Sources */,
 				EB9407B31769E7990061E17D /* SHDetailviewEntranceLightVC.m in Sources */,
 				EB9407B81769E7A90061E17D /* SHDetailviewEntranceAlarmVC.m in Sources */,
+				42DC8560178F3B55002EC3F7 /* VEIFStaticHorizontalSliderViewController.m in Sources */,
+				42DC8561178F3B55002EC3F7 /* VEStaticHorizontalSliderView.m in Sources */,
+				42DC8565178F3EC7002EC3F7 /* SHIconWithTitle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,6 +739,11 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SmartHome/SmartHome-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"VirtualUIElements/**",
+					"\"$(TARGET_BUILD_DIR)/usr/local/lib/include\"/**",
+					"\"$(OBJROOT)/UninstalledProducts/include\"/**",
+				);
 				INFOPLIST_FILE = "SmartHome/SmartHome-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -708,6 +755,11 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SmartHome/SmartHome-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"VirtualUIElements/**",
+					"\"$(TARGET_BUILD_DIR)/usr/local/lib/include\"/**",
+					"\"$(OBJROOT)/UninstalledProducts/include\"/**",
+				);
 				INFOPLIST_FILE = "SmartHome/SmartHome-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

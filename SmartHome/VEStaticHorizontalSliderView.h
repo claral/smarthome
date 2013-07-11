@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import "SHIconWithTitle.h"
+
+@protocol SliderDelegate <NSObject>
+
+- (void)sliderDidMoveTo:(NSInteger)index;
+
+@end
 
 @interface VEStaticHorizontalSliderView : UIView
 
@@ -15,6 +22,8 @@
 @property (nonatomic, assign) NSInteger currentIndex;
 
 @property (nonatomic, strong) CAShapeLayer *needleLayer;
+
+@property (nonatomic, strong) id<SliderDelegate> sDelegate;
 
 - (void)snapNeedleToNearestItem;
 @end

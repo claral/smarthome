@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VEIFStaticHorizontalSliderViewController.h"
 
-@interface SHDetailviewKitchenCoffeeVC : UIViewController
+@interface SHDetailviewKitchenCoffeeVC : UIViewController <SliderDelegate>
 - (IBAction)closeDetailView:(id)sender;
 - (IBAction)backToSH:(id)sender;
 

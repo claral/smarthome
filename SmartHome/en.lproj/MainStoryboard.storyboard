@@ -135,7 +135,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="The-ys-GMw" firstAttribute="bottom" secondItem="NI4-Xi-CaI" secondAttribute="bottom" type="default" id="6Ds-3k-V7f"/>
-                            <constraint firstItem="abY-BC-GU2" firstAttribute="baseline" secondItem="ucU-RV-ete" secondAttribute="baseline" type="default" id="MOw-m1-OhO"/>
                             <constraint firstItem="RWa-Wx-hAJ" firstAttribute="leading" secondItem="tFE-d5-kpK" secondAttribute="leading" constant="271" id="PMS-tP-wYd"/>
                             <constraint firstItem="abY-BC-GU2" firstAttribute="top" secondItem="tFE-d5-kpK" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Rra-W9-MPb"/>
                             <constraint firstItem="xdF-Bo-5CV" firstAttribute="centerX" secondItem="tFE-d5-kpK" secondAttribute="centerX" type="default" id="Xg6-Jq-UbG"/>
@@ -678,7 +677,6 @@
                             <constraint firstItem="xzH-1C-RVj" firstAttribute="centerX" secondItem="4yc-Kb-7gB" secondAttribute="centerX" type="default" id="NMg-YL-JsD"/>
                             <constraint firstItem="4Cj-Sg-iBb" firstAttribute="top" secondItem="4yc-Kb-7gB" secondAttribute="top" constant="146" id="UcF-0M-EBH"/>
                             <constraint firstItem="NnB-4n-XSa" firstAttribute="leading" secondItem="4yc-Kb-7gB" secondAttribute="leading" constant="469" id="XLp-O6-bvq"/>
-                            <constraint firstItem="27J-SY-tBY" firstAttribute="baseline" secondItem="ZO0-VB-cMu" secondAttribute="baseline" type="default" id="jIu-1Q-wvx"/>
                             <constraint firstItem="xzH-1C-RVj" firstAttribute="centerY" secondItem="4yc-Kb-7gB" secondAttribute="centerY" type="default" id="lBk-1J-oxr"/>
                             <constraint firstItem="27J-SY-tBY" firstAttribute="top" secondItem="4yc-Kb-7gB" secondAttribute="top" constant="20" symbolic="YES" type="default" id="mZj-zI-stC"/>
                             <constraint firstAttribute="trailing" secondItem="4Cj-Sg-iBb" secondAttribute="trailing" constant="372" id="rXf-o5-x7v"/>
@@ -948,7 +946,6 @@
                             <constraint firstItem="f0i-Im-HWl" firstAttribute="leading" secondItem="C55-Vu-Fhp" secondAttribute="leading" constant="457" id="LIF-M5-SmT"/>
                             <constraint firstItem="gCx-OI-2X0" firstAttribute="bottom" secondItem="OMq-sY-LAQ" secondAttribute="bottom" type="default" id="LWN-9j-IPu"/>
                             <constraint firstItem="W7W-V2-CLc" firstAttribute="leading" secondItem="C55-Vu-Fhp" secondAttribute="leading" constant="340" id="MZJ-j8-xPP"/>
-                            <constraint firstItem="gCx-OI-2X0" firstAttribute="baseline" secondItem="OMq-sY-LAQ" secondAttribute="baseline" type="default" id="RwB-nB-2r2"/>
                             <constraint firstAttribute="trailing" secondItem="7Be-ko-CWG" secondAttribute="trailing" constant="327" id="Y7G-n8-vv7"/>
                             <constraint firstItem="OMq-sY-LAQ" firstAttribute="leading" secondItem="C55-Vu-Fhp" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Z30-Jd-Llm"/>
                             <constraint firstItem="gCx-OI-2X0" firstAttribute="top" secondItem="C55-Vu-Fhp" secondAttribute="top" constant="20" symbolic="YES" type="default" id="dvl-0g-PQe"/>
@@ -1056,7 +1053,6 @@
                             <constraint firstItem="w4Y-xs-HEY" firstAttribute="centerX" secondItem="UEf-hD-lsb" secondAttribute="centerX" type="default" id="aIm-nh-Std"/>
                             <constraint firstItem="cB0-L4-rso" firstAttribute="top" secondItem="UEf-hD-lsb" secondAttribute="top" constant="297" id="deX-ia-CC7"/>
                             <constraint firstItem="8Gj-S8-3bs" firstAttribute="leading" secondItem="UEf-hD-lsb" secondAttribute="leading" constant="172" id="n2d-Ne-W2k"/>
-                            <constraint firstItem="8Gj-S8-3bs" firstAttribute="baseline" secondItem="b3S-7z-kiC" secondAttribute="baseline" type="default" id="uaC-g1-tTS"/>
                             <constraint firstItem="6u6-nQ-CR4" firstAttribute="leading" secondItem="UEf-hD-lsb" secondAttribute="leading" constant="395" id="voT-0L-KeV"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>

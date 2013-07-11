@@ -10,4 +10,7 @@
 
 @interface SHIconWithTitle : NSObject
 
+@property (nonatomic, strong) UIImage *icon;
+@property (nonatomic, strong) NSString *title;
+
 @end

@@ -7,8 +7,13 @@
 //
 
 #import "VEAbstractControlViewController.h"
+#import "SHIconWithTitle.h"
+#import "VEStaticHorizontalSliderView.h"
+#import <QuartzCore/QuartzCore.h>
 
-@interface VEIFStaticHorizontalSliderViewController : VEAbstractControlViewController
+@interface VEIFStaticHorizontalSliderViewController : UIViewController
 
+@property (nonatomic, strong) id<SliderDelegate> sDelegate;
 @property (nonatomic, strong) NSArray *icons;
+
 @end

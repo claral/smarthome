@@ -7,10 +7,6 @@
 //
 
 #import "VEIFStaticHorizontalSliderViewController.h"
-#import "VEStaticHorizontalSliderView.h"
-#import "VETestAssetsLoader.h"
-#import <QuartzCore/QuartzCore.h>
-#import "VEConstants.h"
 
 @interface VEIFStaticHorizontalSliderViewController ()
 
@@ -24,20 +20,15 @@
 #pragma mark - init/dealloc
 
 @synthesize icons = _icons;
+@synthesize sDelegate = _sDelegate;
 
 - (id)init
 {
     self = [super init];
     if (self)
 	{
-		self.testItemDescription = @"Sie haben mit Ihrem iPad auch die Kontrolle über die Lichtstimmung in Ihrem Haus. Sie wollen nun die Lichstimmung im Wohnzimmer (1) einstellen.";
-		self.testItemPredefinedValues = @[@4, @0, @6];
-		self.testItemTargetValues = @[@2, @6, @3];
-		self.testItemTargetValueNames = @[@"Lesen", @"Party", @"Relax"];
-		self.testItemTaskDescription = [NSString stringWithFormat:@"Wählen sie die Lichstimmung %@", VETaskCurrentTargetValueFormatString];
-		self.testItemViewSizeType = VETestItemViewSizeTypeMedium;
-		self.testItemViewTestedIndex = 0;
-	}
+		
+    }
 	return self;
 }
 
@@ -62,7 +53,7 @@
 	
 	self.horizontalView = [[VEStaticHorizontalSliderView alloc] initWithFrame:horizontalViewFrame];
 	self.horizontalView.items = self.icons;
-//    [VETestAssetsLoader iconsWithFolderName:VETestIconsLichtstimmung];
+    self.horizontalView.sDelegate = self.sDelegate;
 	
 	[self.view addSubview:self.horizontalView];
 }
@@ -79,17 +70,17 @@
 															action:@selector(handleTap:)];
 	[self.horizontalView addGestureRecognizer:panRecognizer];
 	[self.horizontalView addGestureRecognizer:tapRecognizer];
-	
-	[self.horizontalView addObserver:self
-						  forKeyPath:kCurrentIndex
-							 options:NSKeyValueObservingOptionInitial
-							 context:nil];
+//	
+//	[self.horizontalView addObserver:self
+//						  forKeyPath:kCurrentIndex
+//							 options:NSKeyValueObservingOptionInitial
+//							 context:nil];
 }
 
 - (void)dealloc
 {
-    [self.horizontalView removeObserver:self
-							 forKeyPath:kCurrentIndex];
+//    [self.horizontalView removeObserver:self
+//							 forKeyPath:kCurrentIndex];
 }
 
 #pragma mark - Handling Gestures
@@ -131,6 +122,12 @@
 	[CATransaction commit];
 }
 
+- (void)setSDelegate:(id<SliderDelegate>)sDelegate
+{
+    self.horizontalView.sDelegate = sDelegate;
+    _sDelegate = sDelegate;
+}
+
 - (void)handleTap:(UITapGestureRecognizer*)recognizer
 {
 	CGPoint position;
@@ -143,20 +140,20 @@
 }
 
 #pragma mark - KVO
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-	if (object == self.horizontalView &&
-		[keyPath isEqualToString:kCurrentIndex])
-	{
-		[self handleTaskStatusWithValue:(double)self.horizontalView.currentIndex];
-	}
-	else {
-		[super observeValueForKeyPath:keyPath
-							 ofObject:object
-							   change:change
-							  context:context];
-	}
-}
+//
+//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+//{
+//	if (object == self.horizontalView &&
+//		[keyPath isEqualToString:kCurrentIndex])
+//	{
+//		[self handleTaskStatusWithValue:(double)self.horizontalView.currentIndex];
+//	}
+//	else {
+//		[super observeValueForKeyPath:keyPath
+//							 ofObject:object
+//							   change:change
+//							  context:context];
+//	}
+//}
 
 @end

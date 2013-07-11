@@ -10,4 +10,6 @@
 
 @implementation SHIconWithTitle
 
+//intentionally left blank
+
 @end

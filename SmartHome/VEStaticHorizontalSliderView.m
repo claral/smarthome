@@ -7,9 +7,6 @@
 //
 
 #import "VEStaticHorizontalSliderView.h"
-#import "UIImage+Extensions.h"
-#import "NSString+BHExtensions.h"
-#import "NSURL+IconName.h"
 
 #define padding 7.0f
 #define needleRectPadding 3.0f
@@ -126,6 +123,8 @@
 	if (self.currentIndex == oldIndex) {
 		self.needleLayer.position = [self positionOfIndex:self.currentIndex];
 	}
+    
+    [self.sDelegate sliderDidMoveTo:self.currentIndex];
 }
 
 #pragma mark - Helpers
@@ -207,10 +206,10 @@
 	CALayer *itemLayer;
 	CATextLayer *titleLayer;
 	CALayer *imageLayer;
-	NSURL *itemURL;
 	CGFloat titleHeight;
-	
-	itemURL = [self.items objectAtIndex:index];
+	SHIconWithTitle *icon;
+    
+	icon = [self.items objectAtIndex:index];
 	itemLayer = [CALayer layer];
 	
 	itemLayer.frame = [self frameForItemAtIndex:index];
@@ -224,15 +223,14 @@
 								  titleHeight);
 	[titleLayer setContentsScale:[[UIScreen mainScreen] scale]];
 	[titleLayer setFont:@"Helvetica"];
-//	[titleLayer setString:[itemURL iconName]];
-	[titleLayer setFontSize:[titleLayer.string fontSizeForSize:titleLayer.frame.size
-														  font:nil]];
+	
+    [titleLayer setString:icon.title];
+	[titleLayer setFontSize:8.0f];
 	[titleLayer setAlignmentMode:kCAAlignmentCenter];
 	[titleLayer setForegroundColor:[[UIColor blackColor] CGColor]];
 	
 	imageLayer = [CALayer layer];
-	UIImage *croppedImageToFit;
-	croppedImageToFit = [UIImage imageRetinaWithContentsOfFile:itemURL.path];
+	UIImage *croppedImageToFit = icon.icon; //TODO resize das UIImage icon.icon!
 
 	imageLayer.contentsScale = [[UIScreen mainScreen] scale];
 
