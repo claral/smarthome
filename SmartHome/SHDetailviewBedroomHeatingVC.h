@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SHDetailviewBedroomHeatingVC : UIViewController
+@interface SHDetailviewBedroomHeatingVC : UIViewController<UIPickerViewDelegate, UIPickerViewDataSource>
 
 - (IBAction)backToSH:(id)sender;
 - (IBAction)closeDetailView:(id)sender;
