@@ -36,15 +36,45 @@
     self.svc.sDelegate = self;
     
     SHIconWithTitle *icon1 = [[SHIconWithTitle alloc] init];
-    icon1.icon = [UIImage imageNamed:@"oven.png"];
-    icon1.title = @"asdfhkjkj";
+    icon1.icon = [UIImage imageNamed:@"01-Espresso"];
+    icon1.title = @"Espresso";
     
-    self.svc.icons = [[NSArray alloc] initWithObjects:icon1, icon1, nil];
+    SHIconWithTitle *icon2 = [[SHIconWithTitle alloc] init];
+    icon2.icon = [UIImage imageNamed:@"02-Espresso-Doppio"];
+    icon2.title = @"Espresso-Doppio";
+    
+    SHIconWithTitle *icon3 = [[SHIconWithTitle alloc] init];
+    icon3.icon = [UIImage imageNamed:@"03-Kaffee"];
+    icon3.title = @"Kaffee";
+    
+    SHIconWithTitle *icon4 = [[SHIconWithTitle alloc] init];
+    icon4.icon = [UIImage imageNamed:@"04-Cappuccino"];
+    icon4.title = @"Cappuccino";
+    
+    SHIconWithTitle *icon5 = [[SHIconWithTitle alloc] init];
+    icon5.icon = [UIImage imageNamed:@"05-Latte-Macchiato"];
+    icon5.title = @"Latte Macchiato";
+    
+    SHIconWithTitle *icon6 = [[SHIconWithTitle alloc] init];
+    icon6.icon = [UIImage imageNamed:@"07-Milchkaffee"];
+    icon6.title = @"Milchkaffee";
+    
+    SHIconWithTitle *icon7 = [[SHIconWithTitle alloc] init];
+    icon7.icon = [UIImage imageNamed:@"07-Warme-Milch"];
+    icon7.title = @"Warme Milch";
+    
+    SHIconWithTitle *icon8 = [[SHIconWithTitle alloc] init];
+    icon8.icon = [UIImage imageNamed:@"08-Heisses-Wasser"];
+    icon8.title = @"Heisses Wasser";
+    
+    self.svc.icons = [[NSArray alloc] initWithObjects:icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, nil];
     
     UIView *sliderView = self.svc.view;
     
-    [sliderView setBounds:CGRectMake(0, 30, sliderView.frame.size.width, sliderView.frame.size.height)];
-    [self.view addSubview:sliderView];
+    [sliderView setBounds:CGRectMake(-100, 80, sliderView.frame.size.width, sliderView.frame.size.height)];
+    //[self.view addSubview:sliderView];
+    //[self.view sendSubviewToBack:sliderView];
+    [self.view insertSubview:sliderView atIndex:0];
     
     // Do any additional setup after loading the view from its nib.
 }

@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Institute of Ergonomics. All rights reserved.
 //
 
-#import "VEAbstractControlViewController.h"
+//#import "VEAbstractControlViewController.h"
 #import "SHIconWithTitle.h"
 #import "VEStaticHorizontalSliderView.h"
 #import <QuartzCore/QuartzCore.h>

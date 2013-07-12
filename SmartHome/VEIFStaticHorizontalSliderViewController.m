@@ -122,11 +122,6 @@
 	[CATransaction commit];
 }
 
-- (void)setSDelegate:(id<SliderDelegate>)sDelegate
-{
-    self.horizontalView.sDelegate = sDelegate;
-    _sDelegate = sDelegate;
-}
 
 - (void)handleTap:(UITapGestureRecognizer*)recognizer
 {
@@ -134,9 +129,15 @@
 	
 	position = [recognizer locationInView:self.horizontalView];
 	position.y = self.horizontalView.needleLayer.position.y;
-	
+    
 	self.horizontalView.needleLayer.position = position;
 	[self.horizontalView snapNeedleToNearestItem];
+}
+
+- (void)setSDelegate:(id<SliderDelegate>)sDelegate
+{
+    self.horizontalView.sDelegate = sDelegate;
+    _sDelegate = sDelegate;
 }
 
 #pragma mark - KVO

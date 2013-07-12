@@ -25,6 +25,22 @@
 		42DC8560178F3B55002EC3F7 /* VEIFStaticHorizontalSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DC855D178F3B53002EC3F7 /* VEIFStaticHorizontalSliderViewController.m */; };
 		42DC8561178F3B55002EC3F7 /* VEStaticHorizontalSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DC855F178F3B54002EC3F7 /* VEStaticHorizontalSliderView.m */; };
 		42DC8565178F3EC7002EC3F7 /* SHIconWithTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DC8564178F3EC7002EC3F7 /* SHIconWithTitle.m */; };
+		42ED3E6F179000360072D039 /* 01-Espresso.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ED3E5F179000360072D039 /* 01-Espresso.png */; };
+		42ED3E70179000360072D039 /* 01-Espresso@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ED3E60179000360072D039 /* 01-Espresso@2x.png */; };
+		42ED3E71179000360072D039 /* 02-Espresso-Doppio.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ED3E61179000360072D039 /* 02-Espresso-Doppio.png */; };
+		42ED3E72179000360072D039 /* 02-Espresso-Doppio@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ED3E62179000360072D039 /* 02-Espresso-Doppio@2x.png */; };
+		42ED3E73179000360072D039 /* 03-Kaffee.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ED3E63179000360072D039 /* 03-Kaffee.png */; };
+		42ED3E74179000360072D039 /* 03-Kaffee@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ED3E64179000360072D039 /* 03-Kaffee@2x.png */; };
+		42ED3E75179000360072D039 /* 04-Cappuccino.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ED3E65179000360072D039 /* 04-Cappuccino.png */; };
+		42ED3E76179000360072D039 /* 04-Cappuccino@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ED3E66179000360072D039 /* 04-Cappuccino@2x.png */; };
+		42ED3E77179000360072D039 /* 05-Latte-Macchiato.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ED3E67179000360072D039 /* 05-Latte-Macchiato.png */; };
+		42ED3E78179000360072D039 /* 05-Latte-Macchiato@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ED3E68179000360072D039 /* 05-Latte-Macchiato@2x.png */; };
+		42ED3E79179000360072D039 /* 07-Milchkaffee.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ED3E69179000360072D039 /* 07-Milchkaffee.png */; };
+		42ED3E7A179000360072D039 /* 07-Milchkaffee@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ED3E6A179000360072D039 /* 07-Milchkaffee@2x.png */; };
+		42ED3E7B179000360072D039 /* 07-Warme-Milch.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ED3E6B179000360072D039 /* 07-Warme-Milch.png */; };
+		42ED3E7C179000360072D039 /* 07-Warme-Milch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ED3E6C179000360072D039 /* 07-Warme-Milch@2x.png */; };
+		42ED3E7D179000360072D039 /* 08-Heisses-Wasser.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ED3E6D179000360072D039 /* 08-Heisses-Wasser.png */; };
+		42ED3E7E179000360072D039 /* 08-Heisses-Wasser@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ED3E6E179000360072D039 /* 08-Heisses-Wasser@2x.png */; };
 		EB012E0B1767504C0069681A /* SH_PIC_wholehouse.png in Resources */ = {isa = PBXBuildFile; fileRef = EB012E0A1767504C0069681A /* SH_PIC_wholehouse.png */; };
 		EB180A8A17686B6C00FEB253 /* SHDetailviewLivingroomLightVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EB180A8817686B6C00FEB253 /* SHDetailviewLivingroomLightVC.m */; };
 		EB180A8B17686B6C00FEB253 /* SHDetailviewLivingroomLightVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB180A8917686B6C00FEB253 /* SHDetailviewLivingroomLightVC.xib */; };
@@ -131,6 +147,22 @@
 		42DC855F178F3B54002EC3F7 /* VEStaticHorizontalSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VEStaticHorizontalSliderView.m; sourceTree = "<group>"; };
 		42DC8563178F3EC7002EC3F7 /* SHIconWithTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHIconWithTitle.h; sourceTree = "<group>"; };
 		42DC8564178F3EC7002EC3F7 /* SHIconWithTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHIconWithTitle.m; sourceTree = "<group>"; };
+		42ED3E5F179000360072D039 /* 01-Espresso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-Espresso.png"; sourceTree = "<group>"; };
+		42ED3E60179000360072D039 /* 01-Espresso@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-Espresso@2x.png"; sourceTree = "<group>"; };
+		42ED3E61179000360072D039 /* 02-Espresso-Doppio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "02-Espresso-Doppio.png"; sourceTree = "<group>"; };
+		42ED3E62179000360072D039 /* 02-Espresso-Doppio@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "02-Espresso-Doppio@2x.png"; sourceTree = "<group>"; };
+		42ED3E63179000360072D039 /* 03-Kaffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "03-Kaffee.png"; sourceTree = "<group>"; };
+		42ED3E64179000360072D039 /* 03-Kaffee@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "03-Kaffee@2x.png"; sourceTree = "<group>"; };
+		42ED3E65179000360072D039 /* 04-Cappuccino.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "04-Cappuccino.png"; sourceTree = "<group>"; };
+		42ED3E66179000360072D039 /* 04-Cappuccino@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "04-Cappuccino@2x.png"; sourceTree = "<group>"; };
+		42ED3E67179000360072D039 /* 05-Latte-Macchiato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "05-Latte-Macchiato.png"; sourceTree = "<group>"; };
+		42ED3E68179000360072D039 /* 05-Latte-Macchiato@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "05-Latte-Macchiato@2x.png"; sourceTree = "<group>"; };
+		42ED3E69179000360072D039 /* 07-Milchkaffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "07-Milchkaffee.png"; sourceTree = "<group>"; };
+		42ED3E6A179000360072D039 /* 07-Milchkaffee@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "07-Milchkaffee@2x.png"; sourceTree = "<group>"; };
+		42ED3E6B179000360072D039 /* 07-Warme-Milch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "07-Warme-Milch.png"; sourceTree = "<group>"; };
+		42ED3E6C179000360072D039 /* 07-Warme-Milch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "07-Warme-Milch@2x.png"; sourceTree = "<group>"; };
+		42ED3E6D179000360072D039 /* 08-Heisses-Wasser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "08-Heisses-Wasser.png"; sourceTree = "<group>"; };
+		42ED3E6E179000360072D039 /* 08-Heisses-Wasser@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "08-Heisses-Wasser@2x.png"; sourceTree = "<group>"; };
 		EB012E0A1767504C0069681A /* SH_PIC_wholehouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_PIC_wholehouse.png; sourceTree = "<group>"; };
 		EB180A8717686B6C00FEB253 /* SHDetailviewLivingroomLightVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDetailviewLivingroomLightVC.h; sourceTree = "<group>"; };
 		EB180A8817686B6C00FEB253 /* SHDetailviewLivingroomLightVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDetailviewLivingroomLightVC.m; sourceTree = "<group>"; };
@@ -261,10 +293,6 @@
 		421CA57E173AC4CB004AE723 = {
 			isa = PBXGroup;
 			children = (
-				42DC855A178F2FFF002EC3F7 /* AudioToolbox.framework */,
-				42DC8558178F2FD6002EC3F7 /* QuartzCore.framework */,
-				42DC8556178F2FC5002EC3F7 /* CoreData.framework */,
-				42DC8554178F2FBB002EC3F7 /* CoreAudio.framework */,
 				421CA590173AC4CB004AE723 /* SmartHome */,
 				421CA589173AC4CB004AE723 /* Frameworks */,
 				421CA588173AC4CB004AE723 /* Products */,
@@ -282,6 +310,10 @@
 		421CA589173AC4CB004AE723 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42DC855A178F2FFF002EC3F7 /* AudioToolbox.framework */,
+				42DC8558178F2FD6002EC3F7 /* QuartzCore.framework */,
+				42DC8556178F2FC5002EC3F7 /* CoreData.framework */,
+				42DC8554178F2FBB002EC3F7 /* CoreAudio.framework */,
 				421CA58A173AC4CB004AE723 /* UIKit.framework */,
 				421CA58C173AC4CB004AE723 /* Foundation.framework */,
 				421CA58E173AC4CB004AE723 /* CoreGraphics.framework */,
@@ -356,6 +388,29 @@
 			name = StaticHorizontalSlider;
 			sourceTree = "<group>";
 		};
+		42ED3E5E178FFFFC0072D039 /* Kaffeemaschine */ = {
+			isa = PBXGroup;
+			children = (
+				42ED3E5F179000360072D039 /* 01-Espresso.png */,
+				42ED3E60179000360072D039 /* 01-Espresso@2x.png */,
+				42ED3E61179000360072D039 /* 02-Espresso-Doppio.png */,
+				42ED3E62179000360072D039 /* 02-Espresso-Doppio@2x.png */,
+				42ED3E63179000360072D039 /* 03-Kaffee.png */,
+				42ED3E64179000360072D039 /* 03-Kaffee@2x.png */,
+				42ED3E65179000360072D039 /* 04-Cappuccino.png */,
+				42ED3E66179000360072D039 /* 04-Cappuccino@2x.png */,
+				42ED3E67179000360072D039 /* 05-Latte-Macchiato.png */,
+				42ED3E68179000360072D039 /* 05-Latte-Macchiato@2x.png */,
+				42ED3E69179000360072D039 /* 07-Milchkaffee.png */,
+				42ED3E6A179000360072D039 /* 07-Milchkaffee@2x.png */,
+				42ED3E6B179000360072D039 /* 07-Warme-Milch.png */,
+				42ED3E6C179000360072D039 /* 07-Warme-Milch@2x.png */,
+				42ED3E6D179000360072D039 /* 08-Heisses-Wasser.png */,
+				42ED3E6E179000360072D039 /* 08-Heisses-Wasser@2x.png */,
+			);
+			name = Kaffeemaschine;
+			sourceTree = "<group>";
+		};
 		EB012E08176750250069681A /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,6 +428,7 @@
 		EB012E091767502E0069681A /* Icon */ = {
 			isa = PBXGroup;
 			children = (
+				42ED3E5E178FFFFC0072D039 /* Kaffeemaschine */,
 				EBD258EE178D4F2E00EC0342 /* SH_ICON_alarm.png */,
 				EBD258EF178D4F2E00EC0342 /* SH_ICON_coffee.png */,
 				EBD258F0178D4F2E00EC0342 /* SH_ICON_fridge.png */,
@@ -605,6 +661,22 @@
 				EBD25900178D4F2E00EC0342 /* SH_ICON_tv.png in Resources */,
 				EBD25901178D4F2E00EC0342 /* SH_ICON_whirlpool.png in Resources */,
 				EB8E0419178D822A00997928 /* SH_NAVI_base6.png in Resources */,
+				42ED3E6F179000360072D039 /* 01-Espresso.png in Resources */,
+				42ED3E70179000360072D039 /* 01-Espresso@2x.png in Resources */,
+				42ED3E71179000360072D039 /* 02-Espresso-Doppio.png in Resources */,
+				42ED3E72179000360072D039 /* 02-Espresso-Doppio@2x.png in Resources */,
+				42ED3E73179000360072D039 /* 03-Kaffee.png in Resources */,
+				42ED3E74179000360072D039 /* 03-Kaffee@2x.png in Resources */,
+				42ED3E75179000360072D039 /* 04-Cappuccino.png in Resources */,
+				42ED3E76179000360072D039 /* 04-Cappuccino@2x.png in Resources */,
+				42ED3E77179000360072D039 /* 05-Latte-Macchiato.png in Resources */,
+				42ED3E78179000360072D039 /* 05-Latte-Macchiato@2x.png in Resources */,
+				42ED3E79179000360072D039 /* 07-Milchkaffee.png in Resources */,
+				42ED3E7A179000360072D039 /* 07-Milchkaffee@2x.png in Resources */,
+				42ED3E7B179000360072D039 /* 07-Warme-Milch.png in Resources */,
+				42ED3E7C179000360072D039 /* 07-Warme-Milch@2x.png in Resources */,
+				42ED3E7D179000360072D039 /* 08-Heisses-Wasser.png in Resources */,
+				42ED3E7E179000360072D039 /* 08-Heisses-Wasser@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
