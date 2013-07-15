@@ -216,22 +216,23 @@
 	
 	titleLayer = [CATextLayer layer];
 	
-	titleHeight = 20.0f;
+	titleHeight = 30.0f; //20.0f Platz fuer Schrift
 	titleLayer.frame = CGRectMake(padding,
-								  itemLayer.frame.size.height - titleHeight - padding,
+								  itemLayer.frame.size.height - titleHeight - padding + 40.0f,
 								  itemLayer.frame.size.width - 2 * padding,
-								  titleHeight);
+								  titleHeight); //33 Abstand zum Bild
 	[titleLayer setContentsScale:[[UIScreen mainScreen] scale]];
 	[titleLayer setFont:@"Helvetica"];
 	
     [titleLayer setString:icon.title];
-	[titleLayer setFontSize:8.0f];
+	[titleLayer setFontSize:10.0f]; //8.0f Schriftgroesse
 	[titleLayer setAlignmentMode:kCAAlignmentCenter];
 	[titleLayer setForegroundColor:[[UIColor blackColor] CGColor]];
 	
 	imageLayer = [CALayer layer];
 	UIImage *croppedImageToFit = icon.icon; //TODO resize das UIImage icon.icon!
-
+    
+    
 	imageLayer.contentsScale = [[UIScreen mainScreen] scale];
 
 	imageLayer.frame = CGRectMake(0.5 * itemLayer.frame.size.width - 0.5 * croppedImageToFit.size.width,

@@ -41,7 +41,7 @@
     
     SHIconWithTitle *icon2 = [[SHIconWithTitle alloc] init];
     icon2.icon = [UIImage imageNamed:@"02-Espresso-Doppio"];
-    icon2.title = @"Espresso-Doppio";
+    icon2.title = @"Doppio";
     
     SHIconWithTitle *icon3 = [[SHIconWithTitle alloc] init];
     icon3.icon = [UIImage imageNamed:@"03-Kaffee"];

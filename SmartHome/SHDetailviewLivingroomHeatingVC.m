@@ -10,6 +10,8 @@
 
 @interface SHDetailviewLivingroomHeatingVC ()
 
+@property (strong) VEIFStaticHorizontalSliderViewController *svc;
+
 @end
 
 @implementation SHDetailviewLivingroomHeatingVC
@@ -27,6 +29,37 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.svc =
+    [[VEIFStaticHorizontalSliderViewController alloc] init];
+    self.svc.sDelegate = self;
+    
+    SHIconWithTitle *icon1 = [[SHIconWithTitle alloc] init];
+    icon1.icon = [UIImage imageNamed:@"Heizung-Frost"];
+    icon1.title = @"Anti-Frost";
+    
+    SHIconWithTitle *icon2 = [[SHIconWithTitle alloc] init];
+    icon2.icon = [UIImage imageNamed:@"Heizung-Manuell"];
+    icon2.title = @"Manuell ..";
+    
+    SHIconWithTitle *icon3 = [[SHIconWithTitle alloc] init];
+    icon3.icon = [UIImage imageNamed:@"Heizung-Nacht"];
+    icon3.title = @"Nacht";
+    
+    SHIconWithTitle *icon4 = [[SHIconWithTitle alloc] init];
+    icon4.icon = [UIImage imageNamed:@"Heizung-Tag"];
+    icon4.title = @"Tag";
+    
+    self.svc.icons = [[NSArray alloc] initWithObjects:icon1, icon2, icon3, icon4, nil];
+    
+    UIView *sliderView = self.svc.view;
+    
+    [sliderView setBounds:CGRectMake(-100, 80, sliderView.frame.size.width, sliderView.frame.size.height)];
+    //[self.view addSubview:sliderView];
+    //[self.view sendSubviewToBack:sliderView];
+    [self.view insertSubview:sliderView atIndex:0];
+
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,4 +78,10 @@
     [self.presentingViewController.presentingViewController dismissViewControllerAnimated:NO completion:nil];
     // TODO: wirklich alle Views dismissed?
 }
+
+- (void)sliderDidMoveTo:(NSInteger)index
+{
+    NSLog(@"Selected Item = %i", index);
+}
+
 @end

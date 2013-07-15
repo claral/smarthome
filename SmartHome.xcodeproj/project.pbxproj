@@ -18,6 +18,9 @@
 		421CA5A1173AC4CB004AE723 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 421CA5A0173AC4CB004AE723 /* Default-568h@2x.png */; };
 		421CA5A4173AC4CB004AE723 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421CA5A2173AC4CB004AE723 /* MainStoryboard.storyboard */; };
 		421CA5A7173AC4CB004AE723 /* SHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421CA5A6173AC4CB004AE723 /* SHViewController.m */; };
+		42A5C1B21792B49200E868F2 /* Bubble2.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A5C1AF1792B49200E868F2 /* Bubble2.png */; };
+		42A5C1B31792B49200E868F2 /* Bubble3.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A5C1B01792B49200E868F2 /* Bubble3.png */; };
+		42A5C1B51792B4DC00E868F2 /* Bubble1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A5C1B41792B4DC00E868F2 /* Bubble1.png */; };
 		42DC8555178F2FBB002EC3F7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DC8554178F2FBB002EC3F7 /* CoreAudio.framework */; };
 		42DC8557178F2FC6002EC3F7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DC8556178F2FC5002EC3F7 /* CoreData.framework */; };
 		42DC8559178F2FD6002EC3F7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DC8558178F2FD6002EC3F7 /* QuartzCore.framework */; };
@@ -41,6 +44,10 @@
 		42ED3E7C179000360072D039 /* 07-Warme-Milch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ED3E6C179000360072D039 /* 07-Warme-Milch@2x.png */; };
 		42ED3E7D179000360072D039 /* 08-Heisses-Wasser.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ED3E6D179000360072D039 /* 08-Heisses-Wasser.png */; };
 		42ED3E7E179000360072D039 /* 08-Heisses-Wasser@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42ED3E6E179000360072D039 /* 08-Heisses-Wasser@2x.png */; };
+		42F6542D17943D4900703148 /* Heizung-Frost.png in Resources */ = {isa = PBXBuildFile; fileRef = 42F6542917943D4900703148 /* Heizung-Frost.png */; };
+		42F6542F17943D4900703148 /* Heizung-Nacht.png in Resources */ = {isa = PBXBuildFile; fileRef = 42F6542B17943D4900703148 /* Heizung-Nacht.png */; };
+		42F6543017943D4900703148 /* Heizung-Tag.png in Resources */ = {isa = PBXBuildFile; fileRef = 42F6542C17943D4900703148 /* Heizung-Tag.png */; };
+		42F6543417943EF400703148 /* Heizung-Manuell.png in Resources */ = {isa = PBXBuildFile; fileRef = 42F6543317943EF400703148 /* Heizung-Manuell.png */; };
 		EB012E0B1767504C0069681A /* SH_PIC_wholehouse.png in Resources */ = {isa = PBXBuildFile; fileRef = EB012E0A1767504C0069681A /* SH_PIC_wholehouse.png */; };
 		EB180A8A17686B6C00FEB253 /* SHDetailviewLivingroomLightVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EB180A8817686B6C00FEB253 /* SHDetailviewLivingroomLightVC.m */; };
 		EB180A8B17686B6C00FEB253 /* SHDetailviewLivingroomLightVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB180A8917686B6C00FEB253 /* SHDetailviewLivingroomLightVC.xib */; };
@@ -137,6 +144,9 @@
 		421CA5A3173AC4CB004AE723 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		421CA5A5173AC4CB004AE723 /* SHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHViewController.h; sourceTree = "<group>"; };
 		421CA5A6173AC4CB004AE723 /* SHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHViewController.m; sourceTree = "<group>"; };
+		42A5C1AF1792B49200E868F2 /* Bubble2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bubble2.png; sourceTree = "<group>"; };
+		42A5C1B01792B49200E868F2 /* Bubble3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bubble3.png; sourceTree = "<group>"; };
+		42A5C1B41792B4DC00E868F2 /* Bubble1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bubble1.png; sourceTree = "<group>"; };
 		42DC8554178F2FBB002EC3F7 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		42DC8556178F2FC5002EC3F7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		42DC8558178F2FD6002EC3F7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -163,6 +173,10 @@
 		42ED3E6C179000360072D039 /* 07-Warme-Milch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "07-Warme-Milch@2x.png"; sourceTree = "<group>"; };
 		42ED3E6D179000360072D039 /* 08-Heisses-Wasser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "08-Heisses-Wasser.png"; sourceTree = "<group>"; };
 		42ED3E6E179000360072D039 /* 08-Heisses-Wasser@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "08-Heisses-Wasser@2x.png"; sourceTree = "<group>"; };
+		42F6542917943D4900703148 /* Heizung-Frost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Heizung-Frost.png"; sourceTree = "<group>"; };
+		42F6542B17943D4900703148 /* Heizung-Nacht.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Heizung-Nacht.png"; sourceTree = "<group>"; };
+		42F6542C17943D4900703148 /* Heizung-Tag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Heizung-Tag.png"; sourceTree = "<group>"; };
+		42F6543317943EF400703148 /* Heizung-Manuell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Heizung-Manuell.png"; sourceTree = "<group>"; };
 		EB012E0A1767504C0069681A /* SH_PIC_wholehouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_PIC_wholehouse.png; sourceTree = "<group>"; };
 		EB180A8717686B6C00FEB253 /* SHDetailviewLivingroomLightVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDetailviewLivingroomLightVC.h; sourceTree = "<group>"; };
 		EB180A8817686B6C00FEB253 /* SHDetailviewLivingroomLightVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDetailviewLivingroomLightVC.m; sourceTree = "<group>"; };
@@ -375,6 +389,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		42A5C1A51792AE6700E868F2 /* Whirlpool */ = {
+			isa = PBXGroup;
+			children = (
+				42A5C1B41792B4DC00E868F2 /* Bubble1.png */,
+				42A5C1AF1792B49200E868F2 /* Bubble2.png */,
+				42A5C1B01792B49200E868F2 /* Bubble3.png */,
+			);
+			name = Whirlpool;
+			sourceTree = "<group>";
+		};
 		42DC8562178F3B5D002EC3F7 /* StaticHorizontalSlider */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,6 +435,17 @@
 			name = Kaffeemaschine;
 			sourceTree = "<group>";
 		};
+		42F6542817943D3B00703148 /* Heizung */ = {
+			isa = PBXGroup;
+			children = (
+				42F6543317943EF400703148 /* Heizung-Manuell.png */,
+				42F6542917943D4900703148 /* Heizung-Frost.png */,
+				42F6542B17943D4900703148 /* Heizung-Nacht.png */,
+				42F6542C17943D4900703148 /* Heizung-Tag.png */,
+			);
+			name = Heizung;
+			sourceTree = "<group>";
+		};
 		EB012E08176750250069681A /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
@@ -428,6 +463,8 @@
 		EB012E091767502E0069681A /* Icon */ = {
 			isa = PBXGroup;
 			children = (
+				42F6542817943D3B00703148 /* Heizung */,
+				42A5C1A51792AE6700E868F2 /* Whirlpool */,
 				42ED3E5E178FFFFC0072D039 /* Kaffeemaschine */,
 				EBD258EE178D4F2E00EC0342 /* SH_ICON_alarm.png */,
 				EBD258EF178D4F2E00EC0342 /* SH_ICON_coffee.png */,
@@ -677,6 +714,13 @@
 				42ED3E7C179000360072D039 /* 07-Warme-Milch@2x.png in Resources */,
 				42ED3E7D179000360072D039 /* 08-Heisses-Wasser.png in Resources */,
 				42ED3E7E179000360072D039 /* 08-Heisses-Wasser@2x.png in Resources */,
+				42A5C1B21792B49200E868F2 /* Bubble2.png in Resources */,
+				42A5C1B31792B49200E868F2 /* Bubble3.png in Resources */,
+				42A5C1B51792B4DC00E868F2 /* Bubble1.png in Resources */,
+				42F6542D17943D4900703148 /* Heizung-Frost.png in Resources */,
+				42F6542F17943D4900703148 /* Heizung-Nacht.png in Resources */,
+				42F6543017943D4900703148 /* Heizung-Tag.png in Resources */,
+				42F6543417943EF400703148 /* Heizung-Manuell.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

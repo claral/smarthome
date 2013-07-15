@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VEIFStaticHorizontalSliderViewController.h"
 
-@interface SHDetailviewLivingroomHeatingVC : UIViewController
+
+@interface SHDetailviewLivingroomHeatingVC : UIViewController <SliderDelegate>
 - (IBAction)closeDetailView:(id)sender;
 - (IBAction)backToSH:(id)sender;
 

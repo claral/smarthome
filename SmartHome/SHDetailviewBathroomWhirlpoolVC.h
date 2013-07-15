@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VEIFStaticHorizontalSliderViewController.h"
 
-@interface SHDetailviewBathroomWhirlpoolVC : UIViewController
+
+@interface SHDetailviewBathroomWhirlpoolVC : UIViewController <SliderDelegate>
 - (IBAction)backToSH:(id)sender;
 - (IBAction)closeDetailView:(id)sender;
 @end
