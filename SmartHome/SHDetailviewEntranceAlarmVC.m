@@ -9,6 +9,7 @@
 #import "SHDetailviewEntranceAlarmVC.h"
 
 @interface SHDetailviewEntranceAlarmVC ()
+- (IBAction)buttonOKAlarm:(id)sender;
 
 @end
 
@@ -72,4 +73,18 @@
     // TODO: wirklich alle Views dismissed?
 }
 
+- (IBAction)buttonOKAlarm:(id)sender
+{
+    // PW: 1234
+    
+    if ([self.labelAlarmCode.text isEqual: @"1234"])
+    {
+        NSLog(@"password ok");
+        UIAlertView *messagePWOK = [[UIAlertView alloc] initWithTitle:@"PW OK" message:@"Das Passwort wurde richtig eingegeben." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [messagePWOK show];
+    } else {
+        UIAlertView *messagePWNotOK = [[UIAlertView alloc] initWithTitle:@"PW NICHT OK" message:@"Das Passwort wurde nicht richtig eingegeben. Bitte versuchen Sie es erneut." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [messagePWNotOK show];
+    }
+}
 @end

@@ -13,6 +13,7 @@
 @interface SHDetailviewKitchenCoffeeVC ()
 
 @property (strong) VEIFStaticHorizontalSliderViewController *svc;
+- (IBAction)buttonStartCoffee:(id)sender;
 
 @end
 
@@ -99,6 +100,12 @@
 - (void)sliderDidMoveTo:(NSInteger)index
 {
     NSLog(@"Selected Item = %i", index);
+}
+
+- (IBAction)buttonStartCoffee:(id)sender
+{
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Kaffeezubereitung" message:@"3...2...1...FERTIG!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [message show];
 }
 
 @end
