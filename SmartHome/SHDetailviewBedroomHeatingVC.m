@@ -25,16 +25,20 @@
         
         // init array
          self.heatingWheelItems = [[NSArray alloc] initWithObjects:@"15° Celsius", @"16° Celsius", @"17° Celsius", @"18° Celsius", @"19° Celsius", @"20° Celsius", @"21° Celsius", @"22° Celsius", @"23° Celsius", @"24° Celsius", @"25° Celsius", nil];
-        [self.heatingWheel selectRow:1 inComponent:0 animated:NO];
         
-        /*// storage of temperature
-        //NSInteger currentCelsius = self.currentHeatingValue;
-        //currentCelsius = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentCelsius"] integerValue];
-        
-        NSNumber *currentCelsius = [NSNumber numberWithInt:self.currentHeatingValue];
-        currentCelsius = [[NSUserDefaults standardUserDefaults] valueForKey:@"currentCelsius"];*/
     }
     return self;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    // reading stored temperature
+    self.currentHeatingValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentHeatingValue"] integerValue];
+    // reading stored row
+    int currRow = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentRowValue"] integerValue];
+    [self.heatingWheel selectRow:currRow inComponent:0 animated:NO];
 }
 
 - (void)viewDidLoad
@@ -112,8 +116,10 @@
         self.currentHeatingValue = 25;
     }
     
-    //NSString *object = [self.heatingWheelItems objectAtIndex:row];
-    //NSLog(@"%@", object);
+    // storage of temperature
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentHeatingValue] forKey:@"currentHeatingValue"];
+    // storage of row
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:row] forKey:@"currentRowValue"];
 }
 
 @end
