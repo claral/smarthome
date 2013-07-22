@@ -48,10 +48,10 @@
         self.userInteractionEnabled = NO;
         self.clipsToBounds = YES;
         self.backgroundColor = [UIColor blackColor];
-        self.textColor = [UIColor redColor]; // Text vom ausgewaehltem Feld
-        self.textShadowColor = [UIColor grayColor];
+        self.textColor = [UIColor cyanColor]; // Text vom ausgewaehltem Feld
+        self.textShadowColor = [UIColor blackColor];
         self.textShadowOffset = CGSizeMake(0, -1);
-        self.tintColor = [UIColor greenColor]; // ausgewaehltes Feld
+        self.tintColor = [UIColor grayColor]; // ausgewaehltes Feld
         self.shouldCastShadow = YES;
         self.backgroundColor = [UIColor clearColor];
         self.gradientIntensity = 0.15;

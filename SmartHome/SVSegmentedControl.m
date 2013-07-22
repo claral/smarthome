@@ -68,7 +68,7 @@
         self.accessibilityElements = [NSMutableArray arrayWithCapacity:self.sectionTitles.count];
         
         self.backgroundColor = [UIColor clearColor];
-        self.backgroundTintColor = [UIColor colorWithWhite:0 alpha:0.5]; //alpha:0.5; Veraendert die Intensity von Hintergrundflaeche
+        self.backgroundTintColor = [UIColor colorWithWhite:0 alpha:0.2]; //alpha:0.5; Veraendert die Intensity von Hintergrundflaeche
         self.clipsToBounds = YES;
         self.userInteractionEnabled = YES;
         self.animateToInitialSelection = NO;
@@ -77,13 +77,13 @@
         self.minimumOverlapToChange = 0.66;
         
         self.font = [UIFont boldSystemFontOfSize:15];
-        self.textColor = [UIColor orangeColor]; // Text von Hintergrund
-        self.textShadowColor = [UIColor purpleColor];
+        self.textColor = [UIColor whiteColor]; // Text von Hintergrund
+        self.textShadowColor = [UIColor grayColor]; //Schatten vom Text
         self.textShadowOffset = CGSizeMake(0, -1);
         
         self.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 10);
         self.thumbEdgeInset = UIEdgeInsetsMake(2, 2, 3, 2);
-        self.height = 32.0;
+        self.height = 45.0; //32.0; Hoehe des Buttons
         self.cornerRadius = 4.0;
         
         self.selectedSegmentIndex = 0;

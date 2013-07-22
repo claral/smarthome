@@ -18,6 +18,8 @@
 		421CA5A1173AC4CB004AE723 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 421CA5A0173AC4CB004AE723 /* Default-568h@2x.png */; };
 		421CA5A4173AC4CB004AE723 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421CA5A2173AC4CB004AE723 /* MainStoryboard.storyboard */; };
 		421CA5A7173AC4CB004AE723 /* SHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421CA5A6173AC4CB004AE723 /* SHViewController.m */; };
+		42811FA8179D40160072D7B5 /* SVSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 42811FA5179D40160072D7B5 /* SVSegmentedControl.m */; };
+		42811FA9179D40160072D7B5 /* SVSegmentedThumb.m in Sources */ = {isa = PBXBuildFile; fileRef = 42811FA7179D40160072D7B5 /* SVSegmentedThumb.m */; };
 		42A5C1B21792B49200E868F2 /* Bubble2.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A5C1AF1792B49200E868F2 /* Bubble2.png */; };
 		42A5C1B31792B49200E868F2 /* Bubble3.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A5C1B01792B49200E868F2 /* Bubble3.png */; };
 		42A5C1B51792B4DC00E868F2 /* Bubble1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A5C1B41792B4DC00E868F2 /* Bubble1.png */; };
@@ -144,6 +146,10 @@
 		421CA5A3173AC4CB004AE723 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		421CA5A5173AC4CB004AE723 /* SHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHViewController.h; sourceTree = "<group>"; };
 		421CA5A6173AC4CB004AE723 /* SHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHViewController.m; sourceTree = "<group>"; };
+		42811FA4179D40160072D7B5 /* SVSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSegmentedControl.h; sourceTree = "<group>"; };
+		42811FA5179D40160072D7B5 /* SVSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVSegmentedControl.m; sourceTree = "<group>"; };
+		42811FA6179D40160072D7B5 /* SVSegmentedThumb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSegmentedThumb.h; sourceTree = "<group>"; };
+		42811FA7179D40160072D7B5 /* SVSegmentedThumb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVSegmentedThumb.m; sourceTree = "<group>"; };
 		42A5C1AF1792B49200E868F2 /* Bubble2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bubble2.png; sourceTree = "<group>"; };
 		42A5C1B01792B49200E868F2 /* Bubble3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bubble3.png; sourceTree = "<group>"; };
 		42A5C1B41792B4DC00E868F2 /* Bubble1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bubble1.png; sourceTree = "<group>"; };
@@ -338,6 +344,7 @@
 		421CA590173AC4CB004AE723 /* SmartHome */ = {
 			isa = PBXGroup;
 			children = (
+				42811FA3179D3F7E0072D7B5 /* ONOFFSwitch */,
 				42DC8562178F3B5D002EC3F7 /* StaticHorizontalSlider */,
 				421CA599173AC4CB004AE723 /* SHAppDelegate.h */,
 				421CA59A173AC4CB004AE723 /* SHAppDelegate.m */,
@@ -387,6 +394,17 @@
 				421CA5A0173AC4CB004AE723 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42811FA3179D3F7E0072D7B5 /* ONOFFSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				42811FA4179D40160072D7B5 /* SVSegmentedControl.h */,
+				42811FA5179D40160072D7B5 /* SVSegmentedControl.m */,
+				42811FA6179D40160072D7B5 /* SVSegmentedThumb.h */,
+				42811FA7179D40160072D7B5 /* SVSegmentedThumb.m */,
+			);
+			name = ONOFFSwitch;
 			sourceTree = "<group>";
 		};
 		42A5C1A51792AE6700E868F2 /* Whirlpool */ = {
@@ -767,6 +785,8 @@
 				42DC8560178F3B55002EC3F7 /* VEIFStaticHorizontalSliderViewController.m in Sources */,
 				42DC8561178F3B55002EC3F7 /* VEStaticHorizontalSliderView.m in Sources */,
 				42DC8565178F3EC7002EC3F7 /* SHIconWithTitle.m in Sources */,
+				42811FA8179D40160072D7B5 /* SVSegmentedControl.m in Sources */,
+				42811FA9179D40160072D7B5 /* SVSegmentedThumb.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
