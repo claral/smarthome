@@ -18,6 +18,8 @@
 		421CA5A1173AC4CB004AE723 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 421CA5A0173AC4CB004AE723 /* Default-568h@2x.png */; };
 		421CA5A4173AC4CB004AE723 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421CA5A2173AC4CB004AE723 /* MainStoryboard.storyboard */; };
 		421CA5A7173AC4CB004AE723 /* SHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421CA5A6173AC4CB004AE723 /* SHViewController.m */; };
+		42470E8C179D4E3100BBA20B /* Anrufen.png in Resources */ = {isa = PBXBuildFile; fileRef = 42470E8A179D4E3100BBA20B /* Anrufen.png */; };
+		42470E8D179D4E3100BBA20B /* Auflegen.png in Resources */ = {isa = PBXBuildFile; fileRef = 42470E8B179D4E3100BBA20B /* Auflegen.png */; };
 		42811FA8179D40160072D7B5 /* SVSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 42811FA5179D40160072D7B5 /* SVSegmentedControl.m */; };
 		42811FA9179D40160072D7B5 /* SVSegmentedThumb.m in Sources */ = {isa = PBXBuildFile; fileRef = 42811FA7179D40160072D7B5 /* SVSegmentedThumb.m */; };
 		42A5C1B21792B49200E868F2 /* Bubble2.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A5C1AF1792B49200E868F2 /* Bubble2.png */; };
@@ -146,6 +148,8 @@
 		421CA5A3173AC4CB004AE723 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		421CA5A5173AC4CB004AE723 /* SHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHViewController.h; sourceTree = "<group>"; };
 		421CA5A6173AC4CB004AE723 /* SHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHViewController.m; sourceTree = "<group>"; };
+		42470E8A179D4E3100BBA20B /* Anrufen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Anrufen.png; sourceTree = "<group>"; };
+		42470E8B179D4E3100BBA20B /* Auflegen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auflegen.png; sourceTree = "<group>"; };
 		42811FA4179D40160072D7B5 /* SVSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSegmentedControl.h; sourceTree = "<group>"; };
 		42811FA5179D40160072D7B5 /* SVSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVSegmentedControl.m; sourceTree = "<group>"; };
 		42811FA6179D40160072D7B5 /* SVSegmentedThumb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSegmentedThumb.h; sourceTree = "<group>"; };
@@ -383,6 +387,8 @@
 		421CA591173AC4CB004AE723 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				42470E8A179D4E3100BBA20B /* Anrufen.png */,
+				42470E8B179D4E3100BBA20B /* Auflegen.png */,
 				EB012E091767502E0069681A /* Icon */,
 				EB012E08176750250069681A /* Pictures */,
 				421CA592173AC4CB004AE723 /* SmartHome-Info.plist */,
@@ -739,6 +745,8 @@
 				42F6542F17943D4900703148 /* Heizung-Nacht.png in Resources */,
 				42F6543017943D4900703148 /* Heizung-Tag.png in Resources */,
 				42F6543417943EF400703148 /* Heizung-Manuell.png in Resources */,
+				42470E8C179D4E3100BBA20B /* Anrufen.png in Resources */,
+				42470E8D179D4E3100BBA20B /* Auflegen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
