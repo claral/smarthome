@@ -569,6 +569,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">anrufenAlert:</string>
+						<reference key="source" ref="982255286"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">603</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">buttonPhoneDisplay:</string>
 						<reference key="source" ref="575061816"/>
 						<reference key="destination" ref="841351856"/>
@@ -2564,7 +2573,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">602</int>
+			<int key="maxID">603</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2580,6 +2589,7 @@
 					<string key="className">SHDetailviewLivingroomPhoneVC</string>
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="anrufenAlert:">id</string>
 						<string key="backToSH:">id</string>
 						<string key="buttonDeletePhoneDisplay:">UIButton</string>
 						<string key="buttonDeletePhoneDisplayLastNumber:">UIButton</string>
@@ -2587,6 +2597,10 @@
 						<string key="closeDetailview:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="anrufenAlert:">
+							<string key="name">anrufenAlert:</string>
+							<string key="candidateClassName">id</string>
+						</object>
 						<object class="IBActionInfo" key="backToSH:">
 							<string key="name">backToSH:</string>
 							<string key="candidateClassName">id</string>

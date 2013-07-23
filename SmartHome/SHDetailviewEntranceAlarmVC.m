@@ -7,6 +7,8 @@
 //
 
 #import "SHDetailviewEntranceAlarmVC.h"
+#import "SVSegmentedControl.h"
+#import "SVSegmentedThumb.h"
 
 @interface SHDetailviewEntranceAlarmVC ()
 - (IBAction)buttonOKAlarm:(id)sender;
@@ -30,6 +32,19 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    // 1st CONTROL
+    // Hinzufuegen von Feldern: @"Text". (Text betitelt Feld)
+    SVSegmentedControl *navSC = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"Home", @"Away", nil]];
+    navSC.changeHandler = ^(NSUInteger newIndex) {
+        NSLog(@"segmentedControl did select index %i (via block handler)", newIndex);
+    };
+    
+    [self.view addSubview:navSC];
+    
+    navSC.center = CGPointMake((self.view.frame.size.width*3)/4, self.view.frame.size.height/2);  //CGPointMake(160, 70). Ausrichten Des ToggleButtons im IPad Bildschirm selber
+
+    
 }
 
 - (void)didReceiveMemoryWarning

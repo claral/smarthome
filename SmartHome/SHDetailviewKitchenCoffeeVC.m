@@ -7,6 +7,9 @@
 //
 
 #import "SHDetailviewKitchenCoffeeVC.h"
+#import "SVSegmentedThumb.h"
+#import "SVSegmentedControl.h"
+
 //#import <VEIFStaticHorizontalSliderViewController.h>
 //#import <NSURL+IconName.h>
 
@@ -77,7 +80,17 @@
     //[self.view sendSubviewToBack:sliderView];
     [self.view insertSubview:sliderView atIndex:0];
     
-    // Do any additional setup after loading the view from its nib.
+    // ONOFFSwitch
+    // Hinzufuegen von Feldern: @"Text". (Text betitelt Feld)
+    SVSegmentedControl *navSC = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"OFF", @"ON", nil]];
+    navSC.changeHandler = ^(NSUInteger newIndex) {
+        NSLog(@"segmentedControl did select index %i (via block handler)", newIndex);
+    };
+    
+    [self.view addSubview:navSC];
+    
+    navSC.center = CGPointMake((self.view.frame.size.width*1)/3, self.view.frame.size.height/3);  //CGPointMake(160, 70). Ausrichten Des ToggleButtons im IPad Bildschirm selber
+    
 }
 
 - (void)didReceiveMemoryWarning

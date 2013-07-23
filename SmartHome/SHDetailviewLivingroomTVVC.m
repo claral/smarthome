@@ -7,6 +7,8 @@
 //
 
 #import "SHDetailviewLivingroomTVVC.h"
+#import "SVSegmentedControl.h"
+#import "SVSegmentedThumb.h"
 
 @interface SHDetailviewLivingroomTVVC ()
 
@@ -61,6 +63,17 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    // ONOFFSwitch
+    // Hinzufuegen von Feldern: @"Text". (Text betitelt Feld)
+    SVSegmentedControl *navSC = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"OFF", @"ON", nil]];
+    navSC.changeHandler = ^(NSUInteger newIndex) {
+        NSLog(@"segmentedControl did select index %i (via block handler)", newIndex);
+    };
+    
+    [self.view addSubview:navSC];
+    
+    navSC.center = CGPointMake((self.view.frame.size.width*1)/2, (self.view.frame.size.height*1)/5);  //CGPointMake(160, 70). Ausrichten Des ToggleButtons im IPad Bildschirm selber
 }
 
 - (void)didReceiveMemoryWarning

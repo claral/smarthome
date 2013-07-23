@@ -10,9 +10,12 @@
 
 @interface SHDetailviewLivingroomPhoneVC ()
 
+- (IBAction)anrufenAlert:(id)sender;
+
 @end
 
 @implementation SHDetailviewLivingroomPhoneVC
+
 
 @synthesize labelPhoneNumber = _labelPhoneNumber;
 
@@ -75,4 +78,11 @@
         NSLog(@"bla2");
     }
 }
+
+- (IBAction)anrufenAlert:(id)sender
+{
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Es klingelt!" message:@"Palim, palim.. Wer da?" delegate:nil cancelButtonTitle:@"Auflegen" otherButtonTitles:nil];
+    [message show];
+}
+
 @end
