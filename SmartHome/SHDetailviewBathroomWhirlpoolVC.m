@@ -51,10 +51,12 @@
     
     UIView *sliderView = self.svc.view;
     
-    [sliderView setBounds:CGRectMake(-100, 80, sliderView.frame.size.width, sliderView.frame.size.height)];
-    //[self.view addSubview:sliderView];
-    //[self.view sendSubviewToBack:sliderView];
-    [self.view insertSubview:sliderView atIndex:0];
+    
+    [sliderView setBounds:CGRectMake(0, 0, sliderView.frame.size.width, sliderView.frame.size.height)];
+    [sliderView setCenter:CGPointMake(500, 500)];
+    [self.view addSubview:sliderView];
+    // [self.view sendSubviewToBack:sliderView];
+    // [self.view insertSubview:sliderView atIndex:0];
 
     // ONOFFSwitch
     // Hinzufuegen von Feldern: @"Text". (Text betitelt Feld)

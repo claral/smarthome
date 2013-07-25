@@ -10,6 +10,16 @@
 
 @implementation SHIconWithTitle
 
-//intentionally left blank
+@synthesize icon = _icon;
+
+- (UIImage*)icon
+{
+    CGSize newSize = CGSizeMake(50, 50); //resize icon
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [_icon drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
 
 @end

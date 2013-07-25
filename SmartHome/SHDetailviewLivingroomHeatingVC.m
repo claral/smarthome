@@ -61,10 +61,11 @@
     
     UIView *sliderView = self.svc.view;
     
-    [sliderView setBounds:CGRectMake(-100, 80, sliderView.frame.size.width, sliderView.frame.size.height)];
+    [sliderView setBounds:CGRectMake(0, 0, sliderView.frame.size.width, sliderView.frame.size.height)];
+    [sliderView setCenter:CGPointMake(500, 500)];
     //[self.view addSubview:sliderView];
     //[self.view sendSubviewToBack:sliderView];
-    [self.view insertSubview:sliderView atIndex:0];
+    [self.view addSubview:sliderView];
 
     // set pickerwheel of heating to invisible
     [self.heatingWheel setHidden:YES];

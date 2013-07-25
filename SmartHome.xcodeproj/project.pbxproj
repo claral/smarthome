@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		420B767117A16F7C00021FAB /* VERoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 425A3AC417A10FCE00A70C36 /* VERoundedButton.m */; };
+		420B767217A16F7C00021FAB /* VETapNHoldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 425A3AA917A10E3600A70C36 /* VETapNHoldView.m */; };
+		420B767317A16F7C00021FAB /* VEIFTapNHoldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 425A3AA617A10E1C00A70C36 /* VEIFTapNHoldViewController.m */; };
+		420B767517A176AE00021FAB /* VELightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 425A3AB517A10EAB00A70C36 /* VELightView.m */; };
+		420B767617A176AE00021FAB /* VEVMPercentageWheelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 425A3AB017A10E9500A70C36 /* VEVMPercentageWheelViewController.m */; };
+		420B767717A176AE00021FAB /* VEPercentageWheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 425A3AAD17A10E7E00A70C36 /* VEPercentageWheelView.m */; };
+		420B767817A179EF00021FAB /* VEIFWheelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 425A3AB917A10F4E00A70C36 /* VEIFWheelViewController.m */; };
+		420B767917A179EF00021FAB /* VEWheelItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 425A3ABE17A10F6C00A70C36 /* VEWheelItemView.m */; };
+		420B767A17A179EF00021FAB /* VEWheelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 425A3AC017A10F6C00A70C36 /* VEWheelView.m */; };
+		420B767D17A17B8E00021FAB /* BHViewComputations.m in Sources */ = {isa = PBXBuildFile; fileRef = 420B767C17A17B8E00021FAB /* BHViewComputations.m */; };
 		421CA58B173AC4CB004AE723 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421CA58A173AC4CB004AE723 /* UIKit.framework */; };
 		421CA58D173AC4CB004AE723 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421CA58C173AC4CB004AE723 /* Foundation.framework */; };
 		421CA58F173AC4CB004AE723 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421CA58E173AC4CB004AE723 /* CoreGraphics.framework */; };
@@ -20,6 +30,8 @@
 		421CA5A7173AC4CB004AE723 /* SHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421CA5A6173AC4CB004AE723 /* SHViewController.m */; };
 		42470E8C179D4E3100BBA20B /* Anrufen.png in Resources */ = {isa = PBXBuildFile; fileRef = 42470E8A179D4E3100BBA20B /* Anrufen.png */; };
 		42470E8D179D4E3100BBA20B /* Auflegen.png in Resources */ = {isa = PBXBuildFile; fileRef = 42470E8B179D4E3100BBA20B /* Auflegen.png */; };
+		425A3AB317A10E9500A70C36 /* VEVMPercentageWheelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 425A3AB117A10E9500A70C36 /* VEVMPercentageWheelViewController.xib */; };
+		425A3ABC17A10F4E00A70C36 /* VEIFWheelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 425A3ABA17A10F4E00A70C36 /* VEIFWheelViewController.xib */; };
 		42811FA8179D40160072D7B5 /* SVSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 42811FA5179D40160072D7B5 /* SVSegmentedControl.m */; };
 		42811FA9179D40160072D7B5 /* SVSegmentedThumb.m in Sources */ = {isa = PBXBuildFile; fileRef = 42811FA7179D40160072D7B5 /* SVSegmentedThumb.m */; };
 		42A5C1B21792B49200E868F2 /* Bubble2.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A5C1AF1792B49200E868F2 /* Bubble2.png */; };
@@ -132,6 +144,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		420B767B17A17B8E00021FAB /* BHViewComputations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHViewComputations.h; sourceTree = "<group>"; };
+		420B767C17A17B8E00021FAB /* BHViewComputations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHViewComputations.m; sourceTree = "<group>"; };
 		421CA587173AC4CB004AE723 /* SmartHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		421CA58A173AC4CB004AE723 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		421CA58C173AC4CB004AE723 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -150,6 +164,26 @@
 		421CA5A6173AC4CB004AE723 /* SHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHViewController.m; sourceTree = "<group>"; };
 		42470E8A179D4E3100BBA20B /* Anrufen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Anrufen.png; sourceTree = "<group>"; };
 		42470E8B179D4E3100BBA20B /* Auflegen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Auflegen.png; sourceTree = "<group>"; };
+		425A3AA517A10E1B00A70C36 /* VEIFTapNHoldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VEIFTapNHoldViewController.h; sourceTree = "<group>"; };
+		425A3AA617A10E1C00A70C36 /* VEIFTapNHoldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VEIFTapNHoldViewController.m; sourceTree = "<group>"; };
+		425A3AA817A10E3600A70C36 /* VETapNHoldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VETapNHoldView.h; sourceTree = "<group>"; };
+		425A3AA917A10E3600A70C36 /* VETapNHoldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VETapNHoldView.m; sourceTree = "<group>"; };
+		425A3AAC17A10E7E00A70C36 /* VEPercentageWheelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VEPercentageWheelView.h; sourceTree = "<group>"; };
+		425A3AAD17A10E7E00A70C36 /* VEPercentageWheelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VEPercentageWheelView.m; sourceTree = "<group>"; };
+		425A3AAF17A10E9500A70C36 /* VEVMPercentageWheelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VEVMPercentageWheelViewController.h; sourceTree = "<group>"; };
+		425A3AB017A10E9500A70C36 /* VEVMPercentageWheelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VEVMPercentageWheelViewController.m; sourceTree = "<group>"; };
+		425A3AB117A10E9500A70C36 /* VEVMPercentageWheelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VEVMPercentageWheelViewController.xib; sourceTree = "<group>"; };
+		425A3AB417A10EAB00A70C36 /* VELightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VELightView.h; sourceTree = "<group>"; };
+		425A3AB517A10EAB00A70C36 /* VELightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VELightView.m; sourceTree = "<group>"; };
+		425A3AB817A10F4E00A70C36 /* VEIFWheelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VEIFWheelViewController.h; sourceTree = "<group>"; };
+		425A3AB917A10F4E00A70C36 /* VEIFWheelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VEIFWheelViewController.m; sourceTree = "<group>"; };
+		425A3ABA17A10F4E00A70C36 /* VEIFWheelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VEIFWheelViewController.xib; sourceTree = "<group>"; };
+		425A3ABD17A10F6C00A70C36 /* VEWheelItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VEWheelItemView.h; sourceTree = "<group>"; };
+		425A3ABE17A10F6C00A70C36 /* VEWheelItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VEWheelItemView.m; sourceTree = "<group>"; };
+		425A3ABF17A10F6C00A70C36 /* VEWheelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VEWheelView.h; sourceTree = "<group>"; };
+		425A3AC017A10F6C00A70C36 /* VEWheelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VEWheelView.m; sourceTree = "<group>"; };
+		425A3AC317A10FCE00A70C36 /* VERoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VERoundedButton.h; sourceTree = "<group>"; };
+		425A3AC417A10FCE00A70C36 /* VERoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VERoundedButton.m; sourceTree = "<group>"; };
 		42811FA4179D40160072D7B5 /* SVSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSegmentedControl.h; sourceTree = "<group>"; };
 		42811FA5179D40160072D7B5 /* SVSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVSegmentedControl.m; sourceTree = "<group>"; };
 		42811FA6179D40160072D7B5 /* SVSegmentedThumb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSegmentedThumb.h; sourceTree = "<group>"; };
@@ -314,6 +348,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		420B767417A1708800021FAB /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				42DC8563178F3EC7002EC3F7 /* SHIconWithTitle.h */,
+				42DC8564178F3EC7002EC3F7 /* SHIconWithTitle.m */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
 		421CA57E173AC4CB004AE723 = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +391,10 @@
 		421CA590173AC4CB004AE723 /* SmartHome */ = {
 			isa = PBXGroup;
 			children = (
+				420B767417A1708800021FAB /* Shared */,
+				425A3AB717A10F3800A70C36 /* Wheel */,
+				425A3AAB17A10E3B00A70C36 /* PercentageWheel */,
+				425A3AA417A10DED00A70C36 /* TapNHold */,
 				42811FA3179D3F7E0072D7B5 /* ONOFFSwitch */,
 				42DC8562178F3B5D002EC3F7 /* StaticHorizontalSlider */,
 				421CA599173AC4CB004AE723 /* SHAppDelegate.h */,
@@ -402,6 +449,49 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		425A3AA417A10DED00A70C36 /* TapNHold */ = {
+			isa = PBXGroup;
+			children = (
+				425A3AC317A10FCE00A70C36 /* VERoundedButton.h */,
+				425A3AC417A10FCE00A70C36 /* VERoundedButton.m */,
+				425A3AA817A10E3600A70C36 /* VETapNHoldView.h */,
+				425A3AA917A10E3600A70C36 /* VETapNHoldView.m */,
+				425A3AA517A10E1B00A70C36 /* VEIFTapNHoldViewController.h */,
+				425A3AA617A10E1C00A70C36 /* VEIFTapNHoldViewController.m */,
+			);
+			name = TapNHold;
+			sourceTree = "<group>";
+		};
+		425A3AAB17A10E3B00A70C36 /* PercentageWheel */ = {
+			isa = PBXGroup;
+			children = (
+				425A3AB417A10EAB00A70C36 /* VELightView.h */,
+				425A3AB517A10EAB00A70C36 /* VELightView.m */,
+				425A3AAF17A10E9500A70C36 /* VEVMPercentageWheelViewController.h */,
+				425A3AB017A10E9500A70C36 /* VEVMPercentageWheelViewController.m */,
+				425A3AB117A10E9500A70C36 /* VEVMPercentageWheelViewController.xib */,
+				425A3AAC17A10E7E00A70C36 /* VEPercentageWheelView.h */,
+				425A3AAD17A10E7E00A70C36 /* VEPercentageWheelView.m */,
+			);
+			name = PercentageWheel;
+			sourceTree = "<group>";
+		};
+		425A3AB717A10F3800A70C36 /* Wheel */ = {
+			isa = PBXGroup;
+			children = (
+				420B767B17A17B8E00021FAB /* BHViewComputations.h */,
+				420B767C17A17B8E00021FAB /* BHViewComputations.m */,
+				425A3AB817A10F4E00A70C36 /* VEIFWheelViewController.h */,
+				425A3AB917A10F4E00A70C36 /* VEIFWheelViewController.m */,
+				425A3ABA17A10F4E00A70C36 /* VEIFWheelViewController.xib */,
+				425A3ABD17A10F6C00A70C36 /* VEWheelItemView.h */,
+				425A3ABE17A10F6C00A70C36 /* VEWheelItemView.m */,
+				425A3ABF17A10F6C00A70C36 /* VEWheelView.h */,
+				425A3AC017A10F6C00A70C36 /* VEWheelView.m */,
+			);
+			name = Wheel;
+			sourceTree = "<group>";
+		};
 		42811FA3179D3F7E0072D7B5 /* ONOFFSwitch */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,8 +520,6 @@
 				42DC855D178F3B53002EC3F7 /* VEIFStaticHorizontalSliderViewController.m */,
 				42DC855E178F3B54002EC3F7 /* VEStaticHorizontalSliderView.h */,
 				42DC855F178F3B54002EC3F7 /* VEStaticHorizontalSliderView.m */,
-				42DC8563178F3EC7002EC3F7 /* SHIconWithTitle.h */,
-				42DC8564178F3EC7002EC3F7 /* SHIconWithTitle.m */,
 			);
 			name = StaticHorizontalSlider;
 			sourceTree = "<group>";
@@ -747,6 +835,8 @@
 				42F6543417943EF400703148 /* Heizung-Manuell.png in Resources */,
 				42470E8C179D4E3100BBA20B /* Anrufen.png in Resources */,
 				42470E8D179D4E3100BBA20B /* Auflegen.png in Resources */,
+				425A3AB317A10E9500A70C36 /* VEVMPercentageWheelViewController.xib in Resources */,
+				425A3ABC17A10F4E00A70C36 /* VEIFWheelViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -757,6 +847,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				420B767817A179EF00021FAB /* VEIFWheelViewController.m in Sources */,
+				420B767917A179EF00021FAB /* VEWheelItemView.m in Sources */,
+				420B767A17A179EF00021FAB /* VEWheelView.m in Sources */,
+				420B767517A176AE00021FAB /* VELightView.m in Sources */,
+				420B767617A176AE00021FAB /* VEVMPercentageWheelViewController.m in Sources */,
+				420B767717A176AE00021FAB /* VEPercentageWheelView.m in Sources */,
+				420B767117A16F7C00021FAB /* VERoundedButton.m in Sources */,
+				420B767217A16F7C00021FAB /* VETapNHoldView.m in Sources */,
+				420B767317A16F7C00021FAB /* VEIFTapNHoldViewController.m in Sources */,
 				421CA597173AC4CB004AE723 /* main.m in Sources */,
 				421CA59B173AC4CB004AE723 /* SHAppDelegate.m in Sources */,
 				421CA5A7173AC4CB004AE723 /* SHViewController.m in Sources */,
@@ -795,6 +894,7 @@
 				42DC8565178F3EC7002EC3F7 /* SHIconWithTitle.m in Sources */,
 				42811FA8179D40160072D7B5 /* SVSegmentedControl.m in Sources */,
 				42811FA9179D40160072D7B5 /* SVSegmentedThumb.m in Sources */,
+				420B767D17A17B8E00021FAB /* BHViewComputations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

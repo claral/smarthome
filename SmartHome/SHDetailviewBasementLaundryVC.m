@@ -2,13 +2,16 @@
 //  SHDetailviewBasementLaundryVC.m
 //  SmartHome
 //
-//  Created by Clara Lange on 6/13/13.
+//  Created by Lisa Hüfner on 7/25/13.
 //  Copyright (c) 2013 TUM lfe. All rights reserved.
 //
 
 #import "SHDetailviewBasementLaundryVC.h"
+#import "VEIFWheelViewController.h"
 
 @interface SHDetailviewBasementLaundryVC ()
+
+@property (strong) VEIFWheelViewController *wvc;
 
 @end
 
@@ -26,7 +29,26 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.wvc = [[VEIFWheelViewController alloc]init];
+    
+    SHIconWithTitle *item1 = [[SHIconWithTitle alloc] init];
+    item1.icon = [UIImage imageNamed:@"05-Latte-Macchiato"];
+    item1.title = @"Latte Macchiato";
+
+    
+    NSArray *items = [[NSArray alloc] initWithObjects:item1,item1,item1, nil];
+
+    self.wvc.items = items;
+    
+    UIView *wView = self.wvc.view;
+    
+    [wView setBackgroundColor:[UIColor magentaColor]];
+    [wView setBounds:CGRectMake(0, 0, wView.frame.size.width, wView.frame.size.height)];
+    [wView setCenter:CGPointMake(500, 500)];
+    
+    [self.view addSubview:wView];
+
 }
 
 - (void)didReceiveMemoryWarning

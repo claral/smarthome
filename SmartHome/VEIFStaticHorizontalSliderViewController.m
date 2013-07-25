@@ -54,8 +54,9 @@
 	self.horizontalView = [[VEStaticHorizontalSliderView alloc] initWithFrame:horizontalViewFrame];
 	self.horizontalView.items = self.icons;
     self.horizontalView.sDelegate = self.sDelegate;
-	
+    
 	[self.view addSubview:self.horizontalView];
+    self.view.frame = self.horizontalView.frame;
 }
 
 - (void)viewDidLoad
@@ -129,6 +130,9 @@
 	
 	position = [recognizer locationInView:self.horizontalView];
 	position.y = self.horizontalView.needleLayer.position.y;
+    
+    
+    NSLog(@"hurra");
     
 	self.horizontalView.needleLayer.position = position;
 	[self.horizontalView snapNeedleToNearestItem];

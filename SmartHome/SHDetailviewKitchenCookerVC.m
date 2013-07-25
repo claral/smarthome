@@ -7,6 +7,7 @@
 //
 
 #import "SHDetailviewKitchenCookerVC.h"
+#import "VEIFTapNHoldViewController.h"
 
 @interface SHDetailviewKitchenCookerVC ()
 
@@ -30,6 +31,10 @@
 @property (strong, nonatomic, readwrite) NSArray *cooker1LevelArray;
 @property (weak, nonatomic) IBOutlet UILabel *cooker1Label;
 
+
+@property (strong) VEIFTapNHoldViewController *tnhvc;
+
+
 @end
 
 @implementation SHDetailviewKitchenCookerVC
@@ -47,20 +52,51 @@
 {
     [super viewDidLoad];
     
-    // init array cookerlevels (of cooker 1) with uiimmageviews
-    self.cooker1LevelArray = [[NSArray alloc] initWithObjects:self.cooker1Level0, self.cooker1Level1, self.cooker1Level2, self.cooker1Level3, self.cooker1Level4, self.cooker1Level5, self.cooker1Level6, self.cooker1Level7, self.cooker1Level8, self.cooker1Level9 , nil];
+    self.tnhvc =
+    [[VEIFTapNHoldViewController alloc] init];
+//    self.tnhvc.sDelegate = self;
     
-    // TODO: for every cooker
-    // storage
-    NSUInteger cooker1Level = [[[NSUserDefaults standardUserDefaults] valueForKey:@"cookerOneLevel"] integerValue];
-    self.cooker1Label.text = [NSString stringWithFormat:@"Stufe: %d", cooker1Level];
-    self.selectedCooker1Level = [self.cooker1LevelArray objectAtIndex:cooker1Level];
-    [self.selectedCooker1Level setImage:[UIImage imageNamed:@"oven2.png"]];
+    SHIconWithTitle *icon1 = [[SHIconWithTitle alloc] init];
+    icon1.icon = [UIImage imageNamed:@"01-Espresso"];
+    icon1.title = @"Espresso";
     
-    // add a custom long press gesture recognizer
-	self.longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressGesture:)];
-    self.longPressGestureRecognizer.minimumPressDuration = 0.2f;
-    [self.view addGestureRecognizer:self.longPressGestureRecognizer];
+    SHIconWithTitle *icon2 = [[SHIconWithTitle alloc] init];
+    icon2.icon = [UIImage imageNamed:@"02-Espresso-Doppio"];
+    icon2.title = @"Doppio";
+    
+    SHIconWithTitle *icon3 = [[SHIconWithTitle alloc] init];
+    icon3.icon = [UIImage imageNamed:@"03-Kaffee"];
+    icon3.title = @"Kaffee";
+    
+    SHIconWithTitle *icon4 = [[SHIconWithTitle alloc] init];
+    icon4.icon = [UIImage imageNamed:@"04-Cappuccino"];
+    icon4.title = @"Cappuccino";
+    
+        
+    self.tnhvc.items = [[NSArray alloc] initWithObjects:icon1, icon2, icon3, icon4, nil];
+    
+    UIView *sliderView = self.tnhvc.view;
+    
+    [sliderView setBounds:CGRectMake(0, 0, sliderView.frame.size.width, sliderView.frame.size.height)];
+    [sliderView setCenter:CGPointMake(500, 500)];
+    //[sliderView setBackgroundColor:[UIColor magentaColor]];
+    [self.view addSubview:sliderView];
+
+    
+//    // init array cookerlevels (of cooker 1) with uiimmageviews
+//    self.cooker1LevelArray = [[NSArray alloc] initWithObjects:self.cooker1Level0, self.cooker1Level1, self.cooker1Level2, self.cooker1Level3, self.cooker1Level4, self.cooker1Level5, self.cooker1Level6, self.cooker1Level7, self.cooker1Level8, self.cooker1Level9 , nil];
+//    
+//    // TODO: for every cooker
+//    // storage
+//    NSUInteger cooker1Level = [[[NSUserDefaults standardUserDefaults] valueForKey:@"cookerOneLevel"] integerValue];
+//    self.cooker1Label.text = [NSString stringWithFormat:@"Stufe: %d", cooker1Level];
+//    self.selectedCooker1Level = [self.cooker1LevelArray objectAtIndex:cooker1Level];
+//    [self.selectedCooker1Level setImage:[UIImage imageNamed:@"oven2.png"]];
+//    
+//    // add a custom long press gesture recognizer
+//	self.longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressGesture:)];
+//    self.longPressGestureRecognizer.minimumPressDuration = 0.2f;
+//    [self.view addGestureRecognizer:self.longPressGestureRecognizer];
 }
 
 

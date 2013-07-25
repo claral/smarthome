@@ -230,10 +230,10 @@
 	[titleLayer setForegroundColor:[[UIColor blackColor] CGColor]];
 	
 	imageLayer = [CALayer layer];
-	UIImage *croppedImageToFit = icon.icon; //TODO resize das UIImage icon.icon!
+	UIImage *croppedImageToFit = icon.icon;
     
     
-	imageLayer.contentsScale = [[UIScreen mainScreen] scale];
+    imageLayer.contentsScale = [[UIScreen mainScreen] scale];
 
 	imageLayer.frame = CGRectMake(0.5 * itemLayer.frame.size.width - 0.5 * croppedImageToFit.size.width,
 								  0.5 * itemLayer.frame.size.height - 0.5 * croppedImageToFit.size.height,

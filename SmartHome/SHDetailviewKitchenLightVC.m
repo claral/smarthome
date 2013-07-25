@@ -7,8 +7,11 @@
 //
 
 #import "SHDetailviewKitchenLightVC.h"
+#import "VEVMPercentageWheelViewController.h"
 
 @interface SHDetailviewKitchenLightVC ()
+
+@property (strong) VEVMPercentageWheelViewController *pwvc;
 
 @end
 
@@ -26,7 +29,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.pwvc = [[VEVMPercentageWheelViewController alloc]init];
+    
+    UIView *pwView = self.pwvc.view;
+    
+    [pwView setBounds:CGRectMake(0, 0, pwView.frame.size.width, pwView.frame.size.height)];
+    [pwView setCenter:CGPointMake(500, 500)];
+    //[sliderView setBackgroundColor:[UIColor magentaColor]];
+    [self.view addSubview:pwView];
+    
 }
 
 - (void)didReceiveMemoryWarning

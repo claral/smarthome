@@ -10,7 +10,6 @@
 
 @interface SHDetailviewLivingroomLightVC : UIViewController
 
-- (IBAction)ActionButtonLivingroomLight:(id)sender;
 - (IBAction)closeDetailView:(id)sender;
 - (IBAction)backToSH:(id)sender;
 
