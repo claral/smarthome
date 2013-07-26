@@ -33,19 +33,46 @@
     self.wvc = [[VEIFWheelViewController alloc]init];
     
     SHIconWithTitle *item1 = [[SHIconWithTitle alloc] init];
-    item1.icon = [UIImage imageNamed:@"05-Latte-Macchiato"];
-    item1.title = @"Latte Macchiato";
+    item1.icon = [UIImage imageNamed:@"01-Aus"];
+    item1.title = @"   Aus      ";
 
+    SHIconWithTitle *item2 = [[SHIconWithTitle alloc] init];
+    item2.icon = [UIImage imageNamed:@"02-Kochwäsche"];
+    item2.title = @"Kochwäsche";
     
-    NSArray *items = [[NSArray alloc] initWithObjects:item1,item1,item1, nil];
+    SHIconWithTitle *item3 = [[SHIconWithTitle alloc] init];
+    item3.icon = [UIImage imageNamed:@"03-Kochwäsche"];
+    item3.title = @"Kochwäsche";
+    
+    SHIconWithTitle *item4 = [[SHIconWithTitle alloc] init];
+    item4.icon = [UIImage imageNamed:@"04-Pflegeleicht"];
+    item4.title = @"Pflegeleicht";
+    
+    SHIconWithTitle *item5 = [[SHIconWithTitle alloc] init];
+    item5.icon = [UIImage imageNamed:@"05-Feinwäsche"];
+    item5.title = @"Feinwäsche";
+    
+    SHIconWithTitle *item6 = [[SHIconWithTitle alloc] init];
+    item6.icon = [UIImage imageNamed:@"06-Handwäsche"];
+    item6.title = @"Handwäsche";
+    
+    SHIconWithTitle *item7 = [[SHIconWithTitle alloc] init];
+    item7.icon = [UIImage imageNamed:@"07-Eco"];
+    item7.title = @"   Eco      ";
+    
+    SHIconWithTitle *item8 = [[SHIconWithTitle alloc] init];
+    item8.icon = [UIImage imageNamed:@"08-Schleudern"];
+    item8.title = @"Schleudern";
+    
+    NSArray *items = [[NSArray alloc] initWithObjects:item1,item2,item3,item4,item5,item6,item7,item8, nil];
 
     self.wvc.items = items;
     
     UIView *wView = self.wvc.view;
     
-    [wView setBackgroundColor:[UIColor magentaColor]];
+//    [wView setBackgroundColor:[UIColor magentaColor]];
     [wView setBounds:CGRectMake(0, 0, wView.frame.size.width, wView.frame.size.height)];
-    [wView setCenter:CGPointMake(500, 500)];
+    [wView setCenter:CGPointMake(400, 400)];
     
     [self.view addSubview:wView];
 

@@ -58,29 +58,49 @@
     
     SHIconWithTitle *icon1 = [[SHIconWithTitle alloc] init];
     icon1.icon = [UIImage imageNamed:@"01-Espresso"];
-    icon1.title = @"Espresso";
+    icon1.title = @"1";
     
     SHIconWithTitle *icon2 = [[SHIconWithTitle alloc] init];
     icon2.icon = [UIImage imageNamed:@"02-Espresso-Doppio"];
-    icon2.title = @"Doppio";
+    icon2.title = @"2";
     
     SHIconWithTitle *icon3 = [[SHIconWithTitle alloc] init];
     icon3.icon = [UIImage imageNamed:@"03-Kaffee"];
-    icon3.title = @"Kaffee";
+    icon3.title = @"3";
     
     SHIconWithTitle *icon4 = [[SHIconWithTitle alloc] init];
     icon4.icon = [UIImage imageNamed:@"04-Cappuccino"];
-    icon4.title = @"Cappuccino";
+    icon4.title = @"4";
     
+    SHIconWithTitle *icon5 = [[SHIconWithTitle alloc] init];
+    icon5.icon = [UIImage imageNamed:@"04-Cappuccino"];
+    icon5.title = @"5";
+    
+    SHIconWithTitle *icon6 = [[SHIconWithTitle alloc] init];
+    icon6.icon = [UIImage imageNamed:@"04-Cappuccino"];
+    icon6.title = @"6";
+    
+    SHIconWithTitle *icon7 = [[SHIconWithTitle alloc] init];
+    icon7.icon = [UIImage imageNamed:@"04-Cappuccino"];
+    icon7.title = @"7";
+    
+    SHIconWithTitle *icon8 = [[SHIconWithTitle alloc] init];
+    icon8.icon = [UIImage imageNamed:@"04-Cappuccino"];
+    icon8.title = @"8";
+    
+    SHIconWithTitle *icon9 = [[SHIconWithTitle alloc] init];
+    icon9.icon = [UIImage imageNamed:@"04-Cappuccino"];
+    icon9.title = @"9";
         
-    self.tnhvc.items = [[NSArray alloc] initWithObjects:icon1, icon2, icon3, icon4, nil];
+    self.tnhvc.items = [[NSArray alloc] initWithObjects:icon3, icon2, icon1, icon9, icon8, icon7, icon6, icon5, icon4, nil];
     
-    UIView *sliderView = self.tnhvc.view;
+    UIView *tnhView = self.tnhvc.view;
     
-    [sliderView setBounds:CGRectMake(0, 0, sliderView.frame.size.width, sliderView.frame.size.height)];
-    [sliderView setCenter:CGPointMake(500, 500)];
-    //[sliderView setBackgroundColor:[UIColor magentaColor]];
-    [self.view addSubview:sliderView];
+//    [tnhView setBackgroundColor:[UIColor magentaColor]];
+    [tnhView setBounds:CGRectMake(200, 200, tnhView.frame.size.width, tnhView.frame.size.height)];
+    [tnhView setCenter:CGPointMake(400, 650)];
+    
+    [self.view addSubview:tnhView];
 
     
 //    // init array cookerlevels (of cooker 1) with uiimmageviews

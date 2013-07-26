@@ -37,6 +37,22 @@
 		42A5C1B21792B49200E868F2 /* Bubble2.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A5C1AF1792B49200E868F2 /* Bubble2.png */; };
 		42A5C1B31792B49200E868F2 /* Bubble3.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A5C1B01792B49200E868F2 /* Bubble3.png */; };
 		42A5C1B51792B4DC00E868F2 /* Bubble1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A5C1B41792B4DC00E868F2 /* Bubble1.png */; };
+		42CEC28017A27F09007CC976 /* 01-Aus.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CEC27017A27F09007CC976 /* 01-Aus.png */; };
+		42CEC28117A27F09007CC976 /* 01-Aus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CEC27117A27F09007CC976 /* 01-Aus@2x.png */; };
+		42CEC28217A27F09007CC976 /* 02-Kochwäsche.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CEC27217A27F09007CC976 /* 02-Kochwäsche.png */; };
+		42CEC28317A27F09007CC976 /* 02-Kochwäsche@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CEC27317A27F09007CC976 /* 02-Kochwäsche@2x.png */; };
+		42CEC28417A27F09007CC976 /* 03-Kochwäsche.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CEC27417A27F09007CC976 /* 03-Kochwäsche.png */; };
+		42CEC28517A27F09007CC976 /* 03-Kochwäsche@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CEC27517A27F09007CC976 /* 03-Kochwäsche@2x.png */; };
+		42CEC28617A27F09007CC976 /* 04-Pflegeleicht.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CEC27617A27F09007CC976 /* 04-Pflegeleicht.png */; };
+		42CEC28717A27F09007CC976 /* 04-Pflegeleicht@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CEC27717A27F09007CC976 /* 04-Pflegeleicht@2x.png */; };
+		42CEC28817A27F09007CC976 /* 05-Feinwäsche.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CEC27817A27F09007CC976 /* 05-Feinwäsche.png */; };
+		42CEC28917A27F09007CC976 /* 05-Feinwäsche@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CEC27917A27F09007CC976 /* 05-Feinwäsche@2x.png */; };
+		42CEC28A17A27F09007CC976 /* 06-Handwäsche.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CEC27A17A27F09007CC976 /* 06-Handwäsche.png */; };
+		42CEC28B17A27F09007CC976 /* 06-Handwäsche@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CEC27B17A27F09007CC976 /* 06-Handwäsche@2x.png */; };
+		42CEC28C17A27F09007CC976 /* 07-Eco.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CEC27C17A27F09007CC976 /* 07-Eco.png */; };
+		42CEC28D17A27F09007CC976 /* 07-Eco@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CEC27D17A27F09007CC976 /* 07-Eco@2x.png */; };
+		42CEC28E17A27F09007CC976 /* 08-Schleudern.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CEC27E17A27F09007CC976 /* 08-Schleudern.png */; };
+		42CEC28F17A27F09007CC976 /* 08-Schleudern@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CEC27F17A27F09007CC976 /* 08-Schleudern@2x.png */; };
 		42DC8555178F2FBB002EC3F7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DC8554178F2FBB002EC3F7 /* CoreAudio.framework */; };
 		42DC8557178F2FC6002EC3F7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DC8556178F2FC5002EC3F7 /* CoreData.framework */; };
 		42DC8559178F2FD6002EC3F7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DC8558178F2FD6002EC3F7 /* QuartzCore.framework */; };
@@ -191,6 +207,22 @@
 		42A5C1AF1792B49200E868F2 /* Bubble2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bubble2.png; sourceTree = "<group>"; };
 		42A5C1B01792B49200E868F2 /* Bubble3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bubble3.png; sourceTree = "<group>"; };
 		42A5C1B41792B4DC00E868F2 /* Bubble1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bubble1.png; sourceTree = "<group>"; };
+		42CEC27017A27F09007CC976 /* 01-Aus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-Aus.png"; sourceTree = "<group>"; };
+		42CEC27117A27F09007CC976 /* 01-Aus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-Aus@2x.png"; sourceTree = "<group>"; };
+		42CEC27217A27F09007CC976 /* 02-Kochwäsche.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "02-Kochwäsche.png"; sourceTree = "<group>"; };
+		42CEC27317A27F09007CC976 /* 02-Kochwäsche@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "02-Kochwäsche@2x.png"; sourceTree = "<group>"; };
+		42CEC27417A27F09007CC976 /* 03-Kochwäsche.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "03-Kochwäsche.png"; sourceTree = "<group>"; };
+		42CEC27517A27F09007CC976 /* 03-Kochwäsche@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "03-Kochwäsche@2x.png"; sourceTree = "<group>"; };
+		42CEC27617A27F09007CC976 /* 04-Pflegeleicht.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "04-Pflegeleicht.png"; sourceTree = "<group>"; };
+		42CEC27717A27F09007CC976 /* 04-Pflegeleicht@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "04-Pflegeleicht@2x.png"; sourceTree = "<group>"; };
+		42CEC27817A27F09007CC976 /* 05-Feinwäsche.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "05-Feinwäsche.png"; sourceTree = "<group>"; };
+		42CEC27917A27F09007CC976 /* 05-Feinwäsche@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "05-Feinwäsche@2x.png"; sourceTree = "<group>"; };
+		42CEC27A17A27F09007CC976 /* 06-Handwäsche.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06-Handwäsche.png"; sourceTree = "<group>"; };
+		42CEC27B17A27F09007CC976 /* 06-Handwäsche@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06-Handwäsche@2x.png"; sourceTree = "<group>"; };
+		42CEC27C17A27F09007CC976 /* 07-Eco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "07-Eco.png"; sourceTree = "<group>"; };
+		42CEC27D17A27F09007CC976 /* 07-Eco@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "07-Eco@2x.png"; sourceTree = "<group>"; };
+		42CEC27E17A27F09007CC976 /* 08-Schleudern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "08-Schleudern.png"; sourceTree = "<group>"; };
+		42CEC27F17A27F09007CC976 /* 08-Schleudern@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "08-Schleudern@2x.png"; sourceTree = "<group>"; };
 		42DC8554178F2FBB002EC3F7 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		42DC8556178F2FC5002EC3F7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		42DC8558178F2FD6002EC3F7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -513,6 +545,29 @@
 			name = Whirlpool;
 			sourceTree = "<group>";
 		};
+		42CEC26F17A27ECB007CC976 /* Waschmaschine */ = {
+			isa = PBXGroup;
+			children = (
+				42CEC27017A27F09007CC976 /* 01-Aus.png */,
+				42CEC27117A27F09007CC976 /* 01-Aus@2x.png */,
+				42CEC27217A27F09007CC976 /* 02-Kochwäsche.png */,
+				42CEC27317A27F09007CC976 /* 02-Kochwäsche@2x.png */,
+				42CEC27417A27F09007CC976 /* 03-Kochwäsche.png */,
+				42CEC27517A27F09007CC976 /* 03-Kochwäsche@2x.png */,
+				42CEC27617A27F09007CC976 /* 04-Pflegeleicht.png */,
+				42CEC27717A27F09007CC976 /* 04-Pflegeleicht@2x.png */,
+				42CEC27817A27F09007CC976 /* 05-Feinwäsche.png */,
+				42CEC27917A27F09007CC976 /* 05-Feinwäsche@2x.png */,
+				42CEC27A17A27F09007CC976 /* 06-Handwäsche.png */,
+				42CEC27B17A27F09007CC976 /* 06-Handwäsche@2x.png */,
+				42CEC27C17A27F09007CC976 /* 07-Eco.png */,
+				42CEC27D17A27F09007CC976 /* 07-Eco@2x.png */,
+				42CEC27E17A27F09007CC976 /* 08-Schleudern.png */,
+				42CEC27F17A27F09007CC976 /* 08-Schleudern@2x.png */,
+			);
+			name = Waschmaschine;
+			sourceTree = "<group>";
+		};
 		42DC8562178F3B5D002EC3F7 /* StaticHorizontalSlider */ = {
 			isa = PBXGroup;
 			children = (
@@ -575,6 +630,7 @@
 		EB012E091767502E0069681A /* Icon */ = {
 			isa = PBXGroup;
 			children = (
+				42CEC26F17A27ECB007CC976 /* Waschmaschine */,
 				42F6542817943D3B00703148 /* Heizung */,
 				42A5C1A51792AE6700E868F2 /* Whirlpool */,
 				42ED3E5E178FFFFC0072D039 /* Kaffeemaschine */,
@@ -837,6 +893,22 @@
 				42470E8D179D4E3100BBA20B /* Auflegen.png in Resources */,
 				425A3AB317A10E9500A70C36 /* VEVMPercentageWheelViewController.xib in Resources */,
 				425A3ABC17A10F4E00A70C36 /* VEIFWheelViewController.xib in Resources */,
+				42CEC28017A27F09007CC976 /* 01-Aus.png in Resources */,
+				42CEC28117A27F09007CC976 /* 01-Aus@2x.png in Resources */,
+				42CEC28217A27F09007CC976 /* 02-Kochwäsche.png in Resources */,
+				42CEC28317A27F09007CC976 /* 02-Kochwäsche@2x.png in Resources */,
+				42CEC28417A27F09007CC976 /* 03-Kochwäsche.png in Resources */,
+				42CEC28517A27F09007CC976 /* 03-Kochwäsche@2x.png in Resources */,
+				42CEC28617A27F09007CC976 /* 04-Pflegeleicht.png in Resources */,
+				42CEC28717A27F09007CC976 /* 04-Pflegeleicht@2x.png in Resources */,
+				42CEC28817A27F09007CC976 /* 05-Feinwäsche.png in Resources */,
+				42CEC28917A27F09007CC976 /* 05-Feinwäsche@2x.png in Resources */,
+				42CEC28A17A27F09007CC976 /* 06-Handwäsche.png in Resources */,
+				42CEC28B17A27F09007CC976 /* 06-Handwäsche@2x.png in Resources */,
+				42CEC28C17A27F09007CC976 /* 07-Eco.png in Resources */,
+				42CEC28D17A27F09007CC976 /* 07-Eco@2x.png in Resources */,
+				42CEC28E17A27F09007CC976 /* 08-Schleudern.png in Resources */,
+				42CEC28F17A27F09007CC976 /* 08-Schleudern@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

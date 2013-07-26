@@ -64,7 +64,7 @@
 									   self.frame.size.width,
 									   self.frame.size.height * 0.16f);
 	
-	CGFloat calculatedLayerFontSize = 20.0f;
+	CGFloat calculatedLayerFontSize = 10.0f;
 	[self.titleLayer setFont:@"Helvetica"];
 	[self.titleLayer setString:@"Kochstufe"];
 	
