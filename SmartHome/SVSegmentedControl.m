@@ -86,7 +86,7 @@
         self.height = 70.0; //32.0; Hoehe des Buttons
         self.cornerRadius = 4.0;
         
-        //self.selectedSegmentIndex = 0;
+        self.selectedSegmentIndex = 0;
         
         self.innerShadowColor = [UIColor colorWithWhite:0 alpha:0.8];
         
@@ -99,6 +99,7 @@
 - (int) setIndexToBeginWith:(int) index
 {
     self.selectedSegmentIndex = index;
+    [self setSelectedSegmentIndex:self.selectedSegmentIndex];
     return self.selectedSegmentIndex;
 }
 

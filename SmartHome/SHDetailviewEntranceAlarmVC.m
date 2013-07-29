@@ -56,6 +56,20 @@
         NSLog(@"stored val in change handler: %d", self.currentIndexValue);
 
         
+        // show ON OFF again
+        self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValue"] integerValue];
+        int returnIdxVal;
+        if (self.currentIndexValue == 0) // away
+        {
+            returnIdxVal = [self.navSC setIndexToBeginWith:1];
+            NSLog(@"returnidxval: %d", returnIdxVal);
+        } else if (self.currentIndexValue == 1) // home
+        {
+            returnIdxVal = [self.navSC setIndexToBeginWith:0];
+            NSLog(@"returnidxval: %d", returnIdxVal);
+        }
+        
+        
         if (index == 1)
         {
             UIAlertView *messageHome = [[UIAlertView alloc] initWithTitle:@"HOME" message:@"Bitte geben Sie das Passwort ein." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -69,6 +83,23 @@
         }
     };
     
+    
+    
+    self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValue"] integerValue];
+    int returnIdxVal;
+    if (self.currentIndexValue == 0) // away
+    {
+        returnIdxVal = [self.navSC setIndexToBeginWith:1];
+        NSLog(@"returnidxval: %d", returnIdxVal);
+    } else if (self.currentIndexValue == 1) // home
+    {
+        returnIdxVal = [self.navSC setIndexToBeginWith:0];
+        NSLog(@"returnidxval: %d", returnIdxVal);
+    }
+    
+    
+    
+    
     [self.view addSubview:self.navSC];
     
     self.navSC.center = CGPointMake((self.view.frame.size.width*3)/4, self.view.frame.size.height/2);  //CGPointMake(160, 70). Ausrichten Des ToggleButtons im IPad Bildschirm selber
@@ -76,7 +107,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
+    /*[super viewWillAppear:animated];
     
     // reading stored index
     self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValue"] integerValue];
@@ -92,7 +123,7 @@
     {
         returnIdxVal = [self.navSC setIndexToBeginWith:0];
         NSLog(@"returnidxval: %d", returnIdxVal);
-    }
+    }*/
 }
 
 - (void)didReceiveMemoryWarning
