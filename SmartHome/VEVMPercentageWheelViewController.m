@@ -14,7 +14,7 @@
     UITapGestureRecognizer *tapRecognizer;
 }
 
-@property (nonatomic, assign) NSInteger percentage;
+//@property (nonatomic, assign) NSInteger percentage;
 @property (nonatomic, assign) float previousValueAngle;
 @property (nonatomic, assign) BOOL valueAngleLock;
 

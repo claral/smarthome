@@ -45,8 +45,6 @@
         __block NSUInteger index = self.navSC.selectedSegmentIndex;
         NSLog(@"segmentedControl did select index %i (via block handler)", newIndex);
         
-        
-        
         // storage of currentindex
         self.currentIndexValue = index;
         [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue] forKey:@"currentIndexValue"];
@@ -54,7 +52,6 @@
         [self.navSC setIndexToBeginWith:index];
         self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValue"] integerValue];
         NSLog(@"stored val in change handler: %d", self.currentIndexValue);
-
         
         // show ON OFF again
         self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValue"] integerValue];

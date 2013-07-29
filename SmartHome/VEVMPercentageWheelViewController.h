@@ -13,9 +13,11 @@
 
 @interface VEVMPercentageWheelViewController : UIViewController
 
-
+@property (nonatomic, assign) NSInteger percentage;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 @property (weak, nonatomic) IBOutlet VEPercentageWheelView *percentageWheelView;
 @property (weak, nonatomic) IBOutlet VELightView *lightView;
+
+- (void) setPredefinedValue:(id)value;
 
 @end
