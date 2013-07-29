@@ -12,6 +12,10 @@
 
 @interface SHDetailviewEntranceAlarmVC ()
 - (IBAction)buttonOKAlarm:(id)sender;
+@property (nonatomic, assign) BOOL booleanHome;
+@property (nonatomic, assign) int currentIndexValue;
+@property (nonatomic, strong) SVSegmentedControl *navSC;
+
 
 @end
 
@@ -33,18 +37,62 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    // 1st CONTROL
+    // ON OFF SWITCH
     // Hinzufuegen von Feldern: @"Text". (Text betitelt Feld)
-    SVSegmentedControl *navSC = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"Home", @"Away", nil]];
-    navSC.changeHandler = ^(NSUInteger newIndex) {
+    self.navSC = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"  Home  ", @"  Away  ", nil]];
+    
+    self.navSC.changeHandler = ^(NSUInteger newIndex) {
+        __block NSUInteger index = self.navSC.selectedSegmentIndex;
         NSLog(@"segmentedControl did select index %i (via block handler)", newIndex);
+        
+        
+        
+        // storage of currentindex
+        self.currentIndexValue = index;
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue] forKey:@"currentIndexValue"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [self.navSC setIndexToBeginWith:index];
+        self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValue"] integerValue];
+        NSLog(@"stored val in change handler: %d", self.currentIndexValue);
+
+        
+        if (index == 1)
+        {
+            UIAlertView *messageHome = [[UIAlertView alloc] initWithTitle:@"HOME" message:@"Bitte geben Sie das Passwort ein." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [messageHome show];
+            self.booleanHome = true;
+        } else if (index == 0)
+        {
+            UIAlertView *messageAway = [[UIAlertView alloc] initWithTitle:@"AWAY" message:@"Das Haus ist verriegelt." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [messageAway show];
+            self.booleanHome = false;
+        }
     };
     
-    [self.view addSubview:navSC];
+    [self.view addSubview:self.navSC];
     
-    navSC.center = CGPointMake((self.view.frame.size.width*3)/4, self.view.frame.size.height/2);  //CGPointMake(160, 70). Ausrichten Des ToggleButtons im IPad Bildschirm selber
+    self.navSC.center = CGPointMake((self.view.frame.size.width*3)/4, self.view.frame.size.height/2);  //CGPointMake(160, 70). Ausrichten Des ToggleButtons im IPad Bildschirm selber
+}
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
+    // reading stored index
+    self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValue"] integerValue];
+    NSLog(@"stored val: %d", self.currentIndexValue);
+    int returnIdxVal;
+    
+    // show ON OFF again
+    if (self.currentIndexValue == 0) // away
+    {
+        returnIdxVal = [self.navSC setIndexToBeginWith:1];
+        NSLog(@"returnidxval: %d", returnIdxVal);
+    } else if (self.currentIndexValue == 1) // home
+    {
+        returnIdxVal = [self.navSC setIndexToBeginWith:0];
+        NSLog(@"returnidxval: %d", returnIdxVal);
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,8 +112,11 @@
     {
         NSLog(@"code should consist of just 4 items - number of items: %d", self.labelAlarmCode.text.length);
     } else {
-        NSString *digit = sender.currentTitle;
-        self.labelAlarmCode.text = [self.labelAlarmCode.text stringByAppendingString:digit];
+        if (self.booleanHome == true)
+        {
+            NSString *digit = sender.currentTitle;
+            self.labelAlarmCode.text = [self.labelAlarmCode.text stringByAppendingString:digit];
+        }
     }
 }
 

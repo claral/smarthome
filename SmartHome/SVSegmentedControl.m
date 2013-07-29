@@ -76,17 +76,17 @@
         self.mustSlideToChange = NO;
         self.minimumOverlapToChange = 0.66;
         
-        self.font = [UIFont boldSystemFontOfSize:15];
+        self.font = [UIFont boldSystemFontOfSize:18];
         self.textColor = [UIColor whiteColor]; // Text von Hintergrund
         self.textShadowColor = [UIColor grayColor]; //Schatten vom Text
         self.textShadowOffset = CGSizeMake(0, -1);
         
         self.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 10);
         self.thumbEdgeInset = UIEdgeInsetsMake(2, 2, 3, 2);
-        self.height = 45.0; //32.0; Hoehe des Buttons
+        self.height = 70.0; //32.0; Hoehe des Buttons
         self.cornerRadius = 4.0;
         
-        self.selectedSegmentIndex = 0;
+        //self.selectedSegmentIndex = 0;
         
         self.innerShadowColor = [UIColor colorWithWhite:0 alpha:0.8];
         
@@ -94,6 +94,12 @@
     }
     
     return self;
+}
+
+- (int) setIndexToBeginWith:(int) index
+{
+    self.selectedSegmentIndex = index;
+    return self.selectedSegmentIndex;
 }
 
 - (SVSegmentedThumb *)thumb {
