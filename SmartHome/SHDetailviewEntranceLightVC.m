@@ -9,8 +9,11 @@
 #import "SHDetailviewEntranceLightVC.h"
 #import "SVSegmentedControl.h"
 #import "SVSegmentedThumb.h"
+#import "VEVMPercentageWheelViewController.h"
 
 @interface SHDetailviewEntranceLightVC ()
+
+@property (strong) VEVMPercentageWheelViewController *pwvc;
 
 @end
 
@@ -41,6 +44,16 @@
     [self.view addSubview:navSC];
     
     navSC.center = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/4);  //CGPointMake(160, 70). Ausrichten Des ToggleButtons im IPad Bildschirm selber
+    
+    //Percentage Wheel
+    self.pwvc = [[VEVMPercentageWheelViewController alloc]init];
+    
+    UIView *pwView = self.pwvc.view;
+    
+    [pwView setBounds:CGRectMake(0, 0, pwView.frame.size.width, pwView.frame.size.height)];
+    [pwView setCenter:CGPointMake(510, 400)];
+//    [pwView setBackgroundColor:[UIColor magentaColor]];
+    [self.view addSubview:pwView];
     
     
 }
