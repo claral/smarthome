@@ -24,7 +24,14 @@ typedef enum VEWheelItemVerticalPosition : NSUInteger {
 	VEWheelItemVerticalPositionDown
 } VEWheelItemVerticalPosition;
 
+@protocol SliderDelegate <NSObject>
+
+- (void)sliderDidMoveTo:(NSInteger)index;
+
+@end
+
 @interface VEWheelItemView : UIView
+
 
 @property (nonatomic, strong) SHIconWithTitle *icon;
 @property (nonatomic, strong) UIImage *image;

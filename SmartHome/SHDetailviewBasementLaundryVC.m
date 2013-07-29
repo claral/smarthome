@@ -13,6 +13,8 @@
 
 @property (strong) VEIFWheelViewController *wvc;
 
+- (IBAction)startWashing:(id)sender;
+
 @end
 
 @implementation SHDetailviewBasementLaundryVC
@@ -70,6 +72,7 @@
     
     UIView *wView = self.wvc.view;
     
+    
 //    [wView setBackgroundColor:[UIColor magentaColor]];
     [wView setBounds:CGRectMake(0, 0, wView.frame.size.width, wView.frame.size.height)];
     [wView setCenter:CGPointMake(400, 400)];
@@ -95,4 +98,10 @@
     // TODO: wirklich alle Views dismissed?
 }
 
+- (IBAction)startWashing:(id)sender {
+    
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Waschvorgang" message:@"wird durchgeführt!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [message show];
+    
+}
 @end

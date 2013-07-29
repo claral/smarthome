@@ -21,6 +21,7 @@
 
 @implementation VEIFWheelViewController
 
+
 #pragma mark - init/dealloc
 
 - (id)init
@@ -299,5 +300,6 @@
 		itemView.startingPoint = [self.wheelView pointOnCircumferenceForAngle:itemView.angle];
 	}
 }
+
 
 @end

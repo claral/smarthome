@@ -273,6 +273,7 @@
 		
 		[self updateFrame];
 	}
+    
 }
 
 
