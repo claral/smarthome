@@ -46,15 +46,15 @@
     [super viewWillAppear:animated];
     
     // reading stored temperature
-    self.currentTVChanel = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentTVChanel"] integerValue];
+    self.currentTVChanel = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentTVChanelLivingRoom"] integerValue];
     
     // reading stored row
-    int currRow = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentRowValue"] integerValue];
+    int currRow = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentRowValueTVLivingRoom"] integerValue];
     [self.pickerWheelTVChanels selectRow:currRow inComponent:0 animated:NO];
     self.labelCurrentTVChanel.text = [self.arrayTVChanels objectAtIndex:currRow];
     
     // reading stored volume
-    self.currentVolumeValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentTVVolumeValue"] floatValue];
+    self.currentVolumeValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentTVVolumeValueLivingRoom"] floatValue];
     self.sliderTVVolume.value = self.currentVolumeValue;
     self.labelVolume.text = [NSString stringWithFormat:@"%.1f", self.currentVolumeValue * 100];
 }
@@ -126,9 +126,9 @@
     self.currentTVChanel = tmpRow;
     
     // storage of current chanel
-    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentTVChanel] forKey:@"currentTVChanel"];
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentTVChanel] forKey:@"currentTVChanelLivingRoom"];
     // storage of row
-    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:row] forKey:@"currentRowValue"];
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:row] forKey:@"currentRowValueTVLivingRoom"];
     
     self.labelCurrentTVChanel.text = [self.arrayTVChanels objectAtIndex:row];
 }
@@ -139,7 +139,7 @@
     self.currentVolumeValue = [sender value];
     self.labelVolume.text = [NSString stringWithFormat:@"%.1f", self.currentVolumeValue * 100];
     // storage of volume
-    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:self.currentVolumeValue] forKey:@"currentTVVolumeValue"];
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:self.currentVolumeValue] forKey:@"currentTVVolumeValueLivingRoom"];
 }
 
 @end

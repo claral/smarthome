@@ -58,13 +58,13 @@
         
         // storage of currentindex
         self.currentIndexValue = index;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue] forKey:@"currentIndexValue"];
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue] forKey:@"currentIndexValueLightEntrance"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         [navSC setIndexToBeginWith:index];
         
         
         // show ON OFF // within light view
-        self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValue"] integerValue];
+        self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueLightEntrance"] integerValue];
         int returnIdxVal;
         if (self.currentIndexValue == 0) // off
         {
@@ -79,11 +79,11 @@
     };
     
     // reading stored index value
-    self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValue"] integerValue];
+    self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueLightEntrance"] integerValue];
     int returnIdxVal;
     
     // reading stored percentage value
-    self.currentPercentageValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentPercentageValue"] floatValue];
+    self.currentPercentageValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentPercentageValueLightEntrance"] floatValue];
     [pwView setBounds:CGRectMake(0, 0, pwView.frame.size.width, pwView.frame.size.height)];
     [pwView setCenter:CGPointMake(510, 400)];
     NSNumber *currentPercentageNumber = [[NSNumber alloc] init];
@@ -118,7 +118,7 @@
     [super viewWillDisappear:animated];
     
     // storage of current percentage value
-    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:_pwvc.percentageWheelView.valueAngle] forKey:@"currentPercentageValue"];
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:_pwvc.percentageWheelView.valueAngle] forKey:@"currentPercentageValueLightEntrance"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
 }

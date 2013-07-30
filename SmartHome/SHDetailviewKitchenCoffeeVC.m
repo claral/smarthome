@@ -93,13 +93,13 @@
         
         // storage of currentindex
         self.currentIndexValue = index;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue] forKey:@"currentIndexValue"];
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue] forKey:@"currentIndexValueCoffeeKitchen"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         [navSC setIndexToBeginWith:index];
         
         
         // show ON OFF // within light view
-        self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValue"] integerValue];
+        self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueCoffeeKitchen"] integerValue];
         int returnIdxVal;
         if (self.currentIndexValue == 0) // off
         {
@@ -114,7 +114,7 @@
     };
     
     // reading stored index value
-    self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValue"] integerValue];
+    self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueCoffeeKitchen"] integerValue];
     int returnIdxVal;
     
     

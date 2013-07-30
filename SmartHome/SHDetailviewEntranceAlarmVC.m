@@ -47,14 +47,14 @@
         
         // storage of currentindex
         self.currentIndexValue = index;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue] forKey:@"currentIndexValue"];
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue] forKey:@"currentIndexValueAlarmEntrance"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         [self.navSC setIndexToBeginWith:index];
-        self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValue"] integerValue];
+        self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueAlarmEntrance"] integerValue];
         NSLog(@"stored val in change handler: %d", self.currentIndexValue);
         
         // show ON OFF again
-        self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValue"] integerValue];
+        self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueAlarmEntrance"] integerValue];
         int returnIdxVal;
         if (self.currentIndexValue == 0) // away
         {
@@ -82,7 +82,7 @@
     
     
     
-    self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValue"] integerValue];
+    self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueAlarmEntrance"] integerValue];
     int returnIdxVal;
     if (self.currentIndexValue == 0) // away
     {

@@ -35,9 +35,9 @@
     [super viewWillAppear:animated];
     
     // reading stored temperature
-    self.currentHeatingValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentHeatingValue"] integerValue];
+    self.currentHeatingValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentHeatingValueBedroom"] integerValue];
     // reading stored row
-    int currRow = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentRowValue"] integerValue];
+    int currRow = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentRowValueBedroom"] integerValue];
     [self.heatingWheel selectRow:currRow inComponent:0 animated:NO];
 }
 
@@ -117,9 +117,9 @@
     }
     
     // storage of temperature
-    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentHeatingValue] forKey:@"currentHeatingValue"];
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentHeatingValue] forKey:@"currentHeatingValueBedroom"];
     // storage of row
-    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:row] forKey:@"currentRowValue"];
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:row] forKey:@"currentRowValueBedroom"];
 }
 
 @end
