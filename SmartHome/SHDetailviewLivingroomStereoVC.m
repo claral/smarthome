@@ -14,8 +14,17 @@
 
 @property (weak, nonatomic) IBOutlet UISlider *sliderVolume;
 @property (weak, nonatomic) IBOutlet UILabel *labelVolume;
+@property (weak, nonatomic) IBOutlet UILabel *labelVolumeHelper;
 @property (nonatomic, assign) float currentVolumeValue;
+@property (nonatomic, assign) int buttonWithImagePlay; // 1 = play, 0 = pause
+@property (weak, nonatomic) IBOutlet UIButton *buttonPlayPause;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerWheelSongs;
+@property (strong, nonatomic, readwrite) NSArray *arraySongs;
+@property (weak, nonatomic) IBOutlet UILabel *labelSongTitle;
+@property (nonatomic, assign) int currentSong;
 - (IBAction)sliderVolumeChange:(UISlider *)sender;
+- (IBAction)changePlayPause:(id)sender;
+@property (nonatomic, assign) int currentIndexValue;
 
 @end
 
@@ -26,6 +35,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
+        self.arraySongs = [[NSArray alloc] initWithObjects:@"Avicii - Wake Me Up", @"Crystal Castles - Empathy", @"Iggy Pop - The Passenger", @"Joris Delacroix - Aire France", @"Marteria - Lila Wolken", @"Milkey Chance - Stolen Dance", @"Tom Odell - Another Love", nil];
     }
     return self;
 }
@@ -39,22 +50,100 @@
     // Hinzufuegen von Feldern: @"Text". (Text betitelt Feld)
     SVSegmentedControl *navSC = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"OFF", @"ON", nil]];
     navSC.changeHandler = ^(NSUInteger newIndex) {
+        __block NSUInteger index = navSC.selectedSegmentIndex;
         NSLog(@"segmentedControl did select index %i (via block handler)", newIndex);
+        
+        // storage of currentindex
+        self.currentIndexValue = index;
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue] forKey:@"currentIndexValueStereoLivingRoom"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [navSC setIndexToBeginWith:index];
+        
+        
+        self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueStereoLivingRoom"] integerValue];
+        int returnIdxVal;
+        if (self.currentIndexValue == 0) // off
+        {
+            returnIdxVal = [navSC setIndexToBeginWith:1];
+            [self.pickerWheelSongs setHidden:NO];
+            [self.sliderVolume setHidden:NO];
+            [self.labelVolume setHidden:NO];
+            [self.labelSongTitle setHidden:NO];
+            [self.labelVolumeHelper setHidden:NO];
+            [self.buttonPlayPause setHidden:NO];
+        } else if (self.currentIndexValue == 1) // on
+        {
+            returnIdxVal = [navSC setIndexToBeginWith:0];
+            [self.pickerWheelSongs setHidden:YES];
+            [self.sliderVolume setHidden:YES];
+            [self.labelVolume setHidden:YES];
+            [self.labelSongTitle setHidden:YES];
+            [self.labelVolumeHelper setHidden:YES];
+            [self.buttonPlayPause setHidden:YES];
+        }
     };
+    
+    
+    // reading stored index value
+    self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueStereoLivingRoom"] integerValue];
+    int returnIdxVal;
+    
+    // show ON OFF // from entrance view to whirlpool view // TODOOO
+    if (self.currentIndexValue == 0) // on
+    {
+        // set stored index
+        returnIdxVal = [navSC setIndexToBeginWith:1];
+        [self.pickerWheelSongs setHidden:NO];
+        [self.sliderVolume setHidden:NO];
+        [self.labelVolume setHidden:NO];
+        [self.labelSongTitle setHidden:NO];
+        [self.labelVolumeHelper setHidden:NO];
+        [self.buttonPlayPause setHidden:NO];
+    } else if (self.currentIndexValue == 1) // off
+    {
+        // set stored index
+        returnIdxVal = [navSC setIndexToBeginWith:0];
+        [self.pickerWheelSongs setHidden:YES];
+        [self.sliderVolume setHidden:YES];
+        [self.labelVolume setHidden:YES];
+        [self.labelSongTitle setHidden:YES];
+        [self.labelVolumeHelper setHidden:YES];
+        [self.buttonPlayPause setHidden:YES];
+    }
+    
     
     [self.view addSubview:navSC];
     
-    navSC.center = CGPointMake((self.view.frame.size.width*1)/3, (self.view.frame.size.height*1)/2);  //CGPointMake(160, 70). Ausrichten Des ToggleButtons im IPad Bildschirm selber
+    navSC.center = CGPointMake((self.view.frame.size.width*1)/3, self.view.frame.size.height/3);
+    //navSC.center = CGPointMake((self.view.frame.size.width*1)/3, (self.view.frame.size.height*1)/2);  //CGPointMake(160, 70). Ausrichten Des ToggleButtons im IPad Bildschirm selber
     
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
     // reading stored volume
     self.currentVolumeValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentVolumeValue"] floatValue];
     self.sliderVolume.value = self.currentVolumeValue;
     self.labelVolume.text = [NSString stringWithFormat:@"%.1f", self.currentVolumeValue * 100];
+    
+    // reading stored song (label)
+    self.currentSong = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentSongStereoLivingRoom"] integerValue];
+    
+    // reading stored row
+    int currRow = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentRowValueStereoLivingRoom"] integerValue];
+    [self.pickerWheelSongs selectRow:currRow inComponent:0 animated:NO];
+    self.labelSongTitle.text = [self.arraySongs objectAtIndex:currRow];
+    
+    // reading stored button image
+    int buttonWithImagePlayHelper = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentButtonWithImagePlayValueStereoLivingRoom"] integerValue];
+    if (buttonWithImagePlayHelper == 0)
+    {
+        [self.buttonPlayPause setImage:[UIImage imageNamed:@"SH_ICON_pause.png"] forState:UIControlStateNormal];
+    } else if (buttonWithImagePlayHelper == 1){
+        [self.buttonPlayPause setImage:[UIImage imageNamed:@"SH_ICON_play.png"] forState:UIControlStateNormal];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,5 +171,48 @@
     // storage of volume
     [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:self.currentVolumeValue] forKey:@"currentVolumeValue"];
 }
+
+- (IBAction)changePlayPause:(id)sender
+{
+    if (self.buttonPlayPause.imageView.image == [UIImage imageNamed:@"SH_ICON_play.png"])
+    {
+        [self.buttonPlayPause setImage:[UIImage imageNamed:@"SH_ICON_pause.png"] forState:UIControlStateNormal];
+        self.buttonWithImagePlay = 0;
+    } else {
+        [self.buttonPlayPause setImage:[UIImage imageNamed:@"SH_ICON_play.png"] forState:UIControlStateNormal];
+        self.buttonWithImagePlay = 1;
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:self.buttonWithImagePlay] forKey:@"currentButtonWithImagePlayValueStereoLivingRoom"];
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return [self.arraySongs count];
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return [self.arraySongs objectAtIndex:row];
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    int tmpRow = row;
+    self.currentSong = tmpRow;
+    
+    // storage of current chanel
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentSong] forKey:@"currentSongStereoLivingRoom"];
+    // storage of row
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:row] forKey:@"currentRowValueStereoLivingRoom"];
+    
+    self.labelSongTitle.text = [self.arraySongs objectAtIndex:row];
+}
+
 
 @end

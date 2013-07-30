@@ -20,6 +20,7 @@
 @property (nonatomic, assign) float currentVolumeValue;
 @property (weak, nonatomic) IBOutlet UISlider *sliderTVVolume;
 @property (weak, nonatomic) IBOutlet UILabel *labelVolume;
+@property (weak, nonatomic) IBOutlet UILabel *labelVolumeHelper;
 - (IBAction)sliderVolumeChange:(id)sender;
 @property (nonatomic, assign) int currentIndexValue;
 
@@ -87,6 +88,7 @@
             [self.sliderTVVolume setHidden:NO];
             [self.labelVolume setHidden:NO];
             [self.labelCurrentTVChanel setHidden:NO];
+            [self.labelVolumeHelper setHidden:NO];
         } else if (self.currentIndexValue == 1) // on
         {
             returnIdxVal = [navSC setIndexToBeginWith:0];
@@ -94,6 +96,7 @@
             [self.sliderTVVolume setHidden:YES];
             [self.labelVolume setHidden:YES];
             [self.labelCurrentTVChanel setHidden:YES];
+            [self.labelVolumeHelper setHidden:YES];
         }
     };
     
@@ -112,6 +115,7 @@
         [self.sliderTVVolume setHidden:NO];
         [self.labelVolume setHidden:NO];
         [self.labelCurrentTVChanel setHidden:NO];
+        [self.labelVolumeHelper setHidden:NO];
     } else if (self.currentIndexValue == 1) // off
     {
         // set stored index
@@ -120,6 +124,7 @@
         [self.sliderTVVolume setHidden:YES];
         [self.labelVolume setHidden:YES];
         [self.labelCurrentTVChanel setHidden:YES];
+        [self.labelVolumeHelper setHidden:YES];
     }
     
     
