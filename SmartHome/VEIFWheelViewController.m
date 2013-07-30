@@ -47,6 +47,12 @@
 	self.wheelView.currentIndex = [value integerValue];
 }
 
+-(int)getCurrentIndex
+{
+    
+    return self.wheelView.currentIndex;
+}
+
 - (void)loadView
 {
 	[super loadView];

@@ -16,5 +16,6 @@
 @interface VEIFWheelViewController : UIViewController <VEWheelViewDelegate>
 
 @property (nonatomic, strong) NSArray *items;
+-(int)getCurrentIndex;
 
 @end

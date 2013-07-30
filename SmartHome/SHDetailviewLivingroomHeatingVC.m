@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIPickerView *heatingWheel;
 @property (strong, nonatomic, readwrite) NSArray *heatingWheelItems; // WICHTIG: outlets: dataSource & delegate!
 @property (nonatomic, assign) int currentHeatingValue;
+@property (nonatomic, assign) int currentIndex;
 
 @end
 
@@ -26,7 +27,7 @@
         
         // init array of heating
         self.heatingWheelItems = [[NSArray alloc] initWithObjects:@"15° Celsius", @"16° Celsius", @"17° Celsius", @"18° Celsius", @"19° Celsius", @"20° Celsius", @"21° Celsius", @"22° Celsius", @"23° Celsius", @"24° Celsius", @"25° Celsius", nil];
-        [self.heatingWheel selectRow:1 inComponent:0 animated:NO];
+        //[self.heatingWheel selectRow:1 inComponent:0 animated:NO];
         
     }
     return self;
@@ -47,7 +48,7 @@
     
     SHIconWithTitle *icon2 = [[SHIconWithTitle alloc] init];
     icon2.icon = [UIImage imageNamed:@"Heizung-Manuell"];
-    icon2.title = @"Manuell ..";
+    icon2.title = @"Manuell";
     
     SHIconWithTitle *icon3 = [[SHIconWithTitle alloc] init];
     icon3.icon = [UIImage imageNamed:@"Heizung-Nacht"];
@@ -63,13 +64,53 @@
     
     [sliderView setBounds:CGRectMake(0, 0, sliderView.frame.size.width, sliderView.frame.size.height)];
     [sliderView setCenter:CGPointMake(500, 500)];
-    //[self.view addSubview:sliderView];
+    //[self.view addSubview:sliderViewSelected];
     //[self.view sendSubviewToBack:sliderView];
     [self.view addSubview:sliderView];
-
-    // set pickerwheel of heating to invisible
-    [self.heatingWheel setHidden:YES];
     
+    // set pickerwheel of heating to invisible / visible
+    if (self.currentIndex == 1)
+    {
+        NSLog(@"show 'manuell' of heating");
+        [self.heatingWheel setHidden:NO];
+    } else
+    {
+        [self.heatingWheel setHidden:YES];
+    }
+    
+    // reading stored index
+    self.currentIndex = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentHeatingIndexLivingRoom"] intValue];
+    NSNumber *currentIdxNumber = [[NSNumber alloc] init];
+    currentIdxNumber = [NSNumber numberWithFloat:self.currentIndex];
+    [self.svc setPredefinedValue:currentIdxNumber];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    // reading stored temperature
+    self.currentHeatingValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentHeatingValueLivingRoom"] integerValue];
+    // reading stored row
+    int currRow = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentRowValueLivingRoom"] integerValue];
+    [self.heatingWheel selectRow:currRow inComponent:0 animated:NO];
+    
+    // reading stored index
+    self.currentIndex = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentHeatingIndexLivingRoom"] intValue];
+    NSNumber *currentIdxNumber = [[NSNumber alloc] init];
+    currentIdxNumber = [NSNumber numberWithFloat:self.currentIndex];
+    [self.svc setPredefinedValue:currentIdxNumber];
+    
+    // set pickerwheel of heating to invisible / visible
+    if (self.currentIndex == 1)
+    {
+        NSLog(@"show 'manuell' of heating");
+        [self.heatingWheel setHidden:NO];
+    } else
+    {
+        [self.heatingWheel setHidden:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -92,9 +133,12 @@
 - (void)sliderDidMoveTo:(NSInteger)index
 {
     NSLog(@"Selected Item = %i", index);
+    // storage of index
+    self.currentIndex = index;
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndex] forKey:@"currentHeatingIndexLivingRoom"];
+    
     if (index == 1)
     {
-        NSLog(@"show 'manuell' of heating");
         [self.heatingWheel setHidden:NO];
     } else
     {
@@ -155,8 +199,10 @@
         self.currentHeatingValue = 25;
     }
     
-    //NSString *object = [self.heatingWheelItems objectAtIndex:row];
-    //NSLog(@"%@", object);
+    // storage of temperature
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentHeatingValue] forKey:@"currentHeatingValueLivingRoom"];
+    // storage of row
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:row] forKey:@"currentRowValueLivingRoom"];
 }
 
 @end

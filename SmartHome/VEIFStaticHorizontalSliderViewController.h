@@ -16,4 +16,6 @@
 @property (nonatomic, strong) id<SliderDelegate> sDelegate;
 @property (nonatomic, strong) NSArray *icons;
 
+- (void)setPredefinedValue:(id)value;
+
 @end
