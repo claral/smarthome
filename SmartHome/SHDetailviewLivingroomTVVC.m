@@ -21,12 +21,12 @@
 @property (weak, nonatomic) IBOutlet UISlider *sliderTVVolume;
 @property (weak, nonatomic) IBOutlet UILabel *labelVolume;
 - (IBAction)sliderVolumeChange:(id)sender;
+@property (nonatomic, assign) int currentIndexValue;
 
 @end
 
 @implementation SHDetailviewLivingroomTVVC
 
-@synthesize labelTVChannel = _labelTVChannel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -68,12 +68,65 @@
     // Hinzufuegen von Feldern: @"Text". (Text betitelt Feld)
     SVSegmentedControl *navSC = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"OFF", @"ON", nil]];
     navSC.changeHandler = ^(NSUInteger newIndex) {
+        __block NSUInteger index = navSC.selectedSegmentIndex;
         NSLog(@"segmentedControl did select index %i (via block handler)", newIndex);
+        
+        // storage of currentindex
+        self.currentIndexValue = index;
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue] forKey:@"currentIndexValueTVLivingRoom"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [navSC setIndexToBeginWith:index];
+        
+        
+        self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueTVLivingRoom"] integerValue];
+        int returnIdxVal;
+        if (self.currentIndexValue == 0) // off
+        {
+            returnIdxVal = [navSC setIndexToBeginWith:1];
+            [self.pickerWheelTVChanels setHidden:NO];
+            [self.sliderTVVolume setHidden:NO];
+            [self.labelVolume setHidden:NO];
+            [self.labelCurrentTVChanel setHidden:NO];
+        } else if (self.currentIndexValue == 1) // on
+        {
+            returnIdxVal = [navSC setIndexToBeginWith:0];
+            [self.pickerWheelTVChanels setHidden:YES];
+            [self.sliderTVVolume setHidden:YES];
+            [self.labelVolume setHidden:YES];
+            [self.labelCurrentTVChanel setHidden:YES];
+        }
     };
+    
+    
+    
+    // reading stored index value
+    self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueTVLivingRoom"] integerValue];
+    int returnIdxVal;
+    
+    // show ON OFF // from entrance view to whirlpool view // TODOOO
+    if (self.currentIndexValue == 0) // on
+    {
+        // set stored index
+        returnIdxVal = [navSC setIndexToBeginWith:1];
+        [self.pickerWheelTVChanels setHidden:NO];
+        [self.sliderTVVolume setHidden:NO];
+        [self.labelVolume setHidden:NO];
+        [self.labelCurrentTVChanel setHidden:NO];
+    } else if (self.currentIndexValue == 1) // off
+    {
+        // set stored index
+        returnIdxVal = [navSC setIndexToBeginWith:0];
+        [self.pickerWheelTVChanels setHidden:YES];
+        [self.sliderTVVolume setHidden:YES];
+        [self.labelVolume setHidden:YES];
+        [self.labelCurrentTVChanel setHidden:YES];
+    }
+    
+    
     
     [self.view addSubview:navSC];
     
-    navSC.center = CGPointMake((self.view.frame.size.width*1)/2, (self.view.frame.size.height*1)/5);  //CGPointMake(160, 70). Ausrichten Des ToggleButtons im IPad Bildschirm selber
+    navSC.center = CGPointMake((self.view.frame.size.width*1)/3, self.view.frame.size.height/3);
 }
 
 - (void)didReceiveMemoryWarning
@@ -96,13 +149,13 @@
 - (IBAction)buttonChanelDisplay:(UIButton *)sender
 {
     // TODO: change after 5 secs possible
-    if (self.labelTVChannel.text.length == 2)
+    /*if (self.labelTVChannel.text.length == 2)
     {
         NSLog(@"channel should consist of just 2 items - number of items: %d", self.labelTVChannel.text.length);
     } else {
         NSString *digit = sender.currentTitle;
         self.labelTVChannel.text = [self.labelTVChannel.text stringByAppendingString:digit];
-    }
+    }*/
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
