@@ -16,6 +16,8 @@
 @interface SHDetailviewKitchenCoffeeVC ()
 
 @property (strong) VEIFStaticHorizontalSliderViewController *svc;
+@property (nonatomic, assign) int currentIndexValue;
+
 - (IBAction)buttonStartCoffee:(id)sender;
 
 @end
@@ -57,7 +59,7 @@
     
     SHIconWithTitle *icon5 = [[SHIconWithTitle alloc] init];
     icon5.icon = [UIImage imageNamed:@"05-Latte-Macchiato"];
-    icon5.title = @"Latte Macchiato";
+    icon5.title = @"Latte";
     
     SHIconWithTitle *icon6 = [[SHIconWithTitle alloc] init];
     icon6.icon = [UIImage imageNamed:@"07-Milchkaffee"];
@@ -65,11 +67,11 @@
     
     SHIconWithTitle *icon7 = [[SHIconWithTitle alloc] init];
     icon7.icon = [UIImage imageNamed:@"07-Warme-Milch"];
-    icon7.title = @"Warme Milch";
+    icon7.title = @"Milch";
     
     SHIconWithTitle *icon8 = [[SHIconWithTitle alloc] init];
     icon8.icon = [UIImage imageNamed:@"08-Heisses-Wasser"];
-    icon8.title = @"Heisses Wasser";
+    icon8.title = @"Wasser";
     
     self.svc.icons = [[NSArray alloc] initWithObjects:icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, nil];
     
@@ -78,7 +80,7 @@
     [sliderView setBounds:CGRectMake(0, 0, sliderView.frame.size.width, sliderView.frame.size.height)];
     [sliderView setCenter:CGPointMake(500, 500)];
     //[sliderView setBackgroundColor:[UIColor magentaColor]];
-    [self.view addSubview:sliderView];
+//    [self.view addSubview:sliderView];
     //[self.view sendSubviewToBack:sliderView];
 //    [self.view insertSubview:sliderView atIndex:0];
     
@@ -86,11 +88,53 @@
     // Hinzufuegen von Feldern: @"Text". (Text betitelt Feld)
     SVSegmentedControl *navSC = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"OFF", @"ON", nil]];
     navSC.changeHandler = ^(NSUInteger newIndex) {
+        __block NSUInteger index = navSC.selectedSegmentIndex;
         NSLog(@"segmentedControl did select index %i (via block handler)", newIndex);
+        
+        // storage of currentindex
+        self.currentIndexValue = index;
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue] forKey:@"currentIndexValue"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [navSC setIndexToBeginWith:index];
+        
+        
+        // show ON OFF // within light view
+        self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValue"] integerValue];
+        int returnIdxVal;
+        if (self.currentIndexValue == 0) // off
+        {
+            returnIdxVal = [navSC setIndexToBeginWith:1];
+            [self.view addSubview:sliderView];
+        } else if (self.currentIndexValue == 1) // on
+        {
+            returnIdxVal = [navSC setIndexToBeginWith:0];
+            [sliderView removeFromSuperview];
+        }
+        
     };
     
-    [self.view addSubview:navSC];
+    // reading stored index value
+    self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValue"] integerValue];
+    int returnIdxVal;
     
+    
+    // show ON OFF // from entrance view to light view
+    if (self.currentIndexValue == 0) // on
+    {
+        // set stored index
+        returnIdxVal = [navSC setIndexToBeginWith:1];
+        [self.view addSubview:sliderView];
+    } else if (self.currentIndexValue == 1) // off
+    {
+        // set stored index
+        returnIdxVal = [navSC setIndexToBeginWith:0];
+        [sliderView removeFromSuperview];
+    }
+
+
+
+    [self.view addSubview:navSC];
+
     navSC.center = CGPointMake((self.view.frame.size.width*1)/3, self.view.frame.size.height/3);  //CGPointMake(160, 70). Ausrichten Des ToggleButtons im IPad Bildschirm selber
     
 }

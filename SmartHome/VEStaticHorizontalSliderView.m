@@ -225,7 +225,7 @@
 	[titleLayer setFont:@"Helvetica"];
 	
     [titleLayer setString:icon.title];
-	[titleLayer setFontSize:10.0f]; //8.0f Schriftgroesse
+	[titleLayer setFontSize:14.0f]; //8.0f Schriftgroesse
 	[titleLayer setAlignmentMode:kCAAlignmentCenter];
 	[titleLayer setForegroundColor:[[UIColor blackColor] CGColor]];
 	
