@@ -7,33 +7,18 @@
 //
 
 #import "SHDetailviewKitchenCookerVC.h"
-#import "VEIFTapNHoldViewController.h"
 
 @interface SHDetailviewKitchenCookerVC ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *cooker1Start;
-@property (weak, nonatomic) IBOutlet UIImageView *cooker1Level0;
-@property (weak, nonatomic) IBOutlet UIImageView *cooker1Level1;
-@property (weak, nonatomic) IBOutlet UIImageView *cooker1Level2;
-@property (weak, nonatomic) IBOutlet UIImageView *cooker1Level3;
-@property (weak, nonatomic) IBOutlet UIImageView *cooker1Level4;
-@property (weak, nonatomic) IBOutlet UIImageView *cooker1Level5;
-@property (weak, nonatomic) IBOutlet UIImageView *cooker1Level6;
-@property (weak, nonatomic) IBOutlet UIImageView *cooker1Level7;
-@property (weak, nonatomic) IBOutlet UIImageView *cooker1Level8;
-@property (weak, nonatomic) IBOutlet UIImageView *cooker1Level9;
+@property (strong) VEIFTapNHoldViewController *cookerAView;
+@property (strong) VEIFTapNHoldViewController *cookerBView;
+@property (strong) VEIFTapNHoldViewController *cookerCView;
+@property (strong) VEIFTapNHoldViewController *cookerDView;
 
-@property (strong, nonatomic, readwrite) UILongPressGestureRecognizer *longPressGestureRecognizer;
-
-@property (assign, nonatomic, readwrite) BOOL beginFromCooker1StartBool;
-@property (strong, nonatomic, readwrite) UIImageView *selectedCooker1Level;
-@property (strong, nonatomic, readwrite) UIImageView *currentTouchedCooker1Level;
-@property (strong, nonatomic, readwrite) NSArray *cooker1LevelArray;
-@property (weak, nonatomic) IBOutlet UILabel *cooker1Label;
-
-
-@property (strong) VEIFTapNHoldViewController *tnhvc;
-
+@property (nonatomic, assign) int currentIndexCookerA;
+@property (nonatomic, assign) int currentIndexCookerB;
+@property (nonatomic, assign) int currentIndexCookerC;
+@property (nonatomic, assign) int currentIndexCookerD;
 
 @end
 
@@ -52,139 +37,165 @@
 {
     [super viewDidLoad];
     
-    self.tnhvc =
-    [[VEIFTapNHoldViewController alloc] init];
-//    self.tnhvc.sDelegate = self;
     
+/**    Begin Cooker A **/
+    self.currentIndexCookerA = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueCookerA"] intValue];
+
+    self.cookerAView =
+    [[VEIFTapNHoldViewController alloc] initWithIndex:1 cookerValue:self.currentIndexCookerA andDelegate:self];
+//    self.tnhvc.sDelegate = self;
+        
     SHIconWithTitle *icon1 = [[SHIconWithTitle alloc] init];
-    icon1.icon = [UIImage imageNamed:@"01-Espresso"];
-    icon1.title = @"1";
+    icon1.icon = [UIImage imageNamed:@"Cooker0"];
+    icon1.title = @"0";
     
     SHIconWithTitle *icon2 = [[SHIconWithTitle alloc] init];
-    icon2.icon = [UIImage imageNamed:@"02-Espresso-Doppio"];
-    icon2.title = @"2";
+    icon2.icon = [UIImage imageNamed:@"Cooker1"];
+    icon2.title = @"1";
     
     SHIconWithTitle *icon3 = [[SHIconWithTitle alloc] init];
-    icon3.icon = [UIImage imageNamed:@"03-Kaffee"];
-    icon3.title = @"3";
+    icon3.icon = [UIImage imageNamed:@"Cooker2"];
+    icon3.title = @"2";
     
     SHIconWithTitle *icon4 = [[SHIconWithTitle alloc] init];
-    icon4.icon = [UIImage imageNamed:@"04-Cappuccino"];
-    icon4.title = @"4";
+    icon4.icon = [UIImage imageNamed:@"Cooker3"];
+    icon4.title = @"3";
     
     SHIconWithTitle *icon5 = [[SHIconWithTitle alloc] init];
-    icon5.icon = [UIImage imageNamed:@"04-Cappuccino"];
-    icon5.title = @"5";
+    icon5.icon = [UIImage imageNamed:@"Cooker4"];
+    icon5.title = @"4";
     
     SHIconWithTitle *icon6 = [[SHIconWithTitle alloc] init];
-    icon6.icon = [UIImage imageNamed:@"04-Cappuccino"];
-    icon6.title = @"6";
+    icon6.icon = [UIImage imageNamed:@"Cooker5"];
+    icon6.title = @"5";
     
     SHIconWithTitle *icon7 = [[SHIconWithTitle alloc] init];
-    icon7.icon = [UIImage imageNamed:@"04-Cappuccino"];
-    icon7.title = @"7";
+    icon7.icon = [UIImage imageNamed:@"Cooker6"];
+    icon7.title = @"6";
     
     SHIconWithTitle *icon8 = [[SHIconWithTitle alloc] init];
-    icon8.icon = [UIImage imageNamed:@"04-Cappuccino"];
-    icon8.title = @"8";
+    icon8.icon = [UIImage imageNamed:@"Cooker7"];
+    icon8.title = @"7";
     
     SHIconWithTitle *icon9 = [[SHIconWithTitle alloc] init];
-    icon9.icon = [UIImage imageNamed:@"04-Cappuccino"];
-    icon9.title = @"9";
+    icon9.icon = [UIImage imageNamed:@"Cooker8"];
+    icon9.title = @"8";
         
-    self.tnhvc.items = [[NSArray alloc] initWithObjects:icon3, icon2, icon1, icon9, icon8, icon7, icon6, icon5, icon4, nil];
+    self.cookerAView.items = [[NSArray alloc] initWithObjects:icon3, icon2, icon1, icon9, icon8, icon7, icon6, icon5, icon4, nil];
     
-    UIView *tnhView = self.tnhvc.view;
+    UIView *AView = self.cookerAView.view;
     
-//    [tnhView setBackgroundColor:[UIColor magentaColor]];
-    [tnhView setBounds:CGRectMake(200, 200, tnhView.frame.size.width, tnhView.frame.size.height)];
-    [tnhView setCenter:CGPointMake(400, 650)];
+//    [AView setBackgroundColor:[UIColor magentaColor]];
+    [AView setBounds:CGRectMake(0,0, AView.frame.size.width*1/4, AView.frame.size.height*2/7)];
+    [AView setCenter:CGPointMake(200, 530)];
     
-    [self.view addSubview:tnhView];
+    [self.view addSubview:AView];
+    
+    
+/**    Begin Cooker B **/
+    self.currentIndexCookerB = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueCookerB"] intValue];
+    
+    self.cookerBView =
+    [[VEIFTapNHoldViewController alloc] initWithIndex:2 cookerValue:self.currentIndexCookerB andDelegate:self];
+    
+    self.cookerBView.items = [[NSArray alloc] initWithObjects:icon3, icon2, icon1, icon9, icon8, icon7, icon6, icon5, icon4, nil];
+    
+    UIView *BView = self.cookerBView.view;
+    
+    //    [BView setBackgroundColor:[UIColor blueColor]];
+    [BView setBounds:CGRectMake(0,0, BView.frame.size.width*1/4, BView.frame.size.height*2/7)];
+    [BView setCenter:CGPointMake(200, 230)];
+    
+    [self.view addSubview:BView];
+    
+    
+    
+/**    Begin Cooker C **/
+    self.currentIndexCookerC = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueCookerC"] intValue];
+    
+    self.cookerCView =
+    [[VEIFTapNHoldViewController alloc] initWithIndex:3 cookerValue:self.currentIndexCookerC andDelegate:self];
+    
+    self.cookerCView.items = [[NSArray alloc] initWithObjects:icon3, icon2, icon1, icon9, icon8, icon7, icon6, icon5, icon4, nil];
+    
+    UIView *CView = self.cookerCView.view;
+    
+    //    [CView setBackgroundColor:[UIColor greenColor]];
+    [CView setBounds:CGRectMake(0,0, CView.frame.size.width*1/4, CView.frame.size.height*2/7)];
+    [CView setCenter:CGPointMake(700, 230)];
+    
+    [self.view addSubview:CView];
+    
+    
+
+/**    Begin Cooker D **/
+    self.currentIndexCookerD = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueCookerD"] intValue];
+    
+    self.cookerDView =
+    [[VEIFTapNHoldViewController alloc] initWithIndex:4 cookerValue:self.currentIndexCookerD andDelegate:self];
+    
+    self.cookerDView.items = [[NSArray alloc] initWithObjects:icon3, icon2, icon1, icon9, icon8, icon7, icon6, icon5, icon4, nil];
+    
+    UIView *DView = self.cookerDView.view;
+    
+    //    [DView setBackgroundColor:[UIColor greenColor]];
+    [DView setBounds:CGRectMake(0,0, DView.frame.size.width*1/4, DView.frame.size.height*2/7)];
+    [DView setCenter:CGPointMake(700, 530)];
+    
+    [self.view addSubview:DView];
 
     
-//    // init array cookerlevels (of cooker 1) with uiimmageviews
-//    self.cooker1LevelArray = [[NSArray alloc] initWithObjects:self.cooker1Level0, self.cooker1Level1, self.cooker1Level2, self.cooker1Level3, self.cooker1Level4, self.cooker1Level5, self.cooker1Level6, self.cooker1Level7, self.cooker1Level8, self.cooker1Level9 , nil];
-//    
-//    // TODO: for every cooker
-//    // storage
-//    NSUInteger cooker1Level = [[[NSUserDefaults standardUserDefaults] valueForKey:@"cookerOneLevel"] integerValue];
-//    self.cooker1Label.text = [NSString stringWithFormat:@"Stufe: %d", cooker1Level];
-//    self.selectedCooker1Level = [self.cooker1LevelArray objectAtIndex:cooker1Level];
-//    [self.selectedCooker1Level setImage:[UIImage imageNamed:@"oven2.png"]];
-//    
-//    // add a custom long press gesture recognizer
-//	self.longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressGesture:)];
-//    self.longPressGestureRecognizer.minimumPressDuration = 0.2f;
-//    [self.view addGestureRecognizer:self.longPressGestureRecognizer];
+
+    
 }
 
-
-- (void)handleLongPressGesture:(UILongPressGestureRecognizer*)recognizer
+- (void)cooker:(NSInteger)cookerIndex didChangeTo:(NSInteger)cookerValue
 {
-    CGPoint touchPoint = [recognizer locationInView:self.view];
     
-    // START of long press gesture
-    if (UIGestureRecognizerStateBegan == recognizer.state)
-    {
-        if (self.selectedCooker1Level != nil)
-        {
-            [self.selectedCooker1Level setImage:[UIImage imageNamed:@"oven.png"]];
-            self.cooker1Label.text = [NSString stringWithFormat:@"Stufe: %d", [self.cooker1LevelArray indexOfObject:self.selectedCooker1Level]];
-        }
-        if (CGRectContainsPoint(self.cooker1Start.frame, touchPoint))
-        {
-            self.beginFromCooker1StartBool = YES;
-            [self.cooker1Start setImage:[UIImage imageNamed:@"oven2.png"]];
-        }
+    NSLog(@"Hurray the cooker %i JUST changed to %i", cookerIndex, cookerValue);
+
+    switch (cookerIndex) {
+        case 1:
+            self.currentIndexCookerA = cookerValue;
+            [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexCookerA] forKey:@"currentIndexValueCookerA"];
+            break;
+        case 2:
+            self.currentIndexCookerB = cookerValue;
+            [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexCookerB] forKey:@"currentIndexValueCookerB"];
+            break;
+        case 3:
+            self.currentIndexCookerC = cookerValue;
+            [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexCookerC] forKey:@"currentIndexValueCookerC"];
+            break;
+        case 4:
+            self.currentIndexCookerD = cookerValue;
+            [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexCookerD] forKey:@"currentIndexValueCookerD"];
+            break;
+        default:
+            break;
     }
     
-    // CHANGE of long press gesture
-    else if (UIGestureRecognizerStateChanged == recognizer.state)
-    {
-        if (self.beginFromCooker1StartBool == YES)
-        {
-            for (UIImageView* object in self.cooker1LevelArray)
-            {
-                
-                if (CGRectContainsPoint(object.frame, touchPoint))
-                {
-                    object.image = [UIImage imageNamed:@"oven2.png"];
-                    self.currentTouchedCooker1Level = object;
-                }
-                else if ([object isEqual:self.currentTouchedCooker1Level] &&
-                         !CGRectContainsPoint(object.frame, touchPoint))
-                {
-                    object.image = [UIImage imageNamed:@"oven.png"];
-                    self.currentTouchedCooker1Level = nil;
-                }
-                else if (![object isEqual:self.selectedCooker1Level])
-                {
-                    object.image = [UIImage imageNamed:@"oven.png"];
-                }
-            }
-        }
-    }
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+       
+    // reading stored index
+    self.currentIndexCookerA = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueCookerA"] intValue];
+    [_cookerAView setCookerValue:self.currentIndexCookerA];
+
+    self.currentIndexCookerB = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueCookerB"] intValue];
+    [_cookerBView setCookerValue:self.currentIndexCookerB];
     
-    // END of long press gesture
-    else if (UIGestureRecognizerStateEnded == recognizer.state)
-    {
-        if (self.currentTouchedCooker1Level != nil)
-        {
-            self.selectedCooker1Level.image = [UIImage imageNamed:@"oven.png"];
-            self.selectedCooker1Level = self.currentTouchedCooker1Level;
-            self.currentTouchedCooker1Level = nil;
-        }
-        if (self.selectedCooker1Level != nil)
-        {
-            [self.selectedCooker1Level setImage:[UIImage imageNamed:@"oven2.png"]];
-            NSUInteger newCookerOneLevel = [self.cooker1LevelArray indexOfObject:self.selectedCooker1Level];
-            self.cooker1Label.text = [NSString stringWithFormat:@"Stufe: %d", newCookerOneLevel];
-            [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInteger:newCookerOneLevel]
-                                                     forKey:@"cookerOneLevel"];
-        }
-        self.beginFromCooker1StartBool = NO;
-    }
+    self.currentIndexCookerC = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueCookerC"] intValue];
+    [_cookerCView setCookerValue:self.currentIndexCookerC];
+
+    self.currentIndexCookerD = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueCookerD"] intValue];
+    [_cookerDView setCookerValue:self.currentIndexCookerD];
+    
+        
 }
 
 - (void)didReceiveMemoryWarning

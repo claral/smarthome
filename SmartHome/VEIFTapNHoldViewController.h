@@ -11,8 +11,19 @@
 #import <QuartzCore/QuartzCore.h>
 #import "SHIconWithTitle.h"
 
+@protocol tapNHoldDelegate
+
+- (void)cooker:(NSInteger)cookerIndex didChangeTo:(NSInteger)cookerValue;
+
+@end
+
 @interface VEIFTapNHoldViewController : UIViewController
 
 @property (nonatomic, strong) NSArray *items;
+
+- (id)initWithIndex:(NSInteger)index cookerValue:(NSInteger)value andDelegate:(id<tapNHoldDelegate>)delegate;
+- (void)setCookerValue:(NSInteger)value;
+
+- (void)setPredefinedValue:(id)value;
 
 @end

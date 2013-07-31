@@ -243,6 +243,7 @@
 						<int key="NSvFlags">290</int>
 						<string key="NSFrame">{{555, 371}, {403, 216}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<bool key="IBUIShowsSelectionIndicator">YES</bool>

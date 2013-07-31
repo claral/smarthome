@@ -7,6 +7,7 @@
 //
 
 #import "VERoundedButton.h"
+#import "VEIFTapNHoldViewController.h"
 
 @implementation VERoundedButton
 
@@ -52,27 +53,37 @@
 	
 	
 	self.imageLayer = [CALayer layer];
-	self.imageLayer.frame = CGRectMake(self.frame.size.width * 0.25f,
-									   self.frame.size.height * 0.2f,
-									   self.frame.size.width * 0.5f,
-									   self.frame.size.height * 0.5f);
+	self.imageLayer.frame = CGRectMake(self.frame.size.width * 0.1f,
+									   self.frame.size.height*0.1f,
+									   self.frame.size.width*0.8f,
+									   self.frame.size.height*0.8f);
+    //images in button aligned
+//    self.frame.size.width * 0.25f,
+//    self.frame.size.height * 0.2f,
+//    self.frame.size.width * 0.5f,
+//    self.frame.size.height * 0.5f);
+    
 	[self.imageLayer setContentsScale:[[UIScreen mainScreen] scale]];
 	
 	self.titleLayer = [CATextLayer layer];
 	self.titleLayer.frame = CGRectMake(0,
-									   self.frame.size.height * 0.70f,
+									   self.frame.size.height * 0.50f,
 									   self.frame.size.width,
-									   self.frame.size.height * 0.16f);
+									   self.frame.size.height * 3.2f);
+//    (0,
+//     self.frame.size.height * 0.70f,
+//     self.frame.size.width,
+//     self.frame.size.height * 0.16f);
 	
-	CGFloat calculatedLayerFontSize = 10.0f;
+	CGFloat calculatedLayerFontSize = 30.0f;
 	[self.titleLayer setFont:@"Helvetica"];
 	[self.titleLayer setString:@"Kochstufe"];
-	
+    
 	[self.titleLayer setFontSize:calculatedLayerFontSize];
 	[self.titleLayer setContentsScale:[[UIScreen mainScreen] scale]];
 	
 	[self.titleLayer setAlignmentMode:kCAAlignmentCenter];
-	[self.titleLayer setForegroundColor:[[UIColor whiteColor] CGColor]];
+	[self.titleLayer setForegroundColor:[[UIColor blackColor] CGColor]];
 
 //	[self.titleLayer setShadowOpacity:0.7f];
 //	[self.titleLayer setShadowOffset:CGSizeMake(0, 1)];

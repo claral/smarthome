@@ -7,11 +7,13 @@
 //
 
 #import "SHDetailviewBasementLaundryVC.h"
-#import "VEIFWheelViewController.h"
 
 @interface SHDetailviewBasementLaundryVC ()
 
 @property (strong) VEIFWheelViewController *wvc;
+@property (nonatomic, assign) int currentLaundryIndex;
+@property (weak, nonatomic) IBOutlet UIButton *buttonStartWashing;
+
 
 - (IBAction)startWashing:(id)sender;
 
@@ -19,12 +21,29 @@
 
 @implementation SHDetailviewBasementLaundryVC
 
+
+- (void)wheelDidChangeToIndex:(NSInteger)index
+{
+
+    NSLog(@"here we go: %i", index);
+ //button zeigen oder nicht!
+    
+    // Aus
+    [self.buttonStartWashing setHidden:(index == 0)];
+    
+ //save value
+    self.currentLaundryIndex = index;
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentLaundryIndex] forKey:@"currentLaundryIndex"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+}
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
+    
+    [self.buttonStartWashing setHidden:(index == 0)];
     return self;
 }
 
@@ -32,7 +51,15 @@
 {
     [super viewDidLoad];
     
-    self.wvc = [[VEIFWheelViewController alloc]init];
+    //read saved value
+    self.currentLaundryIndex = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentLaundryIndex"] intValue];
+
+    
+    self.wvc = [[VEIFWheelViewController alloc] init];
+    self.wvc.delegate = self;
+//    [self.wvc selectCurrentIndex:self.currentLaundryIndex];
+        
+    // set to wheel -> add setMethod or initWith
     
     SHIconWithTitle *item1 = [[SHIconWithTitle alloc] init];
     item1.icon = [UIImage imageNamed:@"01-Aus"];
@@ -72,13 +99,18 @@
     
     UIView *wView = self.wvc.view;
     
-    
+//    
 //    [wView setBackgroundColor:[UIColor magentaColor]];
     [wView setBounds:CGRectMake(0, 0, wView.frame.size.width, wView.frame.size.height)];
     [wView setCenter:CGPointMake(400, 400)];
     
+    //    [self.buttonStartWashing setHidden:(self.currentLaundryIndex == 0)];
+    [self.buttonStartWashing setHidden:YES];
+    
     [self.view addSubview:wView];
+//    [self.wvc selectCurrentIndex:self.currentLaundryIndex];
 
+    
 }
 
 - (void)didReceiveMemoryWarning

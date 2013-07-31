@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VEIFWheelViewController.h"
 
-@interface SHDetailviewBasementLaundryVC : UIViewController
+
+@interface SHDetailviewBasementLaundryVC : UIViewController <WheelDelegate>
 - (IBAction)backToSH:(id)sender;
 - (IBAction)closeDetailView:(id)sender;
 

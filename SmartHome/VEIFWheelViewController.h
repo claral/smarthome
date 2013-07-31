@@ -10,12 +10,20 @@
 #import "VEWheelView.h"
 #import "VEWheelItemView.h"
 
-
 @class VEWheelView;
+
+@protocol WheelDelegate <NSObject>
+
+- (void)wheelDidChangeToIndex:(NSInteger)index;
+
+@end
 
 @interface VEIFWheelViewController : UIViewController <VEWheelViewDelegate>
 
 @property (nonatomic, strong) NSArray *items;
--(int)getCurrentIndex;
+@property (nonatomic, strong) id<WheelDelegate> delegate;
+
+//-(int)getCurrentIndex;
+- (void)selectCurrentIndex:(NSInteger)value;
 
 @end

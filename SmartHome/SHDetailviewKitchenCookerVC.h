@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VEIFTapNHoldViewController.h"
 
-@interface SHDetailviewKitchenCookerVC : UIViewController
+@interface SHDetailviewKitchenCookerVC : UIViewController <tapNHoldDelegate>
+
 - (IBAction)closeDetailView:(id)sender;
 - (IBAction)backToSH:(id)sender;
 

@@ -27,10 +27,6 @@
 - (id)init
 {
     self = [super init];
-    if (self)
-	{
-		 
-    }
     return self;
 }
 
@@ -42,9 +38,11 @@
 			   afterDelay:0.2f];
 }
 
-- (void)selectCurrentIndex:(id)value
+- (void)selectCurrentIndex:(NSInteger)value
 {
-	self.wheelView.currentIndex = [value integerValue];
+
+//    self.wheelView.currentIndex = value;	
+    
 }
 
 -(int)getCurrentIndex
@@ -57,7 +55,7 @@
 {
 	[super loadView];
 	
-	self.wheelView = [[VEWheelView alloc] initWithFrame:self.view.bounds];
+    self.wheelView = [[VEWheelView alloc] initWithFrame:self.view.bounds];
 
 	[self.view addSubview:self.wheelView];
     self.view.frame = CGRectMake(-60, 0, 700, 500);
@@ -131,6 +129,11 @@
 															action:@selector(handleTap:)];
 	[self.wheelView addGestureRecognizer:rotationRecognizer];
 	[self.view addGestureRecognizer:tapRecognizer];
+}
+
+- (void)wheelViewDidChangeToIndex:(NSInteger)index
+{
+    [self.delegate wheelDidChangeToIndex:index];
 }
 
 - (void)dealloc

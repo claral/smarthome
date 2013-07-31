@@ -283,7 +283,7 @@
 
 #pragma mark - Overriding properties
 
-- (void)setCurrentIndex:(NSUInteger)currentIndex
+- (void)setCurrentIndex:(NSInteger)currentIndex
 {
 	if (_currentIndex != currentIndex)
 	{
@@ -297,8 +297,10 @@
 		
 		_currentIndex = currentIndex;
 	}
+    
+    [self.delegate wheelViewDidChangeToIndex:self.currentIndex];
 	
-	CATransform3D oldRotation;
+    CATransform3D oldRotation;
 	CATransform3D rotation;
 	float newAngle;
 	
@@ -317,6 +319,7 @@
 	[self.layer addAnimation:animation forKey:@"transform"];
 	
 	_currentFloatingIndex = (float)currentIndex;
+        
 }
 
 - (void)setCurrentFloatingIndex:(float)currentFloatingIndex

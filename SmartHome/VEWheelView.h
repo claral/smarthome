@@ -37,5 +37,6 @@
 @protocol VEWheelViewDelegate <NSObject>
 
 - (void)wheelViewWantsToLayoutSubviews:(VEWheelView *)wheelView;
+- (void)wheelViewDidChangeToIndex:(NSInteger)index;
 
 @end
