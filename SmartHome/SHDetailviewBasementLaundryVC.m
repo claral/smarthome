@@ -70,7 +70,7 @@
     // set to wheel -> add setMethod or initWith
     
     SHIconWithTitle *item1 = [[SHIconWithTitle alloc] init];
-    item1.icon = [UIImage imageNamed:@"01-Aus"];
+    item1.icon = [UIImage imageNamed:@"01aus.png"];
     item1.title = @"  Aus             ";
 
     SHIconWithTitle *item2 = [[SHIconWithTitle alloc] init];
@@ -98,7 +98,7 @@
     item7.title = @"           Eco   ";
     
     SHIconWithTitle *item8 = [[SHIconWithTitle alloc] init];
-    item8.icon = [UIImage imageNamed:@"08-Schleudern"];
+    item8.icon = [UIImage imageNamed:@"08schleudern.png"];
     item8.title = @"Schleudern";
     
     NSArray *items = [[NSArray alloc] initWithObjects:item3,item4,item5,item6,item7,item8,item1,item2, nil];
