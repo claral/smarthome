@@ -171,7 +171,7 @@
 	topRight = CGPointMake(topLeft.x + needleSize.width,
 						   topLeft.y);
 	bottomRight = CGPointMake(topRight.x,
-							  topRight.y + needleSize.height);
+							  topRight.y + needleSize.height+50.0f); // Kasten tiefe verstellt mit +50!!!!!
 	bottomLeft = CGPointMake(topLeft.x,
 							 bottomRight.y);
 	
@@ -225,7 +225,7 @@
 	[titleLayer setFont:@"Helvetica"];
 	
     [titleLayer setString:icon.title];
-	[titleLayer setFontSize:14.0f]; //8.0f Schriftgroesse
+	[titleLayer setFontSize:18.0f]; //8.0f Schriftgroesse
 	[titleLayer setAlignmentMode:kCAAlignmentCenter];
 	[titleLayer setForegroundColor:[[UIColor blackColor] CGColor]];
 	
@@ -268,7 +268,9 @@
 		return 0;
 	}
 	
-	return self.frame.size.width / [self.items count];
+//	return self.frame.size.width / [self.items count]*1.25f; //item groesser
+    return self.frame.size.width / [self.items count]*0.80; //item groesser
+
 }
 
 @end

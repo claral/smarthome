@@ -19,6 +19,7 @@
 @property (nonatomic, assign) int currentIndexValue;
 
 - (IBAction)buttonStartCoffee:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *buttonStart;
 
 @end
 
@@ -77,8 +78,10 @@
     
     UIView *sliderView = self.svc.view;
     
+//    [sliderView setBackgroundColor:[UIColor magentaColor]];
     [sliderView setBounds:CGRectMake(0, 0, sliderView.frame.size.width, sliderView.frame.size.height)];
-    [sliderView setCenter:CGPointMake(500, 350)];
+
+    [sliderView setCenter:CGPointMake(627, 350)];
     //[sliderView setBackgroundColor:[UIColor magentaColor]];
 //    [self.view addSubview:sliderView];
     //[self.view sendSubviewToBack:sliderView];
@@ -105,10 +108,12 @@
         {
             returnIdxVal = [navSC setIndexToBeginWith:1];
             [self.view addSubview:sliderView];
+            [self.buttonStart setHidden:NO];
         } else if (self.currentIndexValue == 1) // on
         {
             returnIdxVal = [navSC setIndexToBeginWith:0];
             [sliderView removeFromSuperview];
+            [self.buttonStart setHidden:YES];
         }
         
     };
@@ -124,11 +129,13 @@
         // set stored index
         returnIdxVal = [navSC setIndexToBeginWith:1];
         [self.view addSubview:sliderView];
+        [self.buttonStart setHidden:NO];
     } else if (self.currentIndexValue == 1) // off
     {
         // set stored index
         returnIdxVal = [navSC setIndexToBeginWith:0];
         [sliderView removeFromSuperview];
+        [self.buttonStart setHidden:YES];
     }
 
 

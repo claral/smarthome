@@ -48,13 +48,14 @@
 	horizontalViewSize = CGSizeMake(self.view.frame.size.width, 100);
 	horizontalViewFrame = CGRectMake(self.view.frame.size.width * 0.5f - horizontalViewSize.width * 0.5f,
 									 self.view.frame.size.height * 0.5f - horizontalViewSize.height * 0.5f,
-									 horizontalViewSize.width,
+									 self.view.frame.size.width+450.0f, //breite fuer horizontal view +450
 									 horizontalViewSize.height);
 	
 	self.horizontalView = [[VEStaticHorizontalSliderView alloc] initWithFrame:horizontalViewFrame];
 	self.horizontalView.items = self.icons;
     self.horizontalView.sDelegate = self.sDelegate;
     
+//    [self.horizontalView setBackgroundColor:[UIColor magentaColor]];
 	[self.view addSubview:self.horizontalView];
     self.view.frame = self.horizontalView.frame;
 }
