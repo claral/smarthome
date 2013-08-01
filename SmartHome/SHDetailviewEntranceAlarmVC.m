@@ -37,7 +37,7 @@
     
     // ON OFF SWITCH
     // Hinzufuegen von Feldern: @"Text". (Text betitelt Feld)
-    self.navSC = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"  Home  ", @"  Away  ", nil]];
+    self.navSC = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"Daheim", @"Abwesend", nil]];
     
     self.navSC.changeHandler = ^(NSUInteger newIndex) {
         __block NSUInteger index = self.navSC.selectedSegmentIndex;
@@ -67,12 +67,12 @@
         
         if (index == 1)
         {
-            UIAlertView *messageHome = [[UIAlertView alloc] initWithTitle:@"HOME" message:@"Bitte geben Sie das Passwort ein." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            UIAlertView *messageHome = [[UIAlertView alloc] initWithTitle:@"Daheim" message:@"Bitte geben Sie das Passwort ein." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [messageHome show];
             self.booleanHome = true;
         } else if (index == 0)
         {
-            UIAlertView *messageAway = [[UIAlertView alloc] initWithTitle:@"AWAY" message:@"Das Haus ist verriegelt." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            UIAlertView *messageAway = [[UIAlertView alloc] initWithTitle:@"Abwesend" message:@"Das Haus ist verriegelt." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [messageAway show];
             self.booleanHome = false;
         }
@@ -104,12 +104,12 @@
 {
     if (self.navSC.selectedSegmentIndex == 0)
     {
-        UIAlertView *messageHome = [[UIAlertView alloc] initWithTitle:@"HOME" message:@"Bitte geben Sie das Passwort ein." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *messageHome = [[UIAlertView alloc] initWithTitle:@"Daheim" message:@"Bitte geben Sie das Passwort ein." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [messageHome show];
         self.booleanHome = true;
     } else if (self.navSC.selectedSegmentIndex == 1)
     {
-        UIAlertView *messageAway = [[UIAlertView alloc] initWithTitle:@"AWAY" message:@"Das Haus ist verriegelt." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *messageAway = [[UIAlertView alloc] initWithTitle:@"Abwesend" message:@"Das Haus ist verriegelt." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [messageAway show];
         self.booleanHome = false;
     }
