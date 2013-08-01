@@ -199,6 +199,7 @@
 		EBEDD70617AA87F600851521 /* SH_ICON_heating_moon.png in Resources */ = {isa = PBXBuildFile; fileRef = EBEDD70217AA87F600851521 /* SH_ICON_heating_moon.png */; };
 		EBEDD70717AA87F600851521 /* SH_ICON_heating_star.png in Resources */ = {isa = PBXBuildFile; fileRef = EBEDD70317AA87F600851521 /* SH_ICON_heating_star.png */; };
 		EBEDD70817AA87F600851521 /* SH_ICON_heating_sun.png in Resources */ = {isa = PBXBuildFile; fileRef = EBEDD70417AA87F600851521 /* SH_ICON_heating_sun.png */; };
+		EBEDD70A17AA8A0900851521 /* SH_ICON_labelFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = EBEDD70917AA8A0900851521 /* SH_ICON_labelFrame.png */; };
 		F9CB96911768A9A5004379D2 /* SHLivingroomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9CB96901768A9A5004379D2 /* SHLivingroomVC.m */; };
 /* End PBXBuildFile section */
 
@@ -444,6 +445,7 @@
 		EBEDD70217AA87F600851521 /* SH_ICON_heating_moon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_heating_moon.png; sourceTree = "<group>"; };
 		EBEDD70317AA87F600851521 /* SH_ICON_heating_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_heating_star.png; sourceTree = "<group>"; };
 		EBEDD70417AA87F600851521 /* SH_ICON_heating_sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_heating_sun.png; sourceTree = "<group>"; };
+		EBEDD70917AA8A0900851521 /* SH_ICON_labelFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_labelFrame.png; sourceTree = "<group>"; };
 		F9CB968F1768A9A5004379D2 /* SHLivingroomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHLivingroomVC.h; sourceTree = "<group>"; };
 		F9CB96901768A9A5004379D2 /* SHLivingroomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHLivingroomVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -896,6 +898,7 @@
 		EBEDD6D917AA7AF800851521 /* Numberpad */ = {
 			isa = PBXGroup;
 			children = (
+				EBEDD70917AA8A0900851521 /* SH_ICON_labelFrame.png */,
 				EBEDD6DA17AA7B1600851521 /* SH_ICON_*.png */,
 				EBEDD6DB17AA7B1600851521 /* SH_ICON_#.png */,
 				EBEDD6DC17AA7B1600851521 /* SH_ICON_0.png */,
@@ -1113,6 +1116,7 @@
 				EBEDD70617AA87F600851521 /* SH_ICON_heating_moon.png in Resources */,
 				EBEDD70717AA87F600851521 /* SH_ICON_heating_star.png in Resources */,
 				EBEDD70817AA87F600851521 /* SH_ICON_heating_sun.png in Resources */,
+				EBEDD70A17AA8A0900851521 /* SH_ICON_labelFrame.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
