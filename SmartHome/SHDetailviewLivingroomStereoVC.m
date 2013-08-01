@@ -18,10 +18,10 @@
 @property (nonatomic, assign) float currentVolumeValue;
 @property (nonatomic, assign) int buttonWithImagePlay; // 1 = play, 0 = pause
 @property (weak, nonatomic) IBOutlet UIButton *buttonPlayPause;
-@property (weak, nonatomic) IBOutlet UIPickerView *pickerWheelSongs;
-@property (strong, nonatomic, readwrite) NSArray *arraySongs;
-@property (weak, nonatomic) IBOutlet UILabel *labelSongTitle;
-@property (nonatomic, assign) int currentSong;
+//@property (weak, nonatomic) IBOutlet UIPickerView *pickerWheelSongs;
+//@property (strong, nonatomic, readwrite) NSArray *arraySongs;
+//@property (weak, nonatomic) IBOutlet UILabel *labelSongTitle;
+//@property (nonatomic, assign) int currentSong;
 - (IBAction)sliderVolumeChange:(UISlider *)sender;
 - (IBAction)changePlayPause:(id)sender;
 @property (nonatomic, assign) int currentIndexValue;
@@ -36,7 +36,7 @@
     if (self) {
         // Custom initialization
         
-        self.arraySongs = [[NSArray alloc] initWithObjects:@"Avicii - Wake Me Up", @"Crystal Castles - Empathy", @"Iggy Pop - The Passenger", @"Joris Delacroix - Aire France", @"Marteria - Lila Wolken", @"Milkey Chance - Stolen Dance", @"Tom Odell - Another Love", nil];
+        /*self.arraySongs = [[NSArray alloc] initWithObjects:@"Avicii - Wake Me Up", @"Crystal Castles - Empathy", @"Iggy Pop - The Passenger", @"Joris Delacroix - Aire France", @"Marteria - Lila Wolken", @"Milkey Chance - Stolen Dance", @"Tom Odell - Another Love", nil];*/
     }
     return self;
 }
@@ -48,7 +48,7 @@
     
     // ONOFFSwitch
     // Hinzufuegen von Feldern: @"Text". (Text betitelt Feld)
-    SVSegmentedControl *navSC = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"OFF", @"ON", nil]];
+    /*SVSegmentedControl *navSC = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" AUS ", @" EIN ", nil]];
     navSC.changeHandler = ^(NSUInteger newIndex) {
         __block NSUInteger index = navSC.selectedSegmentIndex;
         NSLog(@"segmentedControl did select index %i (via block handler)", newIndex);
@@ -113,10 +113,7 @@
     
     
     [self.view addSubview:navSC];
-    
-    navSC.center = CGPointMake((self.view.frame.size.width*1)/3, self.view.frame.size.height/3);
-    //navSC.center = CGPointMake((self.view.frame.size.width*1)/3, (self.view.frame.size.height*1)/2);  //CGPointMake(160, 70). Ausrichten Des ToggleButtons im IPad Bildschirm selber
-    
+    navSC.center = CGPointMake(930, 55);*/
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -129,12 +126,12 @@
     self.labelVolume.text = [NSString stringWithFormat:@"%.1f", self.currentVolumeValue * 100];
     
     // reading stored song (label)
-    self.currentSong = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentSongStereoLivingRoom"] integerValue];
+    /*self.currentSong = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentSongStereoLivingRoom"] integerValue];
     
     // reading stored row
     int currRow = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentRowValueStereoLivingRoom"] integerValue];
     [self.pickerWheelSongs selectRow:currRow inComponent:0 animated:NO];
-    self.labelSongTitle.text = [self.arraySongs objectAtIndex:currRow];
+    self.labelSongTitle.text = [self.arraySongs objectAtIndex:currRow];*/
     
     // reading stored button image
     int buttonWithImagePlayHelper = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentButtonWithImagePlayValueStereoLivingRoom"] integerValue];
@@ -186,7 +183,7 @@
     [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:self.buttonWithImagePlay] forKey:@"currentButtonWithImagePlayValueStereoLivingRoom"];
 }
 
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+/*- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
     return 1;
 }
@@ -212,7 +209,7 @@
     [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:row] forKey:@"currentRowValueStereoLivingRoom"];
     
     self.labelSongTitle.text = [self.arraySongs objectAtIndex:row];
-}
+}*/
 
 
 @end

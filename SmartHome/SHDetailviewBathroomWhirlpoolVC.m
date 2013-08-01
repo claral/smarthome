@@ -68,7 +68,7 @@
 
     // ONOFFSwitch
     // Hinzufuegen von Feldern: @"Text". (Text betitelt Feld)
-    SVSegmentedControl *navSC = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"OFF", @"ON", nil]];
+    SVSegmentedControl *navSC = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" AUS ", @" EIN ", nil]];
     navSC.changeHandler = ^(NSUInteger newIndex) {
         __block NSUInteger index = navSC.selectedSegmentIndex;
         NSLog(@"segmentedControl did select index %i (via block handler)", newIndex);
@@ -119,8 +119,7 @@
     
     
     [self.view addSubview:navSC];
-    
-    navSC.center = CGPointMake((self.view.frame.size.width*1)/3, self.view.frame.size.height/3);  //CGPointMake(160, 70). Ausrichten Des ToggleButtons im IPad Bildschirm selber
+    navSC.center = CGPointMake(930, 55);
     
 }
 
