@@ -44,6 +44,7 @@
 - (SVSegmentedControl*)initWithSectionTitles:(NSArray*)titlesArray;
 - (void)setSelectedSegmentIndex:(NSUInteger)index animated:(BOOL)animated;
 - (int)setIndexToBeginWith:(int) index;
+- (void)snap:(BOOL)animated;
 
 // deprecated
 @property (nonatomic, strong) UIColor *tintColor __attribute__((deprecated("review your color (it doesn't get darkened automatically anymore) and assign it 'backgroundTintColor' instead")));

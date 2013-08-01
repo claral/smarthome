@@ -827,18 +827,10 @@
                             <constraint firstAttribute="trailing" secondItem="gaK-ZJ-TNL" secondAttribute="trailing" constant="156" id="yJi-cR-N4b"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="gsM-dS-qe2" appends="YES" id="zHt-ef-2mr"/>
-                        </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tfj-LS-Mdy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="gsM-dS-qe2">
-                    <connections>
-                        <segue destination="Ak2-Pj-6D7" kind="modal" modalTransitionStyle="crossDissolve" id="UKV-q3-f3k"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1479" y="1037"/>
         </scene>
@@ -1151,19 +1143,12 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RLg-CB-Z6k"/>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SH_PIC_wholehouse.png" translatesAutoresizingMaskIntoConstraints="NO" id="Flc-5O-UjV">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="569" id="EaH-jk-63W"/>
                                     <constraint firstAttribute="height" constant="438" id="WzE-Ak-ntT"/>
                                 </constraints>
                             </imageView>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KG9-Dq-etS"/>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kMF-9X-FdN"/>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W9Q-dr-L2o"/>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5TR-A9-lOM"/>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hI6-Nd-CbP"/>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TxP-Wb-jn9"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -1171,46 +1156,24 @@
                             <constraint firstAttribute="bottom" secondItem="Uta-Hy-6rg" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="06I-wl-75J"/>
                             <constraint firstItem="IVP-XL-bzL" firstAttribute="leading" secondItem="Uta-Hy-6rg" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="3dg-m2-lNm"/>
                             <constraint firstItem="nsW-ex-0IB" firstAttribute="bottom" secondItem="3ts-qS-taA" secondAttribute="bottom" type="default" id="5mI-CC-Rv4"/>
-                            <constraint firstItem="hI6-Nd-CbP" firstAttribute="top" secondItem="TxP-Wb-jn9" secondAttribute="top" type="default" id="6Wp-bc-Jix"/>
-                            <constraint firstAttribute="trailing" secondItem="hI6-Nd-CbP" secondAttribute="trailing" constant="285" id="79o-bD-j2g"/>
                             <constraint firstAttribute="bottom" secondItem="f0G-v7-ahy" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="7fj-E1-Sll"/>
-                            <constraint firstAttribute="trailing" secondItem="W9Q-dr-L2o" secondAttribute="trailing" constant="115" id="8P2-R0-IWl"/>
                             <constraint firstItem="Flc-5O-UjV" firstAttribute="centerY" secondItem="AQ4-Yu-TmF" secondAttribute="centerY" type="default" id="Bhv-tJ-5Mx"/>
-                            <constraint firstItem="KG9-Dq-etS" firstAttribute="top" secondItem="AQ4-Yu-TmF" secondAttribute="top" constant="280" id="C0z-1e-Hfk"/>
-                            <constraint firstItem="hI6-Nd-CbP" firstAttribute="top" secondItem="W9Q-dr-L2o" secondAttribute="top" type="default" id="E3g-ZV-8qO"/>
                             <constraint firstAttribute="bottom" secondItem="IVP-XL-bzL" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="FZ0-QK-jPt"/>
                             <constraint firstItem="Flc-5O-UjV" firstAttribute="leading" secondItem="AQ4-Yu-TmF" secondAttribute="leading" constant="399" id="G1W-8g-DNd"/>
-                            <constraint firstItem="RLg-CB-Z6k" firstAttribute="leading" secondItem="AQ4-Yu-TmF" secondAttribute="leading" constant="167" id="KiO-ej-MNX"/>
                             <constraint firstItem="3ts-qS-taA" firstAttribute="leading" secondItem="AQ4-Yu-TmF" secondAttribute="leading" constant="172" id="KsK-Az-0DU"/>
                             <constraint firstItem="D12-bL-aum" firstAttribute="top" secondItem="AQ4-Yu-TmF" secondAttribute="top" constant="646" id="Osl-k1-sH5"/>
                             <constraint firstItem="nsW-ex-0IB" firstAttribute="leading" secondItem="AQ4-Yu-TmF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="PZi-e6-md7"/>
-                            <constraint firstItem="RLg-CB-Z6k" firstAttribute="top" secondItem="AQ4-Yu-TmF" secondAttribute="top" constant="360" id="QMS-US-joQ"/>
                             <constraint firstItem="D12-bL-aum" firstAttribute="centerX" secondItem="AQ4-Yu-TmF" secondAttribute="centerX" type="default" id="WNF-gE-2Oi"/>
                             <constraint firstItem="nsW-ex-0IB" firstAttribute="top" secondItem="AQ4-Yu-TmF" secondAttribute="top" constant="20" symbolic="YES" type="default" id="X9f-Ev-065"/>
                             <constraint firstItem="3ts-qS-taA" firstAttribute="top" secondItem="AQ4-Yu-TmF" secondAttribute="top" constant="20" symbolic="YES" type="default" id="arf-4S-8jy"/>
                             <constraint firstItem="Uta-Hy-6rg" firstAttribute="leading" secondItem="AQ4-Yu-TmF" secondAttribute="leading" constant="456" id="bal-Wp-SYa"/>
-                            <constraint firstItem="5TR-A9-lOM" firstAttribute="top" secondItem="TxP-Wb-jn9" secondAttribute="top" type="default" id="dOg-Ap-GVL"/>
-                            <constraint firstAttribute="bottom" secondItem="5TR-A9-lOM" secondAttribute="bottom" constant="226" id="fWZ-2A-bXU"/>
                             <constraint firstItem="f0G-v7-ahy" firstAttribute="leading" secondItem="AQ4-Yu-TmF" secondAttribute="leading" constant="329" id="hNf-aI-O7u"/>
-                            <constraint firstItem="KG9-Dq-etS" firstAttribute="leading" secondItem="AQ4-Yu-TmF" secondAttribute="leading" constant="507" id="hZW-xO-pFK"/>
-                            <constraint firstAttribute="trailing" secondItem="kMF-9X-FdN" secondAttribute="trailing" constant="156" id="igZ-I4-rir"/>
-                            <constraint firstAttribute="trailing" secondItem="TxP-Wb-jn9" secondAttribute="trailing" constant="381" id="izf-KV-YTm"/>
-                            <constraint firstItem="5TR-A9-lOM" firstAttribute="leading" secondItem="AQ4-Yu-TmF" secondAttribute="leading" constant="451" id="kJv-wU-4L4"/>
-                            <constraint firstItem="kMF-9X-FdN" firstAttribute="top" secondItem="KG9-Dq-etS" secondAttribute="top" type="default" id="xD1-PA-Rpe"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="MWv-TK-moM" appends="YES" id="xs6-6u-EdF"/>
-                        </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s6m-8Y-pp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="MWv-TK-moM">
-                    <connections>
-                        <segue destination="Ak2-Pj-6D7" kind="modal" modalTransitionStyle="crossDissolve" id="Cdd-Bw-3MM"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="733" y="971"/>
         </scene>
@@ -1350,24 +1313,10 @@
                             <constraint firstItem="fEM-CS-d3L" firstAttribute="centerY" secondItem="uaa-75-8Qp" secondAttribute="centerY" type="default" id="zd9-hg-w3w"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="0gk-za-G3c" appends="YES" id="Rxn-Hq-Ykt"/>
-                            <outletCollection property="gestureRecognizers" destination="H1e-fE-ldd" appends="YES" id="aIo-52-rfW"/>
-                        </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XFn-xc-G7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="0gk-za-G3c">
-                    <connections>
-                        <segue destination="1aC-6M-Ec0" kind="modal" modalTransitionStyle="crossDissolve" id="jg5-pz-rw5"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="H1e-fE-ldd">
-                    <connections>
-                        <segue destination="RBY-pl-HHa" kind="modal" modalTransitionStyle="crossDissolve" id="XYU-Bg-vR1"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-387" y="985"/>
         </scene>
@@ -1634,9 +1583,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="rCQ-B2-EuM"/>
         <segue reference="1Pr-0r-JTX"/>
-        <segue reference="XLg-z8-e8c"/>
-        <segue reference="OSa-iG-1p0"/>
+        <segue reference="4Ml-eS-lwi"/>
+        <segue reference="OAZ-Ij-mDc"/>
+        <segue reference="K17-m2-GHl"/>
     </inferredMetricsTieBreakers>
 </document>
