@@ -78,7 +78,7 @@
     UIView *sliderView = self.svc.view;
     
     [sliderView setBounds:CGRectMake(0, 0, sliderView.frame.size.width, sliderView.frame.size.height)];
-    [sliderView setCenter:CGPointMake(500, 500)];
+    [sliderView setCenter:CGPointMake(500, 350)];
     //[sliderView setBackgroundColor:[UIColor magentaColor]];
 //    [self.view addSubview:sliderView];
     //[self.view sendSubviewToBack:sliderView];
