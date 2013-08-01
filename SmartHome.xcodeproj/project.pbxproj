@@ -204,6 +204,7 @@
 		EBEDD71A17AA9C3F00851521 /* 01aus.png in Resources */ = {isa = PBXBuildFile; fileRef = EBEDD71917AA9C3F00851521 /* 01aus.png */; };
 		EBEDD71C17AA9E3E00851521 /* 08schleudern.png in Resources */ = {isa = PBXBuildFile; fileRef = EBEDD71B17AA9E3E00851521 /* 08schleudern.png */; };
 		EBEDD71F17AAA25800851521 /* kuehlschrank.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EBEDD71E17AAA25800851521 /* kuehlschrank.jpg */; };
+		EBEDD72417AAA9A300851521 /* SH_ICON_sliderFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = EBEDD72317AAA9A300851521 /* SH_ICON_sliderFrame.png */; };
 		F9CB96911768A9A5004379D2 /* SHLivingroomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9CB96901768A9A5004379D2 /* SHLivingroomVC.m */; };
 /* End PBXBuildFile section */
 
@@ -454,6 +455,7 @@
 		EBEDD71917AA9C3F00851521 /* 01aus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01aus.png; sourceTree = "<group>"; };
 		EBEDD71B17AA9E3E00851521 /* 08schleudern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 08schleudern.png; sourceTree = "<group>"; };
 		EBEDD71E17AAA25800851521 /* kuehlschrank.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kuehlschrank.jpg; sourceTree = "<group>"; };
+		EBEDD72317AAA9A300851521 /* SH_ICON_sliderFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_sliderFrame.png; sourceTree = "<group>"; };
 		F9CB968F1768A9A5004379D2 /* SHLivingroomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHLivingroomVC.h; sourceTree = "<group>"; };
 		F9CB96901768A9A5004379D2 /* SHLivingroomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHLivingroomVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -726,6 +728,7 @@
 		42F6542817943D3B00703148 /* Heizung */ = {
 			isa = PBXGroup;
 			children = (
+				EBEDD72317AAA9A300851521 /* SH_ICON_sliderFrame.png */,
 				EBEDD70117AA87F600851521 /* SH_ICON_heating_manuell.png */,
 				EBEDD70217AA87F600851521 /* SH_ICON_heating_moon.png */,
 				EBEDD70317AA87F600851521 /* SH_ICON_heating_star.png */,
@@ -1141,6 +1144,7 @@
 				EBEDD71A17AA9C3F00851521 /* 01aus.png in Resources */,
 				EBEDD71C17AA9E3E00851521 /* 08schleudern.png in Resources */,
 				EBEDD71F17AAA25800851521 /* kuehlschrank.jpg in Resources */,
+				EBEDD72417AAA9A300851521 /* SH_ICON_sliderFrame.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
