@@ -26,9 +26,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
+
     return self;
 }
 
@@ -104,6 +102,17 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    if (self.navSC.selectedSegmentIndex == 0)
+    {
+        UIAlertView *messageHome = [[UIAlertView alloc] initWithTitle:@"HOME" message:@"Bitte geben Sie das Passwort ein." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [messageHome show];
+        self.booleanHome = true;
+    } else if (self.navSC.selectedSegmentIndex == 1)
+    {
+        UIAlertView *messageAway = [[UIAlertView alloc] initWithTitle:@"AWAY" message:@"Das Haus ist verriegelt." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [messageAway show];
+        self.booleanHome = false;
+    }
     /*[super viewWillAppear:animated];
     
     // reading stored index
