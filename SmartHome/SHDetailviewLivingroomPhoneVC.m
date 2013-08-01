@@ -81,7 +81,7 @@
 
 - (IBAction)anrufenAlert:(id)sender
 {
-    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Es klingelt!" message:@"Palim, palim.. Wer da?" delegate:nil cancelButtonTitle:@"Auflegen" otherButtonTitles:nil];
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Es klingelt!" message:@"Palim, palim.. Wer da?" delegate:nil cancelButtonTitle:@"Quatschen.." otherButtonTitles:nil];
     [message show];
 }
 
