@@ -96,8 +96,7 @@
     
     
     [self.view addSubview:self.navSC];
-    
-    self.navSC.center = CGPointMake((self.view.frame.size.width*3)/4, self.view.frame.size.height/2);  //CGPointMake(160, 70). Ausrichten Des ToggleButtons im IPad Bildschirm selber
+    self.navSC.center = CGPointMake(888, 55);
 }
 
 - (void)viewWillAppear:(BOOL)animated
