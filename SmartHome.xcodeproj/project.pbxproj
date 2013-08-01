@@ -203,6 +203,7 @@
 		EBEDD70C17AA907200851521 /* SH_ICON_start.png in Resources */ = {isa = PBXBuildFile; fileRef = EBEDD70B17AA907200851521 /* SH_ICON_start.png */; };
 		EBEDD71A17AA9C3F00851521 /* 01aus.png in Resources */ = {isa = PBXBuildFile; fileRef = EBEDD71917AA9C3F00851521 /* 01aus.png */; };
 		EBEDD71C17AA9E3E00851521 /* 08schleudern.png in Resources */ = {isa = PBXBuildFile; fileRef = EBEDD71B17AA9E3E00851521 /* 08schleudern.png */; };
+		EBEDD71F17AAA25800851521 /* kuehlschrank.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EBEDD71E17AAA25800851521 /* kuehlschrank.jpg */; };
 		F9CB96911768A9A5004379D2 /* SHLivingroomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9CB96901768A9A5004379D2 /* SHLivingroomVC.m */; };
 /* End PBXBuildFile section */
 
@@ -452,6 +453,7 @@
 		EBEDD70B17AA907200851521 /* SH_ICON_start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_start.png; sourceTree = "<group>"; };
 		EBEDD71917AA9C3F00851521 /* 01aus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01aus.png; sourceTree = "<group>"; };
 		EBEDD71B17AA9E3E00851521 /* 08schleudern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 08schleudern.png; sourceTree = "<group>"; };
+		EBEDD71E17AAA25800851521 /* kuehlschrank.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kuehlschrank.jpg; sourceTree = "<group>"; };
 		F9CB968F1768A9A5004379D2 /* SHLivingroomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHLivingroomVC.h; sourceTree = "<group>"; };
 		F9CB96901768A9A5004379D2 /* SHLivingroomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHLivingroomVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -753,6 +755,7 @@
 		EB012E091767502E0069681A /* Icon */ = {
 			isa = PBXGroup;
 			children = (
+				EBEDD71D17AAA24D00851521 /* Fridge */,
 				EBEDD6FC17AA87D200851521 /* Phone */,
 				EBEDD6D917AA7AF800851521 /* Numberpad */,
 				42D9938617A9029D00F99D8F /* Cooker */,
@@ -933,6 +936,14 @@
 				EBEDD6FE17AA87DC00851521 /* SH_ICON_phone_stop.png */,
 			);
 			name = Phone;
+			sourceTree = "<group>";
+		};
+		EBEDD71D17AAA24D00851521 /* Fridge */ = {
+			isa = PBXGroup;
+			children = (
+				EBEDD71E17AAA25800851521 /* kuehlschrank.jpg */,
+			);
+			name = Fridge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1129,6 +1140,7 @@
 				EBEDD70C17AA907200851521 /* SH_ICON_start.png in Resources */,
 				EBEDD71A17AA9C3F00851521 /* 01aus.png in Resources */,
 				EBEDD71C17AA9E3E00851521 /* 08schleudern.png in Resources */,
+				EBEDD71F17AAA25800851521 /* kuehlschrank.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

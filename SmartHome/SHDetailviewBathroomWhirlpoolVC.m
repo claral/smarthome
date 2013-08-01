@@ -45,23 +45,23 @@
     
     SHIconWithTitle *icon1 = [[SHIconWithTitle alloc] init];
     icon1.icon = [UIImage imageNamed:@"Bubble1"];
-    icon1.title = @"Wenig Blubberblasen";
+    icon1.title = @"MIN";
     
     SHIconWithTitle *icon2 = [[SHIconWithTitle alloc] init];
     icon2.icon = [UIImage imageNamed:@"Bubble2"];
-    icon2.title = @"Viele Blubberblasen";
+    icon2.title = @"Mittel";
     
     SHIconWithTitle *icon3 = [[SHIconWithTitle alloc] init];
     icon3.icon = [UIImage imageNamed:@"Bubble3"];
-    icon3.title = @"Sehr viele Blubberblasen";
+    icon3.title = @"MAX";
     
     self.svc.icons = [[NSArray alloc] initWithObjects:icon1, icon2, icon3, nil];
     
     UIView *sliderView = self.svc.view;
     
     
-    [sliderView setBounds:CGRectMake(0, 0, sliderView.frame.size.width, sliderView.frame.size.height)];
-    [sliderView setCenter:CGPointMake(500, 500)];
+    [sliderView setBounds:CGRectMake(0, 0, sliderView.frame.size.width * 0.2, sliderView.frame.size.height)];
+    [sliderView setCenter:CGPointMake(500, 575)];
     /*[self.view addSubview:sliderView];/**/
     // [self.view sendSubviewToBack:sliderView];
     // [self.view insertSubview:sliderView atIndex:0];
