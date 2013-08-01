@@ -100,6 +100,13 @@
 		EB180A8B17686B6C00FEB253 /* SHDetailviewLivingroomLightVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB180A8917686B6C00FEB253 /* SHDetailviewLivingroomLightVC.xib */; };
 		EB7003221789CA51005C6949 /* oven2.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7003211789CA51005C6949 /* oven2.png */; };
 		EB7003241789CA57005C6949 /* oven.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7003231789CA57005C6949 /* oven.png */; };
+		EB705C4D17AABC1B000ECDD8 /* SH_ICON_tabHeating.png in Resources */ = {isa = PBXBuildFile; fileRef = EB705C4A17AABC1B000ECDD8 /* SH_ICON_tabHeating.png */; };
+		EB705C4E17AABC1B000ECDD8 /* SH_ICON_tabJalousie.png in Resources */ = {isa = PBXBuildFile; fileRef = EB705C4B17AABC1B000ECDD8 /* SH_ICON_tabJalousie.png */; };
+		EB705C4F17AABC1B000ECDD8 /* SH_ICON_tabLight.png in Resources */ = {isa = PBXBuildFile; fileRef = EB705C4C17AABC1B000ECDD8 /* SH_ICON_tabLight.png */; };
+		EB705C5717AAC630000ECDD8 /* SH_ICON_lineMainView.png in Resources */ = {isa = PBXBuildFile; fileRef = EB705C5617AAC630000ECDD8 /* SH_ICON_lineMainView.png */; };
+		EB705C5B17AAC97D000ECDD8 /* SH_ICON_tabHeatingHightlight.png in Resources */ = {isa = PBXBuildFile; fileRef = EB705C5817AAC97D000ECDD8 /* SH_ICON_tabHeatingHightlight.png */; };
+		EB705C5C17AAC97D000ECDD8 /* SH_ICON_tabJalousieHightlight.png in Resources */ = {isa = PBXBuildFile; fileRef = EB705C5917AAC97D000ECDD8 /* SH_ICON_tabJalousieHightlight.png */; };
+		EB705C5D17AAC97D000ECDD8 /* SH_ICON_tabLightHightlight.png in Resources */ = {isa = PBXBuildFile; fileRef = EB705C5A17AAC97D000ECDD8 /* SH_ICON_tabLightHightlight.png */; };
 		EB8E0419178D822A00997928 /* SH_NAVI_base6.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8E0418178D822A00997928 /* SH_NAVI_base6.png */; };
 		EB9407861769E28D0061E17D /* SHDetailviewBathroomLightVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9407841769E28D0061E17D /* SHDetailviewBathroomLightVC.m */; };
 		EB9407871769E28D0061E17D /* SHDetailviewBathroomLightVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB9407851769E28D0061E17D /* SHDetailviewBathroomLightVC.xib */; };
@@ -323,6 +330,13 @@
 		EB180A8917686B6C00FEB253 /* SHDetailviewLivingroomLightVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHDetailviewLivingroomLightVC.xib; sourceTree = "<group>"; };
 		EB7003211789CA51005C6949 /* oven2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oven2.png; sourceTree = "<group>"; };
 		EB7003231789CA57005C6949 /* oven.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oven.png; sourceTree = "<group>"; };
+		EB705C4A17AABC1B000ECDD8 /* SH_ICON_tabHeating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_tabHeating.png; sourceTree = "<group>"; };
+		EB705C4B17AABC1B000ECDD8 /* SH_ICON_tabJalousie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_tabJalousie.png; sourceTree = "<group>"; };
+		EB705C4C17AABC1B000ECDD8 /* SH_ICON_tabLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_tabLight.png; sourceTree = "<group>"; };
+		EB705C5617AAC630000ECDD8 /* SH_ICON_lineMainView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_lineMainView.png; sourceTree = "<group>"; };
+		EB705C5817AAC97D000ECDD8 /* SH_ICON_tabHeatingHightlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_tabHeatingHightlight.png; sourceTree = "<group>"; };
+		EB705C5917AAC97D000ECDD8 /* SH_ICON_tabJalousieHightlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_tabJalousieHightlight.png; sourceTree = "<group>"; };
+		EB705C5A17AAC97D000ECDD8 /* SH_ICON_tabLightHightlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_tabLightHightlight.png; sourceTree = "<group>"; };
 		EB8E0418178D822A00997928 /* SH_NAVI_base6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_NAVI_base6.png; sourceTree = "<group>"; };
 		EB9407831769E28D0061E17D /* SHDetailviewBathroomLightVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDetailviewBathroomLightVC.h; sourceTree = "<group>"; };
 		EB9407841769E28D0061E17D /* SHDetailviewBathroomLightVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDetailviewBathroomLightVC.m; sourceTree = "<group>"; };
@@ -567,6 +581,7 @@
 				42470E8A179D4E3100BBA20B /* Anrufen.png */,
 				42470E8B179D4E3100BBA20B /* Auflegen.png */,
 				EBEDD70B17AA907200851521 /* SH_ICON_start.png */,
+				EB705C5617AAC630000ECDD8 /* SH_ICON_lineMainView.png */,
 				EB012E091767502E0069681A /* Icon */,
 				EB012E08176750250069681A /* Pictures */,
 				421CA592173AC4CB004AE723 /* SmartHome-Info.plist */,
@@ -758,6 +773,7 @@
 		EB012E091767502E0069681A /* Icon */ = {
 			isa = PBXGroup;
 			children = (
+				EB705C4917AABC07000ECDD8 /* Tabs */,
 				EBEDD71D17AAA24D00851521 /* Fridge */,
 				EBEDD6FC17AA87D200851521 /* Phone */,
 				EBEDD6D917AA7AF800851521 /* Numberpad */,
@@ -823,6 +839,19 @@
 				EBEDD6F817AA87CB00851521 /* SH_ICON_volume.png */,
 			);
 			name = Stereo;
+			sourceTree = "<group>";
+		};
+		EB705C4917AABC07000ECDD8 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				EB705C4A17AABC1B000ECDD8 /* SH_ICON_tabHeating.png */,
+				EB705C4B17AABC1B000ECDD8 /* SH_ICON_tabJalousie.png */,
+				EB705C4C17AABC1B000ECDD8 /* SH_ICON_tabLight.png */,
+				EB705C5817AAC97D000ECDD8 /* SH_ICON_tabHeatingHightlight.png */,
+				EB705C5917AAC97D000ECDD8 /* SH_ICON_tabJalousieHightlight.png */,
+				EB705C5A17AAC97D000ECDD8 /* SH_ICON_tabLightHightlight.png */,
+			);
+			name = Tabs;
 			sourceTree = "<group>";
 		};
 		EB94077F1769E0340061E17D /* Detailviews_Bathroom */ = {
@@ -1145,6 +1174,13 @@
 				EBEDD71C17AA9E3E00851521 /* 08schleudern.png in Resources */,
 				EBEDD71F17AAA25800851521 /* kuehlschrank.jpg in Resources */,
 				EBEDD72417AAA9A300851521 /* SH_ICON_sliderFrame.png in Resources */,
+				EB705C4D17AABC1B000ECDD8 /* SH_ICON_tabHeating.png in Resources */,
+				EB705C4E17AABC1B000ECDD8 /* SH_ICON_tabJalousie.png in Resources */,
+				EB705C4F17AABC1B000ECDD8 /* SH_ICON_tabLight.png in Resources */,
+				EB705C5717AAC630000ECDD8 /* SH_ICON_lineMainView.png in Resources */,
+				EB705C5B17AAC97D000ECDD8 /* SH_ICON_tabHeatingHightlight.png in Resources */,
+				EB705C5C17AAC97D000ECDD8 /* SH_ICON_tabJalousieHightlight.png in Resources */,
+				EB705C5D17AAC97D000ECDD8 /* SH_ICON_tabLightHightlight.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

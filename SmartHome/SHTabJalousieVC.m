@@ -65,22 +65,21 @@
         if (self.currentIndexValue_WholeHouse == 1)// 1 = OFF
         {
             helperInt = 0;
-            // TODOOOOOOO zweimal off bzw zweimal on
-            [navSC_Bedroom setSelectedSegmentIndex:helperInt animated:YES];
-            [navSC_Basement setSelectedSegmentIndex:helperInt animated:YES];
-            [navSC_Bathroom setSelectedSegmentIndex:helperInt animated:YES];
-            [navSC_Entrance setSelectedSegmentIndex:helperInt animated:YES];
-            [navSC_Kitchen setSelectedSegmentIndex:helperInt animated:YES];
-            [navSC_LivingRoom setSelectedSegmentIndex:helperInt animated:YES];
+            [navSC_Bedroom setSelectedSegmentIndex:helperInt animated:NO];
+            [navSC_Basement setSelectedSegmentIndex:helperInt animated:NO];
+            [navSC_Bathroom setSelectedSegmentIndex:helperInt animated:NO];
+            [navSC_Entrance setSelectedSegmentIndex:helperInt animated:NO];
+            [navSC_Kitchen setSelectedSegmentIndex:helperInt animated:NO];
+            [navSC_LivingRoom setSelectedSegmentIndex:helperInt animated:NO];
         } else if (self.currentIndexValue_WholeHouse == 0) // 0 = ON
         {
             helperInt = 1;
-            [navSC_Bedroom setSelectedSegmentIndex:helperInt animated:YES];
-            [navSC_Basement setSelectedSegmentIndex:helperInt animated:YES];
-            [navSC_Bathroom setSelectedSegmentIndex:helperInt animated:YES];
-            [navSC_Entrance setSelectedSegmentIndex:helperInt animated:YES];
-            [navSC_Kitchen setSelectedSegmentIndex:helperInt animated:YES];
-            [navSC_LivingRoom setSelectedSegmentIndex:helperInt animated:YES];
+            [navSC_Bedroom setSelectedSegmentIndex:helperInt animated:NO];
+            [navSC_Basement setSelectedSegmentIndex:helperInt animated:NO];
+            [navSC_Bathroom setSelectedSegmentIndex:helperInt animated:NO];
+            [navSC_Entrance setSelectedSegmentIndex:helperInt animated:NO];
+            [navSC_Kitchen setSelectedSegmentIndex:helperInt animated:NO];
+            [navSC_LivingRoom setSelectedSegmentIndex:helperInt animated:NO];
         }
         
         self.currentIndexValue_Bedroom = index;
@@ -131,7 +130,8 @@
     }
     
     [self.view addSubview:navSC_WholeHouse];
-    navSC_WholeHouse.center = CGPointMake((self.view.frame.size.width*1)/3, self.view.frame.size.height/3);
+    //navSC_WholeHouse.center = CGPointMake((self.view.frame.size.width*1)/3, self.view.frame.size.height/3);
+    navSC_WholeHouse.center = CGPointMake(930, 55);
     
     
     
@@ -161,7 +161,7 @@
     }
     
     [self.view addSubview:navSC_Bedroom];
-    navSC_Bedroom.center = CGPointMake((self.view.frame.size.width*2)/3, 500);
+    navSC_Bedroom.center = CGPointMake(280, 500);
     
     
     // ----------
@@ -190,7 +190,7 @@
     }
     
     [self.view addSubview:navSC_Bathroom];
-    navSC_Bathroom.center = CGPointMake(890, 500);
+    navSC_Bathroom.center = CGPointMake(770, 500);
     
     
     
@@ -220,7 +220,7 @@
     }
     
     [self.view addSubview:navSC_Kitchen];
-    navSC_Kitchen.center = CGPointMake(890, 250);
+    navSC_Kitchen.center = CGPointMake(720, 250);
     
     
     
@@ -250,7 +250,8 @@
     }
     
     [self.view addSubview:navSC_LivingRoom];
-    navSC_LivingRoom.center = CGPointMake((self.view.frame.size.width*2)/3, 250);
+    //navSC_LivingRoom.center = CGPointMake((self.view.frame.size.width*2)/3, 250);
+    navSC_LivingRoom.center = CGPointMake(350, 250);
     
     
     
@@ -281,7 +282,7 @@
 
     
     [self.view addSubview:navSC_Entrance];
-    navSC_Entrance.center = CGPointMake(705, 500);
+    navSC_Entrance.center = CGPointMake(540, 500);
     
     
     
@@ -311,7 +312,7 @@
     }
     
     [self.view addSubview:navSC_Basement];
-    navSC_Basement.center = CGPointMake(620, 600);
+    navSC_Basement.center = CGPointMake(425, 600);
     
 }
 
