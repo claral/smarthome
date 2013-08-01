@@ -52,7 +52,7 @@
 	CGSize contentSize;
 	UIFont *font;
 	
-	font = [UIFont systemFontOfSize:15.0f];
+	font = [UIFont systemFontOfSize:18.0f];
 	stringSize = [self.string sizeWithFont:font];
 	contentSize = stringSize;
 	

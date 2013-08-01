@@ -29,8 +29,11 @@
  //button zeigen oder nicht!
     
     // Aus
-    [self.buttonStartWashing setHidden:(index == 0)];
-    
+    if (index==6){
+        [self.buttonStartWashing setHidden:YES];
+    }else{
+        [self.buttonStartWashing setHidden:NO];
+    }
  //save value
     self.currentLaundryIndex = index;
     [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentLaundryIndex] forKey:@"currentLaundryIndex"];
@@ -43,7 +46,12 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     
-    [self.buttonStartWashing setHidden:(index == 0)];
+//    if (self.currentLaundryIndex==6){
+//        [self.buttonStartWashing setHidden:YES];
+//    }else{
+        [self.buttonStartWashing setHidden:NO];
+//    }
+
     return self;
 }
 
@@ -63,7 +71,7 @@
     
     SHIconWithTitle *item1 = [[SHIconWithTitle alloc] init];
     item1.icon = [UIImage imageNamed:@"01-Aus"];
-    item1.title = @"   Aus      ";
+    item1.title = @"  Aus             ";
 
     SHIconWithTitle *item2 = [[SHIconWithTitle alloc] init];
     item2.icon = [UIImage imageNamed:@"02-Kochwäsche"];
@@ -87,25 +95,29 @@
     
     SHIconWithTitle *item7 = [[SHIconWithTitle alloc] init];
     item7.icon = [UIImage imageNamed:@"07-Eco"];
-    item7.title = @"   Eco      ";
+    item7.title = @"           Eco   ";
     
     SHIconWithTitle *item8 = [[SHIconWithTitle alloc] init];
     item8.icon = [UIImage imageNamed:@"08-Schleudern"];
     item8.title = @"Schleudern";
     
-    NSArray *items = [[NSArray alloc] initWithObjects:item1,item2,item3,item4,item5,item6,item7,item8, nil];
+    NSArray *items = [[NSArray alloc] initWithObjects:item3,item4,item5,item6,item7,item8,item1,item2, nil];
 
     self.wvc.items = items;
     
     UIView *wView = self.wvc.view;
     
-//    
+    
 //    [wView setBackgroundColor:[UIColor magentaColor]];
     [wView setBounds:CGRectMake(0, 0, wView.frame.size.width, wView.frame.size.height)];
-    [wView setCenter:CGPointMake(400, 400)];
+    [wView setCenter:CGPointMake(507, 370)];
     
     //    [self.buttonStartWashing setHidden:(self.currentLaundryIndex == 0)];
-    [self.buttonStartWashing setHidden:YES];
+//    if (self.currentLaundryIndex==6){
+//        [self.buttonStartWashing setHidden:YES];
+//    }else{
+        [self.buttonStartWashing setHidden:NO];
+//    }
     
     [self.view addSubview:wView];
 //    [self.wvc selectCurrentIndex:self.currentLaundryIndex];
