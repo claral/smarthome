@@ -47,7 +47,7 @@
         
     SHIconWithTitle *icon1 = [[SHIconWithTitle alloc] init];
     icon1.icon = [UIImage imageNamed:@"Cooker0"];
-    icon1.title = @"0";
+    icon1.title = @"AUS";
     
     SHIconWithTitle *icon2 = [[SHIconWithTitle alloc] init];
     icon2.icon = [UIImage imageNamed:@"Cooker1"];
@@ -63,31 +63,31 @@
     
     SHIconWithTitle *icon5 = [[SHIconWithTitle alloc] init];
     icon5.icon = [UIImage imageNamed:@"Cooker4"];
-    icon5.title = @"4";
+    icon5.title = @"3";
     
     SHIconWithTitle *icon6 = [[SHIconWithTitle alloc] init];
     icon6.icon = [UIImage imageNamed:@"Cooker5"];
-    icon6.title = @"5";
+    icon6.title = @"4";
     
     SHIconWithTitle *icon7 = [[SHIconWithTitle alloc] init];
     icon7.icon = [UIImage imageNamed:@"Cooker6"];
-    icon7.title = @"6";
+    icon7.title = @"5";
     
     SHIconWithTitle *icon8 = [[SHIconWithTitle alloc] init];
     icon8.icon = [UIImage imageNamed:@"Cooker7"];
-    icon8.title = @"7";
+    icon8.title = @"6";
     
     SHIconWithTitle *icon9 = [[SHIconWithTitle alloc] init];
     icon9.icon = [UIImage imageNamed:@"Cooker8"];
-    icon9.title = @"8";
+    icon9.title = @"7";
         
-    self.cookerAView.items = [[NSArray alloc] initWithObjects:icon3, icon2, icon1, icon9, icon8, icon7, icon6, icon5, icon4, nil];
+    self.cookerAView.items = [[NSArray alloc] initWithObjects:icon3, icon2, icon1, icon9, icon8, icon7, icon6, icon5, nil];
     
     UIView *AView = self.cookerAView.view;
     
 //    [AView setBackgroundColor:[UIColor magentaColor]];
     [AView setBounds:CGRectMake(0,0, AView.frame.size.width*1/4, AView.frame.size.height*2/7)];
-    [AView setCenter:CGPointMake(200, 530)];
+    [AView setCenter:CGPointMake(310, 530)];
     
     [self.view addSubview:AView];
     
@@ -98,13 +98,13 @@
     self.cookerBView =
     [[VEIFTapNHoldViewController alloc] initWithIndex:2 cookerValue:self.currentIndexCookerB andDelegate:self];
     
-    self.cookerBView.items = [[NSArray alloc] initWithObjects:icon3, icon2, icon1, icon9, icon8, icon7, icon6, icon5, icon4, nil];
+    self.cookerBView.items = [[NSArray alloc] initWithObjects:icon3, icon2, icon1, icon9, icon8, icon7, icon6, icon5, nil];
     
     UIView *BView = self.cookerBView.view;
     
     //    [BView setBackgroundColor:[UIColor blueColor]];
     [BView setBounds:CGRectMake(0,0, BView.frame.size.width*1/4, BView.frame.size.height*2/7)];
-    [BView setCenter:CGPointMake(200, 230)];
+    [BView setCenter:CGPointMake(310, 230)];
     
     [self.view addSubview:BView];
     
@@ -116,13 +116,13 @@
     self.cookerCView =
     [[VEIFTapNHoldViewController alloc] initWithIndex:3 cookerValue:self.currentIndexCookerC andDelegate:self];
     
-    self.cookerCView.items = [[NSArray alloc] initWithObjects:icon3, icon2, icon1, icon9, icon8, icon7, icon6, icon5, icon4, nil];
+    self.cookerCView.items = [[NSArray alloc] initWithObjects:icon3, icon2, icon1, icon9, icon8, icon7, icon6, icon5, nil];
     
     UIView *CView = self.cookerCView.view;
     
     //    [CView setBackgroundColor:[UIColor greenColor]];
     [CView setBounds:CGRectMake(0,0, CView.frame.size.width*1/4, CView.frame.size.height*2/7)];
-    [CView setCenter:CGPointMake(700, 230)];
+    [CView setCenter:CGPointMake(710, 230)];
     
     [self.view addSubview:CView];
     
@@ -134,13 +134,13 @@
     self.cookerDView =
     [[VEIFTapNHoldViewController alloc] initWithIndex:4 cookerValue:self.currentIndexCookerD andDelegate:self];
     
-    self.cookerDView.items = [[NSArray alloc] initWithObjects:icon3, icon2, icon1, icon9, icon8, icon7, icon6, icon5, icon4, nil];
+    self.cookerDView.items = [[NSArray alloc] initWithObjects:icon3, icon2, icon1, icon9, icon8, icon7, icon6, icon5, nil];
     
     UIView *DView = self.cookerDView.view;
     
     //    [DView setBackgroundColor:[UIColor greenColor]];
     [DView setBounds:CGRectMake(0,0, DView.frame.size.width*1/4, DView.frame.size.height*2/7)];
-    [DView setCenter:CGPointMake(700, 530)];
+    [DView setCenter:CGPointMake(710, 530)];
     
     [self.view addSubview:DView];
 

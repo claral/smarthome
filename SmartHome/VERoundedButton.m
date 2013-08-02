@@ -57,26 +57,22 @@
 									   self.frame.size.height*0.1f,
 									   self.frame.size.width*0.8f,
 									   self.frame.size.height*0.8f);
-    //images in button aligned
-//    self.frame.size.width * 0.25f,
-//    self.frame.size.height * 0.2f,
-//    self.frame.size.width * 0.5f,
-//    self.frame.size.height * 0.5f);
     
 	[self.imageLayer setContentsScale:[[UIScreen mainScreen] scale]];
 	
 	self.titleLayer = [CATextLayer layer];
 	self.titleLayer.frame = CGRectMake(0,
-									   self.frame.size.height * 0.50f,
+									   self.frame.size.height * 0.35f,
 									   self.frame.size.width,
 									   self.frame.size.height * 3.2f);
-//    (0,
-//     self.frame.size.height * 0.70f,
-//     self.frame.size.width,
-//     self.frame.size.height * 0.16f);
-	
-	CGFloat calculatedLayerFontSize = 30.0f;
-	[self.titleLayer setFont:@"Helvetica"];
+//  self.titleLayer.frame = CGRectMake(0,
+//    self.frame.size.height * 0.50f,
+//    self.frame.size.width,
+//    self.frame.size.height * 3.2f);
+//    
+	CGFloat calculatedLayerFontSize = 50.0f;
+//	[self.titleLayer setFont:@"Helvetica"];
+    [self.titleLayer setFont:@"Helvetica Bold"];
 	[self.titleLayer setString:@"Kochstufe"];
     
 	[self.titleLayer setFontSize:calculatedLayerFontSize];
@@ -89,7 +85,7 @@
 //	[self.titleLayer setShadowOffset:CGSizeMake(0, 1)];
 //	
 	[self addSublayer:self.backgroundLayer];
-	[self addSublayer:self.imageLayer];
+//	[self addSublayer:self.imageLayer];
 	[self addSublayer:self.titleLayer];
 }
 

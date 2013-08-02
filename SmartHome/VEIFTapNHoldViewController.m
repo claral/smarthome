@@ -91,7 +91,7 @@
 		smallButton.layer.opacity = 0.5f;
 		
 		//increase font size manually a bit (oder eben nicht)
-		smallButton.button.titleLayer.fontSize *= 1.0f;
+		smallButton.button.titleLayer.fontSize *= 0.5f;
 		
 		smallButton.button.titleLayer.string = icon.title;
 		smallButton.button.imageLayer.contents = (__bridge id)(icon.icon.CGImage);

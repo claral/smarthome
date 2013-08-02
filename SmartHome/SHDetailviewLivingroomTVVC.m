@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerWheelTVChanels;
 @property (nonatomic, assign) int currentTVChanel;
 //@property (weak, nonatomic) IBOutlet UILabel *labelCurrentTVChanel;
+@property (weak, nonatomic) IBOutlet UILabel *labelTVChannelHelper;
 
 @property (nonatomic, assign) float currentVolumeValue;
 @property (weak, nonatomic) IBOutlet UISlider *sliderTVVolume;
@@ -57,7 +58,7 @@
     // reading stored volume
     self.currentVolumeValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentTVVolumeValueLivingRoom"] floatValue];
     self.sliderTVVolume.value = self.currentVolumeValue;
-    self.labelVolume.text = [NSString stringWithFormat:@"%.1f", self.currentVolumeValue * 100];
+//    self.labelVolume.text = [NSString stringWithFormat:@"%.1f", self.currentVolumeValue * 100];
 }
 
 - (void)viewDidLoad
@@ -89,6 +90,7 @@
             [self.labelVolume setHidden:NO];
 //            [self.labelCurrentTVChanel setHidden:NO];
             [self.labelVolumeHelper setHidden:NO];
+            [self.labelTVChannelHelper setHidden:NO];
         } else if (self.currentIndexValue == 1) // on
         {
             returnIdxVal = [navSC setIndexToBeginWith:0];
@@ -97,6 +99,7 @@
             [self.labelVolume setHidden:YES];
 //            [self.labelCurrentTVChanel setHidden:YES];
             [self.labelVolumeHelper setHidden:YES];
+            [self.labelTVChannelHelper setHidden:YES];
         }
     };
     
@@ -116,6 +119,7 @@
         [self.labelVolume setHidden:NO];
 //        [self.labelCurrentTVChanel setHidden:NO];
         [self.labelVolumeHelper setHidden:NO];
+        [self.labelTVChannelHelper setHidden:NO];
     } else if (self.currentIndexValue == 1) // off
     {
         // set stored index
@@ -125,6 +129,7 @@
         [self.labelVolume setHidden:YES];
 //        [self.labelCurrentTVChanel setHidden:YES];
         [self.labelVolumeHelper setHidden:YES];
+        [self.labelTVChannelHelper setHidden:YES];
     }
     
     
@@ -194,7 +199,7 @@
 {
     self.labelVolume.text = NULL;
     self.currentVolumeValue = [sender value];
-    self.labelVolume.text = [NSString stringWithFormat:@"%.1f", self.currentVolumeValue * 100];
+//    self.labelVolume.text = [NSString stringWithFormat:@"%.1f", self.currentVolumeValue * 100];
     // storage of volume
     [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:self.currentVolumeValue] forKey:@"currentTVVolumeValueLivingRoom"];
 }

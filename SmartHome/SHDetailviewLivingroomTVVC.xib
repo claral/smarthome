@@ -145,7 +145,6 @@
 						<string key="NSFrame">{{623, 304}, {279, 23}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -291,6 +290,14 @@
 						<reference key="destination" ref="1028325343"/>
 					</object>
 					<int key="connectionID">752</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">labelTVChannelHelper</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="730068739"/>
+					</object>
+					<int key="connectionID">800</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -1163,7 +1170,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">799</int>
+			<int key="maxID">800</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1203,12 +1210,17 @@
 						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="labelTVChannelHelper">UILabel</string>
 						<string key="labelVolume">UILabel</string>
 						<string key="labelVolumeHelper">UILabel</string>
 						<string key="pickerWheelTVChanels">UIPickerView</string>
 						<string key="sliderTVVolume">UISlider</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="labelTVChannelHelper">
+							<string key="name">labelTVChannelHelper</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="labelVolume">
 							<string key="name">labelVolume</string>
 							<string key="candidateClassName">UILabel</string>
