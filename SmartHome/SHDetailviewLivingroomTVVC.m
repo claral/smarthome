@@ -15,7 +15,7 @@
 @property (strong, nonatomic, readwrite) NSArray *arrayTVChanels;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerWheelTVChanels;
 @property (nonatomic, assign) int currentTVChanel;
-@property (weak, nonatomic) IBOutlet UILabel *labelCurrentTVChanel;
+//@property (weak, nonatomic) IBOutlet UILabel *labelCurrentTVChanel;
 
 @property (nonatomic, assign) float currentVolumeValue;
 @property (weak, nonatomic) IBOutlet UISlider *sliderTVVolume;
@@ -52,7 +52,7 @@
     // reading stored row
     int currRow = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentRowValueTVLivingRoom"] integerValue];
     [self.pickerWheelTVChanels selectRow:currRow inComponent:0 animated:NO];
-    self.labelCurrentTVChanel.text = [self.arrayTVChanels objectAtIndex:currRow];
+//    self.labelCurrentTVChanel.text = [self.arrayTVChanels objectAtIndex:currRow];
     
     // reading stored volume
     self.currentVolumeValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentTVVolumeValueLivingRoom"] floatValue];
@@ -87,7 +87,7 @@
             [self.pickerWheelTVChanels setHidden:NO];
             [self.sliderTVVolume setHidden:NO];
             [self.labelVolume setHidden:NO];
-            [self.labelCurrentTVChanel setHidden:NO];
+//            [self.labelCurrentTVChanel setHidden:NO];
             [self.labelVolumeHelper setHidden:NO];
         } else if (self.currentIndexValue == 1) // on
         {
@@ -95,7 +95,7 @@
             [self.pickerWheelTVChanels setHidden:YES];
             [self.sliderTVVolume setHidden:YES];
             [self.labelVolume setHidden:YES];
-            [self.labelCurrentTVChanel setHidden:YES];
+//            [self.labelCurrentTVChanel setHidden:YES];
             [self.labelVolumeHelper setHidden:YES];
         }
     };
@@ -114,7 +114,7 @@
         [self.pickerWheelTVChanels setHidden:NO];
         [self.sliderTVVolume setHidden:NO];
         [self.labelVolume setHidden:NO];
-        [self.labelCurrentTVChanel setHidden:NO];
+//        [self.labelCurrentTVChanel setHidden:NO];
         [self.labelVolumeHelper setHidden:NO];
     } else if (self.currentIndexValue == 1) // off
     {
@@ -123,7 +123,7 @@
         [self.pickerWheelTVChanels setHidden:YES];
         [self.sliderTVVolume setHidden:YES];
         [self.labelVolume setHidden:YES];
-        [self.labelCurrentTVChanel setHidden:YES];
+//        [self.labelCurrentTVChanel setHidden:YES];
         [self.labelVolumeHelper setHidden:YES];
     }
     
@@ -187,7 +187,7 @@
     // storage of row
     [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:row] forKey:@"currentRowValueTVLivingRoom"];
     
-    self.labelCurrentTVChanel.text = [self.arrayTVChanels objectAtIndex:row];
+//    self.labelCurrentTVChanel.text = [self.arrayTVChanels objectAtIndex:row];
 }
 
 - (IBAction)sliderVolumeChange:(UISlider *)sender

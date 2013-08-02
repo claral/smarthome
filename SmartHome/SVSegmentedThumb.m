@@ -147,10 +147,10 @@
 
 
 - (void)drawRect:(CGRect)rect {
-    CGRect thumbRect = CGRectMake(self.segmentedControl.thumbEdgeInset.left,
-                                  self.segmentedControl.thumbEdgeInset.top,
-                                  rect.size.width-self.segmentedControl.thumbEdgeInset.left-self.segmentedControl.thumbEdgeInset.right,
-                                  rect.size.height-self.segmentedControl.thumbEdgeInset.top-self.segmentedControl.thumbEdgeInset.bottom+1); // 1 is for segmented bottom gloss
+    CGRect thumbRect = CGRectMake(self.segmentedControl.thumbEdgeInset.left+1.0f,
+                                  self.segmentedControl.thumbEdgeInset.top+1.0f,
+                                  rect.size.width-self.segmentedControl.thumbEdgeInset.left-self.segmentedControl.thumbEdgeInset.right-2.0f,
+                                  rect.size.height-self.segmentedControl.thumbEdgeInset.top-self.segmentedControl.thumbEdgeInset.bottom+1-2.0f); // 1 is for segmented bottom gloss
     
     thumbRect = CGRectInset(thumbRect, 5, 0); // 5 is for thumb shadow. thumbRect, 5, 0
     
