@@ -50,17 +50,16 @@
     
     
     // ON OFF CONTROL
-    // Hinzufuegen von Feldern: @"Text". (Text betitelt Feld)
     SVSegmentedControl *navSC = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" AUS ", @" EIN ", nil]];
     navSC.changeHandler = ^(NSUInteger newIndex) {
-        __block NSUInteger index = navSC.selectedSegmentIndex;
+        //__block NSUInteger index = navSC.selectedSegmentIndex;
         NSLog(@"segmentedControl did select index %i (via block handler)", newIndex);
         
         // storage of currentindex
-        self.currentIndexValue = index;
+        self.currentIndexValue = newIndex;
         [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue] forKey:@"currentIndexValueLightEntrance"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-        [navSC setIndexToBeginWith:index];
+        [navSC setIndexToBeginWith:newIndex];
         
         
         // show ON OFF // within light view
@@ -68,12 +67,12 @@
         int returnIdxVal;
         if (self.currentIndexValue == 0) // off
         {
-            returnIdxVal = [navSC setIndexToBeginWith:1];
-            [self.view addSubview:pwView];
-        } else if (self.currentIndexValue == 1) // on
-        {
             returnIdxVal = [navSC setIndexToBeginWith:0];
             [pwView removeFromSuperview];
+        } else if (self.currentIndexValue == 1) // on
+        {
+            returnIdxVal = [navSC setIndexToBeginWith:1];
+            [self.view addSubview:pwView];
         }
         
     };
@@ -89,28 +88,27 @@
     NSNumber *currentPercentageNumber = [[NSNumber alloc] init];
     
     // show ON OFF // from entrance view to light view
-    if (self.currentIndexValue == 0) // on
+    if (self.currentIndexValue == 0) // off
     {
         // set stored percentage
         currentPercentageNumber = [NSNumber numberWithFloat:self.currentPercentageValue];
         [_pwvc setPredefinedValue:currentPercentageNumber];
         
         // set stored index
-        returnIdxVal = [navSC setIndexToBeginWith:1];
-        [self.view addSubview:pwView];
-    } else if (self.currentIndexValue == 1) // off
+        returnIdxVal = [navSC setIndexToBeginWith:0];
+        [pwView removeFromSuperview];
+    } else if (self.currentIndexValue == 1) // on
     {
         // set stored percentage
         currentPercentageNumber = [NSNumber numberWithFloat:self.currentPercentageValue];
         [_pwvc setPredefinedValue:currentPercentageNumber];
 
         // set stored index
-        returnIdxVal = [navSC setIndexToBeginWith:0];
-        [pwView removeFromSuperview];
+        returnIdxVal = [navSC setIndexToBeginWith:1];
+        [self.view addSubview:pwView];
     }
     
     [self.view addSubview:navSC];
-    //navSC.center = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/4);
     navSC.center = CGPointMake(930, 55);
 }
 

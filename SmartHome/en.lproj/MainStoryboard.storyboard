@@ -414,8 +414,8 @@
                                     <constraint firstAttribute="width" constant="140" id="pI0-SH-w6Z"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Licht" image="SH_ICON_tabLight.png">
-                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Licht" backgroundImage="SH_ICON_tab.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -431,8 +431,8 @@
                                     <constraint firstAttribute="height" constant="72" id="gKw-cb-OPX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Heizung" image="SH_ICON_tabHeating.png">
-                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Heizung" backgroundImage="SH_ICON_tab.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -446,9 +446,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="zFZ-Hu-ZmG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Jalousien" image="SH_ICON_tabJalousie.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Jalousien" backgroundImage="SH_ICON_tab.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -738,9 +738,9 @@
                                     <constraint firstAttribute="width" constant="140" id="clx-co-o2w"/>
                                     <constraint firstAttribute="height" constant="71" id="elK-Za-vCV"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Licht" image="SH_ICON_tabLightHightlight.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Licht" backgroundImage="SH_ICON_tabHightlight.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -751,9 +751,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="jJm-ZG-NHk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Heizung" image="SH_ICON_tabHeating.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Heizung" backgroundImage="SH_ICON_tab.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -767,9 +767,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="qzs-Ku-exw"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Jalousien" image="SH_ICON_tabJalousie.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Jalousien" backgroundImage="SH_ICON_tab.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -1085,8 +1085,8 @@
                                     <constraint firstAttribute="width" constant="140" id="Wt7-YE-M10"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Licht" image="SH_ICON_tabLight.png">
-                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Licht" backgroundImage="SH_ICON_tab.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -1102,8 +1102,8 @@
                                     <constraint firstAttribute="width" constant="140" id="rPs-QL-HI0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Heizung" image="SH_ICON_tabHeating.png">
-                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Heizung" backgroundImage="SH_ICON_tab.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -1118,8 +1118,8 @@
                                     <constraint firstAttribute="width" constant="140" id="uta-KA-pCM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Jalousien" image="SH_ICON_tabJalousieHightlight.png">
-                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Jalousien" backgroundImage="SH_ICON_tabHightlight.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -1211,8 +1211,8 @@
                                     <constraint firstAttribute="width" constant="140" id="bqh-mM-fPn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Licht" image="SH_ICON_tabLight.png">
-                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Licht" backgroundImage="SH_ICON_tab.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -1228,8 +1228,8 @@
                                     <constraint firstAttribute="height" constant="71" id="mDr-vq-lep"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Heizung" image="SH_ICON_tabHeatingHightlight.png">
-                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Heizung" backgroundImage="SH_ICON_tabHightlight.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -1241,8 +1241,8 @@
                                     <constraint firstAttribute="width" constant="140" id="dhq-Of-VqD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Jalousien" image="SH_ICON_tabJalousie.png">
-                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Jalousien" backgroundImage="SH_ICON_tab.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -1464,12 +1464,8 @@
         <image name="SH_ICON_oven.png" width="570" height="570"/>
         <image name="SH_ICON_phone.png" width="570" height="570"/>
         <image name="SH_ICON_stereo.png" width="570" height="570"/>
-        <image name="SH_ICON_tabHeating.png" width="684" height="342"/>
-        <image name="SH_ICON_tabHeatingHightlight.png" width="684" height="342"/>
-        <image name="SH_ICON_tabJalousie.png" width="684" height="342"/>
-        <image name="SH_ICON_tabJalousieHightlight.png" width="684" height="342"/>
-        <image name="SH_ICON_tabLight.png" width="684" height="342"/>
-        <image name="SH_ICON_tabLightHightlight.png" width="684" height="342"/>
+        <image name="SH_ICON_tab.png" width="684" height="342"/>
+        <image name="SH_ICON_tabHightlight.png" width="684" height="342"/>
         <image name="SH_ICON_tv.png" width="570" height="570"/>
         <image name="SH_ICON_whirlpool.png" width="570" height="570"/>
         <image name="SH_NAVI_base2.png" width="821" height="456"/>
@@ -1564,9 +1560,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Uwy-j3-2xz"/>
         <segue reference="4lW-4p-kEl"/>
         <segue reference="Ij5-Rk-8qE"/>
         <segue reference="DVA-Ol-BQ0"/>
+        <segue reference="Uwy-j3-2xz"/>
     </inferredMetricsTieBreakers>
 </document>
