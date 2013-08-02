@@ -659,9 +659,9 @@
 							<reference ref="952524670"/>
 							<reference ref="204604938"/>
 							<reference ref="309616689"/>
-							<reference ref="730068739"/>
 							<reference ref="1018968716"/>
 							<reference ref="1028325343"/>
+							<reference ref="730068739"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -1187,7 +1187,6 @@
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="backToSH:">id</string>
-						<string key="buttonChanelDisplay:">UIButton</string>
 						<string key="closeDetailView:">id</string>
 						<string key="sliderVolumeChange:">id</string>
 					</dictionary>
@@ -1195,10 +1194,6 @@
 						<object class="IBActionInfo" key="backToSH:">
 							<string key="name">backToSH:</string>
 							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="buttonChanelDisplay:">
-							<string key="name">buttonChanelDisplay:</string>
-							<string key="candidateClassName">UIButton</string>
 						</object>
 						<object class="IBActionInfo" key="closeDetailView:">
 							<string key="name">closeDetailView:</string>
