@@ -124,6 +124,7 @@
 		EB8C19FB17ABCE4A009E7293 /* SH_PIC_entrance.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8C19F617ABCE4A009E7293 /* SH_PIC_entrance.png */; };
 		EB8C19FC17ABCE4A009E7293 /* SH_PIC_kitchen.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8C19F717ABCE4A009E7293 /* SH_PIC_kitchen.png */; };
 		EB8C19FD17ABCE4A009E7293 /* SH_PIC_livingroom.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8C19F817ABCE4A009E7293 /* SH_PIC_livingroom.png */; };
+		EB8C19FF17ABD425009E7293 /* SH_PIC_cooker.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8C19FE17ABD425009E7293 /* SH_PIC_cooker.png */; };
 		EB8E0419178D822A00997928 /* SH_NAVI_base6.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8E0418178D822A00997928 /* SH_NAVI_base6.png */; };
 		EB9407861769E28D0061E17D /* SHDetailviewBathroomLightVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9407841769E28D0061E17D /* SHDetailviewBathroomLightVC.m */; };
 		EB9407871769E28D0061E17D /* SHDetailviewBathroomLightVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB9407851769E28D0061E17D /* SHDetailviewBathroomLightVC.xib */; };
@@ -369,6 +370,7 @@
 		EB8C19F617ABCE4A009E7293 /* SH_PIC_entrance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_PIC_entrance.png; sourceTree = "<group>"; };
 		EB8C19F717ABCE4A009E7293 /* SH_PIC_kitchen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_PIC_kitchen.png; sourceTree = "<group>"; };
 		EB8C19F817ABCE4A009E7293 /* SH_PIC_livingroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_PIC_livingroom.png; sourceTree = "<group>"; };
+		EB8C19FE17ABD425009E7293 /* SH_PIC_cooker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_PIC_cooker.png; sourceTree = "<group>"; };
 		EB8E0418178D822A00997928 /* SH_NAVI_base6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_NAVI_base6.png; sourceTree = "<group>"; };
 		EB9407831769E28D0061E17D /* SHDetailviewBathroomLightVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDetailviewBathroomLightVC.h; sourceTree = "<group>"; };
 		EB9407841769E28D0061E17D /* SHDetailviewBathroomLightVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDetailviewBathroomLightVC.m; sourceTree = "<group>"; };
@@ -739,6 +741,7 @@
 		42D9938617A9029D00F99D8F /* Cooker */ = {
 			isa = PBXGroup;
 			children = (
+				EB8C19FE17ABD425009E7293 /* SH_PIC_cooker.png */,
 				42B68D7917A989E30079A110 /* Cooker0.png */,
 				42B68D7A17A989E30079A110 /* Cooker1.png */,
 				42B68D7D17A98C730079A110 /* Cooker2.png */,
@@ -1245,6 +1248,7 @@
 				EB8C19FB17ABCE4A009E7293 /* SH_PIC_entrance.png in Resources */,
 				EB8C19FC17ABCE4A009E7293 /* SH_PIC_kitchen.png in Resources */,
 				EB8C19FD17ABCE4A009E7293 /* SH_PIC_livingroom.png in Resources */,
+				EB8C19FF17ABD425009E7293 /* SH_PIC_cooker.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

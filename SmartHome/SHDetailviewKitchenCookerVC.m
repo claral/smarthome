@@ -87,7 +87,7 @@
     
 //    [AView setBackgroundColor:[UIColor magentaColor]];
     [AView setBounds:CGRectMake(0,0, AView.frame.size.width*1/4, AView.frame.size.height*2/7)];
-    [AView setCenter:CGPointMake(310, 530)];
+    [AView setCenter:CGPointMake(360, 550)];
     
     [self.view addSubview:AView];
     
@@ -104,7 +104,7 @@
     
     //    [BView setBackgroundColor:[UIColor blueColor]];
     [BView setBounds:CGRectMake(0,0, BView.frame.size.width*1/4, BView.frame.size.height*2/7)];
-    [BView setCenter:CGPointMake(310, 230)];
+    [BView setCenter:CGPointMake(360, 250)];
     
     [self.view addSubview:BView];
     
@@ -122,7 +122,7 @@
     
     //    [CView setBackgroundColor:[UIColor greenColor]];
     [CView setBounds:CGRectMake(0,0, CView.frame.size.width*1/4, CView.frame.size.height*2/7)];
-    [CView setCenter:CGPointMake(710, 230)];
+    [CView setCenter:CGPointMake(660, 250)];
     
     [self.view addSubview:CView];
     
@@ -140,7 +140,7 @@
     
     //    [DView setBackgroundColor:[UIColor greenColor]];
     [DView setBounds:CGRectMake(0,0, DView.frame.size.width*1/4, DView.frame.size.height*2/7)];
-    [DView setCenter:CGPointMake(710, 530)];
+    [DView setCenter:CGPointMake(660, 550)];
     
     [self.view addSubview:DView];
 
