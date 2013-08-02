@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelVolumeHelper;
 - (IBAction)sliderVolumeChange:(id)sender;
 @property (nonatomic, assign) int currentIndexValue;
+@property (weak, nonatomic) IBOutlet UIImageView *imageViewWheelFrame;
 
 @end
 
@@ -88,18 +89,18 @@
             [self.pickerWheelTVChanels setHidden:NO];
             [self.sliderTVVolume setHidden:NO];
             [self.labelVolume setHidden:NO];
-//            [self.labelCurrentTVChanel setHidden:NO];
             [self.labelVolumeHelper setHidden:NO];
             [self.labelTVChannelHelper setHidden:NO];
+            [self.imageViewWheelFrame setHidden:NO];
         } else if (self.currentIndexValue == 1) // on
         {
             returnIdxVal = [navSC setIndexToBeginWith:0];
             [self.pickerWheelTVChanels setHidden:YES];
             [self.sliderTVVolume setHidden:YES];
             [self.labelVolume setHidden:YES];
-//            [self.labelCurrentTVChanel setHidden:YES];
             [self.labelVolumeHelper setHidden:YES];
             [self.labelTVChannelHelper setHidden:YES];
+            [self.imageViewWheelFrame setHidden:YES];
         }
     };
     
@@ -109,7 +110,7 @@
     self.currentIndexValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueTVLivingRoom"] integerValue];
     int returnIdxVal;
     
-    // show ON OFF // from entrance view to whirlpool view // TODOOO
+    // show ON OFF // from living room view to tv view
     if (self.currentIndexValue == 0) // on
     {
         // set stored index
@@ -117,9 +118,9 @@
         [self.pickerWheelTVChanels setHidden:NO];
         [self.sliderTVVolume setHidden:NO];
         [self.labelVolume setHidden:NO];
-//        [self.labelCurrentTVChanel setHidden:NO];
         [self.labelVolumeHelper setHidden:NO];
         [self.labelTVChannelHelper setHidden:NO];
+        [self.imageViewWheelFrame setHidden:NO];
     } else if (self.currentIndexValue == 1) // off
     {
         // set stored index
@@ -127,9 +128,9 @@
         [self.pickerWheelTVChanels setHidden:YES];
         [self.sliderTVVolume setHidden:YES];
         [self.labelVolume setHidden:YES];
-//        [self.labelCurrentTVChanel setHidden:YES];
         [self.labelVolumeHelper setHidden:YES];
         [self.labelTVChannelHelper setHidden:YES];
+        [self.imageViewWheelFrame setHidden:YES];
     }
     
     
@@ -200,6 +201,7 @@
     self.labelVolume.text = NULL;
     self.currentVolumeValue = [sender value];
 //    self.labelVolume.text = [NSString stringWithFormat:@"%.1f", self.currentVolumeValue * 100];
+    
     // storage of volume
     [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:self.currentVolumeValue] forKey:@"currentTVVolumeValueLivingRoom"];
 }
