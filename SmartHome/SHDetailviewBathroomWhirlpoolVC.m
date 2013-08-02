@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIPickerView *temperatureWheel;
 @property (strong, nonatomic, readwrite) NSArray *temperatureWheelItems;
 @property (nonatomic, assign) int currentTemperatureValue;
-@property (strong) VEIFStaticHorizontalSliderViewController *svc;
+@property (strong) VEIFStaticHorizontalSliderViewControllerPool *svc;
 @property (nonatomic, assign) int currentIndexValue;
 
 @end
@@ -40,7 +40,7 @@
     [super viewDidLoad];
 
     self.svc =
-    [[VEIFStaticHorizontalSliderViewController alloc] init];
+    [[VEIFStaticHorizontalSliderViewControllerPool alloc] init];
     self.svc.sDelegate = self;
     
     SHIconWithTitle *icon1 = [[SHIconWithTitle alloc] init];
@@ -60,8 +60,10 @@
     UIView *sliderView = self.svc.view;
     
     
-    [sliderView setBounds:CGRectMake(0, 0, sliderView.frame.size.width * 0.2, sliderView.frame.size.height)];
-    [sliderView setCenter:CGPointMake(500, 575)];
+//    [sliderView setBounds:CGRectMake(0, 0, sliderView.frame.size.width * 0.2, sliderView.frame.size.height)];
+//    [sliderView setCenter:CGPointMake(500, 575)];
+    [sliderView setBounds:CGRectMake(0, 0, sliderView.frame.size.width, sliderView.frame.size.height)];
+    [sliderView setCenter:CGPointMake(930, 575)];
     /*[self.view addSubview:sliderView];/**/
     // [self.view sendSubviewToBack:sliderView];
     // [self.view insertSubview:sliderView atIndex:0];

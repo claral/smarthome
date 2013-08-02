@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "VEIFStaticHorizontalSliderViewController.h"
+#import "VEIFStaticHorizontalSliderViewControllerPool.h"
 
 
 @interface SHDetailviewBathroomWhirlpoolVC : UIViewController <SliderDelegate>

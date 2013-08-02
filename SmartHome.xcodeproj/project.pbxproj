@@ -46,6 +46,8 @@
 		42B68D8817A98C740079A110 /* Cooker6.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B68D8117A98C740079A110 /* Cooker6.png */; };
 		42B68D8917A98C740079A110 /* Cooker7.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B68D8217A98C740079A110 /* Cooker7.png */; };
 		42B68D8A17A98C740079A110 /* Cooker8.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B68D8317A98C740079A110 /* Cooker8.png */; };
+		42BCDF7B17ABA5FA00010685 /* VEIFStaticHorizontalSliderViewControllerPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BCDF7817ABA5FA00010685 /* VEIFStaticHorizontalSliderViewControllerPool.m */; };
+		42BCDF7C17ABA5FA00010685 /* VEStaticHorizontalSliderViewPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BCDF7A17ABA5FA00010685 /* VEStaticHorizontalSliderViewPool.m */; };
 		42CEC28017A27F09007CC976 /* 01-Aus.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CEC27017A27F09007CC976 /* 01-Aus.png */; };
 		42CEC28117A27F09007CC976 /* 01-Aus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CEC27117A27F09007CC976 /* 01-Aus@2x.png */; };
 		42CEC28217A27F09007CC976 /* 02-Kochwäsche.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CEC27217A27F09007CC976 /* 02-Kochwäsche.png */; };
@@ -274,6 +276,10 @@
 		42B68D8117A98C740079A110 /* Cooker6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cooker6.png; sourceTree = "<group>"; };
 		42B68D8217A98C740079A110 /* Cooker7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cooker7.png; sourceTree = "<group>"; };
 		42B68D8317A98C740079A110 /* Cooker8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cooker8.png; sourceTree = "<group>"; };
+		42BCDF7717ABA5FA00010685 /* VEIFStaticHorizontalSliderViewControllerPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VEIFStaticHorizontalSliderViewControllerPool.h; sourceTree = "<group>"; };
+		42BCDF7817ABA5FA00010685 /* VEIFStaticHorizontalSliderViewControllerPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VEIFStaticHorizontalSliderViewControllerPool.m; sourceTree = "<group>"; };
+		42BCDF7917ABA5FA00010685 /* VEStaticHorizontalSliderViewPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VEStaticHorizontalSliderViewPool.h; sourceTree = "<group>"; };
+		42BCDF7A17ABA5FA00010685 /* VEStaticHorizontalSliderViewPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VEStaticHorizontalSliderViewPool.m; sourceTree = "<group>"; };
 		42CEC27017A27F09007CC976 /* 01-Aus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-Aus.png"; sourceTree = "<group>"; };
 		42CEC27117A27F09007CC976 /* 01-Aus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-Aus@2x.png"; sourceTree = "<group>"; };
 		42CEC27217A27F09007CC976 /* 02-Kochwäsche.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "02-Kochwäsche.png"; sourceTree = "<group>"; };
@@ -539,6 +545,7 @@
 		421CA590173AC4CB004AE723 /* SmartHome */ = {
 			isa = PBXGroup;
 			children = (
+				42BCDF7617ABA5E800010685 /* StaticHorizontalSliderPool */,
 				420B767417A1708800021FAB /* Shared */,
 				425A3AB717A10F3800A70C36 /* Wheel */,
 				425A3AAB17A10E3B00A70C36 /* PercentageWheel */,
@@ -661,6 +668,17 @@
 				42A5C1B01792B49200E868F2 /* Bubble3.png */,
 			);
 			name = Whirlpool;
+			sourceTree = "<group>";
+		};
+		42BCDF7617ABA5E800010685 /* StaticHorizontalSliderPool */ = {
+			isa = PBXGroup;
+			children = (
+				42BCDF7717ABA5FA00010685 /* VEIFStaticHorizontalSliderViewControllerPool.h */,
+				42BCDF7817ABA5FA00010685 /* VEIFStaticHorizontalSliderViewControllerPool.m */,
+				42BCDF7917ABA5FA00010685 /* VEStaticHorizontalSliderViewPool.h */,
+				42BCDF7A17ABA5FA00010685 /* VEStaticHorizontalSliderViewPool.m */,
+			);
+			name = StaticHorizontalSliderPool;
 			sourceTree = "<group>";
 		};
 		42CEC26F17A27ECB007CC976 /* Waschmaschine */ = {
@@ -1247,6 +1265,8 @@
 				42811FA8179D40160072D7B5 /* SVSegmentedControl.m in Sources */,
 				42811FA9179D40160072D7B5 /* SVSegmentedThumb.m in Sources */,
 				420B767D17A17B8E00021FAB /* BHViewComputations.m in Sources */,
+				42BCDF7B17ABA5FA00010685 /* VEIFStaticHorizontalSliderViewControllerPool.m in Sources */,
+				42BCDF7C17ABA5FA00010685 /* VEStaticHorizontalSliderViewPool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
