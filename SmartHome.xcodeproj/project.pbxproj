@@ -48,6 +48,8 @@
 		42B68D8A17A98C740079A110 /* Cooker8.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B68D8317A98C740079A110 /* Cooker8.png */; };
 		42BCDF7B17ABA5FA00010685 /* VEIFStaticHorizontalSliderViewControllerPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BCDF7817ABA5FA00010685 /* VEIFStaticHorizontalSliderViewControllerPool.m */; };
 		42BCDF7C17ABA5FA00010685 /* VEStaticHorizontalSliderViewPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BCDF7A17ABA5FA00010685 /* VEStaticHorizontalSliderViewPool.m */; };
+		42BCDF8217ABAC6000010685 /* VEIFStaticHorizontalSliderViewControllerHeating.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BCDF7F17ABAC6000010685 /* VEIFStaticHorizontalSliderViewControllerHeating.m */; };
+		42BCDF8317ABAC6000010685 /* VEStaticHorizontalSliderViewHeating.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BCDF8117ABAC6000010685 /* VEStaticHorizontalSliderViewHeating.m */; };
 		42CEC28017A27F09007CC976 /* 01-Aus.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CEC27017A27F09007CC976 /* 01-Aus.png */; };
 		42CEC28117A27F09007CC976 /* 01-Aus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CEC27117A27F09007CC976 /* 01-Aus@2x.png */; };
 		42CEC28217A27F09007CC976 /* 02-Kochwäsche.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CEC27217A27F09007CC976 /* 02-Kochwäsche.png */; };
@@ -281,6 +283,10 @@
 		42BCDF7817ABA5FA00010685 /* VEIFStaticHorizontalSliderViewControllerPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VEIFStaticHorizontalSliderViewControllerPool.m; sourceTree = "<group>"; };
 		42BCDF7917ABA5FA00010685 /* VEStaticHorizontalSliderViewPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VEStaticHorizontalSliderViewPool.h; sourceTree = "<group>"; };
 		42BCDF7A17ABA5FA00010685 /* VEStaticHorizontalSliderViewPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VEStaticHorizontalSliderViewPool.m; sourceTree = "<group>"; };
+		42BCDF7E17ABAC6000010685 /* VEIFStaticHorizontalSliderViewControllerHeating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VEIFStaticHorizontalSliderViewControllerHeating.h; sourceTree = "<group>"; };
+		42BCDF7F17ABAC6000010685 /* VEIFStaticHorizontalSliderViewControllerHeating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VEIFStaticHorizontalSliderViewControllerHeating.m; sourceTree = "<group>"; };
+		42BCDF8017ABAC6000010685 /* VEStaticHorizontalSliderViewHeating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VEStaticHorizontalSliderViewHeating.h; sourceTree = "<group>"; };
+		42BCDF8117ABAC6000010685 /* VEStaticHorizontalSliderViewHeating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VEStaticHorizontalSliderViewHeating.m; sourceTree = "<group>"; };
 		42CEC27017A27F09007CC976 /* 01-Aus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-Aus.png"; sourceTree = "<group>"; };
 		42CEC27117A27F09007CC976 /* 01-Aus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-Aus@2x.png"; sourceTree = "<group>"; };
 		42CEC27217A27F09007CC976 /* 02-Kochwäsche.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "02-Kochwäsche.png"; sourceTree = "<group>"; };
@@ -547,13 +553,14 @@
 		421CA590173AC4CB004AE723 /* SmartHome */ = {
 			isa = PBXGroup;
 			children = (
-				42BCDF7617ABA5E800010685 /* StaticHorizontalSliderPool */,
 				420B767417A1708800021FAB /* Shared */,
 				425A3AB717A10F3800A70C36 /* Wheel */,
 				425A3AAB17A10E3B00A70C36 /* PercentageWheel */,
 				425A3AA417A10DED00A70C36 /* TapNHold */,
 				42811FA3179D3F7E0072D7B5 /* ONOFFSwitch */,
 				42DC8562178F3B5D002EC3F7 /* StaticHorizontalSlider */,
+				42BCDF7617ABA5E800010685 /* StaticHorizontalSliderPool */,
+				42BCDF7D17ABAC1900010685 /* StaticHorizontalSliderHeating */,
 				421CA599173AC4CB004AE723 /* SHAppDelegate.h */,
 				421CA59A173AC4CB004AE723 /* SHAppDelegate.m */,
 				421CA5A2173AC4CB004AE723 /* MainStoryboard.storyboard */,
@@ -681,6 +688,17 @@
 				42BCDF7A17ABA5FA00010685 /* VEStaticHorizontalSliderViewPool.m */,
 			);
 			name = StaticHorizontalSliderPool;
+			sourceTree = "<group>";
+		};
+		42BCDF7D17ABAC1900010685 /* StaticHorizontalSliderHeating */ = {
+			isa = PBXGroup;
+			children = (
+				42BCDF7E17ABAC6000010685 /* VEIFStaticHorizontalSliderViewControllerHeating.h */,
+				42BCDF7F17ABAC6000010685 /* VEIFStaticHorizontalSliderViewControllerHeating.m */,
+				42BCDF8017ABAC6000010685 /* VEStaticHorizontalSliderViewHeating.h */,
+				42BCDF8117ABAC6000010685 /* VEStaticHorizontalSliderViewHeating.m */,
+			);
+			name = StaticHorizontalSliderHeating;
 			sourceTree = "<group>";
 		};
 		42CEC26F17A27ECB007CC976 /* Waschmaschine */ = {
@@ -1271,6 +1289,8 @@
 				420B767D17A17B8E00021FAB /* BHViewComputations.m in Sources */,
 				42BCDF7B17ABA5FA00010685 /* VEIFStaticHorizontalSliderViewControllerPool.m in Sources */,
 				42BCDF7C17ABA5FA00010685 /* VEStaticHorizontalSliderViewPool.m in Sources */,
+				42BCDF8217ABAC6000010685 /* VEIFStaticHorizontalSliderViewControllerHeating.m in Sources */,
+				42BCDF8317ABAC6000010685 /* VEStaticHorizontalSliderViewHeating.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
