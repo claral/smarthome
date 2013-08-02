@@ -145,9 +145,10 @@
     if (buttonWithImageMuteHelper == 0)
     {
         [self.buttonSoundMute setImage:[UIImage imageNamed:@"SH_ICON_mute.png"] forState:UIControlStateNormal];
-//        self.sliderVolume setMinimumValue:<#(float)#>
+        [self.sliderVolume setValue:(0.0f)];
     } else if (buttonWithImageMuteHelper == 1){
         [self.buttonSoundMute setImage:[UIImage imageNamed:@"SH_ICON_volume.png"] forState:UIControlStateNormal];
+        [self.sliderVolume setValue:self.currentVolumeValue];
     }
     
 //    // reading stored button image
@@ -205,9 +206,11 @@
     {
         [self.buttonSoundMute setImage:[UIImage imageNamed:@"SH_ICON_mute.png"] forState:UIControlStateNormal];
         self.buttonWithImageMute = 0;
+        [self.sliderVolume setValue:(0.0f)];
     } else {
         [self.buttonSoundMute setImage:[UIImage imageNamed:@"SH_ICON_volume.png"] forState:UIControlStateNormal];
         self.buttonWithImageMute = 1;
+        [self.sliderVolume setValue:self.currentVolumeValue];
     }
     
     [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:self.buttonWithImageMute] forKey:@"currentButtonWithImageMuteValueStereoLivingRoom"];
