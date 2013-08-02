@@ -18,7 +18,7 @@
 @property (nonatomic, assign) int currentIndexValue_Kitchen;
 @property (nonatomic, assign) int currentIndexValue_LivingRoom;
 @property (nonatomic, assign) int currentIndexValue_Entrance;
-@property (nonatomic, assign) int currentIndexValue_Basement;
+//@property (nonatomic, assign) int currentIndexValue_Basement;
 
 @end
 
@@ -46,7 +46,7 @@
     SVSegmentedControl *navSC_Kitchen = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" AUS ", @" EIN ", nil]];
     SVSegmentedControl *navSC_LivingRoom = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" AUS ", @" EIN ", nil]];
     SVSegmentedControl *navSC_Entrance = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" AUS ", @" EIN ", nil]];
-    SVSegmentedControl *navSC_Basement = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" AUS ", @" EIN ", nil]];
+//    SVSegmentedControl *navSC_Basement = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" AUS ", @" EIN ", nil]];
     
     
     
@@ -66,7 +66,7 @@
         {
             helperInt = 0;
             [navSC_Bedroom setSelectedSegmentIndex:helperInt animated:NO];
-            [navSC_Basement setSelectedSegmentIndex:helperInt animated:NO];
+//            [navSC_Basement setSelectedSegmentIndex:helperInt animated:NO];
             [navSC_Bathroom setSelectedSegmentIndex:helperInt animated:NO];
             [navSC_Entrance setSelectedSegmentIndex:helperInt animated:NO];
             [navSC_Kitchen setSelectedSegmentIndex:helperInt animated:NO];
@@ -75,7 +75,7 @@
         {
             helperInt = 1;
             [navSC_Bedroom setSelectedSegmentIndex:helperInt animated:NO];
-            [navSC_Basement setSelectedSegmentIndex:helperInt animated:NO];
+//            [navSC_Basement setSelectedSegmentIndex:helperInt animated:NO];
             [navSC_Bathroom setSelectedSegmentIndex:helperInt animated:NO];
             [navSC_Entrance setSelectedSegmentIndex:helperInt animated:NO];
             [navSC_Kitchen setSelectedSegmentIndex:helperInt animated:NO];
@@ -86,11 +86,11 @@
         [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Bedroom] forKey:@"currentIndexValueJalousieTabBedroom"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         [navSC_Bedroom setIndexToBeginWith:index];
-        
-        self.currentIndexValue_Basement = index;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Basement] forKey:@"currentIndexValueJalousieTabBasement"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-        [navSC_Basement setIndexToBeginWith:index];
+//        
+//        self.currentIndexValue_Basement = index;
+//        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Basement] forKey:@"currentIndexValueJalousieTabBasement"];
+//        [[NSUserDefaults standardUserDefaults] synchronize];
+//        [navSC_Basement setIndexToBeginWith:index];
         
         self.currentIndexValue_Bathroom = index;
         [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Bathroom] forKey:@"currentIndexValueJalousieTabBathroom"];
@@ -286,33 +286,33 @@
     
     
     
-    // ----------
-    // ON OFF basement
-    navSC_Basement.changeHandler = ^(NSUInteger newIndex) {
-        __block NSUInteger index = navSC_Basement.selectedSegmentIndex;
-        
-        // storage of currentindex
-        self.currentIndexValue_Basement = index;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Basement] forKey:@"currentIndexValueJalousieTabBasement"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-        [navSC_Basement setIndexToBeginWith:index];
-    };
-    // reading stored index value
-    self.currentIndexValue_Basement = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueJalousieTabBasement"] integerValue];
-    
-    // show ON OFF
-    if (self.currentIndexValue_Basement == 0) // on
-    {
-        // set stored index
-        [navSC_Basement setIndexToBeginWith:1];
-    } else if (self.currentIndexValue_Basement == 1) // off
-    {
-        // set stored index
-        [navSC_Basement setIndexToBeginWith:0];
-    }
-    
-    [self.view addSubview:navSC_Basement];
-    navSC_Basement.center = CGPointMake(425, 600);
+//    // ----------
+//    // ON OFF basement
+//    navSC_Basement.changeHandler = ^(NSUInteger newIndex) {
+//        __block NSUInteger index = navSC_Basement.selectedSegmentIndex;
+//        
+//        // storage of currentindex
+//        self.currentIndexValue_Basement = index;
+//        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Basement] forKey:@"currentIndexValueJalousieTabBasement"];
+//        [[NSUserDefaults standardUserDefaults] synchronize];
+//        [navSC_Basement setIndexToBeginWith:index];
+//    };
+//    // reading stored index value
+//    self.currentIndexValue_Basement = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueJalousieTabBasement"] integerValue];
+//    
+//    // show ON OFF
+//    if (self.currentIndexValue_Basement == 0) // on
+//    {
+//        // set stored index
+//        [navSC_Basement setIndexToBeginWith:1];
+//    } else if (self.currentIndexValue_Basement == 1) // off
+//    {
+//        // set stored index
+//        [navSC_Basement setIndexToBeginWith:0];
+//    }
+//    
+//    [self.view addSubview:navSC_Basement];
+//    navSC_Basement.center = CGPointMake(425, 600);
     
 }
 
