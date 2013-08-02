@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "VEIFStaticHorizontalSliderViewController.h"
+#import "VEIFStaticHorizontalSliderViewControllerHeating.h"
 
 
 @interface SHDetailviewLivingroomHeatingVC : UIViewController <SliderDelegate>

@@ -10,7 +10,7 @@
 
 @interface SHDetailviewLivingroomHeatingVC ()
 
-@property (strong) VEIFStaticHorizontalSliderViewController *svc;
+@property (strong) VEIFStaticHorizontalSliderViewControllerHeating *svc;
 @property (weak, nonatomic) IBOutlet UIPickerView *heatingWheel;
 @property (strong, nonatomic, readwrite) NSArray *heatingWheelItems; // WICHTIG: outlets: dataSource & delegate!
 @property (nonatomic, assign) int currentHeatingValue;
@@ -39,7 +39,7 @@
     // Do any additional setup after loading the view from its nib.
     
     self.svc =
-    [[VEIFStaticHorizontalSliderViewController alloc] init];
+    [[VEIFStaticHorizontalSliderViewControllerHeating alloc] init];
     self.svc.sDelegate = self;
     
     SHIconWithTitle *icon1 = [[SHIconWithTitle alloc] init];
@@ -63,7 +63,7 @@
     UIView *sliderView = self.svc.view;
     
     [sliderView setBounds:CGRectMake(0, 0, sliderView.frame.size.width, sliderView.frame.size.height)];
-    [sliderView setCenter:CGPointMake(635, 500)];
+    [sliderView setCenter:CGPointMake(866, 500)];
     //[self.view addSubview:sliderViewSelected];
     //[self.view sendSubviewToBack:sliderView];
     [self.view addSubview:sliderView];
