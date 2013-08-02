@@ -25,6 +25,7 @@
 - (IBAction)sliderVolumeChange:(id)sender;
 @property (nonatomic, assign) int currentIndexValue;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewWheelFrame;
+@property (weak, nonatomic) IBOutlet UIImageView *imageViewVolumeTriangle;
 
 @end
 
@@ -54,12 +55,10 @@
     // reading stored row
     int currRow = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentRowValueTVLivingRoom"] integerValue];
     [self.pickerWheelTVChanels selectRow:currRow inComponent:0 animated:NO];
-//    self.labelCurrentTVChanel.text = [self.arrayTVChanels objectAtIndex:currRow];
     
     // reading stored volume
     self.currentVolumeValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentTVVolumeValueLivingRoom"] floatValue];
     self.sliderTVVolume.value = self.currentVolumeValue;
-//    self.labelVolume.text = [NSString stringWithFormat:@"%.1f", self.currentVolumeValue * 100];
 }
 
 - (void)viewDidLoad
@@ -92,6 +91,7 @@
             [self.labelVolumeHelper setHidden:NO];
             [self.labelTVChannelHelper setHidden:NO];
             [self.imageViewWheelFrame setHidden:NO];
+            [self.imageViewVolumeTriangle setHidden:NO];
         } else if (self.currentIndexValue == 1) // on
         {
             returnIdxVal = [navSC setIndexToBeginWith:0];
@@ -101,6 +101,7 @@
             [self.labelVolumeHelper setHidden:YES];
             [self.labelTVChannelHelper setHidden:YES];
             [self.imageViewWheelFrame setHidden:YES];
+            [self.imageViewVolumeTriangle setHidden:YES];
         }
     };
     
@@ -121,6 +122,7 @@
         [self.labelVolumeHelper setHidden:NO];
         [self.labelTVChannelHelper setHidden:NO];
         [self.imageViewWheelFrame setHidden:NO];
+        [self.imageViewVolumeTriangle setHidden:NO];
     } else if (self.currentIndexValue == 1) // off
     {
         // set stored index
@@ -131,6 +133,7 @@
         [self.labelVolumeHelper setHidden:YES];
         [self.labelTVChannelHelper setHidden:YES];
         [self.imageViewWheelFrame setHidden:YES];
+        [self.imageViewVolumeTriangle setHidden:YES];
     }
     
     
