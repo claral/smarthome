@@ -17,6 +17,8 @@
 @property (nonatomic, assign) int currentTemperatureValue;
 @property (strong) VEIFStaticHorizontalSliderViewControllerPool *svc;
 @property (nonatomic, assign) int currentIndexValue;
+@property (nonatomic, assign) int currentIndexValueSliderBubbles;
+@property (weak, nonatomic) IBOutlet UIImageView *imageViewSliderFrame;
 
 @end
 
@@ -59,15 +61,18 @@
     
     UIView *sliderView = self.svc.view;
     
-    
-//    [sliderView setBounds:CGRectMake(0, 0, sliderView.frame.size.width * 0.2, sliderView.frame.size.height)];
-//    [sliderView setCenter:CGPointMake(500, 575)];
     [sliderView setBounds:CGRectMake(0, 0, sliderView.frame.size.width, sliderView.frame.size.height)];
     [sliderView setCenter:CGPointMake(930, 575)];
-    /*[self.view addSubview:sliderView];/**/
-    // [self.view sendSubviewToBack:sliderView];
-    // [self.view insertSubview:sliderView atIndex:0];
 
+    
+    // STATIC HORIZONTAL SLIDER
+    // reading stored wheelindex
+    self.currentIndexValueSliderBubbles = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexBubblesSliderWhirlpool"] intValue];
+    NSNumber *currentIdxNumber = [[NSNumber alloc] init];
+    currentIdxNumber = [NSNumber numberWithFloat:self.currentIndexValueSliderBubbles];
+    [self.svc setPredefinedValue:currentIdxNumber];
+    
+    
     // ONOFFSwitch
     // Hinzufuegen von Feldern: @"Text". (Text betitelt Feld)
     SVSegmentedControl *navSC = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" AUS ", @" EIN ", nil]];
@@ -88,11 +93,13 @@
         {
             returnIdxVal = [navSC setIndexToBeginWith:1];
             [self.temperatureWheel setHidden:NO];
+            [self.imageViewSliderFrame setHidden:NO];
             [self.view addSubview:sliderView];
         } else if (self.currentIndexValue == 1) // on
         {
             returnIdxVal = [navSC setIndexToBeginWith:0];
             [self.temperatureWheel setHidden:YES];
+            [self.imageViewSliderFrame setHidden:YES];
             [sliderView removeFromSuperview];
         }
     };
@@ -109,12 +116,14 @@
         // set stored index
         returnIdxVal = [navSC setIndexToBeginWith:1];
         [self.temperatureWheel setHidden:NO];
+        [self.imageViewSliderFrame setHidden:NO];
         [self.view addSubview:sliderView];
     } else if (self.currentIndexValue == 1) // off
     {
         // set stored index
         returnIdxVal = [navSC setIndexToBeginWith:0];
         [self.temperatureWheel setHidden:YES];
+        [self.imageViewSliderFrame setHidden:YES];
         [sliderView removeFromSuperview];
     }
     
@@ -122,7 +131,6 @@
     
     [self.view addSubview:navSC];
     navSC.center = CGPointMake(930, 55);
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -131,9 +139,16 @@
     
     // reading stored temperature
     self.currentTemperatureValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentHeatingValueWhirlpoolBathroom"] integerValue];
+    
     // reading stored row
     int currRow = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentRowValueBathroom"] integerValue];
     [self.temperatureWheel selectRow:currRow inComponent:0 animated:NO];
+    
+    // reading stored index (slider bubbles)
+    self.currentIndexValueSliderBubbles = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexBubblesSliderWhirlpool"] intValue];
+    NSNumber *currentIdxNumber = [[NSNumber alloc] init];
+    currentIdxNumber = [NSNumber numberWithFloat:self.currentIndexValueSliderBubbles];
+    [self.svc setPredefinedValue:currentIdxNumber];
 }
 
 
@@ -156,6 +171,9 @@
 
 - (void)sliderDidMoveTo:(NSInteger)index
 {
+    self.currentIndexValueSliderBubbles = index;
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValueSliderBubbles] forKey:@"currentIndexBubblesSliderWhirlpool"];
+    
     NSLog(@"Selected Item = %i", index);
 }
 
