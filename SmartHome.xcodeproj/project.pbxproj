@@ -111,6 +111,7 @@
 		EB705C5D17AAC97D000ECDD8 /* SH_ICON_tabLightHightlight.png in Resources */ = {isa = PBXBuildFile; fileRef = EB705C5A17AAC97D000ECDD8 /* SH_ICON_tabLightHightlight.png */; };
 		EB8C19D617AB8CE3009E7293 /* SH_ICON_tab.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8C19D417AB8CE3009E7293 /* SH_ICON_tab.png */; };
 		EB8C19D717AB8CE3009E7293 /* SH_ICON_tabHightlight.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8C19D517AB8CE3009E7293 /* SH_ICON_tabHightlight.png */; };
+		EB8C19DF17ABAB1A009E7293 /* SH_ICON_sliderFrame2.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8C19DE17ABAB1A009E7293 /* SH_ICON_sliderFrame2.png */; };
 		EB8E0419178D822A00997928 /* SH_NAVI_base6.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8E0418178D822A00997928 /* SH_NAVI_base6.png */; };
 		EB9407861769E28D0061E17D /* SHDetailviewBathroomLightVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9407841769E28D0061E17D /* SHDetailviewBathroomLightVC.m */; };
 		EB9407871769E28D0061E17D /* SHDetailviewBathroomLightVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB9407851769E28D0061E17D /* SHDetailviewBathroomLightVC.xib */; };
@@ -347,6 +348,7 @@
 		EB705C5A17AAC97D000ECDD8 /* SH_ICON_tabLightHightlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_tabLightHightlight.png; sourceTree = "<group>"; };
 		EB8C19D417AB8CE3009E7293 /* SH_ICON_tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_tab.png; sourceTree = "<group>"; };
 		EB8C19D517AB8CE3009E7293 /* SH_ICON_tabHightlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_tabHightlight.png; sourceTree = "<group>"; };
+		EB8C19DE17ABAB1A009E7293 /* SH_ICON_sliderFrame2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_sliderFrame2.png; sourceTree = "<group>"; };
 		EB8E0418178D822A00997928 /* SH_NAVI_base6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_NAVI_base6.png; sourceTree = "<group>"; };
 		EB9407831769E28D0061E17D /* SHDetailviewBathroomLightVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDetailviewBathroomLightVC.h; sourceTree = "<group>"; };
 		EB9407841769E28D0061E17D /* SHDetailviewBathroomLightVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDetailviewBathroomLightVC.m; sourceTree = "<group>"; };
@@ -742,6 +744,7 @@
 		42ED3E5E178FFFFC0072D039 /* Kaffeemaschine */ = {
 			isa = PBXGroup;
 			children = (
+				EB8C19DE17ABAB1A009E7293 /* SH_ICON_sliderFrame2.png */,
 				42ED3E5F179000360072D039 /* 01-Espresso.png */,
 				42ED3E60179000360072D039 /* 01-Espresso@2x.png */,
 				42ED3E61179000360072D039 /* 02-Espresso-Doppio.png */,
@@ -1207,6 +1210,7 @@
 				EB705C5D17AAC97D000ECDD8 /* SH_ICON_tabLightHightlight.png in Resources */,
 				EB8C19D617AB8CE3009E7293 /* SH_ICON_tab.png in Resources */,
 				EB8C19D717AB8CE3009E7293 /* SH_ICON_tabHightlight.png in Resources */,
+				EB8C19DF17ABAB1A009E7293 /* SH_ICON_sliderFrame2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
