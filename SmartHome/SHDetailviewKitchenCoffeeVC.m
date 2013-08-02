@@ -20,6 +20,7 @@
 
 - (IBAction)buttonStartCoffee:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *buttonStart;
+@property (weak, nonatomic) IBOutlet UIImageView *imageViewSliderFrame;
 
 @end
 
@@ -108,12 +109,14 @@
         {
             returnIdxVal = [navSC setIndexToBeginWith:1];
             [self.view addSubview:sliderView];
+            [self.imageViewSliderFrame setHidden:NO];
             [self.buttonStart setHidden:NO];
         } else if (self.currentIndexValue == 1) // on
         {
             returnIdxVal = [navSC setIndexToBeginWith:0];
             [sliderView removeFromSuperview];
             [self.buttonStart setHidden:YES];
+            [self.imageViewSliderFrame setHidden:YES];
         }
         
     };
@@ -130,12 +133,14 @@
         returnIdxVal = [navSC setIndexToBeginWith:1];
         [self.view addSubview:sliderView];
         [self.buttonStart setHidden:NO];
+        [self.imageViewSliderFrame setHidden:NO];
     } else if (self.currentIndexValue == 1) // off
     {
         // set stored index
         returnIdxVal = [navSC setIndexToBeginWith:0];
         [sliderView removeFromSuperview];
         [self.buttonStart setHidden:YES];
+        [self.imageViewSliderFrame setHidden:YES];
     }
 
 
