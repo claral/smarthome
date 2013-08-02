@@ -313,7 +313,7 @@
                                     <constraint firstAttribute="height" constant="280" id="1gp-mH-vji"/>
                                     <constraint firstAttribute="width" constant="400" id="uZe-KC-9c3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <inset key="titleEdgeInsets" minX="0.0" minY="140" maxX="0.0" maxY="200"/>
                                 <state key="normal" title="Wohnzimmer">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -330,7 +330,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="MTy-9V-e9Z"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Küche">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -347,7 +347,7 @@
                                     <constraint firstAttribute="height" constant="280" id="NBX-bf-JcG"/>
                                     <constraint firstAttribute="width" constant="240" id="WXi-wh-qPR"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Schlafzimmer">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -364,7 +364,7 @@
                                     <constraint firstAttribute="width" constant="60" id="b0B-Yx-4ah"/>
                                     <constraint firstAttribute="height" constant="220" id="tww-eg-ucm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <inset key="titleEdgeInsets" minX="0.0" minY="-140" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Keller">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -381,7 +381,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="ABX-MA-49E"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Flur">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -484,15 +484,16 @@
                                     <constraint firstAttribute="height" constant="21" id="IgK-Ry-SgI"/>
                                     <constraint firstAttribute="width" constant="42" id="ehp-BT-xve"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Keller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIK-ot-VfZ">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="iZC-Tx-nDE"/>
+                                    <constraint firstAttribute="width" constant="52" id="n6k-zz-JDs"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -500,7 +501,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="O6C-V0-dU9"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -509,25 +510,23 @@
                                     <constraint firstAttribute="height" constant="21" id="o3x-58-zqL"/>
                                     <constraint firstAttribute="width" constant="68" id="tBi-HU-Zmw"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Wohnzimmer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzK-d0-Qfk">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="hDd-pz-V4a"/>
-                                    <constraint firstAttribute="height" constant="21" id="qdt-2e-jAZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Schlafzimmer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qez-jc-FrU">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="134" id="2DT-gL-yfd"/>
-                                    <constraint firstAttribute="height" constant="21" id="C5Y-bS-wx4"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -553,7 +552,6 @@
                             <constraint firstItem="lA6-Eq-ELO" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="153" id="HH1-CE-OXQ"/>
                             <constraint firstItem="0co-hQ-h1w" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="292" id="I6o-Zm-0DM"/>
                             <constraint firstItem="L0A-Pv-i6i" firstAttribute="centerX" secondItem="XJg-jd-l71" secondAttribute="centerX" type="default" id="IL4-yb-dL9"/>
-                            <constraint firstItem="jzK-d0-Qfk" firstAttribute="top" secondItem="5" secondAttribute="top" constant="225" id="LLO-vO-xZf"/>
                             <constraint firstItem="APm-Rf-psn" firstAttribute="top" secondItem="5" secondAttribute="top" constant="343" id="LbH-Sh-SBh"/>
                             <constraint firstItem="lA6-Eq-ELO" firstAttribute="top" secondItem="5" secondAttribute="top" constant="125" id="R3D-tG-yJe"/>
                             <constraint firstItem="oqv-Ax-W2K" firstAttribute="top" secondItem="lA6-Eq-ELO" secondAttribute="top" type="default" id="RL3-NE-CIF"/>
@@ -567,6 +565,7 @@
                             <constraint firstAttribute="bottom" secondItem="cvI-ZE-S2k" secondAttribute="bottom" constant="103" id="XsO-Ae-Paq"/>
                             <constraint firstItem="XJg-jd-l71" firstAttribute="trailing" secondItem="1TF-HF-bYT" secondAttribute="trailing" type="default" id="ZLm-Rf-QXo"/>
                             <constraint firstItem="cvI-ZE-S2k" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="aTt-ay-wMf"/>
+                            <constraint firstItem="jzK-d0-Qfk" firstAttribute="top" secondItem="5" secondAttribute="top" constant="225" id="buD-LF-4Oq"/>
                             <constraint firstItem="NiO-Px-m33" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="452" id="dhl-fg-hYd"/>
                             <constraint firstItem="QVi-T7-Al7" firstAttribute="bottom" secondItem="APm-Rf-psn" secondAttribute="bottom" type="default" id="eGr-lu-mN8"/>
                             <constraint firstItem="oqv-Ax-W2K" firstAttribute="baseline" secondItem="ABj-oK-0d8" secondAttribute="baseline" type="default" id="eXw-Zx-DGs"/>
@@ -575,7 +574,6 @@
                             <constraint firstItem="jzK-d0-Qfk" firstAttribute="baseline" secondItem="lA6-Eq-ELO" secondAttribute="baseline" type="default" id="lRp-Cz-C3f"/>
                             <constraint firstItem="L0A-Pv-i6i" firstAttribute="baseline" secondItem="VDO-V9-F7U" secondAttribute="baseline" type="default" id="lw7-MG-Aym"/>
                             <constraint firstItem="QVi-T7-Al7" firstAttribute="top" secondItem="NiO-Px-m33" secondAttribute="top" type="default" id="mHe-Dv-opy"/>
-                            <constraint firstItem="Qez-jc-FrU" firstAttribute="centerY" secondItem="APm-Rf-psn" secondAttribute="centerY" type="default" id="mah-pN-e6U"/>
                             <constraint firstAttribute="bottom" secondItem="BIK-ot-VfZ" secondAttribute="bottom" constant="292" id="q1Y-Eb-YkA"/>
                             <constraint firstItem="cvI-ZE-S2k" firstAttribute="centerX" secondItem="1TF-HF-bYT" secondAttribute="centerX" type="default" id="qPv-6y-D54"/>
                             <constraint firstItem="DXE-O6-LBg" firstAttribute="top" secondItem="5" secondAttribute="top" constant="20" symbolic="YES" type="default" id="rxJ-Ui-Inu"/>
@@ -1560,9 +1558,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="4lW-4p-kEl"/>
-        <segue reference="Ij5-Rk-8qE"/>
-        <segue reference="DVA-Ol-BQ0"/>
+        <segue reference="OSa-iG-1p0"/>
         <segue reference="Uwy-j3-2xz"/>
+        <segue reference="rCQ-B2-EuM"/>
+        <segue reference="XLg-z8-e8c"/>
     </inferredMetricsTieBreakers>
 </document>
