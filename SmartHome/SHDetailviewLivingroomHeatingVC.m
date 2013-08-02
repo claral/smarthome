@@ -15,6 +15,7 @@
 @property (strong, nonatomic, readwrite) NSArray *heatingWheelItems; // WICHTIG: outlets: dataSource & delegate!
 @property (nonatomic, assign) int currentHeatingValue;
 @property (nonatomic, assign) int currentIndex;
+@property (weak, nonatomic) IBOutlet UIImageView *imageViewWheelFrame;
 
 @end
 
@@ -73,9 +74,11 @@
     {
         NSLog(@"show 'manuell' of heating");
         [self.heatingWheel setHidden:NO];
+        [self.imageViewWheelFrame setHidden:NO];
     } else
     {
         [self.heatingWheel setHidden:YES];
+        [self.imageViewWheelFrame setHidden:YES];
     }
     
     // reading stored index
@@ -107,9 +110,11 @@
     {
         NSLog(@"show 'manuell' of heating");
         [self.heatingWheel setHidden:NO];
+        [self.imageViewWheelFrame setHidden:NO];
     } else
     {
         [self.heatingWheel setHidden:YES];
+        [self.imageViewWheelFrame setHidden:YES];
     }
 }
 
@@ -140,9 +145,11 @@
     if (index == 1)
     {
         [self.heatingWheel setHidden:NO];
+        [self.imageViewWheelFrame setHidden:NO];
     } else
     {
         [self.heatingWheel setHidden:YES];
+        [self.imageViewWheelFrame setHidden:YES];
     }
 }
 

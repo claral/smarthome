@@ -19,6 +19,7 @@
 @property (nonatomic, assign) int currentIndexValue;
 @property (nonatomic, assign) int currentIndexValueSliderBubbles;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewSliderFrame;
+@property (weak, nonatomic) IBOutlet UIImageView *imageViewWheelFrame;
 
 @end
 
@@ -94,12 +95,14 @@
             returnIdxVal = [navSC setIndexToBeginWith:1];
             [self.temperatureWheel setHidden:NO];
             [self.imageViewSliderFrame setHidden:NO];
+            [self.imageViewWheelFrame setHidden:NO];
             [self.view addSubview:sliderView];
         } else if (self.currentIndexValue == 1) // on
         {
             returnIdxVal = [navSC setIndexToBeginWith:0];
             [self.temperatureWheel setHidden:YES];
             [self.imageViewSliderFrame setHidden:YES];
+            [self.imageViewWheelFrame setHidden:YES];
             [sliderView removeFromSuperview];
         }
     };
@@ -117,6 +120,7 @@
         returnIdxVal = [navSC setIndexToBeginWith:1];
         [self.temperatureWheel setHidden:NO];
         [self.imageViewSliderFrame setHidden:NO];
+        [self.imageViewWheelFrame setHidden:NO];
         [self.view addSubview:sliderView];
     } else if (self.currentIndexValue == 1) // off
     {
@@ -124,6 +128,7 @@
         returnIdxVal = [navSC setIndexToBeginWith:0];
         [self.temperatureWheel setHidden:YES];
         [self.imageViewSliderFrame setHidden:YES];
+        [self.imageViewWheelFrame setHidden:YES];
         [sliderView removeFromSuperview];
     }
     
