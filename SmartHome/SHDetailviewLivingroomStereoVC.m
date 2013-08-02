@@ -17,7 +17,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelVolumeHelper;
 @property (nonatomic, assign) float currentVolumeValue;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonSoundMute; @property (nonatomic,assign) int buttonWithImageMute;// 1 = sound, 0 = mute
+@property (weak, nonatomic) IBOutlet UIButton *buttonSoundMute;
+@property (nonatomic,assign) int buttonWithImageMute;// 1 = sound, 0 = mute
 
 @property (nonatomic, assign) int buttonWithImagePlay; // 1 = play, 0 = pause
 @property (weak, nonatomic) IBOutlet UIButton *buttonPlayPause;
@@ -121,6 +122,14 @@
     
     [self.view addSubview:navSC];
     navSC.center = CGPointMake(930, 55);*/
+    
+    if (self.currentVolumeValue == 0) {
+        [self.buttonSoundMute setImage:[UIImage imageNamed:@"SH_ICON_mute.png"] forState:UIControlStateNormal];
+        self.buttonWithImageMute = 0;
+    } else{
+        [self.buttonSoundMute setImage:[UIImage imageNamed:@"SH_ICON_volume.png"] forState:UIControlStateNormal];
+        self.buttonWithImageMute = 1;
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -151,14 +160,6 @@
         [self.sliderVolume setValue:self.currentVolumeValue];
     }
     
-//    // reading stored button image
-//    int buttonWithImagePlayHelper = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentButtonWithImagePlayValueStereoLivingRoom"] integerValue];
-//    if (buttonWithImagePlayHelper == 0)
-//    {
-//        [self.buttonPlayPause setImage:[UIImage imageNamed:@"SH_ICON_pause.png"] forState:UIControlStateNormal];
-//    } else if (buttonWithImagePlayHelper == 1){
-//        [self.buttonPlayPause setImage:[UIImage imageNamed:@"SH_ICON_play.png"] forState:UIControlStateNormal];
-//    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -184,7 +185,17 @@
     self.currentVolumeValue = [sender value];
 //    self.labelVolume.text = [NSString stringWithFormat:@"%.1f", self.currentVolumeValue * 100];
     // storage of volume
+    
+    if (self.currentVolumeValue == 0) {
+        [self.buttonSoundMute setImage:[UIImage imageNamed:@"SH_ICON_mute.png"] forState:UIControlStateNormal];
+        self.buttonWithImageMute = 0;
+    } else{
+        [self.buttonSoundMute setImage:[UIImage imageNamed:@"SH_ICON_volume.png"] forState:UIControlStateNormal];
+        self.buttonWithImageMute = 1;
+    }
+    
     [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:self.currentVolumeValue] forKey:@"currentVolumeValue"];
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:self.buttonWithImageMute] forKey:@"currentButtonWithImageMuteValueStereoLivingRoom"];
 }
 
 - (IBAction)changePlayPause:(id)sender
@@ -215,34 +226,6 @@
     
     [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:self.buttonWithImageMute] forKey:@"currentButtonWithImageMuteValueStereoLivingRoom"];
 }
-
-/*- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
-    return 1;
-}
-
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
-    return [self.arraySongs count];
-}
-
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    return [self.arraySongs objectAtIndex:row];
-}
-
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
-{
-    int tmpRow = row;
-    self.currentSong = tmpRow;
-    
-    // storage of current chanel
-    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentSong] forKey:@"currentSongStereoLivingRoom"];
-    // storage of row
-    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:row] forKey:@"currentRowValueStereoLivingRoom"];
-    
-    self.labelSongTitle.text = [self.arraySongs objectAtIndex:row];
-}*/
 
 
 @end
