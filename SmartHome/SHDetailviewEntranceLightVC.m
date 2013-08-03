@@ -40,9 +40,8 @@
     self.pwvc = [[VEVMPercentageWheelViewController alloc]init];
     UIView *pwView = self.pwvc.view;
     
-    [pwView setBounds:CGRectMake(0, 0, pwView.frame.size.width, pwView.frame.size.height)];
+    [pwView setBounds:CGRectMake(0, 0, pwView.frame.size.width+50, pwView.frame.size.height+50)];
     [pwView setCenter:CGPointMake(510, 400)];
-    
     //[pwView setBackgroundColor:[UIColor magentaColor]];
     //[self.view addSubview:pwView];
     
@@ -118,6 +117,7 @@
     
     // storage of current percentage value
     [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:_pwvc.percentageWheelView.valueAngle] forKey:@"currentPercentageValueLightEntrance"];
+    //NSLog(@"%f", _pwvc.percentageWheelView.valueAngle);
     [[NSUserDefaults standardUserDefaults] synchronize];
     
 }
