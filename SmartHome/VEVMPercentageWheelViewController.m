@@ -17,6 +17,8 @@
 //@property (nonatomic, assign) NSInteger percentage;
 @property (nonatomic, assign) float previousValueAngle;
 @property (nonatomic, assign) BOOL valueAngleLock;
+@property (nonatomic, assign) float previousPercentageValue;
+@property (nonatomic, assign) BOOL previousPercentageValueBool1;
 
 @end
 
@@ -98,21 +100,183 @@
 }
 
 - (void) updateValue {
-    
-    if (_percentageWheelView.valueAngle >= 0)
+
+    BOOL boolPercentageZero = false;
+    BOOL boolPercentageHundred = false;
+    self.previousPercentageValue = self.percentage;
+
+    if (_percentageWheelView.valueAngle >= 0) // 0% - 75%
+    {
         self.percentage = round(_percentageWheelView.valueAngle/(2*M_PI)*100.0);
-    else
+        //NSLog(@"case1 percentage: %d ", self.percentage);
+        if (self.percentage == 0)
+        {
+            boolPercentageZero = true;
+        } else
+            boolPercentageZero = false;
+
+    }
+    else // 75% - 100%
+    {
         self.percentage = round(100.0 + _percentageWheelView.valueAngle/(2*M_PI)*100.0);
+        //NSLog(@"case2 percentage: %d ", self.percentage);
+        if (self.percentage == 100)
+        {
+            boolPercentageHundred = true;
+        } else
+        {
+            boolPercentageHundred = false;
+        }
+    }
 
-    [self updateResultLabel];
+    if (((self.previousPercentageValue <= 100) && (self.previousPercentageValue >= 95)) && ((self.percentage >= 0) && (self.percentage <= 5)))
+    //if (self.previousPercentageValue <= 100 && self.previousPercentageValue > self.percentage)
+    {
+        // TODO winkel + percentage richtig updaten / berechnen _percentageWheelView.valueAngle
+        //NSLog(@"übergang von 100 auf 0 - mit uhrzeigersinnn");
+        boolPercentageHundred = true;
+        self.percentage = 100;
+        //self.percentage = 100.0 + _percentageWheelView.valueAngle/(2*M_PI)*100.0
+        //_percentageWheelView.valueAngle = -0.02; //2*M_PI + 360.0f; //(self.percentage - 100.0)*(2*M_PI)/100.0;
+    }
     
-    // update LightView
-    _lightView.radius = (float)_percentage/60;
-    [_lightView setNeedsDisplay];
+    if ((self.previousPercentageValue >= 0) && (self.previousPercentageValue <= 5) && (self.percentage <= 100) && (self.percentage >= 95))
+    {
+        //NSLog(@"übergang von 0 auf 100 - gegen uhrzeigersinnn");
+        boolPercentageZero = true;
+        self.percentage = 0;
+        _percentageWheelView.valueAngle = self.percentage*(2*M_PI)/100.0;
+    }
 
-    [_percentageWheelView setNeedsDisplay];
+
     
+    if (boolPercentageHundred == true)
+    {
+        [self updateResultLabel];
+        panRecognizer.enabled = NO;
+        panRecognizer.enabled = YES;
+    } else if (boolPercentageZero == true)
+    {
+        [self updateResultLabel];
+        panRecognizer.enabled = NO;
+        panRecognizer.enabled = YES;
+    } else //if ((boolPercentageHundred) == false && (boolPercentageZero == false))
+    {
+        [self updateResultLabel];
+
+        // update LightView
+        _lightView.radius = (float)_percentage/60;
+        [_lightView setNeedsDisplay];
+
+        [_percentageWheelView setNeedsDisplay];
+    }
 }
+
+- (void) updateValueDOS {
+    
+     if (_percentageWheelView.valueAngle >= 0)
+         self.percentage = round(_percentageWheelView.valueAngle/(2*M_PI)*100.0);
+     else
+         self.percentage = round(100.0 + _percentageWheelView.valueAngle/(2*M_PI)*100.0);
+     
+     [self updateResultLabel];
+     
+     // update LightView
+     _lightView.radius = (float)_percentage/60;
+     [_lightView setNeedsDisplay];
+     
+     [_percentageWheelView setNeedsDisplay];
+}
+
+//- (void) updateValue {
+//
+//    BOOL boolPercentageZero = false;
+//    BOOL boolPercentageHundred = false;
+//    self.previousPercentageValue = self.percentage;
+//    
+//    if (_percentageWheelView.valueAngle >= 0) // 0% - 75%
+//    {
+//        self.percentage = round(_percentageWheelView.valueAngle/(2*M_PI)*100.0);
+//        //NSLog(@"case1 percentage: %d ", self.percentage);
+//        if (self.percentage == 0)
+//        {
+//            boolPercentageZero = true;
+//        } else
+//            boolPercentageZero = false;
+//        
+//        /*if (self.previousPercentageValueBool1 == YES) // übergang von 0/1 auf 100 - gegen uhrzeigersinn
+//        {
+//            NSLog(@"1: übergang von 0/1 auf 100 - gegen uhrzeigersinn");
+//            if (self.previousPercentageValue < self.percentage)
+//            {
+//                NSLog(@"2: übergang von 0/1 auf 100 - gegen uhrzeigersinn");
+//                if (((self.previousPercentageValue <= 100) && (self.previousPercentageValue >= 90)) && ((self.percentage >= 0) && (self.percentage <= 10)))
+//                {
+//                    NSLog(@"3: übergang von 0/1 auf 100 - gegen uhrzeigersinn");
+//                }
+//            }
+//        }*/
+//        
+//        self.previousPercentageValueBool1 = NO;
+//    }
+//    else // 75% - 100%
+//    {
+//        self.percentage = round(100.0 + _percentageWheelView.valueAngle/(2*M_PI)*100.0);
+//        NSLog(@"case2 percentage: %d ", self.percentage);
+//        if (self.percentage == 100)
+//        {
+//            boolPercentageHundred = true;
+//        } else
+//        {
+//            boolPercentageHundred = false;
+//        }
+//        
+//        //if (self.previousPercentageValueBool1 == NO) // übergang von 100 auf 0/1 - mit uhrzeigersinn
+//        {
+//            NSLog(@"1: übergang von 100 auf 0/1 - mit uhrzeigersinn");
+//            //if (self.previousPercentageValue < self.percentage)
+//            {
+//                //NSLog(@"2: übergang von 100 auf 0/1 - mit uhrzeigersinn");
+//                if (((self.previousPercentageValue <= 100) && (self.previousPercentageValue >= 80)))//&& ((self.percentage >= 0) && (self.percentage <= 20)))
+//                {
+//                    NSLog(@"3: übergang von 100 auf 0/1 - mit uhrzeigersinnn");
+//                }
+//            }
+//        }
+//        
+//        self.previousPercentageValueBool1 = YES;
+//    }
+//    
+//    
+//    
+//    if ((boolPercentageHundred) == false && (boolPercentageZero == false))
+//    {
+//        [self updateResultLabel];
+//        
+//        // update LightView
+//        _lightView.radius = (float)_percentage/60;
+//        [_lightView setNeedsDisplay];
+//        
+//        [_percentageWheelView setNeedsDisplay];
+//    } /*else if (boolPercentageHundred == true)
+//    {
+//        [self updateResultLabel];
+//        panRecognizer.enabled = NO;
+//        NSLog(@"hundert erreicht");
+//        //sleep(1);
+//        //UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"MAX" message:@"Die maximale Helligkeit wurde erreicht" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//        //[message show];
+//        panRecognizer.enabled = YES;
+//    } else if (boolPercentageZero == true)
+//    {
+//        [self updateResultLabel];
+//        panRecognizer.enabled = NO;
+//        NSLog(@"zero erreicht");
+//        //UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"MIN" message:@"Die minimale Helligkeit wurde erreicht" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//        //[message show];
+//        panRecognizer.enabled = YES;
+//    }*/
+//}
 
 - (void) updateResultLabel {
     [[self resultLabel] setText:[NSString stringWithFormat:@"%i%%", _percentage]];
