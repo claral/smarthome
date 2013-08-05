@@ -103,6 +103,7 @@
 
     BOOL boolPercentageZero = false;
     BOOL boolPercentageHundred = false;
+    BOOL boolBla;
     self.previousPercentageValue = self.percentage;
 
     if (_percentageWheelView.valueAngle >= 0) // 0% - 75%
@@ -129,23 +130,25 @@
         }
     }
 
-    if (((self.previousPercentageValue <= 100) && (self.previousPercentageValue >= 95)) && ((self.percentage >= 0) && (self.percentage <= 5)))
+    if (((self.previousPercentageValue <= 100) && (self.previousPercentageValue >= 90)) && ((self.percentage >= 0) && (self.percentage <= 10)))
     //if (self.previousPercentageValue <= 100 && self.previousPercentageValue > self.percentage)
     {
-        // TODO winkel + percentage richtig updaten / berechnen _percentageWheelView.valueAngle
-        //NSLog(@"übergang von 100 auf 0 - mit uhrzeigersinnn");
+        //NSLog(@"crossover from 100 to zero (clockwise)");
         boolPercentageHundred = true;
         self.percentage = 100;
         //self.percentage = 100.0 + _percentageWheelView.valueAngle/(2*M_PI)*100.0
-        //_percentageWheelView.valueAngle = -0.02; //2*M_PI + 360.0f; //(self.percentage - 100.0)*(2*M_PI)/100.0;
+        _percentageWheelView.valueAngle = -0.01; //2*M_PI + 360.0f; //(self.percentage - 100.0)*(2*M_PI)/100.0;
+        boolBla = true;
     }
-    
-    if ((self.previousPercentageValue >= 0) && (self.previousPercentageValue <= 5) && (self.percentage <= 100) && (self.percentage >= 95))
+
+    if (boolBla == false && (self.previousPercentageValue >= 0) && (self.previousPercentageValue <= 10) && (self.percentage <= 100) && (self.percentage >= 90))
+    //if ((self.previousPercentageValue >= 0) && (self.previousPercentageValue <= 5) && (self.percentage <= 100) && (self.percentage >= 95))
     {
-        //NSLog(@"übergang von 0 auf 100 - gegen uhrzeigersinnn");
+        //NSLog(@"crossover from zero to 100 (anti-clockwise)");
         boolPercentageZero = true;
         self.percentage = 0;
         _percentageWheelView.valueAngle = self.percentage*(2*M_PI)/100.0;
+        boolBla = false;
     }
 
 
@@ -163,13 +166,13 @@
     } else //if ((boolPercentageHundred) == false && (boolPercentageZero == false))
     {
         [self updateResultLabel];
-
-        // update LightView
-        _lightView.radius = (float)_percentage/60;
-        [_lightView setNeedsDisplay];
-
-        [_percentageWheelView setNeedsDisplay];
     }
+    
+    // update LightView
+    _lightView.radius = (float)_percentage/60;
+    [_lightView setNeedsDisplay];
+    
+    [_percentageWheelView setNeedsDisplay];
 }
 
 - (void) updateValueDOS {
@@ -186,6 +189,23 @@
      [_lightView setNeedsDisplay];
      
      [_percentageWheelView setNeedsDisplay];
+}
+
+- (void) updateValueOLD {
+    
+    if (_percentageWheelView.valueAngle >= 0)
+        self.percentage = _percentageWheelView.valueAngle/(2*M_PI)*100;
+    else
+        self.percentage = 100 + _percentageWheelView.valueAngle/(2*M_PI)*100;
+    
+    [self updateResultLabel];
+    
+    // update LightView
+    _lightView.radius = (float)_percentage/60;
+    [_lightView setNeedsDisplay];
+    
+    [_percentageWheelView setNeedsDisplay];
+    
 }
 
 //- (void) updateValue {
