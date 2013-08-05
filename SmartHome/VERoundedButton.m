@@ -72,7 +72,7 @@
 //    
 	CGFloat calculatedLayerFontSize = 50.0f;
 //	[self.titleLayer setFont:@"Helvetica"];
-    [self.titleLayer setFont:@"Helvetica Bold"];
+    [self.titleLayer setFont:@"Helvetica-Bold"];
 	[self.titleLayer setString:@"Kochstufe"];
     
 	[self.titleLayer setFontSize:calculatedLayerFontSize];

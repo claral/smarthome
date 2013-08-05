@@ -138,7 +138,7 @@
     
     UIView *DView = self.cookerDView.view;
     
-    //    [DView setBackgroundColor:[UIColor greenColor]];
+    //[DView setBackgroundColor:[UIColor greenColor]];
     [DView setBounds:CGRectMake(0,0, DView.frame.size.width*1/4, DView.frame.size.height*2/7)];
     [DView setCenter:CGPointMake(660, 550)];
     
@@ -152,7 +152,7 @@
 - (void)cooker:(NSInteger)cookerIndex didChangeTo:(NSInteger)cookerValue
 {
     
-    NSLog(@"Hurray the cooker %i JUST changed to %i", cookerIndex, cookerValue);
+    //NSLog(@"Hurray the cooker %i JUST changed to %i", cookerIndex, cookerValue);
 
     switch (cookerIndex) {
         case 1:

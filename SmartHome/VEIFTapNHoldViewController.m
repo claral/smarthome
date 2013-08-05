@@ -119,14 +119,14 @@
 																		 self.currentButtonSize.height)];
 	[self.view addSubview:self.tapNHoldView];
 	[self.view bringSubviewToFront:self.tapNHoldView];
-	
+	//[self.tapNHoldView setBackgroundColor:[UIColor magentaColor]];
 	
 	UILongPressGestureRecognizer*recognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self
 																							action:@selector(handleTapGesture:)];
-	recognizer.minimumPressDuration = 0.0f;
+	recognizer.minimumPressDuration = 0.3f;
     
 	//ICH: tapgesturerecognizer added -> funktioniert nicht
-    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGestureDOS:)];
     
 	[self.tapNHoldView addGestureRecognizer:recognizer];
     
@@ -144,7 +144,7 @@
 
 #pragma mark - Handle pan Gesture
 
-////Original!! handletapgesture
+//Original!! handletapgesture
 //- (void)handleTapGesture:(UILongPressGestureRecognizer *)recognizer
 //{
 //	CGPoint position;
@@ -206,171 +206,188 @@
 
 
 //ICH: Auskommentierter handletapgesture code von mir auf basis von 'recognizer'
-//- (void)handleTapGesture:(UILongPressGestureRecognizer *)recognizer
-//{
-//
-//	CGPoint position;
-//	position = [recognizer locationInView:self.tapNHoldView];
-//
-//	if (recognizer.state == UIGestureRecognizerStateBegan)
-//	{
-//        if (self.tapCounter%2==0) {
-//
-//            if ([self.tapNHoldView.button.backgroundLayer containsPoint:position])
-//            {
-//                self.tapNHoldView.button.pressed = YES;
-//                [self setSmallButtonsHidden:NO];
-//            }
-//
-//            self.tapCounter++;
-//            return;
-//        }
-//        if (self.tapCounter%2==1){
-//
-//            if ([self.tapNHoldView.button.backgroundLayer containsPoint:position]) {
-//                self.tapNHoldView.button.pressed = NO;
-//                [self setSmallButtonsHidden:YES];
-//            }
-//
-//            self.tapCounter++;
-//            return;
-//
-//        }
-//	}
-//
-//	if (self.isActive == NO)
-//	{
-//		return;
-//	}
-//
-//	if (recognizer.state == UIGestureRecognizerStateCancelled ||
-//		recognizer.state == UIGestureRecognizerStateEnded)
-//	{
-//		if (self.smallButtonsAnimationEnded == YES)
-//		{
-//			for (NSUInteger index = 0; index < [self.smallButtonViews count]; index++)
-//			{
-//				VETapNHoldView *smallButtonView;
-//
-//				smallButtonView = [self.smallButtonViews objectAtIndex:index];
-//				position = [recognizer locationInView:smallButtonView];
-//
-//				if ([smallButtonView.button.backgroundLayer containsPoint:position]){
-//					self.currentIndex = index;
-//                    [self updateTapNHoldViewToCurrentIndex];
-//
-//				}
-//			}
-//		}
-//
-//		self.tapNHoldView.button.pressed = NO;
-////		[self setSmallButtonsHidden:YES];
-//		return;
-//	}
-//
-//	for (VETapNHoldView *smallButtonView in self.smallButtonViews)
-//	{
-//		position = [recognizer locationInView:smallButtonView];
-//		if ([smallButtonView.button.backgroundLayer containsPoint:position]) {
-//			smallButtonView.button.highlighted = YES;
-//			continue;
-//		}
-//		smallButtonView.button.highlighted = NO;
-//	}
-//}
-
-
-//ICH: handleTapGesture auf basis von tapRecognizer anstatt recognizer
-- (void)handleTapGesture:(UILongPressGestureRecognizer *)tapRecognizer
+- (void)handleTapGesture:(UILongPressGestureRecognizer *)recognizer
 {
-    
+
 	CGPoint position;
-	position = [tapRecognizer locationInView:self.tapNHoldView];
-	
-    //Falls tap beginnt, dann abhängig von tapcounter werden die small buttons angezeigt oder nicht
-	if (tapRecognizer.state == UIGestureRecognizerStateBegan)
+	position = [recognizer locationInView:self.tapNHoldView];
+
+	if (recognizer.state == UIGestureRecognizerStateBegan)
 	{
         if (self.tapCounter%2==0) {
-            
+
             if ([self.tapNHoldView.button.backgroundLayer containsPoint:position])
             {
                 self.tapNHoldView.button.pressed = YES;
                 [self setSmallButtonsHidden:NO];
             }
-            
+
             self.tapCounter++;
             return;
         }
         if (self.tapCounter%2==1){
-            
+
             if ([self.tapNHoldView.button.backgroundLayer containsPoint:position]) {
                 self.tapNHoldView.button.pressed = NO;
                 [self setSmallButtonsHidden:YES];
             }
-            
+
             self.tapCounter++;
             return;
-            
+
         }
 	}
-	
+
 	if (self.isActive == NO)
 	{
 		return;
 	}
-    
-    //Funktioniert nicht
-    if (tapRecognizer.state == UIGestureRecognizerStateChanged) {
-        for (NSUInteger index = 0; index < [self.smallButtonViews count]; index++)
-        {
-            VETapNHoldView *smallButtonView;
-            
-            smallButtonView = [self.smallButtonViews objectAtIndex:index];
-            position = [tapRecognizer locationInView:smallButtonView];
-            
-            if ([smallButtonView.button.backgroundLayer containsPoint:position]){
-                self.currentIndex = index;
-                [self updateTapNHoldViewToCurrentIndex];
-                
-            }
-        }
-    }
-    
-	
-	if (tapRecognizer.state == UIGestureRecognizerStateCancelled ||
-		tapRecognizer.state == UIGestureRecognizerStateEnded)
+
+	if (recognizer.state == UIGestureRecognizerStateCancelled ||
+		recognizer.state == UIGestureRecognizerStateEnded)
 	{
 		if (self.smallButtonsAnimationEnded == YES)
 		{
 			for (NSUInteger index = 0; index < [self.smallButtonViews count]; index++)
 			{
 				VETapNHoldView *smallButtonView;
-				
+
 				smallButtonView = [self.smallButtonViews objectAtIndex:index];
-				position = [tapRecognizer locationInView:smallButtonView];
-				
+				position = [recognizer locationInView:smallButtonView];
+
 				if ([smallButtonView.button.backgroundLayer containsPoint:position]){
 					self.currentIndex = index;
                     [self updateTapNHoldViewToCurrentIndex];
-                    
+
 				}
 			}
 		}
-		
+
 		self.tapNHoldView.button.pressed = NO;
-        //		[self setSmallButtonsHidden:YES];
+		[self setSmallButtonsHidden:YES];
 		return;
 	}
-	
+
 	for (VETapNHoldView *smallButtonView in self.smallButtonViews)
 	{
-		position = [tapRecognizer locationInView:smallButtonView];
+		position = [recognizer locationInView:smallButtonView];
 		if ([smallButtonView.button.backgroundLayer containsPoint:position]) {
 			smallButtonView.button.highlighted = YES;
 			continue;
 		}
 		smallButtonView.button.highlighted = NO;
 	}
+}
+
+
+//ICH: handleTapGesture auf basis von tapRecognizer anstatt recognizer
+- (void)handleTapGestureDOS:(UITapGestureRecognizer *)tapRecognizer
+{
+    
+    NSLog(@"tapcounter: %d", self.tapCounter);
+    
+	CGPoint position;
+	position = [tapRecognizer locationInView:self.tapNHoldView];
+	
+    if (self.tapCounter%2==0)
+    {
+        
+        NSLog(@"Step1: open smallbuttons");
+        
+        if ([self.tapNHoldView.button.backgroundLayer containsPoint:position])
+        {
+            self.tapNHoldView.button.pressed = YES;
+            [self setSmallButtonsHidden:NO];
+        }
+        
+    } else {
+        
+        for (NSUInteger index = 0; index < [self.smallButtonViews count]; index++)
+        {
+            VETapNHoldView *smallButtonView;
+            [smallButtonView setBackgroundColor:[UIColor blueColor]];
+            
+            smallButtonView = [self.smallButtonViews objectAtIndex:index];
+            position = [tapRecognizer locationInView:smallButtonView];
+            
+            if ([smallButtonView.button.backgroundLayer containsPoint:position])
+            {
+                NSLog(@"Step2b: close smallbuttons (click on smallbuttons) + update value");
+                self.currentIndex = index;
+                [self updateTapNHoldViewToCurrentIndex];
+                
+                self.tapNHoldView.button.pressed = NO;
+                [self setSmallButtonsHidden:YES];
+            } else //if ([self.tapNHoldView.button.backgroundLayer containsPoint:position])
+            {
+                NSLog(@"Step2a: close smallbuttons (click on main button)");
+                self.tapNHoldView.button.pressed = NO;
+                [self setSmallButtonsHidden:YES];
+            }
+        }
+	}
+    
+    self.tapCounter++;
+    
+	
+//	if (self.isActive == NO)
+//	{
+//		return;
+//	}
+    
+    //Funktioniert nicht
+//    if (tapRecognizer.state == UIGestureRecognizerStateChanged)
+//    {
+//        for (NSUInteger index = 0; index < [self.smallButtonViews count]; index++)
+//        {
+//            VETapNHoldView *smallButtonView;
+//            
+//            smallButtonView = [self.smallButtonViews objectAtIndex:index];
+//            position = [tapRecognizer locationInView:smallButtonView];
+//            
+//            if ([smallButtonView.button.backgroundLayer containsPoint:position]){
+//                self.currentIndex = index;
+//                [self updateTapNHoldViewToCurrentIndex];
+//                
+//            }
+//        }
+//    }
+    
+	
+//	if (tapRecognizer.state == UIGestureRecognizerStateCancelled ||
+//		tapRecognizer.state == UIGestureRecognizerStateEnded)
+//	{
+//		if (self.smallButtonsAnimationEnded == YES)
+//		{
+//			for (NSUInteger index = 0; index < [self.smallButtonViews count]; index++)
+//			{
+//				VETapNHoldView *smallButtonView;
+//				
+//				smallButtonView = [self.smallButtonViews objectAtIndex:index];
+//				position = [tapRecognizer locationInView:smallButtonView];
+//				
+//				if ([smallButtonView.button.backgroundLayer containsPoint:position]){
+//					self.currentIndex = index;
+//                    [self updateTapNHoldViewToCurrentIndex];
+//                    
+//				}
+//			}
+//		}
+//		
+//		self.tapNHoldView.button.pressed = NO;
+        //		[self setSmallButtonsHidden:YES];
+//		return;
+//	}
+	
+//	for (VETapNHoldView *smallButtonView in self.smallButtonViews)
+//	{
+//		position = [tapRecognizer locationInView:smallButtonView];
+//		if ([smallButtonView.button.backgroundLayer containsPoint:position]) {
+//			smallButtonView.button.highlighted = YES;
+//			continue;
+//		}
+//		smallButtonView.button.highlighted = NO;
+//	}
 }
 
 
