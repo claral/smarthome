@@ -34,7 +34,7 @@
 
 @property (nonatomic,assign) int tapCounter;//ICH
 
-
+@property (nonatomic,strong) UIView *superView;
 @end
 
 @implementation VEIFTapNHoldViewController
@@ -52,9 +52,10 @@
     return self;
 }
 
-- (id)initWithIndex:(NSInteger)index cookerValue:(NSInteger)value andDelegate:(id<tapNHoldDelegate>)delegate;
+- (id)initWithIndex:(NSInteger)index cookerValue:(NSInteger)value andDelegate:(id<tapNHoldDelegate>)delegate andSuperView:(UIView*)superView
 {
     self = [super init];
+    self.superView = superView;
 
     self.cookerIndex = index;
     self.delegate = delegate;
@@ -78,9 +79,9 @@
 {
 	CGRect smallButtonRect;
 	CGSize smallButtonSize;
-	
+    
 	NSMutableArray *smallButtonViews = [NSMutableArray array];
-	smallButtonSize = CGSizeMake(self.currentButtonSize.width * 0.45f,
+	smallButtonSize = CGSizeMake (self.currentButtonSize.width * 0.45f,
 								 self.currentButtonSize.height * 0.45f);
 	
 	smallButtonRect = CGRectMake(CGRectGetMidX(self.view.bounds) - smallButtonSize.width * 0.5f,
@@ -93,13 +94,14 @@
 		VETapNHoldView *smallButton;
 		smallButton = [[VETapNHoldView alloc] initWithFrame:smallButtonRect];
 		smallButton.layer.opacity = 0.5f;
-		
+
+		[smallButton setBackgroundColor:[UIColor greenColor]];
 		//increase font size manually a bit (oder eben nicht)
 		smallButton.button.titleLayer.fontSize *= 0.5f;
 		
 		smallButton.button.titleLayer.string = icon.title;
 		smallButton.button.imageLayer.contents = (__bridge id)(icon.icon.CGImage);
-		
+        
 		[self.view addSubview:smallButton];
 		[smallButtonViews addObject:smallButton];
 	}
@@ -110,6 +112,9 @@
 {
 	[super viewDidLoad];
 	
+    UITapGestureRecognizer *tapRecognizerX = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGestureOnSmallButton:)];
+    [self.superView addGestureRecognizer:tapRecognizerX];
+    
 	self.currentButtonSize = CGSizeMake(200, 200);
 	self.smallButtonViews = [self loadSmallButtonViews];
 	
@@ -119,18 +124,13 @@
 																		 self.currentButtonSize.height)];
 	[self.view addSubview:self.tapNHoldView];
 	[self.view bringSubviewToFront:self.tapNHoldView];
-	//[self.tapNHoldView setBackgroundColor:[UIColor magentaColor]];
 	
 	UILongPressGestureRecognizer*recognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self
 																							action:@selector(handleTapGesture:)];
+    [self.tapNHoldView addGestureRecognizer:recognizer];
 	recognizer.minimumPressDuration = 0.3f;
     
-	//ICH: tapgesturerecognizer added -> funktioniert nicht
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGestureDOS:)];
-    
-	[self.tapNHoldView addGestureRecognizer:recognizer];
-    
-    //ICH: tapgesturerecognizer added -> funktioniert nicht (Versuch mit handletapgesture mit 'taprecognizer' anstatt nur 'recognizer')
     [self.tapNHoldView addGestureRecognizer:tapRecognizer];
     
     self.tapCounter=0;
@@ -203,6 +203,26 @@
 //	}
 //}
 
+- (void)handleTapGestureOnSmallButton:(UITapGestureRecognizer *)tapRecognizer
+{
+    for (NSUInteger index = 0; index < [self.smallButtonViews count]; index++)
+    {
+        VETapNHoldView *smallButtonView;
+        
+        smallButtonView = [self.smallButtonViews objectAtIndex:index];
+        CGPoint position = [tapRecognizer locationInView:self.superView];
+        //[objLayer containsPoint:[objLayer convertPoint:lastTouch fromLayer:objLayer.superlayer]]
+        
+        if ([smallButtonView.button.backgroundLayer containsPoint:[smallButtonView.button.backgroundLayer convertPoint:position fromLayer:smallButtonView.button.backgroundLayer.superlayer ]]){
+            self.currentIndex = index;
+            [self updateTapNHoldViewToCurrentIndex];
+            self.tapNHoldView.button.pressed = NO;
+            [self setSmallButtonsHidden:YES];
+            self.tapCounter++;
+            break;
+        }
+    }
+}
 
 
 //ICH: Auskommentierter handletapgesture code von mir auf basis von 'recognizer'
@@ -283,12 +303,11 @@
 //ICH: handleTapGesture auf basis von tapRecognizer anstatt recognizer
 - (void)handleTapGestureDOS:(UITapGestureRecognizer *)tapRecognizer
 {
-    
     NSLog(@"tapcounter: %d", self.tapCounter);
     
 	CGPoint position;
 	position = [tapRecognizer locationInView:self.tapNHoldView];
-	
+    
     if (self.tapCounter%2==0)
     {
         
@@ -298,11 +317,42 @@
         {
             self.tapNHoldView.button.pressed = YES;
             [self setSmallButtonsHidden:NO];
+            
         }
         
     } else {
         
-        for (NSUInteger index = 0; index < [self.smallButtonViews count]; index++)
+        //if ([self.tapNHoldView.button.backgroundLayer containsPoint:position])
+        //{
+            
+            NSLog(@"Step2a: close smallbuttons (click on main button)");
+            self.tapNHoldView.button.pressed = NO;
+            [self setSmallButtonsHidden:YES];
+            
+        /*} else {
+            
+            NSLog(@"Step2a: close smallbuttons (click on main button)");
+            if (self.smallButtonsAnimationEnded == YES)
+            {
+                for (NSUInteger index = 0; index < [self.smallButtonViews count]; index++)
+                {
+                    VETapNHoldView *smallButtonView;
+                    smallButtonView = [self.smallButtonViews objectAtIndex:index];
+                    position = [tapRecognizer locationInView:smallButtonView];
+                    if ([smallButtonView.button.backgroundLayer containsPoint:position])
+                    {
+                        self.currentIndex = index;
+                        [self updateTapNHoldViewToCurrentIndex];
+                    }
+                }
+            }
+            self.tapNHoldView.button.pressed = NO;
+            [self setSmallButtonsHidden:YES];
+            //return;
+        }*/
+        
+        
+        /*for (NSUInteger index = 0; index < [self.smallButtonViews count]; index++)
         {
             VETapNHoldView *smallButtonView;
             [smallButtonView setBackgroundColor:[UIColor blueColor]];
@@ -318,13 +368,13 @@
                 
                 self.tapNHoldView.button.pressed = NO;
                 [self setSmallButtonsHidden:YES];
+                smallButtonView.button.highlighted = YES;
             } else //if ([self.tapNHoldView.button.backgroundLayer containsPoint:position])
             {
                 NSLog(@"Step2a: close smallbuttons (click on main button)");
                 self.tapNHoldView.button.pressed = NO;
                 [self setSmallButtonsHidden:YES];
-            }
-        }
+            }*/
 	}
     
     self.tapCounter++;
@@ -461,6 +511,8 @@
 		
 		currentView.layer.opacity = 1.0f;
 		currentView.layer.position = smallButtonPosition;
+    
+        currentView.backgroundColor = [UIColor yellowColor];
 	}
 	
 	self.smallButtonsAnimationEnded = NO;

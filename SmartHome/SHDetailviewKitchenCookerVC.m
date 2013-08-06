@@ -42,7 +42,7 @@
     self.currentIndexCookerA = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueCookerA"] intValue];
 
     self.cookerAView =
-    [[VEIFTapNHoldViewController alloc] initWithIndex:1 cookerValue:self.currentIndexCookerA andDelegate:self];
+    [[VEIFTapNHoldViewController alloc] initWithIndex:1 cookerValue:self.currentIndexCookerA andDelegate:self andSuperView:self.view];
 //    self.tnhvc.sDelegate = self;
         
     SHIconWithTitle *icon1 = [[SHIconWithTitle alloc] init];
@@ -96,7 +96,7 @@
     self.currentIndexCookerB = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueCookerB"] intValue];
     
     self.cookerBView =
-    [[VEIFTapNHoldViewController alloc] initWithIndex:2 cookerValue:self.currentIndexCookerB andDelegate:self];
+    [[VEIFTapNHoldViewController alloc] initWithIndex:2 cookerValue:self.currentIndexCookerB andDelegate:self andSuperView:self.view];
     
     self.cookerBView.items = [[NSArray alloc] initWithObjects:icon3, icon2, icon1, icon9, icon8, icon7, icon6, icon5, nil];
     
@@ -114,7 +114,7 @@
     self.currentIndexCookerC = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueCookerC"] intValue];
     
     self.cookerCView =
-    [[VEIFTapNHoldViewController alloc] initWithIndex:3 cookerValue:self.currentIndexCookerC andDelegate:self];
+    [[VEIFTapNHoldViewController alloc] initWithIndex:3 cookerValue:self.currentIndexCookerC andDelegate:self andSuperView:self.view];
     
     self.cookerCView.items = [[NSArray alloc] initWithObjects:icon3, icon2, icon1, icon9, icon8, icon7, icon6, icon5, nil];
     
@@ -132,7 +132,7 @@
     self.currentIndexCookerD = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueCookerD"] intValue];
     
     self.cookerDView =
-    [[VEIFTapNHoldViewController alloc] initWithIndex:4 cookerValue:self.currentIndexCookerD andDelegate:self];
+    [[VEIFTapNHoldViewController alloc] initWithIndex:4 cookerValue:self.currentIndexCookerD andDelegate:self andSuperView:self.view];
     
     self.cookerDView.items = [[NSArray alloc] initWithObjects:icon3, icon2, icon1, icon9, icon8, icon7, icon6, icon5, nil];
     

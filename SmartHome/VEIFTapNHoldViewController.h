@@ -21,7 +21,7 @@
 
 @property (nonatomic, strong) NSArray *items;
 
-- (id)initWithIndex:(NSInteger)index cookerValue:(NSInteger)value andDelegate:(id<tapNHoldDelegate>)delegate;
+- (id)initWithIndex:(NSInteger)index cookerValue:(NSInteger)value andDelegate:(id<tapNHoldDelegate>)delegate andSuperView:(UIView*)superView;
 - (void)setCookerValue:(NSInteger)value;
 
 - (void)setPredefinedValue:(id)value;
