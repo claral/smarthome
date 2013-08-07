@@ -95,13 +95,16 @@
 		smallButton = [[VETapNHoldView alloc] initWithFrame:smallButtonRect];
 		smallButton.layer.opacity = 0.5f;
 
-		[smallButton setBackgroundColor:[UIColor greenColor]];
+	//	[smallButton setBackgroundColor:[UIColor greenColor]];
 		//increase font size manually a bit (oder eben nicht)
 		smallButton.button.titleLayer.fontSize *= 0.5f;
-		
+		//smallButton.backgroundColor = [UIColor greenColor];
 		smallButton.button.titleLayer.string = icon.title;
 		smallButton.button.imageLayer.contents = (__bridge id)(icon.icon.CGImage);
         
+        UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                                               action:@selector(handleTapGestureOnSmallButton:)];
+        [smallButton addGestureRecognizer:tapGestureRecognizer];
 		[self.view addSubview:smallButton];
 		[smallButtonViews addObject:smallButton];
 	}
@@ -112,9 +115,6 @@
 {
 	[super viewDidLoad];
 	
-    UITapGestureRecognizer *tapRecognizerX = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGestureOnSmallButton:)];
-    [self.superView addGestureRecognizer:tapRecognizerX];
-    
 	self.currentButtonSize = CGSizeMake(200, 200);
 	self.smallButtonViews = [self loadSmallButtonViews];
 	
@@ -129,6 +129,10 @@
 																							action:@selector(handleTapGesture:)];
     [self.tapNHoldView addGestureRecognizer:recognizer];
 	recognizer.minimumPressDuration = 0.3f;
+   // [self.tapNHoldView setBackgroundColor:[UIColor redColor]];
+    
+    UITapGestureRecognizer *tapRecognizerX = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGestureOnSmallButton:)];
+    [self.tapNHoldView addGestureRecognizer:tapRecognizerX];
     
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGestureDOS:)];
     [self.tapNHoldView addGestureRecognizer:tapRecognizer];
@@ -207,13 +211,11 @@
 {
     for (NSUInteger index = 0; index < [self.smallButtonViews count]; index++)
     {
-        VETapNHoldView *smallButtonView;
-        
-        smallButtonView = [self.smallButtonViews objectAtIndex:index];
-        CGPoint position = [tapRecognizer locationInView:self.superView];
-        //[objLayer containsPoint:[objLayer convertPoint:lastTouch fromLayer:objLayer.superlayer]]
-        
-        if ([smallButtonView.button.backgroundLayer containsPoint:[smallButtonView.button.backgroundLayer convertPoint:position fromLayer:smallButtonView.button.backgroundLayer.superlayer ]]){
+        VETapNHoldView *smallButtonView = [self.smallButtonViews objectAtIndex:index];
+        CGPoint position = [tapRecognizer locationInView:smallButtonView];
+
+        if ([smallButtonView.button.backgroundLayer containsPoint:position])
+        {
             self.currentIndex = index;
             [self updateTapNHoldViewToCurrentIndex];
             self.tapNHoldView.button.pressed = NO;
@@ -281,6 +283,7 @@
 
 				}
 			}
+            self.tapCounter++;
 		}
 
 		self.tapNHoldView.button.pressed = NO;
@@ -478,6 +481,7 @@
 
 - (void)showSmallButtons
 {
+    [self.superView bringSubviewToFront:self.view];
 	[UIView beginAnimations:@"animateOut" context:nil];
 	[UIView setAnimationDuration:0.25f];
 	[UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
@@ -511,12 +515,11 @@
 		
 		currentView.layer.opacity = 1.0f;
 		currentView.layer.position = smallButtonPosition;
-    
-        currentView.backgroundColor = [UIColor yellowColor];
 	}
 	
 	self.smallButtonsAnimationEnded = NO;
 	[UIView commitAnimations];
+   // [self.view setBackgroundColor:[UIColor yellowColor]];
 }
 
 - (void)animationDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context

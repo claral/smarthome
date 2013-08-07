@@ -86,7 +86,7 @@
     UIView *AView = self.cookerAView.view;
     
 //    [AView setBackgroundColor:[UIColor magentaColor]];
-    [AView setBounds:CGRectMake(0,0, AView.frame.size.width*1/4, AView.frame.size.height*2/7)];
+    [AView setBounds:CGRectMake(0,0, 400, 400)];
     [AView setCenter:CGPointMake(360, 550)];
     
     [self.view addSubview:AView];
@@ -103,7 +103,7 @@
     UIView *BView = self.cookerBView.view;
     
     //    [BView setBackgroundColor:[UIColor blueColor]];
-    [BView setBounds:CGRectMake(0,0, BView.frame.size.width*1/4, BView.frame.size.height*2/7)];
+    [BView setBounds:CGRectMake(0,0, 400, 400)];
     [BView setCenter:CGPointMake(360, 250)];
     
     [self.view addSubview:BView];
@@ -121,7 +121,7 @@
     UIView *CView = self.cookerCView.view;
     
     //    [CView setBackgroundColor:[UIColor greenColor]];
-    [CView setBounds:CGRectMake(0,0, CView.frame.size.width*1/4, CView.frame.size.height*2/7)];
+    [CView setBounds:CGRectMake(0,0, 400, 400)];
     [CView setCenter:CGPointMake(660, 250)];
     
     [self.view addSubview:CView];
@@ -139,7 +139,7 @@
     UIView *DView = self.cookerDView.view;
     
     //[DView setBackgroundColor:[UIColor greenColor]];
-    [DView setBounds:CGRectMake(0,0, DView.frame.size.width*1/4, DView.frame.size.height*2/7)];
+    [DView setBounds:CGRectMake(0,0, 400, 400)];
     [DView setCenter:CGPointMake(660, 550)];
     
     [self.view addSubview:DView];
