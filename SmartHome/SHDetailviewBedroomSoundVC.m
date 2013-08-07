@@ -7,13 +7,28 @@
 //
 
 #import "SHDetailviewBedroomSoundVC.h"
+#import "SVSegmentedControl.h"
+#import "SVSegmentedThumb.h"
 
 @interface SHDetailviewBedroomSoundVC ()
 
-@property (nonatomic, assign) float currentVolumeValue;
 @property (weak, nonatomic) IBOutlet UISlider *sliderVolume;
-@property (weak, nonatomic) IBOutlet UILabel *labelVolumeValue;
+@property (weak, nonatomic) IBOutlet UILabel *labelVolume;
+@property (weak, nonatomic) IBOutlet UILabel *labelVolumeHelper;
+@property (nonatomic, assign) float currentVolumeValue;
+
+@property (weak, nonatomic) IBOutlet UIButton *buttonSoundMute;
+@property (nonatomic,assign) int buttonWithImageMute;// 1 = sound, 0 = mute
+
+@property (nonatomic, assign) int buttonWithImagePlay; // 1 = play, 0 = pause
+@property (weak, nonatomic) IBOutlet UIButton *buttonPlayPause;
+
 - (IBAction)sliderVolumeChange:(UISlider *)sender;
+- (IBAction)changePlayPause:(id)sender;
+- (IBAction)changeSoundMute:(id)sender;
+
+
+@property (nonatomic, assign) int currentIndexValue;
 
 @end
 
@@ -23,25 +38,23 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    // reading stored volume
-    self.currentVolumeValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentVolumeValue"] floatValue];
-    self.sliderVolume.value = self.currentVolumeValue;
-    self.labelVolumeValue.text = [NSString stringWithFormat:@"%.1f", self.currentVolumeValue * 100];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     
+    if (self.currentVolumeValue == 0) {
+        [self.buttonSoundMute setImage:[UIImage imageNamed:@"SH_ICON_mute.png"] forState:UIControlStateNormal];
+        self.buttonWithImageMute = 0;
+    } else{
+        [self.buttonSoundMute setImage:[UIImage imageNamed:@"SH_ICON_volume.png"] forState:UIControlStateNormal];
+        self.buttonWithImageMute = 1;
+    }
+    
+    //tap function beim slider
     UITapGestureRecognizer *gr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(sliderTapped:)];
     [self.sliderVolume addGestureRecognizer:gr];
 }
@@ -57,14 +70,46 @@
     CGFloat value = s.minimumValue + delta;
     [s setValue:value animated:YES];
     
+    self.currentVolumeValue = value;
+    
     // storage of volume
-    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:value] forKey:@"currentVolumeValue"];
+    if (self.currentVolumeValue == 0) {
+        [self.buttonSoundMute setImage:[UIImage imageNamed:@"SH_ICON_mute.png"] forState:UIControlStateNormal];
+        self.buttonWithImageMute = 0;
+    } else{
+        [self.buttonSoundMute setImage:[UIImage imageNamed:@"SH_ICON_volume.png"] forState:UIControlStateNormal];
+        self.buttonWithImageMute = 1;
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:self.currentVolumeValue] forKey:@"currentVolumeValue"];
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:self.buttonWithImageMute] forKey:@"currentButtonWithImageMuteValueStereoLivingRoom"];
+
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    // reading stored volume
+    self.currentVolumeValue = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentVolumeValue"] floatValue];
+    self.sliderVolume.value = self.currentVolumeValue;
+    
+    // reading stored button image
+    int buttonWithImageMuteHelper = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentButtonWithImageMuteValueStereoLivingRoom"] integerValue];
+    if (buttonWithImageMuteHelper == 0)
+    {
+        [self.buttonSoundMute setImage:[UIImage imageNamed:@"SH_ICON_mute.png"] forState:UIControlStateNormal];
+        [self.sliderVolume setValue:(0.0f)];
+    } else if (buttonWithImageMuteHelper == 1){
+        [self.buttonSoundMute setImage:[UIImage imageNamed:@"SH_ICON_volume.png"] forState:UIControlStateNormal];
+        [self.sliderVolume setValue:self.currentVolumeValue];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)closeDetailView:(id)sender
@@ -75,16 +120,55 @@
 - (IBAction)backToSH:(id)sender
 {
     [self.presentingViewController.presentingViewController dismissViewControllerAnimated:NO completion:nil];
-    // TODO: wirklich alle Views dismissed?
 }
 
 - (IBAction)sliderVolumeChange:(UISlider *)sender
 {
-    self.labelVolumeValue.text = NULL;
+    self.labelVolume.text = NULL;
     self.currentVolumeValue = [sender value];
-    self.labelVolumeValue.text = [NSString stringWithFormat:@"%.1f", self.currentVolumeValue * 100];
+    
     // storage of volume
+    
+    if (self.currentVolumeValue == 0) {
+        [self.buttonSoundMute setImage:[UIImage imageNamed:@"SH_ICON_mute.png"] forState:UIControlStateNormal];
+        self.buttonWithImageMute = 0;
+    } else{
+        [self.buttonSoundMute setImage:[UIImage imageNamed:@"SH_ICON_volume.png"] forState:UIControlStateNormal];
+        self.buttonWithImageMute = 1;
+    }
+    
     [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:self.currentVolumeValue] forKey:@"currentVolumeValue"];
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:self.buttonWithImageMute] forKey:@"currentButtonWithImageMuteValueStereoLivingRoom"];
 }
+
+- (IBAction)changePlayPause:(id)sender
+{
+    if (self.buttonPlayPause.imageView.image == [UIImage imageNamed:@"SH_ICON_play.png"])
+    {
+        [self.buttonPlayPause setImage:[UIImage imageNamed:@"SH_ICON_pause.png"] forState:UIControlStateNormal];
+        self.buttonWithImagePlay = 0;
+    } else {
+        [self.buttonPlayPause setImage:[UIImage imageNamed:@"SH_ICON_play.png"] forState:UIControlStateNormal];
+        self.buttonWithImagePlay = 1;
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:self.buttonWithImagePlay] forKey:@"currentButtonWithImagePlayValueStereoLivingRoom"];
+}
+
+- (IBAction)changeSoundMute:(id)sender {
+    if (self.buttonSoundMute.imageView.image == [UIImage imageNamed:@"SH_ICON_volume.png"])
+    {
+        [self.buttonSoundMute setImage:[UIImage imageNamed:@"SH_ICON_mute.png"] forState:UIControlStateNormal];
+        self.buttonWithImageMute = 0;
+        [self.sliderVolume setValue:(0.0f)];
+    } else {
+        [self.buttonSoundMute setImage:[UIImage imageNamed:@"SH_ICON_volume.png"] forState:UIControlStateNormal];
+        self.buttonWithImageMute = 1;
+        [self.sliderVolume setValue:self.currentVolumeValue];
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:self.buttonWithImageMute] forKey:@"currentButtonWithImageMuteValueStereoLivingRoom"];
+}
+
 
 @end
