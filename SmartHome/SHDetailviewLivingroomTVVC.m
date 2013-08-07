@@ -169,6 +169,39 @@
     
     [self.view addSubview:navSC];
     navSC.center = CGPointMake(930, 55);
+    
+    //tap function beim slider
+    UITapGestureRecognizer *gr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(sliderTapped:)];
+    [self.sliderTVVolume addGestureRecognizer:gr];
+
+    
+}
+
+- (void)sliderTapped:(UIGestureRecognizer *)g
+{
+    UISlider* s = (UISlider*)g.view;
+    if (s.highlighted)
+        return; // tap on thumb, let slider deal with it
+    CGPoint pt = [g locationInView: s];
+    CGFloat percentage = pt.x / s.bounds.size.width;
+    CGFloat delta = percentage * (s.maximumValue - s.minimumValue);
+    CGFloat value = s.minimumValue + delta;
+    [s setValue:value animated:YES];
+    
+    self.currentVolumeValue = value;
+    
+    // storage of volume
+    if (self.currentVolumeValue == 0) {
+        [self.buttonSoundMute setImage:[UIImage imageNamed:@"SH_ICON_mute.png"] forState:UIControlStateNormal];
+        self.buttonWithImageMute = 0;
+    } else{
+        [self.buttonSoundMute setImage:[UIImage imageNamed:@"SH_ICON_volume.png"] forState:UIControlStateNormal];
+        self.buttonWithImageMute = 1;
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:self.currentVolumeValue] forKey:@"currentTVVolumeValueLivingRoom"];
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:self.buttonWithImageMute] forKey:@"currentButtonWithImageMuteValueTVLivingRoom"];
+    
 }
 
 - (void)didReceiveMemoryWarning
