@@ -159,9 +159,9 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
 						<string type="base64-UTF8" key="IBUIText">S8O8aGxzY2hyYW5rLUluaGFsdAoKMXggICAgICBNaWxjaAoxeCAgICAgIFdhc3NlcgoxeCAgICAgIE1h
-cm1lbGFkZQrigKgyeCAgICAgIEFuYW5hcwoxLzIgICAgIE1lbG9uZQogICAgICAgICAgUGZpcnNpc2No
-ZQogICAgICAgICAgUGh5c2FsaXMKICAgICAgICAgIEtyZXNzZQogICAgICAgICAgS8Okc2UKICAgICAg
-ICAgIFNhaG5lCiAgICAgICAgICBDcmVtZSBCcnVsZWU</string>
+cm1lbGFkZQrigKgyeCAgICAgIEFuYW5hcwoxLzIgICAgIE1lbG9uZQogICAgICAgICAgUGZpcnNpY2hl
+CiAgICAgICAgICBQaHlzYWxpcwogICAgICAgICAgS3Jlc3NlCiAgICAgICAgICBLw6RzZQogICAgICAg
+ICAgU2FobmUKICAgICAgICAgIENyw6htZSBCcnVsw6llA</string>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 							<int key="IBUIAutocapitalizationType">2</int>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
