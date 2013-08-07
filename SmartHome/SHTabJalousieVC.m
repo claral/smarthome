@@ -39,12 +39,12 @@
     
     
     // init all ON OFFs
-    SVSegmentedControl *navSC_WholeHouse = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" AUS ", @" EIN ", nil]];
-    SVSegmentedControl *navSC_Bedroom = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" AUS ", @" EIN ", nil]];
-    SVSegmentedControl *navSC_Bathroom = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" AUS ", @" EIN ", nil]];
-    SVSegmentedControl *navSC_Kitchen = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" AUS ", @" EIN ", nil]];
-    SVSegmentedControl *navSC_LivingRoom = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" AUS ", @" EIN ", nil]];
-    SVSegmentedControl *navSC_Entrance = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" AUS ", @" EIN ", nil]];
+    SVSegmentedControl *navSC_WholeHouse = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" ZU ", @"OFFEN", nil]];
+    SVSegmentedControl *navSC_Bedroom = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" ZU ", @"OFFEN", nil]];
+    SVSegmentedControl *navSC_Bathroom = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" ZU ", @"OFFEN", nil]];
+    SVSegmentedControl *navSC_Kitchen = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" ZU ", @"OFFEN", nil]];
+    SVSegmentedControl *navSC_LivingRoom = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" ZU ", @"OFFEN", nil]];
+    SVSegmentedControl *navSC_Entrance = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" ZU ", @"OFFEN", nil]];
     
     
     

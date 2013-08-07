@@ -15,7 +15,9 @@
 @property (nonatomic, assign) BOOL booleanHome;
 @property (nonatomic, assign) int currentIndexValue;
 @property (nonatomic, strong) SVSegmentedControl *navSC;
-
+@property (nonatomic, assign) NSString *digit;
+@property (nonatomic, assign) NSString *wholePW;
+@property (weak, nonatomic) IBOutlet UILabel *labelAlarmCodeHidden;
 
 @end
 
@@ -75,6 +77,8 @@
             UIAlertView *messageAway = [[UIAlertView alloc] initWithTitle:@"Abwesend" message:@"Das Haus ist verriegelt." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [messageAway show];
             self.booleanHome = false;
+            self.labelAlarmCode.text = [self.labelAlarmCode.text stringByDeletingLastPathComponent];
+            self.labelAlarmCodeHidden.text = [self.labelAlarmCodeHidden.text stringByDeletingLastPathComponent];
         }
     };
     
@@ -111,6 +115,8 @@
         UIAlertView *messageAway = [[UIAlertView alloc] initWithTitle:@"Abwesend" message:@"Das Haus ist verriegelt." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [messageAway show];
         self.booleanHome = false;
+        self.labelAlarmCode.text = [self.labelAlarmCode.text stringByDeletingLastPathComponent];
+        self.labelAlarmCodeHidden.text = [self.labelAlarmCodeHidden.text stringByDeletingLastPathComponent];
     }
     /*[super viewWillAppear:animated];
     
@@ -150,8 +156,13 @@
     } else {
         if (self.booleanHome == true)
         {
-            NSString *digit = sender.currentTitle;
-            self.labelAlarmCode.text = [self.labelAlarmCode.text stringByAppendingString:digit];
+            self.digit = sender.currentTitle;
+            self.wholePW = sender.currentTitle;
+            NSLog(@"%@", self.digit);
+            NSLog(@"%@", self.wholePW);
+            self.labelAlarmCodeHidden.text = [self.labelAlarmCodeHidden.text stringByAppendingString:self.digit];
+            self.labelAlarmCode.text = [self.labelAlarmCode.text stringByAppendingString:@"*"];
+            //self.labelAlarmCode.text = [self.labelAlarmCode.text stringByAppendingString:digit];
         }
     }
 }
@@ -161,6 +172,7 @@
     if (self.labelAlarmCode.text.length > 1)
     {
         [self.labelAlarmCode setText:[self.labelAlarmCode.text substringToIndex:[self.labelAlarmCode.text length]-1]];
+        [self.labelAlarmCodeHidden setText:[self.labelAlarmCodeHidden.text substringToIndex:[self.labelAlarmCodeHidden.text length]-1]];
     } else if (self.labelAlarmCode.text.length == 1) {
         self.labelAlarmCode.text = @"";
         NSLog(@"bla1");
@@ -179,7 +191,9 @@
 {
     // PW: 1234
     
-    if ([self.labelAlarmCode.text isEqual: @"1234"])
+    NSLog(@"%@", self.digit);
+    
+    if ([self.labelAlarmCodeHidden.text isEqual:@"1234"])//[self.labelAlarmCode.text isEqual: @"1234"])
     {
         NSLog(@"password ok");
         UIAlertView *messagePWOK = [[UIAlertView alloc] initWithTitle:@"PW OK" message:@"Das Passwort wurde richtig eingegeben." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];

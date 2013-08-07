@@ -130,7 +130,7 @@
         }
     }
 
-    if (((self.previousPercentageValue <= 100) && (self.previousPercentageValue >= 90)) && ((self.percentage >= 0) && (self.percentage <= 10)))
+    if (((self.previousPercentageValue <= 100) && (self.previousPercentageValue >= 92)) && ((self.percentage >= 0) && (self.percentage <= 8)))
     //if (self.previousPercentageValue <= 100 && self.previousPercentageValue > self.percentage)
     {
         //NSLog(@"crossover from 100 to zero (clockwise)");
@@ -141,7 +141,7 @@
         boolBla = true;
     }
 
-    if (boolBla == false && (self.previousPercentageValue >= 0) && (self.previousPercentageValue <= 10) && (self.percentage <= 100) && (self.percentage >= 90))
+    if (boolBla == false && (self.previousPercentageValue >= 0) && (self.previousPercentageValue <= 8) && (self.percentage <= 100) && (self.percentage >= 92))
     //if ((self.previousPercentageValue >= 0) && (self.previousPercentageValue <= 5) && (self.percentage <= 100) && (self.percentage >= 95))
     {
         //NSLog(@"crossover from zero to 100 (anti-clockwise)");

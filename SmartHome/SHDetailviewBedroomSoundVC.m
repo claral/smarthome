@@ -41,6 +41,24 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    UITapGestureRecognizer *gr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(sliderTapped:)];
+    [self.sliderVolume addGestureRecognizer:gr];
+}
+
+- (void)sliderTapped:(UIGestureRecognizer *)g
+{
+    UISlider* s = (UISlider*)g.view;
+    if (s.highlighted)
+        return; // tap on thumb, let slider deal with it
+    CGPoint pt = [g locationInView: s];
+    CGFloat percentage = pt.x / s.bounds.size.width;
+    CGFloat delta = percentage * (s.maximumValue - s.minimumValue);
+    CGFloat value = s.minimumValue + delta;
+    [s setValue:value animated:YES];
+    
+    // storage of volume
+    [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithFloat:value] forKey:@"currentVolumeValue"];
 }
 
 - (void)didReceiveMemoryWarning

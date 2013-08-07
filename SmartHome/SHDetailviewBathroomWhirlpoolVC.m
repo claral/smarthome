@@ -32,7 +32,7 @@
         // Custom initialization
         
         // init array of heating
-        self.temperatureWheelItems = [[NSArray alloc] initWithObjects:@"25° Celsius", @"26° Celsius", @"27° Celsius", @"28° Celsius", @"29° Celsius", @"30° Celsius", @"31° Celsius", @"32° Celsius", @"33° Celsius", @"34° Celsius", @"35° Celsius", nil];
+        self.temperatureWheelItems = [[NSArray alloc] initWithObjects:@"30° Celsius", @"31° Celsius", @"32° Celsius", @"33° Celsius", @"34° Celsius", @"35° Celsius", @"36° Celsius", @"37° Celsius", @"38° Celsius", @"39° Celsius", @"40° Celsius", @"41° Celsius", @"42° Celsius",  nil];
         
     }
     return self;
@@ -202,39 +202,45 @@
 {
     if (row == 0)
     {
-        self.currentTemperatureValue = 25;
+        self.currentTemperatureValue = 30;
     } else if (row == 1)
     {
-        self.currentTemperatureValue = 26;
+        self.currentTemperatureValue = 31;
     } else if (row == 2)
     {
-        self.currentTemperatureValue = 27;
+        self.currentTemperatureValue = 32;
     } else if (row == 3)
     {
-        self.currentTemperatureValue = 28;
+        self.currentTemperatureValue = 33;
     } else if (row == 4)
     {
-        self.currentTemperatureValue = 29;
+        self.currentTemperatureValue = 34;
     } else if (row == 5)
     {
-        self.currentTemperatureValue = 30;
+        self.currentTemperatureValue = 35;
     } else if (row == 6)
     {
-        self.currentTemperatureValue = 31;
+        self.currentTemperatureValue = 36;
     } else if (row == 7)
     {
-        self.currentTemperatureValue = 32;
+        self.currentTemperatureValue = 37;
     } else if (row == 8)
     {
-        self.currentTemperatureValue = 33;
+        self.currentTemperatureValue = 38;
     } else if (row == 9)
     {
-        self.currentTemperatureValue = 34;
+        self.currentTemperatureValue = 39;
     } else if (row == 10)
     {
-        self.currentTemperatureValue = 35;
+        self.currentTemperatureValue = 40;
+    } else if (row == 11)
+    {
+        self.currentTemperatureValue = 41;
+    } else if (row == 12)
+    {
+        self.currentTemperatureValue = 42;
     }
-    
+
     // storage of temperature
     [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentTemperatureValue] forKey:@"currentHeatingValueWhirlpoolBathroom"];
     // storage of row
