@@ -100,9 +100,10 @@
 		42F6542F17943D4900703148 /* Heizung-Nacht.png in Resources */ = {isa = PBXBuildFile; fileRef = 42F6542B17943D4900703148 /* Heizung-Nacht.png */; };
 		42F6543017943D4900703148 /* Heizung-Tag.png in Resources */ = {isa = PBXBuildFile; fileRef = 42F6542C17943D4900703148 /* Heizung-Tag.png */; };
 		42F6543417943EF400703148 /* Heizung-Manuell.png in Resources */ = {isa = PBXBuildFile; fileRef = 42F6543317943EF400703148 /* Heizung-Manuell.png */; };
-		EB012E0B1767504C0069681A /* SH_PIC_wholehouse.png in Resources */ = {isa = PBXBuildFile; fileRef = EB012E0A1767504C0069681A /* SH_PIC_wholehouse.png */; };
 		EB180A8A17686B6C00FEB253 /* SHDetailviewLivingroomLightVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EB180A8817686B6C00FEB253 /* SHDetailviewLivingroomLightVC.m */; };
 		EB180A8B17686B6C00FEB253 /* SHDetailviewLivingroomLightVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB180A8917686B6C00FEB253 /* SHDetailviewLivingroomLightVC.xib */; };
+		EB65371617B3F211005B1CE6 /* SH_PIC_wholehouse.png in Resources */ = {isa = PBXBuildFile; fileRef = EB65371517B3F211005B1CE6 /* SH_PIC_wholehouse.png */; };
+		EB65371817B3F275005B1CE6 /* SH_PIC_wholehouseOLD.png in Resources */ = {isa = PBXBuildFile; fileRef = EB65371717B3F275005B1CE6 /* SH_PIC_wholehouseOLD.png */; };
 		EB705C4D17AABC1B000ECDD8 /* SH_ICON_tabHeating.png in Resources */ = {isa = PBXBuildFile; fileRef = EB705C4A17AABC1B000ECDD8 /* SH_ICON_tabHeating.png */; };
 		EB705C4E17AABC1B000ECDD8 /* SH_ICON_tabJalousie.png in Resources */ = {isa = PBXBuildFile; fileRef = EB705C4B17AABC1B000ECDD8 /* SH_ICON_tabJalousie.png */; };
 		EB705C4F17AABC1B000ECDD8 /* SH_ICON_tabLight.png in Resources */ = {isa = PBXBuildFile; fileRef = EB705C4C17AABC1B000ECDD8 /* SH_ICON_tabLight.png */; };
@@ -344,10 +345,11 @@
 		42F6542B17943D4900703148 /* Heizung-Nacht.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Heizung-Nacht.png"; sourceTree = "<group>"; };
 		42F6542C17943D4900703148 /* Heizung-Tag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Heizung-Tag.png"; sourceTree = "<group>"; };
 		42F6543317943EF400703148 /* Heizung-Manuell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Heizung-Manuell.png"; sourceTree = "<group>"; };
-		EB012E0A1767504C0069681A /* SH_PIC_wholehouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_PIC_wholehouse.png; sourceTree = "<group>"; };
 		EB180A8717686B6C00FEB253 /* SHDetailviewLivingroomLightVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDetailviewLivingroomLightVC.h; sourceTree = "<group>"; };
 		EB180A8817686B6C00FEB253 /* SHDetailviewLivingroomLightVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDetailviewLivingroomLightVC.m; sourceTree = "<group>"; };
 		EB180A8917686B6C00FEB253 /* SHDetailviewLivingroomLightVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHDetailviewLivingroomLightVC.xib; sourceTree = "<group>"; };
+		EB65371517B3F211005B1CE6 /* SH_PIC_wholehouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_PIC_wholehouse.png; sourceTree = "<group>"; };
+		EB65371717B3F275005B1CE6 /* SH_PIC_wholehouseOLD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_PIC_wholehouseOLD.png; sourceTree = "<group>"; };
 		EB705C4A17AABC1B000ECDD8 /* SH_ICON_tabHeating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_tabHeating.png; sourceTree = "<group>"; };
 		EB705C4B17AABC1B000ECDD8 /* SH_ICON_tabJalousie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_tabJalousie.png; sourceTree = "<group>"; };
 		EB705C4C17AABC1B000ECDD8 /* SH_ICON_tabLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_tabLight.png; sourceTree = "<group>"; };
@@ -820,7 +822,8 @@
 				EB8C19F617ABCE4A009E7293 /* SH_PIC_entrance.png */,
 				EB8C19F717ABCE4A009E7293 /* SH_PIC_kitchen.png */,
 				EB8C19F817ABCE4A009E7293 /* SH_PIC_livingroom.png */,
-				EB012E0A1767504C0069681A /* SH_PIC_wholehouse.png */,
+				EB65371517B3F211005B1CE6 /* SH_PIC_wholehouse.png */,
+				EB65371717B3F275005B1CE6 /* SH_PIC_wholehouseOLD.png */,
 			);
 			name = Pictures;
 			sourceTree = "<group>";
@@ -1092,7 +1095,6 @@
 				421CA59F173AC4CB004AE723 /* Default@2x.png in Resources */,
 				421CA5A1173AC4CB004AE723 /* Default-568h@2x.png in Resources */,
 				421CA5A4173AC4CB004AE723 /* MainStoryboard.storyboard in Resources */,
-				EB012E0B1767504C0069681A /* SH_PIC_wholehouse.png in Resources */,
 				EB180A8B17686B6C00FEB253 /* SHDetailviewLivingroomLightVC.xib in Resources */,
 				EBCD34241769C320006BBE5A /* SHDetailviewLivingroomPhoneVC.xib in Resources */,
 				EBCD34291769CBFE006BBE5A /* SHDetailviewLivingroomTVVC.xib in Resources */,
@@ -1245,6 +1247,8 @@
 				EB8C19FF17ABD425009E7293 /* SH_PIC_cooker.png in Resources */,
 				EB8C1A0317ABDCEB009E7293 /* SH_ICON_volume_slider.png in Resources */,
 				EBE6A5C917ABF320005308BA /* SH_ICON_arrowToBasement.png in Resources */,
+				EB65371617B3F211005B1CE6 /* SH_PIC_wholehouse.png in Resources */,
+				EB65371817B3F275005B1CE6 /* SH_PIC_wholehouseOLD.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
