@@ -146,7 +146,7 @@
     // show ON OFF
     [navSC_Bathroom setIndexToBeginWith:self.currentIndexValue_Bathroom];
     [self.view addSubview:navSC_Bathroom];
-    navSC_Bathroom.center = CGPointMake(770, 500);
+    navSC_Bathroom.center = CGPointMake(774, 500);
     
     
     
@@ -206,7 +206,7 @@
     // show ON OFF
     [navSC_Entrance setIndexToBeginWith:self.currentIndexValue_Entrance];
     [self.view addSubview:navSC_Entrance];
-    navSC_Entrance.center = CGPointMake(540, 500);
+    navSC_Entrance.center = CGPointMake(542, 500);
 }
 
 - (void)didReceiveMemoryWarning
