@@ -79,15 +79,15 @@
         
         // storage of currentindex
         self.currentIndexValue_Bedroom = newIndex;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Bedroom] forKey:@"currentIndexValueLightTabBedroom"];
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Bedroom] forKey:@"currentIndexValueLightBedroom"];
         [navSC_Bedroom setIndexToBeginWith:newIndex];
         
         self.currentIndexValue_Basement = newIndex;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Basement] forKey:@"currentIndexValueLightTabBasement"];
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Basement] forKey:@"currentIndexValueLightBasement"];
         [navSC_Basement setIndexToBeginWith:newIndex];
         
         self.currentIndexValue_Bathroom = newIndex;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Bathroom] forKey:@"currentIndexValueLightTabBathroom"];
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Bathroom] forKey:@"currentIndexValueLightBathroom"];
         [navSC_Bathroom setIndexToBeginWith:newIndex];
         
         self.currentIndexValue_Entrance = newIndex;
@@ -95,11 +95,11 @@
         [navSC_Entrance setIndexToBeginWith:newIndex];
         
         self.currentIndexValue_Kitchen = newIndex;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Kitchen] forKey:@"currentIndexValueLightTabKitchen"];
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Kitchen] forKey:@"currentIndexValueLightKitchen"];
         [navSC_Kitchen setIndexToBeginWith:newIndex];
         
         self.currentIndexValue_LivingRoom = newIndex;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_LivingRoom] forKey:@"currentIndexValueLightTabLivingRoom"];
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_LivingRoom] forKey:@"currentIndexValueLightLivingRoom"];
         [navSC_LivingRoom setIndexToBeginWith:newIndex];
         
         [[NSUserDefaults standardUserDefaults] synchronize];
@@ -121,14 +121,14 @@
         
         // storage of currentindex
         self.currentIndexValue_Bedroom = newIndex;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Bedroom] forKey:@"currentIndexValueLightTabBedroom"];
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Bedroom] forKey:@"currentIndexValueLightBedroom"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         
         [navSC_Bedroom setIndexToBeginWith:newIndex];
     };
     
     // reading stored index value
-    self.currentIndexValue_Bedroom = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueLightTabBedroom"] integerValue];
+    self.currentIndexValue_Bedroom = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueLightBedroom"] integerValue];
     [navSC_Bedroom setIndexToBeginWith:self.currentIndexValue_Bedroom];
     
     [self.view addSubview:navSC_Bedroom];
@@ -142,14 +142,14 @@
         
         // storage of currentindex
         self.currentIndexValue_Bathroom = newIndex;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Bathroom] forKey:@"currentIndexValueLightTabBathroom"];
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Bathroom] forKey:@"currentIndexValueLightBathroom"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         
         [navSC_Bathroom setIndexToBeginWith:newIndex];
     };
     
     // reading stored index value
-    self.currentIndexValue_Bathroom = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueLightTabBathroom"] integerValue];
+    self.currentIndexValue_Bathroom = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueLightBathroom"] integerValue];
     [navSC_Bathroom setIndexToBeginWith:self.currentIndexValue_Bathroom];
     
     [self.view addSubview:navSC_Bathroom];
@@ -163,14 +163,14 @@
         
         // storage of currentindex
         self.currentIndexValue_Kitchen = newIndex;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Kitchen] forKey:@"currentIndexValueLightTabKitchen"];
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Kitchen] forKey:@"currentIndexValueLightKitchen"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         
         [navSC_Kitchen setIndexToBeginWith:newIndex];
     };
     
     // reading stored index value
-    self.currentIndexValue_Kitchen = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueLightTabKitchen"] integerValue];
+    self.currentIndexValue_Kitchen = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueLightKitchen"] integerValue];
     [navSC_Kitchen setIndexToBeginWith:self.currentIndexValue_Kitchen];
     
     [self.view addSubview:navSC_Kitchen];
@@ -184,14 +184,14 @@
         
         // storage of currentindex
         self.currentIndexValue_LivingRoom = newIndex;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_LivingRoom] forKey:@"currentIndexValueLightTabLivingRoom"];
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_LivingRoom] forKey:@"currentIndexValueLightLivingRoom"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         
         [navSC_LivingRoom setIndexToBeginWith:newIndex];
     };
     
     // reading stored index value
-    self.currentIndexValue_LivingRoom = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueLightTabLivingRoom"] integerValue];
+    self.currentIndexValue_LivingRoom = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueLightLivingRoom"] integerValue];
     [navSC_LivingRoom setIndexToBeginWith:self.currentIndexValue_LivingRoom];
     
     [self.view addSubview:navSC_LivingRoom];
@@ -226,14 +226,14 @@
         
         // storage of currentindex
         self.currentIndexValue_Basement = newIndex;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Basement] forKey:@"currentIndexValueLightTabBasement"];
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Basement] forKey:@"currentIndexValueLightBasement"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         
         [navSC_Basement setIndexToBeginWith:newIndex];
     };
     
     // reading stored index value
-    self.currentIndexValue_Basement = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueLightTabBasement"] integerValue];
+    self.currentIndexValue_Basement = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueLightBasement"] integerValue];
     [navSC_Basement setIndexToBeginWith:self.currentIndexValue_Basement];
     
     [self.view addSubview:navSC_Basement];
