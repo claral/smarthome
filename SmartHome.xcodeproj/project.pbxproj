@@ -103,8 +103,6 @@
 		EB012E0B1767504C0069681A /* SH_PIC_wholehouse.png in Resources */ = {isa = PBXBuildFile; fileRef = EB012E0A1767504C0069681A /* SH_PIC_wholehouse.png */; };
 		EB180A8A17686B6C00FEB253 /* SHDetailviewLivingroomLightVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EB180A8817686B6C00FEB253 /* SHDetailviewLivingroomLightVC.m */; };
 		EB180A8B17686B6C00FEB253 /* SHDetailviewLivingroomLightVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB180A8917686B6C00FEB253 /* SHDetailviewLivingroomLightVC.xib */; };
-		EB7003221789CA51005C6949 /* oven2.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7003211789CA51005C6949 /* oven2.png */; };
-		EB7003241789CA57005C6949 /* oven.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7003231789CA57005C6949 /* oven.png */; };
 		EB705C4D17AABC1B000ECDD8 /* SH_ICON_tabHeating.png in Resources */ = {isa = PBXBuildFile; fileRef = EB705C4A17AABC1B000ECDD8 /* SH_ICON_tabHeating.png */; };
 		EB705C4E17AABC1B000ECDD8 /* SH_ICON_tabJalousie.png in Resources */ = {isa = PBXBuildFile; fileRef = EB705C4B17AABC1B000ECDD8 /* SH_ICON_tabJalousie.png */; };
 		EB705C4F17AABC1B000ECDD8 /* SH_ICON_tabLight.png in Resources */ = {isa = PBXBuildFile; fileRef = EB705C4C17AABC1B000ECDD8 /* SH_ICON_tabLight.png */; };
@@ -350,8 +348,6 @@
 		EB180A8717686B6C00FEB253 /* SHDetailviewLivingroomLightVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDetailviewLivingroomLightVC.h; sourceTree = "<group>"; };
 		EB180A8817686B6C00FEB253 /* SHDetailviewLivingroomLightVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDetailviewLivingroomLightVC.m; sourceTree = "<group>"; };
 		EB180A8917686B6C00FEB253 /* SHDetailviewLivingroomLightVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHDetailviewLivingroomLightVC.xib; sourceTree = "<group>"; };
-		EB7003211789CA51005C6949 /* oven2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oven2.png; sourceTree = "<group>"; };
-		EB7003231789CA57005C6949 /* oven.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oven.png; sourceTree = "<group>"; };
 		EB705C4A17AABC1B000ECDD8 /* SH_ICON_tabHeating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_tabHeating.png; sourceTree = "<group>"; };
 		EB705C4B17AABC1B000ECDD8 /* SH_ICON_tabJalousie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_tabJalousie.png; sourceTree = "<group>"; };
 		EB705C4C17AABC1B000ECDD8 /* SH_ICON_tabLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SH_ICON_tabLight.png; sourceTree = "<group>"; };
@@ -996,8 +992,6 @@
 				EBCD34491769D874006BBE5A /* SHDetailviewKitchenCookerVC.h */,
 				EBCD344A1769D874006BBE5A /* SHDetailviewKitchenCookerVC.m */,
 				EBCD344B1769D874006BBE5A /* SHDetailviewKitchenCookerVC.xib */,
-				EB7003231789CA57005C6949 /* oven.png */,
-				EB7003211789CA51005C6949 /* oven2.png */,
 			);
 			name = Detailviews_Kitchen;
 			sourceTree = "<group>";
@@ -1126,8 +1120,6 @@
 				EBE0D93917818E8800E5CA2B /* SH_NAVI_base4.png in Resources */,
 				EBE0D93B1781A99500E5CA2B /* SH_NAVI_base5.png in Resources */,
 				EBE7A7021781C34B000C01B8 /* SH_ICON_light2.png in Resources */,
-				EB7003221789CA51005C6949 /* oven2.png in Resources */,
-				EB7003241789CA57005C6949 /* oven.png in Resources */,
 				EBD258F8178D4F2E00EC0342 /* SH_ICON_alarm.png in Resources */,
 				EBD258F9178D4F2E00EC0342 /* SH_ICON_coffee.png in Resources */,
 				EBD258FA178D4F2E00EC0342 /* SH_ICON_fridge.png in Resources */,

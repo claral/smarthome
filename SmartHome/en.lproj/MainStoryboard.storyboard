@@ -806,9 +806,7 @@
                             <constraint firstAttribute="trailing" secondItem="k9b-DK-kGN" secondAttribute="trailing" constant="292" id="Q3r-jH-PQJ"/>
                             <constraint firstItem="MRW-QW-IKf" firstAttribute="top" secondItem="j5T-wz-7MI" secondAttribute="top" constant="20" symbolic="YES" type="default" id="RAu-wh-aU8"/>
                             <constraint firstItem="k9b-DK-kGN" firstAttribute="top" secondItem="xrd-DI-R1u" secondAttribute="top" type="default" id="Rl5-kK-KSh"/>
-                            <constraint firstItem="Cf1-Fd-UnU" firstAttribute="baseline" secondItem="xrd-DI-R1u" secondAttribute="baseline" type="default" id="TOr-aZ-q35"/>
                             <constraint firstItem="M1f-oP-mHI" firstAttribute="centerY" secondItem="j5T-wz-7MI" secondAttribute="centerY" type="default" id="UwX-vh-KH3"/>
-                            <constraint firstItem="Cf1-Fd-UnU" firstAttribute="baseline" secondItem="k9b-DK-kGN" secondAttribute="baseline" type="default" id="VfX-AY-1Xp"/>
                             <constraint firstAttribute="bottom" secondItem="Cf1-Fd-UnU" secondAttribute="bottom" constant="17" id="Xbt-n2-COD"/>
                             <constraint firstItem="xrd-DI-R1u" firstAttribute="bottom" secondItem="Cf1-Fd-UnU" secondAttribute="bottom" type="default" id="YEb-qd-q6o"/>
                             <constraint firstItem="iJ1-Sq-b0L" firstAttribute="centerX" secondItem="xrd-DI-R1u" secondAttribute="centerX" type="default" id="ZhD-Lv-6sG"/>
@@ -1271,12 +1269,6 @@
                                     <constraint firstAttribute="height" constant="2" id="hho-fM-waV"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SH_ICON_arrowToBasement.png" translatesAutoresizingMaskIntoConstraints="NO" id="FMg-7c-U7e">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="17" id="91r-wC-39K"/>
-                                    <constraint firstAttribute="height" constant="71" id="yOu-r6-m3y"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -1297,8 +1289,6 @@
                             <constraint firstItem="x86-NQ-jvQ" firstAttribute="leading" secondItem="uaa-75-8Qp" secondAttribute="leading" type="default" id="nhQ-b0-YQs"/>
                             <constraint firstItem="fEM-CS-d3L" firstAttribute="centerY" secondItem="uaa-75-8Qp" secondAttribute="centerY" type="default" id="psA-I0-lTa"/>
                             <constraint firstAttribute="trailing" secondItem="Wnu-2w-zAA" secondAttribute="trailing" constant="292" id="qtw-Gq-FcI"/>
-                            <constraint firstItem="FMg-7c-U7e" firstAttribute="leading" secondItem="uaa-75-8Qp" secondAttribute="leading" constant="416" id="sGH-w1-w0v"/>
-                            <constraint firstAttribute="bottom" secondItem="FMg-7c-U7e" secondAttribute="bottom" constant="183" id="uSa-93-0K6"/>
                             <constraint firstItem="x86-NQ-jvQ" firstAttribute="trailing" secondItem="uaa-75-8Qp" secondAttribute="trailing" type="default" id="vkr-oN-RDv"/>
                             <constraint firstItem="Edb-4y-U3d" firstAttribute="top" secondItem="91Z-ZH-ueu" secondAttribute="top" type="default" id="xNv-9R-x2F"/>
                         </constraints>
@@ -1497,80 +1487,6 @@
         <image name="SH_PIC_livingroom.png" width="4070" height="2850"/>
         <image name="SH_PIC_wholehouse.png" width="4104" height="2850"/>
     </resources>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SHBasementVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SHBasementVC.h"/>
-            <relationships>
-                <relationship kind="action" name="backToSH:"/>
-                <relationship kind="action" name="laundryButtonTouchUp:" candidateClass="UIButton"/>
-                <relationship kind="action" name="lightButtonTouchUp:" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="SHBathroomVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SHBathroomVC.h"/>
-            <relationships>
-                <relationship kind="action" name="backToSH:"/>
-                <relationship kind="action" name="heatingButtonTouchUp:" candidateClass="UIButton"/>
-                <relationship kind="action" name="lightButtonTouchUp:" candidateClass="UIButton"/>
-                <relationship kind="action" name="radioButtonTouchUp:" candidateClass="UIButton"/>
-                <relationship kind="action" name="whirlpoolButtonTouchUp:" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="SHBedroomVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SHBedroomVC.h"/>
-            <relationships>
-                <relationship kind="action" name="backToSH:"/>
-                <relationship kind="action" name="heatingButtonTouchUp:" candidateClass="UIButton"/>
-                <relationship kind="action" name="lightButtonTouchUp:" candidateClass="UIButton"/>
-                <relationship kind="action" name="soundButtonTouchUp:" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="SHEntranceVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SHEntranceVC.h"/>
-            <relationships>
-                <relationship kind="action" name="alarmButtonTouchUp:" candidateClass="UIButton"/>
-                <relationship kind="action" name="backToSH:"/>
-                <relationship kind="action" name="lightButtonTouchUp:" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="SHKitchenVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SHKitchenVC.h"/>
-            <relationships>
-                <relationship kind="action" name="backToSH:"/>
-                <relationship kind="action" name="coffeeButtonTouchUp:" candidateClass="UIButton"/>
-                <relationship kind="action" name="cookerButtonTouchUp:" candidateClass="UIButton"/>
-                <relationship kind="action" name="fridgeButtonTouchUp:" candidateClass="UIButton"/>
-                <relationship kind="action" name="heatingButtonTouchUp:" candidateClass="UIButton"/>
-                <relationship kind="action" name="lightButtonTouchUp:" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="SHLivingroomVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SHLivingroomVC.h"/>
-            <relationships>
-                <relationship kind="action" name="backToSH:" candidateClass="UIButton"/>
-                <relationship kind="action" name="heatingButtonTouchUp:" candidateClass="UIButton"/>
-                <relationship kind="action" name="lightButtonTouchUp:" candidateClass="UIButton"/>
-                <relationship kind="action" name="phoneButtonTouchUp:" candidateClass="UIButton"/>
-                <relationship kind="action" name="stereoButtonTouchUp:" candidateClass="UIButton"/>
-                <relationship kind="action" name="tvButtonTouchUP:" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="SHTabHeatingVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SHTabHeatingVC.h"/>
-        </class>
-        <class className="SHTabJalousieVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SHTabJalousieVC.h"/>
-        </class>
-        <class className="SHTabLightVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SHTabLightVC.h"/>
-        </class>
-        <class className="SHViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SHViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

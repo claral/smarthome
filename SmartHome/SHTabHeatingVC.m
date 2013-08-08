@@ -46,8 +46,8 @@
     SVSegmentedControl *navSC_Bathroom = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" AUS ", @" EIN ", nil]];
     SVSegmentedControl *navSC_Kitchen = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" AUS ", @" EIN ", nil]];
     SVSegmentedControl *navSC_LivingRoom = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" AUS ", @" EIN ", nil]];
-    SVSegmentedControl *navSC_Entrance = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" AUS ", @" EIN ", nil]];
-    SVSegmentedControl *navSC_Basement = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" AUS ", @" EIN ", nil]];
+    /*SVSegmentedControl *navSC_Entrance = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" AUS ", @" EIN ", nil]];
+    SVSegmentedControl *navSC_Basement = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@" AUS ", @" EIN ", nil]];*/
     
     
     
@@ -71,34 +71,34 @@
         }
         
         [navSC_Bedroom setSelectedSegmentIndex:helperInt animated:NO];
-        [navSC_Basement setSelectedSegmentIndex:helperInt animated:NO];
+        /*[navSC_Basement setSelectedSegmentIndex:helperInt animated:NO];*/
         [navSC_Bathroom setSelectedSegmentIndex:helperInt animated:NO];
-        [navSC_Entrance setSelectedSegmentIndex:helperInt animated:NO];
+        /*[navSC_Entrance setSelectedSegmentIndex:helperInt animated:NO];*/
         [navSC_Kitchen setSelectedSegmentIndex:helperInt animated:NO];
         [navSC_LivingRoom setSelectedSegmentIndex:helperInt animated:NO];
         
         self.currentIndexValue_Bedroom = newIndex;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Bedroom] forKey:@"currentIndexValueHeatingTabBedroom"];
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Bedroom] forKey:@"currentHeatingIndexBedroom"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         [navSC_Bedroom setIndexToBeginWith:newIndex];
         
-        self.currentIndexValue_Basement = newIndex;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Basement] forKey:@"currentIndexValueHeatingTabBasement"];
+        /*self.currentIndexValue_Basement = newIndex;
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Basement] forKey:@"currentHeatingIndexBasement"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-        [navSC_Basement setIndexToBeginWith:newIndex];
+        [navSC_Basement setIndexToBeginWith:newIndex];*/
         
         self.currentIndexValue_Bathroom = newIndex;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Bathroom] forKey:@"currentIndexValueHeatingTabBathroom"];
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Bathroom] forKey:@"currentHeatingIndexBathroom"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         [navSC_Bathroom setIndexToBeginWith:newIndex];
         
-        self.currentIndexValue_Entrance = newIndex;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Entrance] forKey:@"currentIndexValueHeatingTabEntrance"];
+        /*self.currentIndexValue_Entrance = newIndex;
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Entrance] forKey:@"currentHeatingIndexEntrance"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-        [navSC_Entrance setIndexToBeginWith:newIndex];
+        [navSC_Entrance setIndexToBeginWith:newIndex];*/
         
         self.currentIndexValue_Kitchen = newIndex;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Kitchen] forKey:@"currentIndexValueHeatingTabKitchen"];
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Kitchen] forKey:@"currentHeatingIndexKitchen"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         [navSC_Kitchen setIndexToBeginWith:newIndex];
         
@@ -125,12 +125,12 @@
         
         // storage of currentindex
         self.currentIndexValue_Bedroom = newIndex;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Bedroom] forKey:@"currentIndexValueHeatingTabBedroom"];
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Bedroom] forKey:@"currentHeatingIndexBedroom"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         [navSC_Bedroom setIndexToBeginWith:newIndex];
     };
     // reading stored index value
-    self.currentIndexValue_Bedroom = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueHeatingTabBedroom"] integerValue];
+    self.currentIndexValue_Bedroom = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentHeatingIndexBedroom"] integerValue];
     
     // show ON OFF
     [navSC_Bedroom setIndexToBeginWith:self.currentIndexValue_Bedroom];
@@ -144,12 +144,12 @@
         
         // storage of currentindex
         self.currentIndexValue_Bathroom = newIndex;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Bathroom] forKey:@"currentIndexValueHeatingTabBathroom"];
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Bathroom] forKey:@"currentHeatingIndexBathroom"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         [navSC_Bathroom setIndexToBeginWith:newIndex];
     };
     // reading stored index value
-    self.currentIndexValue_Bathroom = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueHeatingTabBathroom"] integerValue];
+    self.currentIndexValue_Bathroom = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentHeatingIndexBathroom"] integerValue];
     
     // show ON OFF
     [navSC_Bathroom setIndexToBeginWith:self.currentIndexValue_Bathroom];
@@ -164,12 +164,12 @@
         
         // storage of currentindex
         self.currentIndexValue_Kitchen = newIndex;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Kitchen] forKey:@"currentIndexValueHeatingTabKitchen"];
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Kitchen] forKey:@"currentHeatingIndexKitchen"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         [navSC_Kitchen setIndexToBeginWith:newIndex];
     };
     // reading stored index value
-    self.currentIndexValue_Kitchen = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueHeatingTabKitchen"] integerValue];
+    self.currentIndexValue_Kitchen = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentHeatingIndexKitchen"] integerValue];
     
     // show ON OFF
     [navSC_Kitchen setIndexToBeginWith:self.currentIndexValue_Kitchen];
@@ -205,45 +205,45 @@
     
     
     
-    // ----------
+    /*// ----------
     // ON OFF entrance
     navSC_Entrance.changeHandler = ^(NSUInteger newIndex) {
         
         // storage of currentindex
         self.currentIndexValue_Entrance = newIndex;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Entrance] forKey:@"currentIndexValueHeatingTabEntrance"];
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Entrance] forKey:@"currentHeatingIndexEntrance"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         [navSC_Entrance setIndexToBeginWith:newIndex];
     };
     // reading stored index value
-    self.currentIndexValue_Entrance = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueHeatingTabEntrance"] integerValue];
+    self.currentIndexValue_Entrance = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentHeatingIndexEntrance"] integerValue];
     
     // show ON OFF
     [navSC_Entrance setIndexToBeginWith:self.currentIndexValue_Entrance];
     
     [self.view addSubview:navSC_Entrance];
-    navSC_Entrance.center = CGPointMake(540, 500);
+    navSC_Entrance.center = CGPointMake(540, 500);*/
     
     
     
-    // ----------
+    /*// ----------
     // ON OFF basement
     navSC_Basement.changeHandler = ^(NSUInteger newIndex) {
         
         // storage of currentindex
         self.currentIndexValue_Basement = newIndex;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Basement] forKey:@"currentIndexValueHeatingTabBasement"];
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Basement] forKey:@"currentHeatingIndexBasement"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         [navSC_Basement setIndexToBeginWith:newIndex];
     };
     // reading stored index value
-    self.currentIndexValue_Basement = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentIndexValueHeatingTabBasement"] integerValue];
+    self.currentIndexValue_Basement = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentHeatingIndexBasement"] integerValue];
     
     // show ON OFF
     [navSC_Basement setIndexToBeginWith:self.currentIndexValue_Basement];
     
     [self.view addSubview:navSC_Basement];
-    navSC_Basement.center = CGPointMake(425, 600);
+    navSC_Basement.center = CGPointMake(425, 600);*/
 }
 
 - (void)didReceiveMemoryWarning
