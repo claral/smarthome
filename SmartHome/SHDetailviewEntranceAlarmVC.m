@@ -19,6 +19,23 @@
 @property (nonatomic, assign) NSString *wholePW;
 @property (weak, nonatomic) IBOutlet UILabel *labelAlarmCodeHidden;
 
+@property (weak, nonatomic) IBOutlet UIImageView *numberPadTextField;
+@property (weak, nonatomic) IBOutlet UIButton *numberPadDelete;
+@property (weak, nonatomic) IBOutlet UIButton *numberPadOne;
+@property (weak, nonatomic) IBOutlet UIButton *numberPadTwo;
+@property (weak, nonatomic) IBOutlet UIButton *numberPadThree;
+@property (weak, nonatomic) IBOutlet UIButton *numberPadFour;
+@property (weak, nonatomic) IBOutlet UIButton *numberPadFive;
+@property (weak, nonatomic) IBOutlet UIButton *numberPadSix;
+@property (weak, nonatomic) IBOutlet UIButton *numberPadSeven;
+@property (weak, nonatomic) IBOutlet UIButton *numberPadEight;
+@property (weak, nonatomic) IBOutlet UIButton *numberPadNine;
+@property (weak, nonatomic) IBOutlet UIButton *numberPadStart;
+@property (weak, nonatomic) IBOutlet UIButton *numberPadZero;
+@property (weak, nonatomic) IBOutlet UIButton *numberPadOK;
+@property (weak, nonatomic) IBOutlet UILabel *labelInfo1;
+@property (weak, nonatomic) IBOutlet UILabel *labelInfo2;
+
 @end
 
 @implementation SHDetailviewEntranceAlarmVC
@@ -72,13 +89,49 @@
             UIAlertView *messageHome = [[UIAlertView alloc] initWithTitle:@"Daheim" message:@"Bitte geben Sie das Passwort ein." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [messageHome show];
             self.booleanHome = true;
+            
+            [self.numberPadTextField setHidden:NO];
+            [self.numberPadDelete setHidden:NO];
+            [self.numberPadOne setHidden:NO];
+            [self.numberPadTwo setHidden:NO];
+            [self.numberPadThree setHidden:NO];
+            [self.numberPadFour setHidden:NO];
+            [self.numberPadFive setHidden:NO];
+            [self.numberPadSix setHidden:NO];
+            [self.numberPadSeven setHidden:NO];
+            [self.numberPadEight setHidden:NO];
+            [self.numberPadNine setHidden:NO];
+            [self.numberPadStart setHidden:NO];
+            [self.numberPadZero setHidden:NO];
+            [self.numberPadOK setHidden:NO];
+            [self.labelInfo1 setHidden:YES];
+            [self.labelInfo2 setHidden:YES];
+            
         } else if (index == 0)
         {
-            UIAlertView *messageAway = [[UIAlertView alloc] initWithTitle:@"Abwesend" message:@"Das Haus ist verriegelt." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [messageAway show];
+            //UIAlertView *messageAway = [[UIAlertView alloc] initWithTitle:@"Abwesend" message:@"Das Haus ist verriegelt." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            //[messageAway show];
             self.booleanHome = false;
             self.labelAlarmCode.text = [self.labelAlarmCode.text stringByDeletingLastPathComponent];
             self.labelAlarmCodeHidden.text = [self.labelAlarmCodeHidden.text stringByDeletingLastPathComponent];
+            
+            [self.numberPadTextField setHidden:YES];
+            [self.numberPadDelete setHidden:YES];
+            [self.numberPadOne setHidden:YES];
+            [self.numberPadTwo setHidden:YES];
+            [self.numberPadThree setHidden:YES];
+            [self.numberPadFour setHidden:YES];
+            [self.numberPadFive setHidden:YES];
+            [self.numberPadSix setHidden:YES];
+            [self.numberPadSeven setHidden:YES];
+            [self.numberPadEight setHidden:YES];
+            [self.numberPadNine setHidden:YES];
+            [self.numberPadStart setHidden:YES];
+            [self.numberPadZero setHidden:YES];
+            [self.numberPadOK setHidden:YES];
+            [self.labelInfo1 setHidden:NO];
+            [self.labelInfo2 setHidden:NO];
+            
         }
     };
     
@@ -110,13 +163,48 @@
         UIAlertView *messageHome = [[UIAlertView alloc] initWithTitle:@"Daheim" message:@"Bitte geben Sie das Passwort ein." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [messageHome show];
         self.booleanHome = true;
+        
+        [self.numberPadTextField setHidden:NO];
+        [self.numberPadDelete setHidden:NO];
+        [self.numberPadOne setHidden:NO];
+        [self.numberPadTwo setHidden:NO];
+        [self.numberPadThree setHidden:NO];
+        [self.numberPadFour setHidden:NO];
+        [self.numberPadFive setHidden:NO];
+        [self.numberPadSix setHidden:NO];
+        [self.numberPadSeven setHidden:NO];
+        [self.numberPadEight setHidden:NO];
+        [self.numberPadNine setHidden:NO];
+        [self.numberPadStart setHidden:NO];
+        [self.numberPadZero setHidden:NO];
+        [self.numberPadOK setHidden:NO];
+        [self.labelInfo1 setHidden:YES];
+        [self.labelInfo2 setHidden:YES];
+        
     } else if (self.navSC.selectedSegmentIndex == 1)
     {
-        UIAlertView *messageAway = [[UIAlertView alloc] initWithTitle:@"Abwesend" message:@"Das Haus ist verriegelt." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [messageAway show];
+        //UIAlertView *messageAway = [[UIAlertView alloc] initWithTitle:@"Abwesend" message:@"Das Haus ist verriegelt." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        //[messageAway show];
         self.booleanHome = false;
         self.labelAlarmCode.text = [self.labelAlarmCode.text stringByDeletingLastPathComponent];
         self.labelAlarmCodeHidden.text = [self.labelAlarmCodeHidden.text stringByDeletingLastPathComponent];
+        
+        [self.numberPadTextField setHidden:YES];
+        [self.numberPadDelete setHidden:YES];
+        [self.numberPadOne setHidden:YES];
+        [self.numberPadTwo setHidden:YES];
+        [self.numberPadThree setHidden:YES];
+        [self.numberPadFour setHidden:YES];
+        [self.numberPadFive setHidden:YES];
+        [self.numberPadSix setHidden:YES];
+        [self.numberPadSeven setHidden:YES];
+        [self.numberPadEight setHidden:YES];
+        [self.numberPadNine setHidden:YES];
+        [self.numberPadStart setHidden:YES];
+        [self.numberPadZero setHidden:YES];
+        [self.numberPadOK setHidden:YES];
+        [self.labelInfo1 setHidden:NO];
+        [self.labelInfo2 setHidden:NO];
     }
     /*[super viewWillAppear:animated];
     
@@ -175,6 +263,7 @@
         [self.labelAlarmCodeHidden setText:[self.labelAlarmCodeHidden.text substringToIndex:[self.labelAlarmCodeHidden.text length]-1]];
     } else if (self.labelAlarmCode.text.length == 1) {
         self.labelAlarmCode.text = @"";
+        self.labelAlarmCodeHidden.text = @"";
         NSLog(@"bla1");
     } else {
         NSLog(@"bla2");
