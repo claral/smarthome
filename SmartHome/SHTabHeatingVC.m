@@ -133,6 +133,11 @@
     self.currentIndexValue_Bedroom = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentHeatingIndexBedroom"] integerValue];
     
     // show ON OFF
+    if (self.currentIndexValue_Bedroom > 1)
+    {
+        self.currentIndexValue_Bedroom = 1;
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Bedroom] forKey:@"currentHeatingIndexBedroom"];
+    }
     [navSC_Bedroom setIndexToBeginWith:self.currentIndexValue_Bedroom];
     [self.view addSubview:navSC_Bedroom];
     navSC_Bedroom.center = CGPointMake(280, 500);
@@ -152,6 +157,11 @@
     self.currentIndexValue_Bathroom = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentHeatingIndexBathroom"] integerValue];
     
     // show ON OFF
+    if (self.currentIndexValue_Bathroom > 1)
+    {
+        self.currentIndexValue_Bathroom = 1;
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Bathroom] forKey:@"currentHeatingIndexBathroom"];
+    }
     [navSC_Bathroom setIndexToBeginWith:self.currentIndexValue_Bathroom];
     [self.view addSubview:navSC_Bathroom];
     navSC_Bathroom.center = CGPointMake(770, 500);
@@ -172,6 +182,11 @@
     self.currentIndexValue_Kitchen = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentHeatingIndexKitchen"] integerValue];
     
     // show ON OFF
+    if (self.currentIndexValue_Kitchen > 1)
+    {
+        self.currentIndexValue_Kitchen = 1;
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Kitchen] forKey:@"currentHeatingIndexKitchen"];
+    }
     [navSC_Kitchen setIndexToBeginWith:self.currentIndexValue_Kitchen];
     
     [self.view addSubview:navSC_Kitchen];
@@ -202,48 +217,6 @@
     
     [self.view addSubview:navSC_LivingRoom];
     navSC_LivingRoom.center = CGPointMake(350, 250);
-    
-    
-    
-    /*// ----------
-    // ON OFF entrance
-    navSC_Entrance.changeHandler = ^(NSUInteger newIndex) {
-        
-        // storage of currentindex
-        self.currentIndexValue_Entrance = newIndex;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Entrance] forKey:@"currentHeatingIndexEntrance"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-        [navSC_Entrance setIndexToBeginWith:newIndex];
-    };
-    // reading stored index value
-    self.currentIndexValue_Entrance = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentHeatingIndexEntrance"] integerValue];
-    
-    // show ON OFF
-    [navSC_Entrance setIndexToBeginWith:self.currentIndexValue_Entrance];
-    
-    [self.view addSubview:navSC_Entrance];
-    navSC_Entrance.center = CGPointMake(540, 500);*/
-    
-    
-    
-    /*// ----------
-    // ON OFF basement
-    navSC_Basement.changeHandler = ^(NSUInteger newIndex) {
-        
-        // storage of currentindex
-        self.currentIndexValue_Basement = newIndex;
-        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:self.currentIndexValue_Basement] forKey:@"currentHeatingIndexBasement"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-        [navSC_Basement setIndexToBeginWith:newIndex];
-    };
-    // reading stored index value
-    self.currentIndexValue_Basement = [[[NSUserDefaults standardUserDefaults] valueForKey:@"currentHeatingIndexBasement"] integerValue];
-    
-    // show ON OFF
-    [navSC_Basement setIndexToBeginWith:self.currentIndexValue_Basement];
-    
-    [self.view addSubview:navSC_Basement];
-    navSC_Basement.center = CGPointMake(425, 600);*/
 }
 
 - (void)didReceiveMemoryWarning
